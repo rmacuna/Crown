@@ -44,6 +44,25 @@ div.cr-inline {
   margin-left: 0.2rem;
   margin-right: 0.2rem; }
 
+.cr.container {
+  max-width: 90%;
+  height: 100%;
+  margin-left: 20px;
+  padding-right: 35px;
+  padding-left: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media screen and (max-width: 850px) {
+    .cr.container {
+      float: none;
+      max-width: 90%;
+      margin-left: 0px;
+      margin-right: 20px;
+      padding-right: 35px;
+      padding-left: 35px;
+      padding-top: 10px;
+      padding-bottom: 10px; } }
+
 /*-----------------------------------All  BUTTONS CODE---------------------------------------------------------- */
 .cr.button {
   background: #F5F5F5;
@@ -61,22 +80,45 @@ div.cr-inline {
   padding-left: 20px;
   display: table;
   cursor: pointer;
-  height: 2.2rem;
-  transition: all 0.3s ease 0s; }
+  height: 2.2rem; }
 
-.cr.button:hover {
-  background: rgba(0, 0, 0, 0.1); }
+.cr.button.plain {
+  border-radius: none; }
+
+.cr.button {
+  transition: all 0.3s ease 0s; }
+  .cr.button:hover {
+    background: rgba(0, 0, 0, 0.1); }
+  .cr.button:active {
+    background: rgba(0, 0, 0, 0.2); }
+
+.cr.button.small {
+  min-width: 20px; }
+
+.cr.button.medium {
+  min-width: 140px; }
+
+.cr.button.large {
+  min-width: 220px; }
+
+.cr.button.big {
+  height: 3rem;
+  line-height: 3rem; }
+
+.cr.button.adaptive {
+  width: 100%; }
 
 /* -------------------------------|RAISED BUTTONS CODE|-------------------------------------------------------- */
 .cr.button.raised {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  transition: 0.3s; }
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
 
 .cr.button.raised:active {
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4); }
 
-.cr.button.hoverable:hover {
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3); }
+.cr.button.hoverable {
+  transition: all 0.3s ease 0s; }
+  .cr.button.hoverable:hover {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3); }
 
 /* --------------------------------------- OUTLINED BUTTONS -------------------------------------------------- */
 .cr.button.outline {
@@ -156,7 +198,8 @@ div.cr-inline {
   border: 1px solid #e5c100;
   color: #e5c100; }
   .cr.button.outline.gold:hover {
-    background: #e5c100;
+    background: #998100;
+    border: 1px solid #998100;
     color: #fff; }
 
 /*------------------------------------|COLOR VARIANTS NORMAL BUTTONS|-------------------------------------------------------- */
@@ -165,61 +208,72 @@ div.cr-inline {
   color: #fff; }
   .cr.button.blue:hover {
     background: #1976D2; }
+  .cr.button.blue:active {
+    background: #2196F3; }
 
 .cr.button.deep-purple {
   background: #673AB7;
   color: #fff; }
   .cr.button.deep-purple:hover {
     background: #512DA8; }
+  .cr.button.deep-purple:active {
+    background: #673AB7; }
 
 .cr.button.gold {
   background: #e5c100;
   color: #fff; }
   .cr.button.gold:hover {
     background: #998100; }
+  .cr.button.gold:active {
+    background: #e5c100; }
 
 .cr.button.green {
   background: #00C853;
   color: #fff; }
   .cr.button.green:hover {
     background: #388E3C; }
+  .cr.button.green:active {
+    background: #00C853; }
 
 .cr.button.red {
   background: #F44336;
   color: #fff; }
   .cr.button.red:hover {
     background: #D32F2F; }
-
-.cr.button.white {
-  background: #fff;
-  color: #000;
-  border: 0.5px solid #000; }
-  .cr.button.white:hover {
-    background: #E0E0E0; }
+  .cr.button.red:active {
+    background: #F44336; }
 
 .cr.button.orange {
   background: #FF9800;
   color: #fff; }
   .cr.button.orange:hover {
     background: #E64A19; }
+  .cr.button.orange:active {
+    background: #FF9800; }
 
 .cr.button.pink {
   background: #E91E63;
   color: #fff; }
   .cr.button.pink:hover {
     background: #C2185B; }
+  .cr.button.pink:active {
+    background: #E91E63; }
 
 .cr.button.light-blue {
   background: #03A9F4;
   color: #fff; }
   .cr.button.light-blue:hover {
     background: #0288D1; }
+  .cr.button.light-blue:active {
+    background: #03A9F4; }
 
 .cr.button.indigo {
   background: #3F51B5;
   color: #fff; }
   .cr.button.indigo:hover {
     background: #303F9F; }
+  .cr.button.indigo:active {
+    background: #3F51B5; }
 
 .cr.button.black {
   background: #000;
@@ -230,16 +284,19 @@ div.cr-inline {
   color: #fff; }
   .cr.button.teal:hover {
     background: #00796B; }
+  .cr.button.teal:active {
+    background: #009688; }
 
 .cr.button.amber {
   background: #FFC107;
   color: #fff; }
   .cr.button.amber:hover {
     background: #FFA000; }
+  .cr.button.amber:active {
+    background: #FFC107; }
 
-button {
-  border: none;
-  height: 2.8rem;
-  line-height: 2.8rem; }
+button.cr.button {
+  outline: none;
+  border: none; }
 
 /*# sourceMappingURL=main.css.map */

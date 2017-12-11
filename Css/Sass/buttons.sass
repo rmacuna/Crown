@@ -1,6 +1,4 @@
 @import 'variables'
-
-
 /*-----------------------------------All  BUTTONS CODE----------------------------------------------------------*/
 
 .cr.button
@@ -20,25 +18,128 @@
 	display: table
 	cursor: pointer
 	height: 2.2rem
-	transition: all 0.3s ease 0s
+
+.cr.button.plain
+	border-radius: none
 
 .cr.button
+	transition: all 0.3s ease 0s
 	&:hover 
 		background: rgba(0,0,0,0.1)
+	&:active
+		background: rgba(0,0,0,0.2)
+
+.cr.button.small
+	min-width: $button-small-size
+
+.cr.button.medium
+	min-width: $button-medium-size
+
+.cr.button.large
+	min-width: $button-large-size
+
+.cr.button.big 
+	height: $button-big-height
+	line-height: $button-big-height
+
+.cr.button.adaptive
+	width: 100%
+
 	
 /* -------------------------------|RAISED BUTTONS CODE|--------------------------------------------------------*/
 .cr.button.raised
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
-	transition: 0.3s
 
 .cr.button.raised
 	&:active
 		box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0, 0.12), 0 5px 5px -3px rgba(0,0,0, 0.4)
 
 .cr.button.hoverable
+	transition: all 0.3s ease 0s
 	&:hover
 		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .3)
 
+// .cr.button.ripple
+// 	overflow: hidden
+// 	position: relative 
+
+// .cr.button.ripple
+// 	&:after
+// 		content: ''
+// 		display: block
+// 		position: absolute
+// 		top: 50%
+// 		left: 50%
+// 		width: 120px
+// 		height: 120px
+// 		margin-left: -60px
+// 		margin-top: -60px
+// 		background: rgba(255, 255, 255, .5)
+// 		border-radius: 100%
+// 		transform: scale(0)
+
+// .cr.button.ripple
+// 	&:not(:active)
+// 		&:after
+// 			animation: ripple 1s ease-out
+
+// .cr.button.ripple
+// 	&:after
+// 		visibility: hidden 
+
+// .cr.button.ripple 
+// 	&:focus
+// 		&:after
+// 			visibility: visible
+
+// *, *:before, *:after
+// 	box-sizing: border-box
+
+
+// @-webkit-keyframes ripple
+// 	0%
+// 		-webkit-transform: scale(0)
+// 	20%
+// 		-webkit-transform: scale(0)
+// 	100%
+// 		opacity: 0
+// 		-webkit-transform: scale(1)
+
+// @-moz-keyframes ripple
+// 	0%
+// 		transform: scale(0)
+// 	20%
+// 		transform: scale(0)
+// 	100%
+// 		opacity: 0
+// 		transform: scale(1)
+
+// @-ms-keyframes ripple 
+// 	0%
+// 		transform: scale(0)
+// 	20%
+// 		transform: scale(0)
+// 	100%
+// 		opacity: 0
+// 		transform: scale(1)
+
+// @-o-keyframes ripple
+// 	0%
+// 		transform: scale(0)
+// 	20%
+// 		transform: scale(0)
+// 	100%
+// 		opacity: 0
+// 		transform: scale(1)
+
+// @keyframes ripple
+// 	0%
+// 		transform: scale(0)
+// 	20%
+// 		transform: scale(0)
+// 	100%
+// 		opacity: 0
+// 		transform: scale(1)
 
 
 /* --------------------------------------- OUTLINED BUTTONS --------------------------------------------------*/
@@ -119,70 +220,83 @@
 	border: 1px solid $gold
 	color: $gold
 	&:hover
-		background: $gold
+		background: $gold-deep
+		border: 1px solid $gold-deep
 		color: $white
 /*------------------------------------|COLOR VARIANTS NORMAL BUTTONS|--------------------------------------------------------*/
+
+
 .cr.button.blue
 	background: $blue 
 	color: $white
 	&:hover 
 		background: #1976D2
-
+	&:active
+		background: $blue
 
 .cr.button.deep-purple
 	background: $deep-purple
 	color: $white
 	&:hover
 		background: #512DA8
+	&:active
+		background: $deep-purple
 
 .cr.button.gold
 	background: $gold
 	color: $white
 	&:hover
 		background: #998100
+	&:active
+		background: $gold 
 		
 .cr.button.green
 	background: $green 
 	color: $white
 	&:hover 
 		background: #388E3C
+	&:active 
+		background: $green 
 
 .cr.button.red
 	background: $red
 	color: $white
 	&:hover
 		background: #D32F2F
-
-.cr.button.white 
-	background: $white 
-	color: $black 
-	border: 0.5px solid $black
-	&:hover
-		background: #E0E0E0
+	&:active 
+		background: $red 
 
 .cr.button.orange
 	background: $orange
 	color: $white 
 	&:hover 
 		background: #E64A19
+	&:active 
+		background: $orange
 
 .cr.button.pink
 	background: $pink
 	color: $white 
 	&:hover
 		background: #C2185B
+	&:active
+		background: $pink 
 
 .cr.button.light-blue
 	background: $light-blue
 	color: $white
 	&:hover 
 		background: #0288D1  
+	&:active 
+		background: $light-blue
 
 .cr.button.indigo
 	background: $indigo
 	color: $white 
 	&:hover 
 		background: #303F9F
+	&:active 
+		background: $indigo 
 
 .cr.button.black
 	background: $black
@@ -193,17 +307,19 @@
 	background: $teal 
 	color: $white 
 	&:hover 
-		background: #00796B 
-
+		background: #00796B
+	&:active 
+		background: $teal 
 
 .cr.button.amber 
 	background: $amber
 	color: $white 
 	&:hover 
 		background: #FFA000
+	&:active 
+		background: $amber 
 
-button
+button.cr.button
+	outline: none 
 	border: none
-	height: 2.8rem
-	line-height: 2.8rem	
 
