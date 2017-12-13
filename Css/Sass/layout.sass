@@ -35,21 +35,28 @@ div.cr-inline
 	margin-right: 0.2rem
 
 .cr.container
-	max-width: 90%
 	height: 100%
-	margin-left: 20px
-	padding-right: 35px
-	padding-left: 35px
-	padding-top: 10px
-	padding-bottom: 10px
+	margin-top: 5px
+	margin-bottom: 5px
+	margin-right: auto 
+	margin-left: auto
+	padding-right: 15px
+	padding-left: 15px
 
-	@media screen and(max-width: 850px)
-		float: none 
+	@media screen and(max-width: 767px)
+		width: auto
 		max-width: 90%
-		margin-left: 0px
-		margin-right: 20px
-		padding-right: 35px
-		padding-left: 35px
-		padding-top: 10px
-		padding-bottom: 10px
 
+	@media screen and(min-width: 768px)
+		width: 750px
+		max-width: 90%
+
+	@media screen and(max-width: 1199px) and (min-width: 992px)
+		width: 970px
+		margin-left: 25px
+		max-width: 90%
+
+	@media screen and(min-width: 1200px)
+		width: 1170px
+		margin-left: 35px
+		max-width: 90%

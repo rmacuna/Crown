@@ -1,4 +1,108 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+input.cr.input.basic {
+  background: none;
+  border: 0.5px solid #BDBDBD;
+  outline: none;
+  height: 1.5rem;
+  min-width: 150px;
+  font-size: 16px;
+  border-radius: 0.2rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem; }
+  input.cr.input.basic:focus {
+    transition: 0.3s all ease 0s;
+    border: 0.5px solid #2196F3; }
+
+/*-----------------------------------MATERIAL INPUT ------------------------- */
+.material-field {
+  position: relative;
+  height: 52px;
+  padding: 16px 0 8px 0;
+  width: 95%; }
+
+.material-field:after, .material-field:before {
+  content: "";
+  height: 1px;
+  width: 95%;
+  background-color: #e7e7e7;
+  position: absolute;
+  bottom: 6px;
+  -webkit-transition: height 0.3s ease-out;
+  -o-transition: height 0.3s ease-out;
+  -moz-transition: height 0.3s ease-out;
+  transition: height 0.3s ease-out;
+  left: 0; }
+
+.material-field:after {
+  background-color: #E91E63;
+  transform: scaleX(0);
+  -webkit-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  transition: transform 0.3s; }
+
+.is-focused .m-label {
+  color: #E91E63; }
+
+.is-focused:after, .m-label:after {
+  transform: scaleX(1);
+  height: 2px; }
+
+.has-label .m-label {
+  transform: translateY(0) scale(0.75); }
+
+.m-input {
+  position: relative;
+  display: block;
+  width: 95%;
+  height: 38px;
+  padding-bottom: 2px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+  font-family: "Nunito", open-sans;
+  line-height: 16px;
+  font-size: 16px;
+  background: transparent;
+  outline: none;
+  border: none;
+  -webkit-appearance: none; }
+
+.m-label {
+  position: relative;
+  margin: 0;
+  color: #bfbfbf;
+  line-height: 16px;
+  font-weight: 400px;
+  font-size: 16px;
+  display: block;
+  transform: translateY(24px);
+  -webkit-transition: transform 0.3s, font-size 0.3s;
+  -o-transition: transform 0.3s, font-size 0.3s;
+  -moz-transition: transform 0.3s, font-size 0.3s;
+  transition: transform 0.3s, font-size 0.3s;
+  transform-origin: 0 50%; }
+
+input.medium {
+  width: 250px; }
+
+input.large {
+  width: 320px; }
+
+input.adaptive {
+  width: 95%; }
+
+input.cr.input.gold {
+  border: 0.5px solid #bf9b30; }
+
+input.cr.input.green {
+  border: 0.5px solid #00C853; }
+
+input.cr.input.error {
+  border: 0.5px solid #F44336; }
+
 .col-1 {
   width: 8.33%; }
 
@@ -45,23 +149,31 @@ div.cr-inline {
   margin-right: 0.2rem; }
 
 .cr.container {
-  max-width: 90%;
   height: 100%;
-  margin-left: 20px;
-  padding-right: 35px;
-  padding-left: 35px;
-  padding-top: 10px;
-  padding-bottom: 10px; }
-  @media screen and (max-width: 850px) {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px; }
+  @media screen and (max-width: 767px) {
     .cr.container {
-      float: none;
-      max-width: 90%;
-      margin-left: 0px;
-      margin-right: 20px;
-      padding-right: 35px;
-      padding-left: 35px;
-      padding-top: 10px;
-      padding-bottom: 10px; } }
+      width: auto;
+      max-width: 90%; } }
+  @media screen and (min-width: 768px) {
+    .cr.container {
+      width: 750px;
+      max-width: 90%; } }
+  @media screen and (max-width: 1199px) and (min-width: 992px) {
+    .cr.container {
+      width: 970px;
+      margin-left: 25px;
+      max-width: 90%; } }
+  @media screen and (min-width: 1200px) {
+    .cr.container {
+      width: 1170px;
+      margin-left: 35px;
+      max-width: 90%; } }
 
 /*-----------------------------------All  BUTTONS CODE---------------------------------------------------------- */
 button.cr.button {
@@ -90,7 +202,7 @@ button.cr.button {
   border-radius: 0px; }
 
 .cr.button {
-  transition: all 0.3s ease 0s; }
+  transition: background-color 0.3s; }
   .cr.button:active {
     background: rgba(0, 0, 0, 0.2); }
 
@@ -108,17 +220,24 @@ button.cr.button {
   line-height: 3rem; }
 
 .cr.button.adaptive {
-  width: 100%; }
+  width: 95%; }
 
 /* -------------------------------|RAISED BUTTONS CODE|-------------------------------------------------------- */
 .cr.button.raised {
+  -webkit-transition: box-shadow 0.3s;
+  -moz-transition: box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
 
 .cr.button.raised:active {
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4); }
 
 .cr.button.hoverable {
-  transition: all 0.3s ease 0s; }
+  -o-transition: box-shadow 0.3s;
+  -moz-transition: background 0.3s, box-shadow 0.2s;
+  -webkit-transition: background 0.3s, box-shadow 0.2s;
+  transition: background 0.3s, box-shadow 0.3s; }
   .cr.button.hoverable:hover {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3); }
 

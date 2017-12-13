@@ -3,7 +3,7 @@
 button.cr.button
 	outline: none 
 	border: none
-
+	
 .cr.button
 	background: #F5F5F5
 	border-radius: 0.15rem
@@ -26,7 +26,7 @@ button.cr.button
 	border-radius: 0px
 
 .cr.button
-	transition: all 0.3s ease 0s
+	transition: background-color 0.3s
 	&:active
 		background: rgba(0,0,0,0.2)
 
@@ -44,11 +44,15 @@ button.cr.button
 	line-height: $button-big-height
 
 .cr.button.adaptive
-	width: 100%
+	width: 95%
 
 	
 /* -------------------------------|RAISED BUTTONS CODE|--------------------------------------------------------*/
 .cr.button.raised
+	-webkit-transition: box-shadow 0.3s
+	-moz-transition: box-shadow 0.3s
+	-o-transition: box-shadow 0.3s
+	transition: box-shadow 0.3s
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
 
 .cr.button.raised
@@ -56,93 +60,12 @@ button.cr.button
 		box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0, 0.12), 0 5px 5px -3px rgba(0,0,0, 0.4)
 
 .cr.button.hoverable
-	transition: all 0.3s ease 0s
+	-o-transition: box-shadow 0.3s
+	-moz-transition: background 0.3s, box-shadow 0.2s
+	-webkit-transition: background 0.3s,box-shadow 0.2s
+	transition: background 0.3s,box-shadow 0.3s
 	&:hover
 		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .3)
-
-// .cr.button.ripple
-// 	overflow: hidden
-// 	position: relative 
-
-// .cr.button.ripple
-// 	&:after
-// 		content: ''
-// 		display: block
-// 		position: absolute
-// 		top: 50%
-// 		left: 50%
-// 		width: 120px
-// 		height: 120px
-// 		margin-left: -60px
-// 		margin-top: -60px
-// 		background: rgba(255, 255, 255, .5)
-// 		border-radius: 100%
-// 		transform: scale(0)
-
-// .cr.button.ripple
-// 	&:not(:active)
-// 		&:after
-// 			animation: ripple 1s ease-out
-
-// .cr.button.ripple
-// 	&:after
-// 		visibility: hidden 
-
-// .cr.button.ripple 
-// 	&:focus
-// 		&:after
-// 			visibility: visible
-
-// *, *:before, *:after
-// 	box-sizing: border-box
-
-
-// @-webkit-keyframes ripple
-// 	0%
-// 		-webkit-transform: scale(0)
-// 	20%
-// 		-webkit-transform: scale(0)
-// 	100%
-// 		opacity: 0
-// 		-webkit-transform: scale(1)
-
-// @-moz-keyframes ripple
-// 	0%
-// 		transform: scale(0)
-// 	20%
-// 		transform: scale(0)
-// 	100%
-// 		opacity: 0
-// 		transform: scale(1)
-
-// @-ms-keyframes ripple 
-// 	0%
-// 		transform: scale(0)
-// 	20%
-// 		transform: scale(0)
-// 	100%
-// 		opacity: 0
-// 		transform: scale(1)
-
-// @-o-keyframes ripple
-// 	0%
-// 		transform: scale(0)
-// 	20%
-// 		transform: scale(0)
-// 	100%
-// 		opacity: 0
-// 		transform: scale(1)
-
-// @keyframes ripple
-// 	0%
-// 		transform: scale(0)
-// 	20%
-// 		transform: scale(0)
-// 	100%
-// 		opacity: 0
-// 		transform: scale(1)
-
-
 /* --------------------------------------- OUTLINED BUTTONS --------------------------------------------------*/
 .cr.button.outline
 	background: none 
