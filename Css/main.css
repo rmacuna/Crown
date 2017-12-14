@@ -20,12 +20,12 @@ input.cr.input.basic {
   position: relative;
   height: 52px;
   padding: 16px 0 8px 0;
-  width: 95%; }
+  width: 100%; }
 
 .material-field:after, .material-field:before {
   content: "";
   height: 1px;
-  width: 95%;
+  width: 100%;
   background-color: #e7e7e7;
   position: absolute;
   bottom: 6px;
@@ -56,7 +56,7 @@ input.cr.input.basic {
 .m-input {
   position: relative;
   display: block;
-  width: 95%;
+  width: 100%;
   height: 38px;
   padding-bottom: 2px;
   padding-top: 0px;
@@ -84,6 +84,36 @@ input.cr.input.basic {
   -moz-transition: transform 0.3s, font-size 0.3s;
   transition: transform 0.3s, font-size 0.3s;
   transform-origin: 0 50%; }
+
+span.cr-state[data-error].error:before {
+  content: attr(data-error);
+  width: 30px;
+  heigh: 20px;
+  position: relative;
+  color: #E91E63;
+  display: none;
+  visibility: hidden;
+  white-space: nowrap;
+  font-size: 12px; }
+
+span.cr-state[data-positive].done:before {
+  content: attr(data-positive);
+  width: 30px;
+  height: 20px;
+  position: relative;
+  color: #00C853;
+  display: none;
+  visibility: hidden;
+  white-space: nowrap;
+  font-size: 12px; }
+
+span.cr-state.error.show:before {
+  display: block;
+  visibility: visible; }
+
+span.cr-state.done.show:before {
+  display: block;
+  visibility: visible; }
 
 input.medium {
   width: 250px; }

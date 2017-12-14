@@ -22,13 +22,13 @@ input.cr.input.basic
     position: relative 
     height: 52px
     padding: 16px 0 8px 0
-    width: 95%
+    width: $m-input-adaptive
 
 .material-field
     &:after, &:before
         content: ''
         height: 1px 
-        width: 95%
+        width: $m-input-adaptive
         background-color: #e7e7e7
         position: absolute
         bottom: 6px
@@ -59,18 +59,15 @@ input.cr.input.basic
 .has-label .m-label
     transform: translateY(0) scale(0.75)
 
-
 .m-input
     position: relative 
-
     display: block 
-    width: 95%
+    width: $m-input-adaptive
     height: 38px
     padding-bottom: 2px
     padding-top: 0px
     padding-right: 0px
     padding-left: 0px
-
     font-family: 'Nunito', open-sans
     line-height: 16px
     font-size: 16px
@@ -98,6 +95,40 @@ input.cr.input.basic
     transition: transform 0.3s, font-size 0.3s
 
     transform-origin: 0 50%
+
+span.cr-state[data-error].error
+    &:before
+        content: attr(data-error)
+        width: 30px
+        heigh: 20px
+        position: relative
+        color: $accent
+        display: none
+        visibility: hidden
+        white-space: nowrap
+        font-size: 12px
+
+span.cr-state[data-positive].done
+    &:before
+        content: attr(data-positive)
+        width: 30px
+        height: 20px
+        position: relative 
+        color: $green
+        display: none 
+        visibility: hidden 
+        white-space: nowrap
+        font-size: 12px
+
+span.cr-state.error.show
+    &:before
+        display: block
+        visibility: visible
+
+span.cr-state.done.show
+    &:before
+        display: block
+        visibility: visible
 
 
 
