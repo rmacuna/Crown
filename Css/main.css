@@ -1,28 +1,49 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
-input.cr.input.basic {
-  background: none;
-  border: 0.5px solid #BDBDBD;
-  outline: none;
-  height: 1.5rem;
-  min-width: 150px;
+div.cr.input.basic {
+  position: relative;
+  height: 32px;
+  vertical-align: middle;
+  padding: 16px 0 8px 0;
+  width: 100%; }
+  div.cr.input.basic label {
+    margin: 5px auto; }
+  div.cr.input.basic input {
+    position: relative;
+    height: 36px;
+    font-size: 16px;
+    border-radius: 2px;
+    border: 0.5px solid #BDBDBD;
+    padding: 2px 8px 2px 8px;
+    outline: none;
+    transition: border-color 0.3s; }
+    div.cr.input.basic input:focus {
+      border-color: #2196F3; }
+  div.cr.input.basic input.has-text {
+    border-color: #2196F3; }
+  div.cr.input.basic input.has-error {
+    border-color: #F44336; }
+  div.cr.input.basic input.done {
+    border-color: #00C853; }
+
+input.done {
+  border-color: #00C853; }
+
+label.basic.label {
+  float: left;
+  display: inline-block;
+  width: 80px;
+  max-width: 60px;
   font-size: 16px;
-  border-radius: 0.2rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
-  input.cr.input.basic:focus {
-    transition: 0.3s all ease 0s;
-    border: 0.5px solid #2196F3; }
+  vertical-align: baseline; }
 
 /*-----------------------------------MATERIAL INPUT ------------------------- */
-.material-field {
+.cr-material-field {
   position: relative;
   height: 52px;
   padding: 16px 0 8px 0;
   width: 100%; }
 
-.material-field:after, .material-field:before {
+.cr-material-field:after, .cr-material-field:before {
   content: "";
   height: 1px;
   width: 100%;
@@ -35,7 +56,7 @@ input.cr.input.basic {
   transition: height 0.3s ease-out;
   left: 0; }
 
-.material-field:after {
+.cr-material-field:after {
   background-color: #E91E63;
   transform: scaleX(0);
   -webkit-transition: transform 0.3s;
@@ -90,7 +111,7 @@ span.cr-state[data-error].error:before {
   width: 30px;
   heigh: 20px;
   position: relative;
-  color: #E91E63;
+  color: #F44336;
   display: none;
   visibility: hidden;
   white-space: nowrap;
@@ -122,7 +143,7 @@ input.large {
   width: 320px; }
 
 input.adaptive {
-  width: 95%; }
+  width: 100%; }
 
 input.cr.input.gold {
   border: 0.5px solid #bf9b30; }

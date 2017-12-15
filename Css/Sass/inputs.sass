@@ -1,30 +1,92 @@
 @import 'variables'
 
-input.cr.input.basic
-    background: none
-    border: 0.5px solid #BDBDBD
-    outline: none 
-    height: 1.5rem
-    min-width: 150px
+
+div.cr.input.basic
+    position: relative
+    height: 32px
+    vertical-align: middle 
+    padding: 16px 0 8px 0 
+    width: $m-input-adaptive
+    label
+        margin: 5px auto 
+    input
+        position: relative
+        height: 36px
+        font-size: 16px
+        border-radius: 2px 
+        border: 0.5px solid $input-border
+        padding: 2px 8px 2px 8px
+        outline: none
+        transition: border-color 0.3s 
+        &:focus
+            border-color: $blue
+
+    input.has-text
+        border-color: $blue
+
+    input.has-error
+        border-color: $red 
+
+    input.done 
+        border-color: $green
+
+// .validate .has-text
+//     border-color: $blue
+
+// .validate .has-error[data-error]
+//     border-color: $red
+//     &:after 
+//         content: 'dasd'
+//         width: 30px
+//         height: 20px
+//         position: relative 
+//         color: $red-1
+
+
+input.done 
+    border-color: $green
+
+
+
+// input.cr.input.basic
+//     background: none
+//     border: 0.5px solid #BDBDBD
+//     outline: none 
+//     height: 1.5rem
+//     min-width: 150px
+//     font-size: 16px
+//     margin-left: 5px
+//     margin-top: 5px
+//     margin-bottom: 5px
+//     margin-right: 5px
+//     display: block
+//     vertical-align: baseline
+//     border-radius: 0.2rem
+//     padding-left: 0.5rem
+//     padding-right: 0.5rem
+//     padding-top: 0.5rem
+//     padding-bottom: 0.5rem
+//     &:focus
+//         transition: 0.3s all ease 0s
+//         border: 0.5px solid $blue
+
+label.basic.label
+    float: left
+    display: inline-block
+    width: 80px
+    max-width: 60px
     font-size: 16px
-    border-radius: 0.2rem
-    padding-left: 0.5rem
-    padding-right: 0.5rem
-    padding-top: 0.5rem
-    padding-bottom: 0.5rem
-    &:focus
-        transition: 0.3s all ease 0s
-        border: 0.5px solid $blue
+    vertical-align: baseline
 
 /*-----------------------------------MATERIAL INPUT -------------------------*/
 
-.material-field
+.cr-material-field
     position: relative 
     height: 52px
     padding: 16px 0 8px 0
     width: $m-input-adaptive
 
-.material-field
+.cr-material-field
     &:after, &:before
         content: ''
         height: 1px 
@@ -38,7 +100,7 @@ input.cr.input.basic
         transition: height 0.3s ease-out 
         left: 0 
 
-.material-field
+.cr-material-field
     &:after 
         background-color: $accent
         transform: scaleX(0)
@@ -102,7 +164,7 @@ span.cr-state[data-error].error
         width: 30px
         heigh: 20px
         position: relative
-        color: $accent
+        color: $red
         display: none
         visibility: hidden
         white-space: nowrap
@@ -131,9 +193,6 @@ span.cr-state.done.show
         visibility: visible
 
 
-
-
-
 input.medium
     width: 250px
 
@@ -141,7 +200,7 @@ input.large
     width: 320px
 
 input.adaptive
-    width: 95%
+    width: $m-input-adaptive
 
 
 input.cr.input.gold
