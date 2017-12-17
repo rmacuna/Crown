@@ -5,9 +5,87 @@ jQuery(function($) {
         $(this).parent().addClass('is-focused has-label');
     })
 
+    $('.markable').blur(function() {
+        let value = $(this).val();
+        let input = $(this).parent().find('input');
+        if (value.trim().length > 0) {
+            input.addClass('has-text');
+        } else {
+            input.removeClass('has-text');
+        }
+    })
+
+    $('.in-basic.validate').blur(function() {
+        let value = $(this).val();
+        let span_elem = $(this).parent().find('span');
+        if ($(this).is('.numbers')) {
+            if (value.length > 0) {
+                if (span_elem.attr('class').search('email') == -1) {
+                    if (!$.isNumeric(value)) {
+                        if (span_elem.is('.done')) {
+                            span_elem.removeClass('done');
+                        }
+                        if (!$(this).is('.error')) {
+                            $(this).addClass('error'); //Añado la clae error al input
+                            span_elem.addClass('error');
+                        }
+                    } else {
+                        if ($(this).is('.error')) {
+                            span_elem.removeClass('error');
+                            $(this).removeClass('error');
+                        }
+                        if (!span_elem.is('done')) {
+                            span_elem.addClass('done');
+                        }
+                    }
+                }
+            } else {
+                if ($(this).is('.done')) {
+                    $(this).removeClass('done');
+                    span_elem.removeClass('done');
+                } else if ($(this).is('.error')) {
+                    $(this).removeClass('error');
+                    span_elem.removeClass('error');
+                }
+            }
+        } else if ($(this).is('.email')) {
+            let value = $(this).val();
+            let re = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+            let span_elem = $(this).parent().find('span');
+            if (value.length > 0) {
+                if (span_elem.attr('class').search('numbers') == -1) {
+                    if (!re.test(value.trim())) {
+                        if (span_elem.is('.done')) {
+                            span_elem.removeClass('done');
+                        }
+                        if (!span_elem.is('.error')) {
+                            $(this).addClass('error');
+                            span_elem.addClass('error');
+                        }
+                    } else {
+                        if ($(this).is('.error')) {
+                            span_elem.removeClass('error');
+                            $(this).removeClass('error');
+                        }
+                        if (!span_elem.is('.done')) {
+                            span_elem.addClass('done');
+                        }
+                    }
+                }
+            } else {
+                if ($(this).is('.done')) {
+                    span_elem.removeClass('done');
+                } else if ($(this).is('.error')) {
+                    span_elem.removeClass('error');
+                    $(this).removeClass('error');
+                }
+            }
+        }
+    })
+
     $('.m-input.validate.numbers').blur(function() {
         let value = $(this).val(); //Valor del input
-        let spanClass = $(this).parent().find('span')// Tomo el id del field
+        let spanClass = $(this).parent().find('span') // Tomo el id del field
         let className = $(this).attr('class'); // Tomo la clase 
         let elem = $(spanClass);
         //Valido que no se agrege ninguna de las clases de validación como email o letras nada mas
@@ -96,7 +174,7 @@ jQuery(function($) {
                         } else {
                             valid = true;
                         }
-                    }else{
+                    } else {
                         valid = true;
                     }
                 } else if ($(this).is('.numbers')) {
@@ -111,7 +189,7 @@ jQuery(function($) {
                         } else {
                             valid = true;
                         }
-                    }else{
+                    } else {
                         valid = true;
                     }
                 }
@@ -119,7 +197,7 @@ jQuery(function($) {
         });
         return valid;
     })
-    
+
     $('.m-input').blur(function() {
         $parent = $(this).parent();
         if ($(this).val() == '') {

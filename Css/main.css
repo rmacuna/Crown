@@ -2,11 +2,15 @@
 div.cr.input.basic {
   position: relative;
   height: 32px;
+  margin: 4px 2px 10px 2px;
   vertical-align: middle;
   padding: 16px 0 8px 0;
   width: 100%; }
   div.cr.input.basic label {
-    margin: 5px auto; }
+    width: 100px;
+    padding-top: 5px;
+    position: relative;
+    display: inline-block; }
   div.cr.input.basic input {
     position: relative;
     height: 36px;
@@ -15,18 +19,39 @@ div.cr.input.basic {
     border: 0.5px solid #BDBDBD;
     padding: 2px 8px 2px 8px;
     outline: none;
-    transition: border-color 0.3s; }
+    transition: border-color 0.3s, background 0.3s; }
     div.cr.input.basic input:focus {
       border-color: #2196F3; }
+  div.cr.input.basic input.error {
+    background: rgba(244, 67, 54, 0.1);
+    border-color: #B71C1C;
+    color: #B71C1C; }
+  div.cr.input.basic input.done {
+    background: rgba(0, 200, 83, 0.2);
+    border-color: #8BC34A;
+    color: #000; }
+  div.cr.input.basic span:before, div.cr.input.basic input:before {
+    text-align: left;
+    box-sizing: content-box;
+    vertical-align: baseline; }
+  div.cr.input.basic span.cr-message.error:before {
+    content: "X";
+    position: relative;
+    display: inline-block;
+    font-size: 12px;
+    width: 20px;
+    height: 36px;
+    color: #B71C1C; }
+  div.cr.input.basic span.cr-message.done:after {
+    content: "";
+    display: inline-block;
+    width: 4.5px;
+    height: 9px;
+    border: solid #00C853;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg); }
   div.cr.input.basic input.has-text {
     border-color: #2196F3; }
-  div.cr.input.basic input.has-error {
-    border-color: #F44336; }
-  div.cr.input.basic input.done {
-    border-color: #00C853; }
-
-input.done {
-  border-color: #00C853; }
 
 label.basic.label {
   float: left;
@@ -106,7 +131,7 @@ label.basic.label {
   transition: transform 0.3s, font-size 0.3s;
   transform-origin: 0 50%; }
 
-span.cr-state[data-error].error:before {
+span.m-cr-state[data-error].error:before {
   content: attr(data-error);
   width: 30px;
   heigh: 20px;
@@ -117,7 +142,7 @@ span.cr-state[data-error].error:before {
   white-space: nowrap;
   font-size: 12px; }
 
-span.cr-state[data-positive].done:before {
+span.m-cr-state[data-positive].done:before {
   content: attr(data-positive);
   width: 30px;
   height: 20px;
@@ -128,11 +153,11 @@ span.cr-state[data-positive].done:before {
   white-space: nowrap;
   font-size: 12px; }
 
-span.cr-state.error.show:before {
+span.m-cr-state.error.show:before {
   display: block;
   visibility: visible; }
 
-span.cr-state.done.show:before {
+span.m-cr-state.done.show:before {
   display: block;
   visibility: visible; }
 
@@ -251,6 +276,9 @@ button.cr.button {
 
 .cr.button.plain {
   border-radius: 0px; }
+
+.cr.button.rounded {
+  border-radius: 50px; }
 
 .cr.button {
   transition: background-color 0.3s; }
