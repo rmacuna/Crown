@@ -15,7 +15,8 @@ input
     height: 36px
     font-size: 16px
     font-family: 'Nunito', open-sans
-    border-radius: 2px 
+    border-radius: 2px
+    margin: 0 
     border: 1px solid $input-border
     padding: 2px 8px 2px 8px
     outline: none
@@ -123,24 +124,67 @@ div.cr.input.basic
 
 
 div.cr.input.label
-    position: relative
-    height: 32px
-    vertical-align: middle 
-    padding: 16px 0 8px 0 
-    width: $m-input-adaptive
+    margin: 4px 2px 10px 2px
+    input
+        left: -4px
+        width: 80%
     div.label
-        &:before
-        width: 100px
-        padding: 2px 2px 2px 2px
-        text-align: center
-        height: 32px
-        display: inline-block
+        max-width: 200px
+        white-space: nowrap
+        padding-top: 9.5px
+        padding-left: 20px
+        padding-right: 18px
         background: lighten($gray, 30)
-        color: $black
-        border-radius: 2px
+        color: lighten($black, 30)
+        height: 31px
+        border-top-left-radius: 2px
+        border-bottom-left-radius: 2px
+        border: 0.5px solid lighten($gray, 20)
+        border-right: 0px
+        position: relative
+        display: inline-block
+        text-align: center
+        font-weight: bold
 
+    div.label.blue
+        background: $blue 
+        color: $white
+        border-top-left-radius: 2px
+        border-bottom-left-radius: 2px
+        border: 0.5px solid $blue
+        border-right: 0px
 
-    
+    div.label.green
+        background: $green 
+        color: $white
+        border-top-left-radius: 2px
+        border-bottom-left-radius: 2px
+        border: 0.5px solid $green
+        border-right: 0px
+
+    div.label.teal
+        background: $teal        
+        color: $white
+        border-top-left-radius: 2px
+        border-bottom-left-radius: 2px
+        border: 0.5px solid $teal
+        border-right: 0px
+    div.label.pink
+        background: $pink 
+        color: $white
+        border-top-left-radius: 2px
+        border-bottom-left-radius: 2px
+        border: 0.5px solid $pink
+        border-right: 0px
+
+    div.label.red
+        background: $red 
+        color: $white
+        border-top-left-radius: 2px
+        border-bottom-left-radius: 2px
+        border: 0.5px solid $red
+        border-right: 0px 
+
 
 
 /*-----------------------------------MATERIAL INPUT -------------------------*/
