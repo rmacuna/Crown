@@ -1,5 +1,9 @@
 @import 'variables'
 
+.bold
+    font-weight: bold
+
+
 div.cr.input.basic
     position: relative
     height: 32px
@@ -18,13 +22,62 @@ div.cr.input.basic
         position: relative
         height: 36px
         font-size: 16px
+        font-family: 'Nunito', open-sans
         border-radius: 2px 
-        border: 0.5px solid $input-border
+        border: 1px solid $input-border
         padding: 2px 8px 2px 8px
         outline: none
         transition: border-color 0.3s, background 0.3s 
         &:focus
             border-color: $blue
+
+    input.green-outline
+        border: 1px solid $green
+
+    input.blue-outline
+        border: 1px solid $blue 
+
+    input.red-outline
+        border: 1px solid $red
+
+    input.pink-outline 
+        border: 1px solid $pink
+
+    input.green-font
+        color: $green 
+
+    input.red-font
+        color: $red  
+
+    input.pink-font
+        color: $pink 
+
+    input.blue-font
+        color: $blue
+
+    input.rounded 
+        border-radius: 50px
+        padding: 2px 12px 2px 12px
+
+    input.dark-background
+        border: 2px solid $white
+        background: $black
+        color: $white
+       
+    input.dark-background.blue
+        border: 2px solid $blue
+        background: $black
+        color: $white
+
+    input.dark-background.green
+        border: 2px solid $green
+        background: $black
+        color: $white
+
+    input.dark-background.red
+        border: 2px solid $red
+        background: $black
+        color: $white
 
     input.error 
         background: rgba($red, .1)
@@ -47,6 +100,7 @@ div.cr.input.basic
     span.cr-message.error
         &:before
             content: 'X'
+            font-weight: bold
             position: relative
             display: inline-block
             font-size: 12px 
@@ -54,12 +108,12 @@ div.cr.input.basic
             height: 36px
             color: $red-1
 
-
     span.cr-message.done
         &:after
             content: ''
             display: inline-block
             width: 4.5px
+            font-weight: bold
             height: 9px
             border: solid $green 
             border-width: 0 2px 2px 0
@@ -69,13 +123,9 @@ div.cr.input.basic
     input.has-text
         border-color: $blue
 
-label.basic.label
-    float: left
-    display: inline-block
-    width: 80px
-    max-width: 60px
-    font-size: 16px
-    vertical-align: baseline
+
+
+
 
 /*-----------------------------------MATERIAL INPUT -------------------------*/
 

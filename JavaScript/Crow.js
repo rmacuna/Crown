@@ -40,10 +40,9 @@ jQuery(function($) {
                     }
                 }
             } else {
-                if ($(this).is('.done')) {
-                    $(this).removeClass('done');
+                if (span_elem.is('.done')) {
                     span_elem.removeClass('done');
-                } else if ($(this).is('.error')) {
+                } else if (span_elem.is('.error')) {
                     $(this).removeClass('error');
                     span_elem.removeClass('error');
                 }
@@ -73,7 +72,7 @@ jQuery(function($) {
                     }
                 }
             } else {
-                if ($(this).is('.done')) {
+                if (span_elem.is('.done')) {
                     span_elem.removeClass('done');
                 } else if ($(this).is('.error')) {
                     span_elem.removeClass('error');

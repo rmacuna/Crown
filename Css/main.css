@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+.bold {
+  font-weight: bold; }
+
 div.cr.input.basic {
   position: relative;
   height: 32px;
@@ -15,13 +18,49 @@ div.cr.input.basic {
     position: relative;
     height: 36px;
     font-size: 16px;
+    font-family: "Nunito", open-sans;
     border-radius: 2px;
-    border: 0.5px solid #BDBDBD;
+    border: 1px solid #BDBDBD;
     padding: 2px 8px 2px 8px;
     outline: none;
     transition: border-color 0.3s, background 0.3s; }
     div.cr.input.basic input:focus {
       border-color: #2196F3; }
+  div.cr.input.basic input.green-outline {
+    border: 1px solid #00C853; }
+  div.cr.input.basic input.blue-outline {
+    border: 1px solid #2196F3; }
+  div.cr.input.basic input.red-outline {
+    border: 1px solid #F44336; }
+  div.cr.input.basic input.pink-outline {
+    border: 1px solid #E91E63; }
+  div.cr.input.basic input.green-font {
+    color: #00C853; }
+  div.cr.input.basic input.red-font {
+    color: #F44336; }
+  div.cr.input.basic input.pink-font {
+    color: #E91E63; }
+  div.cr.input.basic input.blue-font {
+    color: #2196F3; }
+  div.cr.input.basic input.rounded {
+    border-radius: 50px;
+    padding: 2px 12px 2px 12px; }
+  div.cr.input.basic input.dark-background {
+    border: 2px solid #fff;
+    background: #000;
+    color: #fff; }
+  div.cr.input.basic input.dark-background.blue {
+    border: 2px solid #2196F3;
+    background: #000;
+    color: #fff; }
+  div.cr.input.basic input.dark-background.green {
+    border: 2px solid #00C853;
+    background: #000;
+    color: #fff; }
+  div.cr.input.basic input.dark-background.red {
+    border: 2px solid #F44336;
+    background: #000;
+    color: #fff; }
   div.cr.input.basic input.error {
     background: rgba(244, 67, 54, 0.1);
     border-color: #B71C1C;
@@ -36,6 +75,7 @@ div.cr.input.basic {
     vertical-align: baseline; }
   div.cr.input.basic span.cr-message.error:before {
     content: "X";
+    font-weight: bold;
     position: relative;
     display: inline-block;
     font-size: 12px;
@@ -46,20 +86,13 @@ div.cr.input.basic {
     content: "";
     display: inline-block;
     width: 4.5px;
+    font-weight: bold;
     height: 9px;
     border: solid #00C853;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg); }
   div.cr.input.basic input.has-text {
     border-color: #2196F3; }
-
-label.basic.label {
-  float: left;
-  display: inline-block;
-  width: 80px;
-  max-width: 60px;
-  font-size: 16px;
-  vertical-align: baseline; }
 
 /*-----------------------------------MATERIAL INPUT ------------------------- */
 .cr-material-field {
