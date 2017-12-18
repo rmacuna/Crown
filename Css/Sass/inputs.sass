@@ -3,6 +3,87 @@
 .bold
     font-weight: bold
 
+    
+label
+    width: 100px
+    padding-top: 5px
+    position: relative
+    display: inline-block
+
+input
+    position: relative
+    height: 36px
+    font-size: 16px
+    font-family: 'Nunito', open-sans
+    border-radius: 2px 
+    border: 1px solid $input-border
+    padding: 2px 8px 2px 8px
+    outline: none
+    transition: border-color 0.3s, background 0.3s 
+    &:focus
+        border-color: $blue
+
+input.green-outline
+    border: 1px solid $green
+
+input.blue-outline
+    border: 1px solid $blue 
+
+input.red-outline
+    border: 1px solid $red
+
+input.pink-outline 
+    border: 1px solid $pink
+
+input.green-font
+    color: $green 
+
+input.red-font
+    color: $red  
+
+input.pink-font
+    color: $pink 
+
+input.blue-font
+    color: $blue
+
+input.rounded 
+    border-radius: 50px
+    padding: 2px 12px 2px 12px
+
+input.dark-background
+    border: 2px solid $white
+    background: $black
+    color: $white
+       
+input.dark-background.blue
+    border: 2px solid $blue
+    background: $black
+    color: $white
+
+input.dark-background.green
+    border: 2px solid $green
+    background: $black
+    color: $white
+
+input.dark-background.red
+    border: 2px solid $red
+    background: $black
+    color: $white
+
+input.error 
+    background: rgba($red, .1)
+    border-color: $red-1
+    color: $red-1
+       
+
+input.done 
+    background: rgba($green, .2)
+    border-color: $light-green
+    color: $black
+
+input.has-text
+    border-color: $blue
 
 div.cr.input.basic
     position: relative
@@ -11,91 +92,12 @@ div.cr.input.basic
     vertical-align: middle 
     padding: 16px 0 8px 0 
     width: $m-input-adaptive
-    
-    label
-        width: 100px
-        padding-top: 5px
-        position: relative
-        display: inline-block
-
-    input
-        position: relative
-        height: 36px
-        font-size: 16px
-        font-family: 'Nunito', open-sans
-        border-radius: 2px 
-        border: 1px solid $input-border
-        padding: 2px 8px 2px 8px
-        outline: none
-        transition: border-color 0.3s, background 0.3s 
-        &:focus
-            border-color: $blue
-
-    input.green-outline
-        border: 1px solid $green
-
-    input.blue-outline
-        border: 1px solid $blue 
-
-    input.red-outline
-        border: 1px solid $red
-
-    input.pink-outline 
-        border: 1px solid $pink
-
-    input.green-font
-        color: $green 
-
-    input.red-font
-        color: $red  
-
-    input.pink-font
-        color: $pink 
-
-    input.blue-font
-        color: $blue
-
-    input.rounded 
-        border-radius: 50px
-        padding: 2px 12px 2px 12px
-
-    input.dark-background
-        border: 2px solid $white
-        background: $black
-        color: $white
-       
-    input.dark-background.blue
-        border: 2px solid $blue
-        background: $black
-        color: $white
-
-    input.dark-background.green
-        border: 2px solid $green
-        background: $black
-        color: $white
-
-    input.dark-background.red
-        border: 2px solid $red
-        background: $black
-        color: $white
-
-    input.error 
-        background: rgba($red, .1)
-        border-color: $red-1
-        color: $red-1
-       
-
-    input.done 
-        background: rgba($green, .2)
-        border-color: $light-green
-        color: $black
 
     span, input
         &:before
             text-align: left
             box-sizing: content-box
             vertical-align: baseline 
-
 
     span.cr-message.error
         &:before
@@ -120,11 +122,25 @@ div.cr.input.basic
             transform: rotate(45deg)
 
 
-    input.has-text
-        border-color: $blue
+div.cr.input.label
+    position: relative
+    height: 32px
+    vertical-align: middle 
+    padding: 16px 0 8px 0 
+    width: $m-input-adaptive
+    div.label
+        &:before
+        width: 100px
+        padding: 2px 2px 2px 2px
+        text-align: center
+        height: 32px
+        display: inline-block
+        background: lighten($gray, 30)
+        color: $black
+        border-radius: 2px
 
 
-
+    
 
 
 /*-----------------------------------MATERIAL INPUT -------------------------*/

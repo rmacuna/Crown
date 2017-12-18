@@ -2,6 +2,86 @@
 .bold {
   font-weight: bold; }
 
+label {
+  width: 100px;
+  padding-top: 5px;
+  position: relative;
+  display: inline-block; }
+
+input {
+  position: relative;
+  height: 36px;
+  font-size: 16px;
+  font-family: "Nunito", open-sans;
+  border-radius: 2px;
+  border: 1px solid #BDBDBD;
+  padding: 2px 8px 2px 8px;
+  outline: none;
+  transition: border-color 0.3s, background 0.3s; }
+  input:focus {
+    border-color: #2196F3; }
+
+input.green-outline {
+  border: 1px solid #00C853; }
+
+input.blue-outline {
+  border: 1px solid #2196F3; }
+
+input.red-outline {
+  border: 1px solid #F44336; }
+
+input.pink-outline {
+  border: 1px solid #E91E63; }
+
+input.green-font {
+  color: #00C853; }
+
+input.red-font {
+  color: #F44336; }
+
+input.pink-font {
+  color: #E91E63; }
+
+input.blue-font {
+  color: #2196F3; }
+
+input.rounded {
+  border-radius: 50px;
+  padding: 2px 12px 2px 12px; }
+
+input.dark-background {
+  border: 2px solid #fff;
+  background: #000;
+  color: #fff; }
+
+input.dark-background.blue {
+  border: 2px solid #2196F3;
+  background: #000;
+  color: #fff; }
+
+input.dark-background.green {
+  border: 2px solid #00C853;
+  background: #000;
+  color: #fff; }
+
+input.dark-background.red {
+  border: 2px solid #F44336;
+  background: #000;
+  color: #fff; }
+
+input.error {
+  background: rgba(244, 67, 54, 0.1);
+  border-color: #B71C1C;
+  color: #B71C1C; }
+
+input.done {
+  background: rgba(0, 200, 83, 0.2);
+  border-color: #8BC34A;
+  color: #000; }
+
+input.has-text {
+  border-color: #2196F3; }
+
 div.cr.input.basic {
   position: relative;
   height: 32px;
@@ -9,66 +89,6 @@ div.cr.input.basic {
   vertical-align: middle;
   padding: 16px 0 8px 0;
   width: 100%; }
-  div.cr.input.basic label {
-    width: 100px;
-    padding-top: 5px;
-    position: relative;
-    display: inline-block; }
-  div.cr.input.basic input {
-    position: relative;
-    height: 36px;
-    font-size: 16px;
-    font-family: "Nunito", open-sans;
-    border-radius: 2px;
-    border: 1px solid #BDBDBD;
-    padding: 2px 8px 2px 8px;
-    outline: none;
-    transition: border-color 0.3s, background 0.3s; }
-    div.cr.input.basic input:focus {
-      border-color: #2196F3; }
-  div.cr.input.basic input.green-outline {
-    border: 1px solid #00C853; }
-  div.cr.input.basic input.blue-outline {
-    border: 1px solid #2196F3; }
-  div.cr.input.basic input.red-outline {
-    border: 1px solid #F44336; }
-  div.cr.input.basic input.pink-outline {
-    border: 1px solid #E91E63; }
-  div.cr.input.basic input.green-font {
-    color: #00C853; }
-  div.cr.input.basic input.red-font {
-    color: #F44336; }
-  div.cr.input.basic input.pink-font {
-    color: #E91E63; }
-  div.cr.input.basic input.blue-font {
-    color: #2196F3; }
-  div.cr.input.basic input.rounded {
-    border-radius: 50px;
-    padding: 2px 12px 2px 12px; }
-  div.cr.input.basic input.dark-background {
-    border: 2px solid #fff;
-    background: #000;
-    color: #fff; }
-  div.cr.input.basic input.dark-background.blue {
-    border: 2px solid #2196F3;
-    background: #000;
-    color: #fff; }
-  div.cr.input.basic input.dark-background.green {
-    border: 2px solid #00C853;
-    background: #000;
-    color: #fff; }
-  div.cr.input.basic input.dark-background.red {
-    border: 2px solid #F44336;
-    background: #000;
-    color: #fff; }
-  div.cr.input.basic input.error {
-    background: rgba(244, 67, 54, 0.1);
-    border-color: #B71C1C;
-    color: #B71C1C; }
-  div.cr.input.basic input.done {
-    background: rgba(0, 200, 83, 0.2);
-    border-color: #8BC34A;
-    color: #000; }
   div.cr.input.basic span:before, div.cr.input.basic input:before {
     text-align: left;
     box-sizing: content-box;
@@ -91,8 +111,22 @@ div.cr.input.basic {
     border: solid #00C853;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg); }
-  div.cr.input.basic input.has-text {
-    border-color: #2196F3; }
+
+div.cr.input.label {
+  position: relative;
+  height: 32px;
+  vertical-align: middle;
+  padding: 16px 0 8px 0;
+  width: 100%; }
+  div.cr.input.label div.label {
+    width: 100px;
+    padding: 2px 2px 2px 2px;
+    text-align: center;
+    height: 32px;
+    display: inline-block;
+    background: #ebebeb;
+    color: #000;
+    border-radius: 2px; }
 
 /*-----------------------------------MATERIAL INPUT ------------------------- */
 .cr-material-field {
