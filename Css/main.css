@@ -1,4 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+div.cr.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s;
+  height: auto;
+  min-height: 15rem;
+  width: 20rem;
+  min-width: 12rem;
+  font-size: 16px;
+  border-radius: 2px;
+  z-index: 1;
+  background: #fcfcfc; }
+  div.cr.card .card-head {
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    height: 30px;
+    font-weight: bold;
+    color: #4d4d4d;
+    padding: 15px 0px 10px 0;
+    margin: auto;
+    width: 100%;
+    border-bottom: 1px solid #d1d1d1; }
+  div.cr.card .card-body {
+    padding: 10px 5px 10px 5px;
+    font-size: 16px; }
+
 .bold {
   font-weight: bold; }
 
@@ -115,12 +141,10 @@ div.cr.input.basic {
 
 div.cr.input.label {
   margin: 4px 2px 10px 2px;
-  width: 100%; }
+  position: relative; }
   div.cr.input.label input {
-    left: -4px;
-    width: 80%; }
+    left: -4px; }
   div.cr.input.label div.label {
-    width: 10%;
     white-space: nowrap;
     padding-top: 9.5px;
     padding-left: 20px;
