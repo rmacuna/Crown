@@ -352,6 +352,48 @@ div.cr.input.adaptive {
 input.cr.input.error {
   border: 0.5px solid #F44336; }
 
+div.cr.snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px; }
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0; }
+  to {
+    bottom: 30px;
+    opacity: 1; } }
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0; }
+  to {
+    bottom: 30px;
+    opacity: 1; } }
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 0;
+    opacity: 1; }
+  to {
+    bottom: 30px;
+    opacity: 0; } }
+@keyframes fadeout {
+  from {
+    bottom: 0;
+    opacity: 1; }
+  to {
+    bottom: 30px;
+    opacity: 0; } }
 .col-1 {
   width: 8.33%; }
 

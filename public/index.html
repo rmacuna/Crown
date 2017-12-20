@@ -7,8 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../Css/main.css">
     <title>LearnDesign</title>
     <style type="text/css">
-    body{
-    }
+    body {}
+
     .sep {
         padding-top: 20px;
     }
@@ -17,31 +17,31 @@
 
 <body>
     <div class="cr container">
-            <div class="cr input label">
-                <input type="text" id="input1" name="input1">
-                <button class="ender">Copy</button>
+        <div class="cr input label">
+            <input type="text" id="input1" name="input1">
+            <button class="ender">Copy</button>
+            <a class="hola" href="">hola</a>
+        </div>
+        <div class="sep"></div>
+        <button type="submit" class="cr button outline green">Submit</button>
+        <div class="sep"></div>
+        <div class="cr card">
+            <div class="card-head">Header</div>
+            <div class="card-body">
             </div>
-
-            <!-- <div class="cr input label">
-                <div class="label">Last Name</div>
-                <input class="adaptive" type="text" id="input1" name="input1">
-            </div> -->
-
-            <div class="sep"></div>
-            <button type="submit" class="cr button outline green">Submit</button>
-            <div class="sep"></div>
-
-            <div class="cr card">
-                <div class="card-head">Header</div>
-                <div class="card-body">
-                </div>
-                <div class="card-footer">
-                </div>
+            <div class="card-footer">
             </div>
+        </div>
+        <div class="cr snackbar"></div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../JavaScript/Crow.js"></script>
-    <script type="text/javascript"></script>
+    <script>
+    $('button').on('click', function() {
+        $(".cr.snackbar").show('show', "Copied");
+
+    })
+    </script>
 </body>
 
 </html>

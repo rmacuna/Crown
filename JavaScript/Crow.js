@@ -6,15 +6,16 @@ jQuery(function($) {
     })
 
     $('.markable').blur(function() {
-        let value = $(this).val();
-        let input = $(this).parent().find('input');
-        if (value.trim().length > 0) {
-            input.addClass('has-text');
-        } else {
-            input.removeClass('has-text');
+        if (!$(this).parent().is('.material-field')) {
+            let value = $(this).val();
+            let input = $(this).parent().find('input');
+            if (value.trim().length > 0) {
+                input.addClass('has-text');
+            } else {
+                input.removeClass('has-text');
+            }
         }
     })
-
     $('.in-basic.validate').blur(function() {
         let value = $(this).val();
         let span_elem = $(this).parent().find('span');
@@ -81,7 +82,6 @@ jQuery(function($) {
             }
         }
     })
-
     $('.m-input.validate.numbers').blur(function() {
         let value = $(this).val(); //Valor del input
         let spanClass = $(this).parent().find('span') // Tomo el id del field
@@ -118,7 +118,6 @@ jQuery(function($) {
             }
         }
     })
-
     $('.m-input.validate.email').blur(function() {
         let value = $(this).val();
         let spanClass = $(this).parent().find('span');
@@ -154,8 +153,6 @@ jQuery(function($) {
             }
         }
     })
-
-
     $("form").submit(function() {
         var valid = true;
         $('input').each(function() {
@@ -196,7 +193,6 @@ jQuery(function($) {
         });
         return valid;
     })
-
     $('.m-input').blur(function() {
         $parent = $(this).parent();
         if ($(this).val() == '') {
@@ -205,3 +201,22 @@ jQuery(function($) {
         $parent.removeClass('is-focused');
     })
 })
+
+try {
+    (function($) {
+        $.fn.show = function(action, message) {
+            if ($(this).is('.cr.snackbar')) {
+                if (action == "show") {
+                    console.log($(this).html(message));
+                    return this.css({
+                        'visibility': "visible",
+                        'color': "white",
+                        'font-size': "14px",
+                        animation: "fadein 0.5s, fadeout 0.5s 2.5s"
+                    });
+                }
+            }
+        };
+    }(jQuery));
+} catch (e) {
+}
