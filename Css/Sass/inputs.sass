@@ -126,10 +126,13 @@ div.cr.input.basic
 div.cr.input.label
     margin: 4px 2px 10px 2px
     position: relative 
+    white-space: nowrap
+    display: inline-block
     input
         left: -4px
+        display: inline-block
+
     div.label
-        white-space: nowrap
         padding-top: 9.5px
         padding-left: 20px
         padding-right: 18px
@@ -182,7 +185,51 @@ div.cr.input.label
         border-top-left-radius: 2px
         border-bottom-left-radius: 2px
         border: 0.5px solid $red
-        border-right: 0px 
+        border-right: 0px
+
+    div.ender
+        padding-top: 9.5px
+        padding-left: 20px
+        padding-right: 18px
+        left: -9px
+        background: lighten($gray, 30)
+        color: lighten($black, 30)
+        height: 31px
+        margin: 0
+        border-top-right-radius: 2px
+        border-bottom-right-radius: 2px
+        border: 0.5px solid lighten($gray, 20)
+        border-left: 0px
+        position: relative
+        display: inline-block
+        text-align: center
+        font-weight: bold
+
+    button.ender
+        padding-top: 10px
+        padding-left: 19px
+        outline: none
+        padding-right: 17px
+        padding-bottom: 9px
+        font-size: 12px
+        left: -8px
+        background: lighten($gray, 30)
+        color: lighten($black, 30)
+        height: 42px
+        margin: 0
+        border-top-right-radius: 2px
+        border-bottom-right-radius: 2px
+        border: 0.5px solid lighten($gray, 20)
+        border-left: 0px
+        position: relative
+        display: inline-block
+        text-align: center
+        font-weight: bold
+        transition: background-color 0.3s
+        &:active
+            background: lighten($gray, 20)
+
+    
 
 
 
@@ -219,7 +266,6 @@ div.cr.input.label
 
 .is-focused .m-label
     color: $accent
-
 
 .is-focused, .m-label
     &:after
@@ -301,21 +347,19 @@ span.m-cr-state.done.show
         visibility: visible
 
 
-input.medium
-    width: 250px
+.cr.input.medium
+    input
+        width: 250px
 
-input.large 
-    width: 320px
+div.cr.input.large 
+    input
+        width: 420px
 
-input.adaptive
-    width: $m-input-adaptive
-
-
-input.cr.input.gold
-    border: 0.5px solid $gold 
-
-input.cr.input.green
-    border: 0.5px solid $green
-
+div.cr.input.adaptive
+    display: flex
+    input
+        width: $m-input-adaptive
+    
+// NO es necesario
 input.cr.input.error
     border: 0.5px solid $red

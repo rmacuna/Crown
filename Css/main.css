@@ -141,11 +141,13 @@ div.cr.input.basic {
 
 div.cr.input.label {
   margin: 4px 2px 10px 2px;
-  position: relative; }
+  position: relative;
+  white-space: nowrap;
+  display: inline-block; }
   div.cr.input.label input {
-    left: -4px; }
+    left: -4px;
+    display: inline-block; }
   div.cr.input.label div.label {
-    white-space: nowrap;
     padding-top: 9.5px;
     padding-left: 20px;
     padding-right: 18px;
@@ -195,6 +197,46 @@ div.cr.input.label {
     border-bottom-left-radius: 2px;
     border: 0.5px solid #F44336;
     border-right: 0px; }
+  div.cr.input.label div.ender {
+    padding-top: 9.5px;
+    padding-left: 20px;
+    padding-right: 18px;
+    left: -9px;
+    background: #ebebeb;
+    color: #4d4d4d;
+    height: 31px;
+    margin: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border: 0.5px solid #d1d1d1;
+    border-left: 0px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold; }
+  div.cr.input.label button.ender {
+    padding-top: 10px;
+    padding-left: 19px;
+    outline: none;
+    padding-right: 17px;
+    padding-bottom: 9px;
+    font-size: 12px;
+    left: -8px;
+    background: #ebebeb;
+    color: #4d4d4d;
+    height: 42px;
+    margin: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border: 0.5px solid #d1d1d1;
+    border-left: 0px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s; }
+    div.cr.input.label button.ender:active {
+      background: #d1d1d1; }
 
 /*-----------------------------------MATERIAL INPUT ------------------------- */
 .cr-material-field {
@@ -296,20 +338,16 @@ span.m-cr-state.done.show:before {
   display: block;
   visibility: visible; }
 
-input.medium {
+.cr.input.medium input {
   width: 250px; }
 
-input.large {
-  width: 320px; }
+div.cr.input.large input {
+  width: 420px; }
 
-input.adaptive {
-  width: 100%; }
-
-input.cr.input.gold {
-  border: 0.5px solid #bf9b30; }
-
-input.cr.input.green {
-  border: 0.5px solid #00C853; }
+div.cr.input.adaptive {
+  display: flex; }
+  div.cr.input.adaptive input {
+    width: 100%; }
 
 input.cr.input.error {
   border: 0.5px solid #F44336; }
