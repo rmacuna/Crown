@@ -215,16 +215,16 @@ div.cr.input.label {
     text-align: center;
     font-weight: bold; }
   div.cr.input.label button.ender {
-    padding-top: 10px;
-    padding-left: 19px;
+    padding-top: 14.5px;
+    padding-left: 15px;
     outline: none;
-    padding-right: 17px;
-    padding-bottom: 9px;
+    padding-right: 15px;
+    padding-bottom: 26px;
     font-size: 12px;
     left: -8px;
     background: #ebebeb;
     color: #4d4d4d;
-    height: 42px;
+    height: 38px;
     margin: 0;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
@@ -356,7 +356,7 @@ div.cr.snackbar {
   visibility: hidden;
   min-width: 250px;
   margin-left: -125px;
-  background-color: #000;
+  background-color: #4d4d4d;
   color: #fff;
   text-align: center;
   border-radius: 2px;

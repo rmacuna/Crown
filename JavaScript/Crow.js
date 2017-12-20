@@ -204,16 +204,25 @@ jQuery(function($) {
 
 try {
     (function($) {
-        $.fn.show = function(action, message) {
+        $.fn.snackbar = function(action, message, delay) {
             if ($(this).is('.cr.snackbar')) {
                 if (action == "show") {
-                    console.log($(this).html(message));
-                    return this.css({
+                
+                    $(this).html(message);
+                    this.css({
                         'visibility': "visible",
                         'color': "white",
                         'font-size': "14px",
-                        animation: "fadein 0.5s, fadeout 0.5s 2.5s"
+                        'animation': "fadein 0.5s, fadeout 0.5s 2.5s",
+                        '-o-animation': "fadein 0.5s, fadeout 0.5s 2.5s",
+                        '-moz-animation': "fadein 0.5s, fadeout 0.5s 2.5s",
+                        '-webkit-animation': "fadein 0.5s, fadeout 0.5s 2.5s"
                     });
+                    setTimeout(() => {
+                        this.css({
+                            'visibility': "hidden",
+                        });
+                    }, 3000);
                 }
             }
         };

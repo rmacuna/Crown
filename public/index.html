@@ -7,8 +7,6 @@
     <link rel="stylesheet" type="text/css" href="../Css/main.css">
     <title>LearnDesign</title>
     <style type="text/css">
-    body {}
-
     .sep {
         padding-top: 20px;
     }
@@ -20,7 +18,6 @@
         <div class="cr input label">
             <input type="text" id="input1" name="input1">
             <button class="ender">Copy</button>
-            <a class="hola" href="">hola</a>
         </div>
         <div class="sep"></div>
         <button type="submit" class="cr button outline green">Submit</button>
@@ -38,8 +35,7 @@
     <script src="../JavaScript/Crow.js"></script>
     <script>
     $('button').on('click', function() {
-        $(".cr.snackbar").show('show', "Copied");
-
+        $(".cr.snackbar").snackbar('show', "Copied");
     })
     </script>
 </body>
