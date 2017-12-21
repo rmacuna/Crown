@@ -3,7 +3,6 @@
 div.cr.snackbar
 
 	visibility: hidden
-	// transition-duration: 0.5s
 	position: absolute 
 	font-size: 14px
 	font-family: 'Nunito', open-sans
@@ -21,7 +20,7 @@ div.cr.snackbar
 	
 	box-shadow: 0 2px 1px -1px $gray
 	
-	bottom: 4%
+	// bottom: 4%
 	margin-left: -80px
 	min-width: 250px
 	padding: 16px 
@@ -41,6 +40,85 @@ div.cr.snackbar
 		transition: background-color 0.3s
 		&:active
 			background-color: lighten($black, 22)
+
+
+	@media screen and (max-width: 767px)
+		bottom: 0%
+		bottom: -30px
+		
+		@-webkit-keyframes fadein 
+			from
+				bottom: -60px
+			to 
+				bottom: -30px
+				opacity: 1
+
+		@keyframes fadein
+			from
+				bottom: -60px
+			to 
+				bottom: -30px
+				opacity: 1
+
+
+	@media screen and (min-width: 768px)
+		bottom: 0%
+		bottom: -30px
+		
+		@-webkit-keyframes fadein 
+			from
+				bottom: -60px
+			to 
+				bottom: -30ox
+				opacity: 1
+
+		@keyframes fadein
+			from
+				bottom: -60px 
+			to 
+				bottom: -30px
+				opacity: 1
+
+
+
+	@media screen and (max-width: 1199px) and (min-width: 992px)
+		bottom: 4%
+		@-webkit-keyframes fadein 
+			from
+				bottom: 0
+				opacity: 0
+			to 
+				bottom: 30px
+				opacity: 1
+
+		@keyframes fadein
+			from
+				bottom: 0 
+			to 
+				bottom: 30px
+				opacity: 1
+
+
+
+
+
+	@media screen and (min-width: 1200px)
+		bottom: 4%
+		@-webkit-keyframes fadein 
+			from
+				bottom: 0
+				opacity: 0
+			to 
+				bottom: 30px
+				opacity: 1
+
+		@keyframes fadein
+			from
+				bottom: 0 
+			to 
+				bottom: 30px
+				opacity: 1
+
 
 
 
@@ -69,43 +147,3 @@ div.cr.snackbar.yellow
 		color: lighten($black, 25)
 		&:active
 			background-color: darken($yellow, 5) 
-
-
-
-
-
-
-
-@-webkit-keyframes fadein
-	from
-		bottom: 0
-		opacity: 0
-	to
-		bottom: 30px
-		opacity: 1
-
-@keyframes fadein
-	from
-		bottom: 0
-		opacity: 0
-	to
-		bottom: 30px
-		opacity: 1
-
-@-webkit-keyframes fadeout
-	from
-		bottom: 0
-		opacity: 1
-	to
-		bottom: 30px
-		opacity: 0
-
-@keyframes fadeout
-	from
-		bottom: 0
-		opacity: 1
-	to
-		bottom: 30px
-		opacity: 0
-
-

@@ -366,7 +366,6 @@ div.cr.snackbar {
   display: flex;
   position: fixed;
   box-shadow: 0 2px 1px -1px #9E9E9E;
-  bottom: 4%;
   margin-left: -80px;
   min-width: 250px;
   padding: 16px;
@@ -385,6 +384,70 @@ div.cr.snackbar {
     transition: background-color 0.3s; }
     div.cr.snackbar button.snack.action:active {
       background-color: #383838; }
+  @media screen and (max-width: 767px) {
+    div.cr.snackbar {
+      bottom: 0%;
+      bottom: -30px; }
+    @-webkit-keyframes fadein {
+      from {
+        bottom: -60px; }
+      to {
+        bottom: -30px;
+        opacity: 1; } }
+    @keyframes fadein {
+      from {
+        bottom: -60px; }
+      to {
+        bottom: -30px;
+        opacity: 1; } } }
+  @media screen and (min-width: 768px) {
+    div.cr.snackbar {
+      bottom: 0%;
+      bottom: -30px; }
+    @-webkit-keyframes fadein {
+      from {
+        bottom: -60px; }
+      to {
+        bottom: -30ox;
+        opacity: 1; } }
+    @keyframes fadein {
+      from {
+        bottom: -60px; }
+      to {
+        bottom: -30px;
+        opacity: 1; } } }
+  @media screen and (max-width: 1199px) and (min-width: 992px) {
+    div.cr.snackbar {
+      bottom: 4%; }
+    @-webkit-keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0; }
+      to {
+        bottom: 30px;
+        opacity: 1; } }
+    @keyframes fadein {
+      from {
+        bottom: 0; }
+      to {
+        bottom: 30px;
+        opacity: 1; } } }
+  @media screen and (min-width: 1200px) {
+    div.cr.snackbar {
+      bottom: 4%; }
+    @-webkit-keyframes fadein {
+      from {
+        bottom: 0;
+        opacity: 0; }
+      to {
+        bottom: 30px;
+        opacity: 1; } }
+    @keyframes fadein {
+      from {
+        bottom: 0; }
+      to {
+        bottom: 30px;
+        opacity: 1; } } }
 
 div.cr.snackbar.white {
   background-color: #fcfcfc;
@@ -411,34 +474,9 @@ div.cr.snackbar.yellow {
     div.cr.snackbar.yellow button.snack.action:active {
       background-color: #ffe822; }
 
-@-webkit-keyframes fadein {
-  from {
-    bottom: 0;
-    opacity: 0; }
-  to {
-    bottom: 30px;
-    opacity: 1; } }
-@keyframes fadein {
-  from {
-    bottom: 0;
-    opacity: 0; }
-  to {
-    bottom: 30px;
-    opacity: 1; } }
-@-webkit-keyframes fadeout {
-  from {
-    bottom: 0;
-    opacity: 1; }
-  to {
-    bottom: 30px;
-    opacity: 0; } }
-@keyframes fadeout {
-  from {
-    bottom: 0;
-    opacity: 1; }
-  to {
-    bottom: 30px;
-    opacity: 0; } }
+html {
+  height: 100vh; }
+
 .col-1 {
   width: 8.33%; }
 

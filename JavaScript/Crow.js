@@ -205,7 +205,15 @@ var statePressed = false;
 try {
     (function($) {
         $.fn.snackbar = function(action, message, delay) {
+            let snack = $(this);
+            let btnUndo = $(this).find('.snack.action.undo');
             if (statePressed == false) {
+                if(btnUndo){
+                    btnUndo.on('click', function(){
+                        snack.fadeOut();
+                        // statePressed = false;
+                    });
+                }
                 if ($(this).is('.cr.snackbar')) {
                     if (action == "show") {
                         statePressed = true;
