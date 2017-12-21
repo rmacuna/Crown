@@ -354,17 +354,62 @@ input.cr.input.error {
 
 div.cr.snackbar {
   visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background-color: #4d4d4d;
+  position: absolute;
+  font-size: 14px;
+  font-family: "Nunito", open-sans;
+  background-color: #404040;
   color: #fff;
-  text-align: center;
-  border-radius: 2px;
-  padding: 16px;
-  position: fixed;
+  height: 20px;
   z-index: 1;
+  justify-content: space-around;
+  border-radius: 2px;
+  display: flex;
+  position: fixed;
+  box-shadow: 0 2px 1px -1px #9E9E9E;
+  bottom: 4%;
+  margin-left: -80px;
+  min-width: 250px;
+  padding: 16px;
+  margin: 0 auto;
   left: 50%;
-  bottom: 30px; }
+  margin-right: -50%;
+  transform: translate(-50%, -50%); }
+  div.cr.snackbar button.snack.action {
+    color: #FFEB3B;
+    font-weight: bold;
+    font-size: 12px;
+    outline: none;
+    border: none;
+    background: none;
+    padding-left: 10px;
+    transition: background-color 0.3s; }
+    div.cr.snackbar button.snack.action:active {
+      background-color: #383838; }
+
+div.cr.snackbar.white {
+  background-color: #fcfcfc;
+  color: #4d4d4d; }
+  div.cr.snackbar.white button.snack.action {
+    color: #4d4d4d; }
+    div.cr.snackbar.white button.snack.action:active {
+      background-color: #f2f2f2; }
+
+div.cr.snackbar.i-green {
+  background-color: #1DE9B6;
+  color: #9C27B0;
+  font-weight: bold; }
+  div.cr.snackbar.i-green button.snack.action {
+    color: #9C27B0; }
+    div.cr.snackbar.i-green button.snack.action:active {
+      background-color: #15d8a7; }
+
+div.cr.snackbar.yellow {
+  background-color: #FFEB3B;
+  color: #404040; }
+  div.cr.snackbar.yellow button.snack.action {
+    color: #404040; }
+    div.cr.snackbar.yellow button.snack.action:active {
+      background-color: #ffe822; }
 
 @-webkit-keyframes fadein {
   from {

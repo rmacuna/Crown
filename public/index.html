@@ -29,12 +29,15 @@
             <div class="card-footer">
             </div>
         </div>
-        <div class="cr snackbar"></div>
+        <div class="cr snackbar ">
+            <span class="snack-message"></span>
+            <button class="snack action">Random Action</button>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../JavaScript/Crow.js"></script>
     <script>
-    $('button').on('click', function() {
+    $('button, .ender').on('click', function() {
         $(".cr.snackbar").snackbar('show', "Copied");
     })
     </script>

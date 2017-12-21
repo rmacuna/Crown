@@ -201,31 +201,38 @@ jQuery(function($) {
         $parent.removeClass('is-focused');
     })
 })
-
+var statePressed = false;
 try {
     (function($) {
         $.fn.snackbar = function(action, message, delay) {
-            if ($(this).is('.cr.snackbar')) {
-                if (action == "show") {
-                
-                    $(this).html(message);
-                    this.css({
-                        'visibility': "visible",
-                        'color': "white",
-                        'font-size': "14px",
-                        'animation': "fadein 0.5s, fadeout 0.5s 2.5s",
-                        '-o-animation': "fadein 0.5s, fadeout 0.5s 2.5s",
-                        '-moz-animation': "fadein 0.5s, fadeout 0.5s 2.5s",
-                        '-webkit-animation': "fadein 0.5s, fadeout 0.5s 2.5s"
-                    });
-                    setTimeout(() => {
-                        this.css({
-                            'visibility': "hidden",
+            if (statePressed == false) {
+                if ($(this).is('.cr.snackbar')) {
+                    if (action == "show") {
+                        statePressed = true;
+                        if (message.length != null) {
+                            $(this).find('.snack-message').prepend(message);
+                        }
+                        setTimeout(() => {
+                            $(this).fadeOut();
+                        }, 2500);
+
+                        setTimeout(() => {
+                            $(this).removeAttr('style');
+                            $(this).find('.snack-message').html("");
+                            statePressed = false;
+                        }, 3000);
+
+                        return this.css({
+                            'visibility': "visible",
+                            'animation': "fadein 0.3s",
+                            '-o-animation': "fadein 0.3s",
+                            '-moz-animation': "fadein 0.3s",
+                            '-webkit-animation': "fadein 0.3s"
                         });
-                    }, 3000);
+                    }
                 }
             }
+
         };
     }(jQuery));
-} catch (e) {
-}
+} catch (e) {}
