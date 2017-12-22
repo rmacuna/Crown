@@ -200,6 +200,16 @@ jQuery(function($) {
         }
         $parent.removeClass('is-focused');
     })
+
+    $('button.ripple').on('click', function(e) {
+        e.preventDefault();
+        let elem = $(this);
+        elem.addClass("active");
+        setTimeout(function () {
+            elem.removeClass("active");
+        },1500);
+    });
+
 })
 var statePressed = false;
 try {
@@ -208,8 +218,8 @@ try {
             let snack = $(this);
             let btnUndo = $(this).find('.snack.action.undo');
             if (statePressed == false) {
-                if(btnUndo){
-                    btnUndo.on('click', function(){
+                if (btnUndo) {
+                    btnUndo.on('click', function() {
                         snack.fadeOut();
                         // statePressed = false;
                     });

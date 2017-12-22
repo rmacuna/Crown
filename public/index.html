@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../Css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>LearnDesign</title>
     <style type="text/css">
     .sep {
@@ -19,6 +20,11 @@
             <input type="text" id="input1" name="input1">
             <button class="ender">Copy</button>
         </div>
+        
+        <button class="button-float ripple">
+            <i class="material-icons">add</i>
+        </button>
+
         <div class="sep"></div>
         <button type="submit" class="cr button outline green">Submit</button>
         <div class="sep"></div>
@@ -37,7 +43,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../JavaScript/Crow.js"></script>
     <script>
-    $('button, .ender').on('click', function() {
+    $('.ender').on('click', function() {
         $(".cr.snackbar").snackbar('show', "Copied");
     })
     </script>

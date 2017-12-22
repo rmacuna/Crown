@@ -320,3 +320,114 @@ button.cr.button
 		background: #FFA000 
 	&:active 
 		background: #FF6F00
+
+/*----- FLOATING BUTTON --------*/
+button.button-float
+	position: fixed 
+	width: 56px
+	outline: none
+	border: none 
+	height: 56px
+	right: 40px
+	background-color: $accent 
+	color: $white 
+	border-radius: 50px
+	text-align: center
+	transition: background-color 0.3s, box-shadow 0.3s 
+	box-shadow: 0 4px 8px $gray
+	bottom: 4%
+	i
+		text-align: center
+		position: absolute
+		-webkit-touch-callout: none 
+		-webkit-user-select: none 
+		-moz-user-select: none 
+		-ms-user-select: none 
+		user-select: none 
+		margin-top: 0 auto
+		padding: 2px
+		bottom: 0 
+		transform: translate(-50%, -50%)
+
+
+	&:active 
+		background-color: darken($accent, 10)
+		box-shadow: 0 6px 12px $gray
+
+
+
+.ripple
+	overflow: hidden
+
+.ripple.active
+	&:after
+		content: ''
+		position: absolute
+		border-radius: 50px 
+		width: 15px
+		height: 15px
+		display: inline-block
+		transform: translate(-50%, -50%)
+		background: $white
+		-o-animation: ripple-anim 1.5s
+		-webkit-animation: ripple-anim 1.5s
+		-moz-animation: ripple-anim 1.5s
+		-ms-animation: ripple-anim 1.5s 
+		animation: ripple-anim 1.5s 
+
+
+
+@-webkit-keyframes ripple-anim
+	from
+		transform: scale(0.1)
+		opacity: 0.4
+	to 
+		transform: scale(1)
+		opacity: 0 
+	
+
+@-o-keyframes ripple-anim
+	from
+		transform: scale(0.1)
+		opacity: 0.4
+	to 
+		transform: scale(1)
+		opacity: 0 
+
+
+@-moz-keyframes ripple-anim
+	from
+		transform: scale(1)
+		opacity: 0.4
+	to 
+		transform: scale(100)
+		opacity: 0 
+
+
+@-ms-keyframes ripple-anim
+	from
+		transform: scale(1)
+		opacity: 0.4
+	to 
+		transform: scale(100)
+		opacity: 0 
+
+
+@keyframes ripple-anim
+	from
+		transform: scale(1)
+		position: absolute 
+		margin-top: 0 auto 
+		transform: translate(-50%, 50%)
+		opacity: 0.4
+	to 
+		transform: scale(50)
+		opacity: 0 
+
+
+
+
+
+
+
+
