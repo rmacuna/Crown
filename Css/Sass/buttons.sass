@@ -3,22 +3,24 @@
 button.cr.button
 	outline: none 
 	border: none
+	overflow: hidden
 	
 .cr.button
 	background: #F5F5F5
 	border-radius: 0.15rem
+	overflow: hidden
 	color: $black
 	font-family: 'Nunito', sans-serif
 	text-align: center
 	font-size: 0.9rem
 	font-weight: bold
-	white-space: nowrap
 	user-select: none
+	position: relative
 	text-decoration: none
 	line-height: 2.2rem
 	padding-right: 20px
-	padding-left: 20px
 	display: table
+	padding-left: 20px
 	cursor: pointer
 	height: 2.2rem
 
@@ -348,81 +350,51 @@ button.button-float
 		padding: 2px
 		bottom: 0 
 		transform: translate(-50%, -50%)
-
-
+		
 	&:active 
 		background-color: darken($accent, 10)
 		box-shadow: 0 6px 12px $gray
 
+button.dark-bg
+	box-shadow: none !important
 
 
-.ripple
+.pulse
 	overflow: hidden
 
-.ripple.active
-	&:after
-		content: ''
-		position: absolute
-		border-radius: 50px 
-		width: 15px
-		height: 15px
-		display: inline-block
-		transform: translate(-50%, -50%)
-		background: $white
-		-o-animation: ripple-anim 1.5s
-		-webkit-animation: ripple-anim 1.5s
-		-moz-animation: ripple-anim 1.5s
-		-ms-animation: ripple-anim 1.5s 
-		animation: ripple-anim 1.5s 
+.ripple
+	width: 0
+	height: 0
+	border-radius: 50%
+	background: rgba($white, .4)
+	transform: scale(0)
+	position: absolute 
+	opacity: 1
 
+.ripple-active 
+	animation: ripple-anim .4s linear 
 
-
-@-webkit-keyframes ripple-anim
-	from
-		transform: scale(0.1)
-		opacity: 0.4
-	to 
-		transform: scale(1)
-		opacity: 0 
-	
 
 @-o-keyframes ripple-anim
-	from
-		transform: scale(0.1)
-		opacity: 0.4
-	to 
-		transform: scale(1)
+	100%
+		transform: scale(2)
 		opacity: 0 
-
-
-@-moz-keyframes ripple-anim
-	from
-		transform: scale(1)
-		opacity: 0.4
-	to 
-		transform: scale(100)
+@-webkit-keyframes ripple-anim
+	100% 
+		transform: scale(2)
 		opacity: 0 
-
 
 @-ms-keyframes ripple-anim
-	from
-		transform: scale(1)
-		opacity: 0.4
-	to 
-		transform: scale(100)
+	100%
+		transform: scale(2)
 		opacity: 0 
-
 
 @keyframes ripple-anim
-	from
-		transform: scale(1)
-		position: absolute 
-		margin-top: 0 auto 
-		transform: translate(-50%, 50%)
-		opacity: 0.4
-	to 
-		transform: scale(50)
+	100%
+		transform: scale(2)
 		opacity: 0 
+
+
 
 
 

@@ -201,16 +201,38 @@ jQuery(function($) {
         $parent.removeClass('is-focused');
     })
 
-    $('button.ripple').on('click', function(e) {
-        e.preventDefault();
-        let elem = $(this);
-        elem.addClass("active");
-        setTimeout(function () {
-            elem.removeClass("active");
-        },1500);
-    });
+    $("button.pulse, div.cr.button.pulse").click(function (e) {
+        $('.ripple').remove();
+
+        let posX = $(this).offset().left,
+            posY = $(this).offset().top,
+            btn_width = $(this).width(),
+            btn_height = $(this).height();
+
+        $(this).prepend("<span class='ripple'></span>");
+
+
+        if (btn_width >= btn_height) {
+            btn_height = btn_width;
+        }else{
+            btn_width = btn_height;
+        }
+
+        let x = e.pageX - posX - btn_width / 2;
+        let y = e.pageY - posY - btn_height / 2;
+
+
+        $(".ripple").css({
+            width: btn_width,
+            height: btn_height,
+            top: y + 'px',
+            left: x + 'px'
+        }).addClass("ripple-active");
+    })
 
 })
+
+
 var statePressed = false;
 try {
     (function($) {
