@@ -51,7 +51,7 @@ button.cr.button
 	line-height: $button-big-height
 
 .cr.button.adaptive
-	width: 95%
+	width: 100%
 
 	
 /* -------------------------------|RAISED BUTTONS CODE|--------------------------------------------------------*/
@@ -82,7 +82,7 @@ button.cr.button
 		background: $black 
 		color: $white
 
-.cr.button.white 
+.cr.button.outline.white 
 	background: none 
 	border: 1px solid $white 
 	color: $white 
@@ -167,13 +167,20 @@ button.cr.button
 		border: 1px solid $gold-deep
 		color: $white
 /*------------------------------------|COLOR VARIANTS NORMAL BUTTONS|--------------------------------------------------------*/
-
-
 .cr.button.blue
 	background: $blue 
 	color: $white
 	&:active
 		background: #1565C0
+
+.cr.button.white 
+	background: $white 
+	border-radius: 1px
+	color: lighten($black, 10)
+	&:hover 
+		background: darken($white, .1) 
+	.ripple 
+		background: $gray
 
 .cr.button.deep-purple
 	background: $deep-purple
@@ -336,6 +343,53 @@ button.cr.button
 	&:active 
 		background: #FF6F00
 
+/*-------------------------------SIMPLE BUTTON------------------------------------*/
+.cr.simple.button 
+	color: lighten($black, 10)
+	background: none !important
+	.ripple 
+		background: $gray
+
+.cr.simple.button.blue 
+	color: $blue 
+	.ripple 
+		background: $blue 
+
+.cr.simple.button.red 
+	color: $red 
+	.ripple 
+		background: $red 
+
+.cr.simple.button.gold 
+	color: $gold 
+	.ripple 
+		background: $gold 
+
+.cr.simple.button.indigo 
+	color: $indigo 
+	.ripple 
+		background: $indigo 
+
+.cr.simple.button.green 
+	color: $green 
+	.ripple 
+		background: $green 
+
+.cr.simple.button.amber 
+	color: $amber 
+	.ripple 
+		background: $amber 
+
+.cr.simple.button.purple 
+	color: $purple 
+	.ripple 
+		background: $purple 
+
+.cr.simple.button.yellow
+	color: $yellow 
+	.ripple 
+		background: $yellow
+		 
 /*----- FLOATING BUTTON --------*/
 button.button-float
 	position: fixed 

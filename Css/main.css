@@ -5,9 +5,9 @@ div.cr.card {
   height: auto;
   min-height: 15rem;
   width: 20rem;
+  border-radius: 2px;
   min-width: 12rem;
   font-size: 16px;
-  border-radius: 2px;
   transition: box-shadow 0.3s;
   z-index: 1;
   background: #fcfcfc; }
@@ -15,7 +15,10 @@ div.cr.card {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2); }
   div.cr.card .card-head {
     text-align: center;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
     display: block;
+    position: relative;
     vertical-align: middle;
     height: 30px;
     font-weight: bold;
@@ -26,11 +29,18 @@ div.cr.card {
   div.cr.card .card-body {
     padding: 15px 20px 15px 20px;
     font-size: 16px;
+    position: relative;
     margin: 20px auto; }
   div.cr.card .card-footer {
     text-align: center;
+    position: relative;
     font-weight: bold;
     display: flex-inline;
+    height: auto;
+    border-top-right-radius: none;
+    border-top-left-radius: none;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
     padding: 15px 10px 20px 10px;
     color: #4d4d4d;
     vertical-align: middle;
@@ -38,12 +48,54 @@ div.cr.card {
     background: #fcfcfc; }
     div.cr.card .card-footer * {
       display: inline; }
-  div.cr.card .card-footer.blue {
-    background: #2196F3;
-    color: #fff; }
+  @media screen and (max-width: 767px) {
+    div.cr.card {
+      width: auto;
+      max-width: 99%; } }
+
+.cr.card.pulse {
+  overflow: hidden; }
+
+.cr.card.blue {
+  background: #2196F3;
+  color: #fff; }
+
+.cr.card.pink {
+  background: #E91E63;
+  color: #fff; }
+
+.cr.card.green {
+  background: #00C853;
+  color: #fff; }
+
+.cr.card.indigo {
+  background: #3F51B5;
+  color: #fff; }
+
+.cr.card.amber {
+  background: #fcbd00;
+  color: #fefefe; }
+
+.noraise {
+  box-shadow: 0 1px 1px 0 rgba(158, 158, 158, 0.6) !important; }
+
+div.cr.card.small {
+  width: 25rem; }
+  div.cr.card.small .card-body {
+    margin: 0;
+    max-height: 20rem !important;
+    position: relative; }
+  div.cr.card.small .card-footer {
+    position: relative;
+    bottom: -40px;
+    margin: 0;
+    padding-bottom: 10px !important; }
 
 div.cr.card.medium {
   width: 35rem; }
+
+div.cr.card.adaptive {
+  width: 100%; }
 
 .bold {
   font-weight: bold; }
@@ -372,18 +424,6 @@ div.cr.input.adaptive {
 input.cr.input.error {
   border: 0.5px solid #F44336; }
 
-.blue {
-  background: #2196F3;
-  color: #fff; }
-
-.green {
-  background: #00C853;
-  color: #fff; }
-
-.red {
-  background: #F44336;
-  color: #fff; }
-
 .text-white {
   color: #fff !important; }
 
@@ -561,7 +601,7 @@ div.cr-inline {
   margin-right: 0.2rem; }
 
 .cr.container {
-  height: 100%;
+  height: 100vh;
   margin-top: 5px;
   margin-bottom: 5px;
   margin-right: auto;
@@ -571,21 +611,21 @@ div.cr-inline {
   @media screen and (max-width: 767px) {
     .cr.container {
       width: auto;
-      max-width: 90%; } }
+      max-width: 90% !important; } }
   @media screen and (min-width: 768px) {
     .cr.container {
       width: 750px;
-      max-width: 90%; } }
+      max-width: 90% !important; } }
   @media screen and (max-width: 1199px) and (min-width: 992px) {
     .cr.container {
       width: 970px;
       margin-left: 25px;
-      max-width: 90%; } }
+      max-width: 90% !important; } }
   @media screen and (min-width: 1200px) {
     .cr.container {
       width: 1170px;
       margin-left: 35px;
-      max-width: 90%; } }
+      max-width: 90% !important; } }
 
 /*-----------------------------------All  BUTTONS CODE---------------------------------------------------------- */
 button.cr.button {
@@ -638,7 +678,7 @@ button.cr.button {
   line-height: 3rem; }
 
 .cr.button.adaptive {
-  width: 95%; }
+  width: 100%; }
 
 /* -------------------------------|RAISED BUTTONS CODE|-------------------------------------------------------- */
 .cr.button.raised {
@@ -668,15 +708,15 @@ button.cr.button {
     background: #000;
     color: #fff; }
 
-.cr.button.white {
+.cr.button.outline.white {
   background: none;
   border: 1px solid #fff;
   color: #fff; }
-  .cr.button.white:hover {
+  .cr.button.outline.white:hover {
     background: #fff;
     color: #000;
     border-color: #fff; }
-  .cr.button.white .ripple {
+  .cr.button.outline.white .ripple {
     background: #9E9E9E; }
 
 .cr.button.outline.blue {
@@ -758,6 +798,15 @@ button.cr.button {
   color: #fff; }
   .cr.button.blue:active {
     background: #1565C0; }
+
+.cr.button.white {
+  background: #fff;
+  border-radius: 1px;
+  color: #1a1a1a; }
+  .cr.button.white:hover {
+    background: white; }
+  .cr.button.white .ripple {
+    background: #9E9E9E; }
 
 .cr.button.deep-purple {
   background: #673AB7;
@@ -914,6 +963,53 @@ button.cr.button {
     background: #FFA000; }
   .cr.button.amber.hoverable:active {
     background: #FF6F00; }
+
+/*-------------------------------SIMPLE BUTTON------------------------------------ */
+.cr.simple.button {
+  color: #1a1a1a;
+  background: none !important; }
+  .cr.simple.button .ripple {
+    background: #9E9E9E; }
+
+.cr.simple.button.blue {
+  color: #2196F3; }
+  .cr.simple.button.blue .ripple {
+    background: #2196F3; }
+
+.cr.simple.button.red {
+  color: #F44336; }
+  .cr.simple.button.red .ripple {
+    background: #F44336; }
+
+.cr.simple.button.gold {
+  color: #bf9b30; }
+  .cr.simple.button.gold .ripple {
+    background: #bf9b30; }
+
+.cr.simple.button.indigo {
+  color: #3F51B5; }
+  .cr.simple.button.indigo .ripple {
+    background: #3F51B5; }
+
+.cr.simple.button.green {
+  color: #00C853; }
+  .cr.simple.button.green .ripple {
+    background: #00C853; }
+
+.cr.simple.button.amber {
+  color: #FFC107; }
+  .cr.simple.button.amber .ripple {
+    background: #FFC107; }
+
+.cr.simple.button.purple {
+  color: #9C27B0; }
+  .cr.simple.button.purple .ripple {
+    background: #9C27B0; }
+
+.cr.simple.button.yellow {
+  color: #FFEB3B; }
+  .cr.simple.button.yellow .ripple {
+    background: #FFEB3B; }
 
 /*----- FLOATING BUTTON -------- */
 button.button-float {

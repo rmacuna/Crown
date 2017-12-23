@@ -201,7 +201,7 @@ jQuery(function($) {
         $parent.removeClass('is-focused');
     })
 
-    $("button.pulse, div.cr.button.pulse").click(function (e) {
+    $(".pulse").click(function (e) {
         $('.ripple').remove();
 
         let posX = $(this).offset().left,
@@ -243,7 +243,6 @@ try {
                 if (btnUndo) {
                     btnUndo.on('click', function() {
                         snack.fadeOut();
-                        // statePressed = false;
                     });
                 }
                 if ($(this).is('.cr.snackbar')) {

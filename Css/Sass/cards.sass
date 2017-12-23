@@ -6,9 +6,9 @@ div.cr.card
 	height: auto
 	min-height: 15.0rem
 	width: 20.0rem
+	border-radius: 2px
 	min-width: 12.0rem
 	font-size: 16px
-	border-radius: 2px
 	transition: box-shadow 0.3s
 	z-index: 1
 	background: darken($white, 1.2)
@@ -16,8 +16,11 @@ div.cr.card
 		box-shadow: 0  4px 10px 0 rgba($black, .2)
 
 	.card-head
-		text-align: center 
+		text-align: center
+		border-top-right-radius: 2px 
+		border-top-left-radius: 2px
 		display: block
+		position: relative
 		vertical-align: middle
 		height: 30px
 		font-weight: bold
@@ -29,26 +32,81 @@ div.cr.card
 	.card-body
 		padding: 15px 20px 15px 20px
 		font-size: 16px
+		position: relative
 		margin: 20px auto
 
 	.card-footer
 		text-align: center 
+		position: relative
 		font-weight: bold 
 		display: flex-inline
-		padding: 15px 10px 20px 10px 		
+		height: auto
+		border-top-right-radius: none 
+		border-top-left-radius: none 
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		padding: 15px 10px 20px 10px
 		color: lighten($black, 30)
-		vertical-align: middle 
+		vertical-align: middle
 		margin: auto
 		background: darken($white, 1.2)
 		*
 			display: inline
 
-	.card-footer.blue 
-		background: $blue
-		color: $white
+	@media screen and (max-width: 767px)
+		width: auto
+		max-width: 99%
+
+
+.cr.card.pulse 
+	overflow: hidden 
+
+.cr.card.blue 
+	background: $blue 
+	color: $white
+
+.cr.card.pink 
+	background: $pink 
+	color: $white 
+
+.cr.card.green 
+	background: $green 
+	color: $white 
+
+.cr.card.indigo 
+	background: $indigo 
+	color: $white 
+
+.cr.card.amber 
+	background: darken($amber, 2)
+	color: darken($white, .5)
+
+
+.noraise
+		box-shadow: 0 1px 1px 0 rgba($gray, .6) !important
+
+div.cr.card.small 
+	width: 25rem	
+	.card-body
+		margin: 0 
+		max-height: 20rem !important
+		position: relative
+
+	.card-footer
+		position: relative
+		bottom: -40px
+		margin: 0 
+		padding-bottom: 10px !important 
 
 div.cr.card.medium 
 	width: 35rem
+
+div.cr.card.adaptive 
+	width: 100%
+
+
+
+
 
 
 
