@@ -1,17 +1,23 @@
 @import 'variables'
 
 div.cr.card
+	position: relative 
+
 	box-shadow: 0 2px 4px 0 rgba($black, .2)
 	transition: box-shadow 0.3s
-	height: auto
 	min-height: 15.0rem
+
+	height: auto 
 	width: 20.0rem
 	border-radius: 2px
 	min-width: 12.0rem
+
 	font-size: 16px
-	transition: box-shadow 0.3s
 	z-index: 1
-	background: darken($white, 1.2)
+	// background: darken($white, 1.2)
+
+
+
 	&:hover 
 		box-shadow: 0  4px 10px 0 rgba($black, .2)
 
@@ -19,43 +25,158 @@ div.cr.card
 		text-align: center
 		border-top-right-radius: 2px 
 		border-top-left-radius: 2px
-		display: block
-		position: relative
 		vertical-align: middle
 		height: 30px
+		font-size: 25px
 		font-weight: bold
 		color: lighten($black, 30)
 		padding: 15px 0px 10px 0
 		margin: auto
 		width: 100%
 
+	.card-head.pink 
+		background: $pink 
+		color: $white 
+
+	.card-head.blue 
+		background: $blue 
+		color: $white 
+
+	.card-head.green 
+		background: $green 
+		color: $white 
+
+	.card-head.indigo
+		background: $indigo 
+		color: $white 
+
+	.card-head.amber 
+		background: $amber 
+		color: $white 
+
+	.card-head.red 
+		background: $red 
+		color: $white 
+
+	.card-head.teal 
+		background: $teal
+		color: $white 
+
+	.card-head.orange 
+		background: $orange 
+		color: $white 
+
+	.card-head.black 
+		background: $black 
+		color: $white 
+
+
 	.card-body
-		padding: 15px 20px 15px 20px
+		vertical-align: middle 
+		height: auto 
+		padding: 15px 10px 15px 20px
+		margin: auto 
 		font-size: 16px
-		position: relative
-		margin: 20px auto
+		background: $white
+
+	.card-body.pink 
+		background: $pink 
+		color: $white 
+
+	.card-body.black
+		background: $black 
+		color: $white 
+
+	.card-body.blue 
+		background: $blue 
+		color: $white 
+
+	.card-body.indigo 
+		background: $indigo
+		color: $white 
+
+	.card-body.green 
+		background: $green 
+		color: $white 
+
+	.card-body.amber 
+		background: $amber 
+		color: $white 
+
+	.card-body.red 
+		background: $red 
+		color: $white 
+
+	.card-body.teal 
+		background: $teal
+		color: $white 
+
+	.card-body.orange 
+		background: $orange 
+		color: $white 
+
 
 	.card-footer
-		text-align: center 
 		position: relative
-		font-weight: bold 
-		display: flex-inline
-		height: auto
+		margin-top: -30px
+		width: auto
+
+		text-align: center
+		border-top-right-radius: 2px 
+		border-top-left-radius: 2px
+
+		font-weight: bold
+		color: lighten($black, 30)
+		font-size: 16px
+
 		border-top-right-radius: none 
 		border-top-left-radius: none 
 		border-bottom-left-radius: 2px
 		border-bottom-right-radius: 2px
-		padding: 15px 10px 20px 10px
+
+
 		color: lighten($black, 30)
-		vertical-align: middle
-		margin: auto
-		background: darken($white, 1.2)
+		// background: darken($white, 1.2)
 		*
 			display: inline
+
+	.card-footer.blue 
+		background: $blue 
+		color: $white 
+	.card-footer.green 
+		background: $green
+		color: $white 
+	.card-footer.red 
+		background: $red 
+		color: $white 
+	.card-footer.amber 
+		background: $amber 
+		color: $white 
+	.card-footer.indigo 
+		background: $indigo 
+		color: $white 
+	.card-footer.pink 
+		background: $pink 
+		color: $white 
+	.card-footer.teal 
+		background: $teal
+		color: $white 
+	.card-footer.black 
+		background: $black 
+		color: $white 
+	.card-footer.orange 
+		background: $orange 
+		color: $white 
+
+
 
 	@media screen and (max-width: 767px)
 		width: auto
 		max-width: 99%
+		.card-footer
+			width: auto
+			margin-top: -30px
+			position: relative
 
 
 .cr.card.pulse 
@@ -86,17 +207,13 @@ div.cr.card
 		box-shadow: 0 1px 1px 0 rgba($gray, .6) !important
 
 div.cr.card.small 
-	width: 25rem	
-	.card-body
-		margin: 0 
-		max-height: 20rem !important
-		position: relative
-
+	width: 20rem
 	.card-footer
-		position: relative
-		bottom: -40px
-		margin: 0 
-		padding-bottom: 10px !important 
+		height: auto
+		padding: 10px 5px
+		vertical-align: middle
+		margin: 0 auto
+
 
 div.cr.card.medium 
 	width: 35rem

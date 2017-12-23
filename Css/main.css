@@ -1,57 +1,142 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 div.cr.card {
+  position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s;
-  height: auto;
   min-height: 15rem;
+  height: auto;
   width: 20rem;
   border-radius: 2px;
   min-width: 12rem;
   font-size: 16px;
-  transition: box-shadow 0.3s;
-  z-index: 1;
-  background: #fcfcfc; }
+  z-index: 1; }
   div.cr.card:hover {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2); }
   div.cr.card .card-head {
     text-align: center;
     border-top-right-radius: 2px;
     border-top-left-radius: 2px;
-    display: block;
-    position: relative;
     vertical-align: middle;
     height: 30px;
+    font-size: 25px;
     font-weight: bold;
     color: #4d4d4d;
     padding: 15px 0px 10px 0;
     margin: auto;
     width: 100%; }
+  div.cr.card .card-head.pink {
+    background: #E91E63;
+    color: #fff; }
+  div.cr.card .card-head.blue {
+    background: #2196F3;
+    color: #fff; }
+  div.cr.card .card-head.green {
+    background: #00C853;
+    color: #fff; }
+  div.cr.card .card-head.indigo {
+    background: #3F51B5;
+    color: #fff; }
+  div.cr.card .card-head.amber {
+    background: #FFC107;
+    color: #fff; }
+  div.cr.card .card-head.red {
+    background: #F44336;
+    color: #fff; }
+  div.cr.card .card-head.teal {
+    background: #009688;
+    color: #fff; }
+  div.cr.card .card-head.orange {
+    background: #FF9800;
+    color: #fff; }
+  div.cr.card .card-head.black {
+    background: #000;
+    color: #fff; }
   div.cr.card .card-body {
-    padding: 15px 20px 15px 20px;
-    font-size: 16px;
-    position: relative;
-    margin: 20px auto; }
-  div.cr.card .card-footer {
-    text-align: center;
-    position: relative;
-    font-weight: bold;
-    display: flex-inline;
+    vertical-align: middle;
     height: auto;
+    padding: 15px 10px 15px 20px;
+    margin: auto;
+    font-size: 16px;
+    background: #fff; }
+  div.cr.card .card-body.pink {
+    background: #E91E63;
+    color: #fff; }
+  div.cr.card .card-body.black {
+    background: #000;
+    color: #fff; }
+  div.cr.card .card-body.blue {
+    background: #2196F3;
+    color: #fff; }
+  div.cr.card .card-body.indigo {
+    background: #3F51B5;
+    color: #fff; }
+  div.cr.card .card-body.green {
+    background: #00C853;
+    color: #fff; }
+  div.cr.card .card-body.amber {
+    background: #FFC107;
+    color: #fff; }
+  div.cr.card .card-body.red {
+    background: #F44336;
+    color: #fff; }
+  div.cr.card .card-body.teal {
+    background: #009688;
+    color: #fff; }
+  div.cr.card .card-body.orange {
+    background: #FF9800;
+    color: #fff; }
+  div.cr.card .card-footer {
+    position: relative;
+    margin-top: -30px;
+    width: auto;
+    text-align: center;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    font-weight: bold;
+    color: #4d4d4d;
+    font-size: 16px;
     border-top-right-radius: none;
     border-top-left-radius: none;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
-    padding: 15px 10px 20px 10px;
-    color: #4d4d4d;
-    vertical-align: middle;
-    margin: auto;
-    background: #fcfcfc; }
+    color: #4d4d4d; }
     div.cr.card .card-footer * {
       display: inline; }
+  div.cr.card .card-footer.blue {
+    background: #2196F3;
+    color: #fff; }
+  div.cr.card .card-footer.green {
+    background: #00C853;
+    color: #fff; }
+  div.cr.card .card-footer.red {
+    background: #F44336;
+    color: #fff; }
+  div.cr.card .card-footer.amber {
+    background: #FFC107;
+    color: #fff; }
+  div.cr.card .card-footer.indigo {
+    background: #3F51B5;
+    color: #fff; }
+  div.cr.card .card-footer.pink {
+    background: #E91E63;
+    color: #fff; }
+  div.cr.card .card-footer.teal {
+    background: #009688;
+    color: #fff; }
+  div.cr.card .card-footer.black {
+    background: #000;
+    color: #fff; }
+  div.cr.card .card-footer.orange {
+    background: #FF9800;
+    color: #fff; }
   @media screen and (max-width: 767px) {
     div.cr.card {
       width: auto;
-      max-width: 99%; } }
+      max-width: 99%; }
+      div.cr.card .card-footer {
+        width: auto;
+        margin-top: -30px;
+        position: relative; } }
 
 .cr.card.pulse {
   overflow: hidden; }
@@ -80,16 +165,12 @@ div.cr.card {
   box-shadow: 0 1px 1px 0 rgba(158, 158, 158, 0.6) !important; }
 
 div.cr.card.small {
-  width: 25rem; }
-  div.cr.card.small .card-body {
-    margin: 0;
-    max-height: 20rem !important;
-    position: relative; }
+  width: 20rem; }
   div.cr.card.small .card-footer {
-    position: relative;
-    bottom: -40px;
-    margin: 0;
-    padding-bottom: 10px !important; }
+    height: auto;
+    padding: 10px 5px;
+    vertical-align: middle;
+    margin: 0 auto; }
 
 div.cr.card.medium {
   width: 35rem; }
@@ -967,14 +1048,24 @@ button.cr.button {
 /*-------------------------------SIMPLE BUTTON------------------------------------ */
 .cr.simple.button {
   color: #1a1a1a;
-  background: none !important; }
+  background: none !important;
+  transition: background 0.3s !important; }
   .cr.simple.button .ripple {
     background: #9E9E9E; }
+  .cr.simple.button:active {
+    background: #d1d1d1 !important; }
 
 .cr.simple.button.blue {
   color: #2196F3; }
   .cr.simple.button.blue .ripple {
     background: #2196F3; }
+  .cr.simple.button.blue:active {
+    background: #d1d1d1 !important; }
+
+.cr.simple.button.white {
+  color: #fff; }
+  .cr.simple.button.white .ripple {
+    background: #fff; }
 
 .cr.simple.button.red {
   color: #F44336; }
@@ -987,7 +1078,8 @@ button.cr.button {
     background: #bf9b30; }
 
 .cr.simple.button.indigo {
-  color: #3F51B5; }
+  color: #3F51B5;
+  transition: background-color 0.3s; }
   .cr.simple.button.indigo .ripple {
     background: #3F51B5; }
 

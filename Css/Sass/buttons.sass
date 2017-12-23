@@ -347,13 +347,25 @@ button.cr.button
 .cr.simple.button 
 	color: lighten($black, 10)
 	background: none !important
+	transition: background 0.3s !important
 	.ripple 
 		background: $gray
+	&:active 
+		background: lighten($gray, 20) !important
 
 .cr.simple.button.blue 
 	color: $blue 
 	.ripple 
 		background: $blue 
+	&:active 
+		background: lighten($gray, 20) !important
+
+.cr.simple.button.white 
+	color: $white 
+	.ripple
+		background: $white
+
+
 
 .cr.simple.button.red 
 	color: $red 
@@ -366,9 +378,10 @@ button.cr.button
 		background: $gold 
 
 .cr.simple.button.indigo 
-	color: $indigo 
+	color: $indigo
+	transition: background-color 0.3s 
 	.ripple 
-		background: $indigo 
+		background: $indigo
 
 .cr.simple.button.green 
 	color: $green 
