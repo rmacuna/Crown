@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 div.cr.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s;
   height: auto;
   min-height: 15rem;
@@ -8,8 +8,11 @@ div.cr.card {
   min-width: 12rem;
   font-size: 16px;
   border-radius: 2px;
+  transition: box-shadow 0.3s;
   z-index: 1;
   background: #fcfcfc; }
+  div.cr.card:hover {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2); }
   div.cr.card .card-head {
     text-align: center;
     display: block;
@@ -19,11 +22,28 @@ div.cr.card {
     color: #4d4d4d;
     padding: 15px 0px 10px 0;
     margin: auto;
-    width: 100%;
-    border-bottom: 1px solid #d1d1d1; }
+    width: 100%; }
   div.cr.card .card-body {
-    padding: 10px 5px 10px 5px;
-    font-size: 16px; }
+    padding: 15px 20px 15px 20px;
+    font-size: 16px;
+    margin: 20px auto; }
+  div.cr.card .card-footer {
+    text-align: center;
+    font-weight: bold;
+    display: flex-inline;
+    padding: 15px 10px 20px 10px;
+    color: #4d4d4d;
+    vertical-align: middle;
+    margin: auto;
+    background: #fcfcfc; }
+    div.cr.card .card-footer * {
+      display: inline; }
+  div.cr.card .card-footer.blue {
+    background: #2196F3;
+    color: #fff; }
+
+div.cr.card.medium {
+  width: 35rem; }
 
 .bold {
   font-weight: bold; }
@@ -201,7 +221,7 @@ div.cr.input.label {
     padding-top: 9.5px;
     padding-left: 20px;
     padding-right: 18px;
-    left: -9px;
+    left: -5px;
     background: #ebebeb;
     color: #4d4d4d;
     height: 31px;
@@ -222,7 +242,7 @@ div.cr.input.label {
     padding-right: 1.5rem;
     padding-bottom: 0.2rem;
     font-size: 12px;
-    left: -8px;
+    left: -5px;
     background: #ebebeb;
     color: #4d4d4d;
     height: 2.62rem;
@@ -351,6 +371,24 @@ div.cr.input.adaptive {
 
 input.cr.input.error {
   border: 0.5px solid #F44336; }
+
+.blue {
+  background: #2196F3;
+  color: #fff; }
+
+.green {
+  background: #00C853;
+  color: #fff; }
+
+.red {
+  background: #F44336;
+  color: #fff; }
+
+.text-white {
+  color: #fff !important; }
+
+.text-black {
+  color: #000 !important; }
 
 div.cr.snackbar {
   visibility: hidden;
@@ -553,6 +591,7 @@ div.cr-inline {
 button.cr.button {
   outline: none;
   border: none;
+  line-height: 2rem;
   overflow: hidden; }
 
 .cr.button {
@@ -628,6 +667,17 @@ button.cr.button {
   .cr.button.outline:hover {
     background: #000;
     color: #fff; }
+
+.cr.button.white {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff; }
+  .cr.button.white:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff; }
+  .cr.button.white .ripple {
+    background: #9E9E9E; }
 
 .cr.button.outline.blue {
   background: none;
@@ -877,6 +927,7 @@ button.button-float {
   color: #fff;
   border-radius: 50px;
   text-align: center;
+  z-index: 3;
   transition: background-color 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 8px #9E9E9E;
   bottom: 4%; }

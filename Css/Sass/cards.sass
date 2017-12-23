@@ -1,7 +1,7 @@
 @import 'variables'
 
 div.cr.card
-	box-shadow: 0 4px 8px 0 rgba($black, 0.2)
+	box-shadow: 0 2px 4px 0 rgba($black, .2)
 	transition: box-shadow 0.3s
 	height: auto
 	min-height: 15.0rem
@@ -9,8 +9,12 @@ div.cr.card
 	min-width: 12.0rem
 	font-size: 16px
 	border-radius: 2px
+	transition: box-shadow 0.3s
 	z-index: 1
 	background: darken($white, 1.2)
+	&:hover 
+		box-shadow: 0  4px 10px 0 rgba($black, .2)
+
 	.card-head
 		text-align: center 
 		display: block
@@ -21,15 +25,38 @@ div.cr.card
 		padding: 15px 0px 10px 0
 		margin: auto
 		width: 100%
-		border-bottom: 1px solid lighten($gray, 20)
 
 	.card-body
-		padding: 10px 5px 10px 5px
+		padding: 15px 20px 15px 20px
 		font-size: 16px
-
-
+		margin: 20px auto
 
 	.card-footer
+		text-align: center 
+		font-weight: bold 
+		display: flex-inline
+		padding: 15px 10px 20px 10px 		
+		color: lighten($black, 30)
+		vertical-align: middle 
+		margin: auto
+		background: darken($white, 1.2)
+		*
+			display: inline
+
+	.card-footer.blue 
+		background: $blue
+		color: $white
+
+div.cr.card.medium 
+	width: 35rem
+
+
+
+
+
+
+
+
 
 
 

@@ -3,6 +3,7 @@
 button.cr.button
 	outline: none 
 	border: none
+	line-height: 2.0rem
 	overflow: hidden
 	
 .cr.button
@@ -80,6 +81,18 @@ button.cr.button
 	&:hover 
 		background: $black 
 		color: $white
+
+.cr.button.white 
+	background: none 
+	border: 1px solid $white 
+	color: $white 
+	&:hover 
+		background: $white 
+		color: $black
+		border-color: $white
+	.ripple 
+		background: $gray
+
 
 .cr.button.outline.blue 
 	background: none
@@ -335,6 +348,7 @@ button.button-float
 	color: $white 
 	border-radius: 50px
 	text-align: center
+	z-index: 3
 	transition: background-color 0.3s, box-shadow 0.3s 
 	box-shadow: 0 4px 8px $gray
 	bottom: 4%
@@ -350,7 +364,7 @@ button.button-float
 		padding: 2px
 		bottom: 0 
 		transform: translate(-50%, -50%)
-		
+
 	&:active 
 		background-color: darken($accent, 10)
 		box-shadow: 0 6px 12px $gray
