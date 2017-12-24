@@ -8,7 +8,7 @@ div.cr.card
 	min-height: 15.0rem
 
 	height: auto 
-	width: 20.0rem
+	width: 25.0rem
 	border-radius: 2px
 	min-width: 12.0rem
 
@@ -26,13 +26,13 @@ div.cr.card
 		border-top-right-radius: 2px 
 		border-top-left-radius: 2px
 		vertical-align: middle
-		height: 30px
+		height: auto
 		font-size: 25px
 		font-weight: bold
 		color: lighten($black, 30)
-		padding: 15px 0px 10px 0
+		padding: 15px 10px 15px 20px
 		margin: auto
-		width: 100%
+		overflow: hidden
 
 	.card-head.pink 
 		background: $pink 
@@ -118,12 +118,14 @@ div.cr.card
 
 	.card-footer
 		position: relative
-		margin-top: -30px
 		width: auto
 
+		height: auto
+		padding: 10px 5px
+		vertical-align: middle
+		margin: 0 auto
+
 		text-align: center
-		border-top-right-radius: 2px 
-		border-top-left-radius: 2px
 
 		font-weight: bold
 		color: lighten($black, 30)
@@ -167,7 +169,6 @@ div.cr.card
 	.card-footer.orange 
 		background: $orange 
 		color: $white 
-
 
 
 	@media screen and (max-width: 767px)

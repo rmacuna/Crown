@@ -5,7 +5,7 @@ div.cr.card {
   transition: box-shadow 0.3s;
   min-height: 15rem;
   height: auto;
-  width: 20rem;
+  width: 25rem;
   border-radius: 2px;
   min-width: 12rem;
   font-size: 16px;
@@ -17,13 +17,13 @@ div.cr.card {
     border-top-right-radius: 2px;
     border-top-left-radius: 2px;
     vertical-align: middle;
-    height: 30px;
+    height: auto;
     font-size: 25px;
     font-weight: bold;
     color: #4d4d4d;
-    padding: 15px 0px 10px 0;
+    padding: 15px 10px 15px 20px;
     margin: auto;
-    width: 100%; }
+    overflow: hidden; }
   div.cr.card .card-head.pink {
     background: #E91E63;
     color: #fff; }
@@ -87,11 +87,12 @@ div.cr.card {
     color: #fff; }
   div.cr.card .card-footer {
     position: relative;
-    margin-top: -30px;
     width: auto;
+    height: auto;
+    padding: 10px 5px;
+    vertical-align: middle;
+    margin: 0 auto;
     text-align: center;
-    border-top-right-radius: 2px;
-    border-top-left-radius: 2px;
     font-weight: bold;
     color: #4d4d4d;
     font-size: 16px;
@@ -1052,6 +1053,8 @@ button.cr.button {
   transition: background 0.3s !important; }
   .cr.simple.button .ripple {
     background: #9E9E9E; }
+  .cr.simple.button:active {
+    background: #d1d1d1 !important; }
   .cr.simple.button:active {
     background: #d1d1d1 !important; }
 
