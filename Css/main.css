@@ -3,7 +3,6 @@ div.cr.card {
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s;
-  min-height: 15rem;
   height: auto;
   width: 25rem;
   border-radius: 2px;
@@ -16,14 +15,13 @@ div.cr.card {
     text-align: center;
     border-top-right-radius: 2px;
     border-top-left-radius: 2px;
-    vertical-align: middle;
+    border-bottom-right-radius: none;
+    border-bottom-left-radius: none;
     height: auto;
-    font-size: 25px;
     font-weight: bold;
+    position: relative;
     color: #4d4d4d;
-    padding: 15px 10px 15px 20px;
-    margin: auto;
-    overflow: hidden; }
+    padding: 10px 5px; }
   div.cr.card .card-head.pink {
     background: #E91E63;
     color: #fff; }
@@ -52,10 +50,10 @@ div.cr.card {
     background: #000;
     color: #fff; }
   div.cr.card .card-body {
-    vertical-align: middle;
     height: auto;
+    overflow: auto;
+    position: static;
     padding: 15px 10px 15px 20px;
-    margin: auto;
     font-size: 16px;
     background: #fff; }
   div.cr.card .card-body.pink {
@@ -86,12 +84,13 @@ div.cr.card {
     background: #FF9800;
     color: #fff; }
   div.cr.card .card-footer {
-    position: relative;
-    width: auto;
-    height: auto;
+    position: static;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 4px;
+    height: aut;
     padding: 10px 5px;
-    vertical-align: middle;
-    margin: 0 auto;
     text-align: center;
     font-weight: bold;
     color: #4d4d4d;
@@ -132,12 +131,7 @@ div.cr.card {
     color: #fff; }
   @media screen and (max-width: 767px) {
     div.cr.card {
-      width: auto;
-      max-width: 99%; }
-      div.cr.card .card-footer {
-        width: auto;
-        margin-top: -30px;
-        position: relative; } }
+      width: auto; } }
 
 .cr.card.pulse {
   overflow: hidden; }
@@ -167,11 +161,10 @@ div.cr.card {
 
 div.cr.card.small {
   width: 20rem; }
-  div.cr.card.small .card-footer {
-    height: auto;
-    padding: 10px 5px;
-    vertical-align: middle;
-    margin: 0 auto; }
+  @media screen and (max-width: 600px) {
+    div.cr.card.small .card-footer {
+      padding: 10px 5px;
+      margin: 0 auto; } }
 
 div.cr.card.medium {
   width: 35rem; }
@@ -179,6 +172,8 @@ div.cr.card.medium {
 div.cr.card.adaptive {
   width: 100%; }
 
+@media screen and (max-width: 767px) {
+  width: auto !important; }
 .bold {
   font-weight: bold; }
 
@@ -299,7 +294,7 @@ div.cr.input.label {
   white-space: nowrap;
   display: inline-block; }
   div.cr.input.label input {
-    left: -4px;
+    left: -1px;
     display: inline-block; }
   div.cr.input.label div.label {
     padding-top: 9.5px;
@@ -1054,21 +1049,19 @@ button.cr.button {
   .cr.simple.button .ripple {
     background: #9E9E9E; }
   .cr.simple.button:active {
-    background: #d1d1d1 !important; }
-  .cr.simple.button:active {
-    background: #d1d1d1 !important; }
+    background: #ebebeb !important; }
 
 .cr.simple.button.blue {
   color: #2196F3; }
   .cr.simple.button.blue .ripple {
     background: #2196F3; }
-  .cr.simple.button.blue:active {
-    background: #d1d1d1 !important; }
 
 .cr.simple.button.white {
   color: #fff; }
   .cr.simple.button.white .ripple {
     background: #fff; }
+  .cr.simple.button.white:active {
+    background: none !important; }
 
 .cr.simple.button.red {
   color: #F44336; }

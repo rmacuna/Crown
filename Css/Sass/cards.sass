@@ -5,18 +5,13 @@ div.cr.card
 
 	box-shadow: 0 2px 4px 0 rgba($black, .2)
 	transition: box-shadow 0.3s
-	min-height: 15.0rem
-
-	height: auto 
+	height: auto
+	
 	width: 25.0rem
 	border-radius: 2px
 	min-width: 12.0rem
-
 	font-size: 16px
 	z-index: 1
-	// background: darken($white, 1.2)
-
-
 
 	&:hover 
 		box-shadow: 0  4px 10px 0 rgba($black, .2)
@@ -25,14 +20,13 @@ div.cr.card
 		text-align: center
 		border-top-right-radius: 2px 
 		border-top-left-radius: 2px
-		vertical-align: middle
+		border-bottom-right-radius: none 
+		border-bottom-left-radius: none 
 		height: auto
-		font-size: 25px
 		font-weight: bold
+		position: relative 
 		color: lighten($black, 30)
-		padding: 15px 10px 15px 20px
-		margin: auto
-		overflow: hidden
+		padding: 10px 5px
 
 	.card-head.pink 
 		background: $pink 
@@ -72,10 +66,12 @@ div.cr.card
 
 
 	.card-body
-		vertical-align: middle 
 		height: auto 
+		overflow: auto 
+		position: static 
+		// border-bottom-right-radius: 2px 
+		// border-bottom-left-radius: 2px
 		padding: 15px 10px 15px 20px
-		margin: auto 
 		font-size: 16px
 		background: $white
 
@@ -117,28 +113,22 @@ div.cr.card
 
 
 	.card-footer
-		position: relative
-		width: auto
-
-		height: auto
+		position: static
+		top: auto
+		left: 0
+		right: 0
+		bottom: 4px
+		height: aut
 		padding: 10px 5px
-		vertical-align: middle
-		margin: 0 auto
-
 		text-align: center
-
 		font-weight: bold
 		color: lighten($black, 30)
 		font-size: 16px
-
 		border-top-right-radius: none 
 		border-top-left-radius: none 
 		border-bottom-left-radius: 2px
 		border-bottom-right-radius: 2px
-
-
 		color: lighten($black, 30)
-		// background: darken($white, 1.2)
 		*
 			display: inline
 
@@ -170,14 +160,9 @@ div.cr.card
 		background: $orange 
 		color: $white 
 
-
 	@media screen and (max-width: 767px)
 		width: auto
-		max-width: 99%
-		.card-footer
-			width: auto
-			margin-top: -30px
-			position: relative
+
 
 
 .cr.card.pulse 
@@ -209,31 +194,15 @@ div.cr.card
 
 div.cr.card.small 
 	width: 20rem
-	.card-footer
-		height: auto
-		padding: 10px 5px
-		vertical-align: middle
-		margin: 0 auto
-
+	@media screen and (max-width: 600px)
+		.card-footer
+			padding: 10px 5px
+			margin: 0 auto
 
 div.cr.card.medium 
 	width: 35rem
 
 div.cr.card.adaptive 
 	width: 100%
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width: 767px)
+	width: auto !important 

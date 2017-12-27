@@ -6,7 +6,7 @@ jQuery(function($) {
     })
 
     $('.markable').blur(function() {
-        if (!$(this).parent().is('.material-field')) {
+        if (!$(this).parent().is('.cr-material-field')) {
             let value = $(this).val();
             let input = $(this).parent().find('input');
             if (value.trim().length > 0) {
@@ -16,7 +16,7 @@ jQuery(function($) {
             }
         }
     })
-    $('.in-basic.validate').blur(function() {
+    $('.in-basic.validate, .in-label.validate').blur(function() {
         let value = $(this).val();
         let span_elem = $(this).parent().find('span');
         if ($(this).is('.numbers')) {
@@ -193,6 +193,7 @@ jQuery(function($) {
         });
         return valid;
     })
+
     $('.m-input').blur(function() {
         $parent = $(this).parent();
         if ($(this).val() == '') {
