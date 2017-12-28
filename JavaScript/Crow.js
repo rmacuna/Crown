@@ -198,7 +198,7 @@ jQuery(function($) {
         }
         $parent.removeClass('is-focused');
     })
-    $(".pulse").click(function (e) {
+    $(".pulse").click(function(e) {
         $('.ripple').remove();
 
         let posX = $(this).offset().left,
@@ -211,7 +211,7 @@ jQuery(function($) {
 
         if (btn_width >= btn_height) {
             btn_height = btn_width;
-        }else{
+        } else {
             btn_width = btn_height;
         }
 
@@ -265,7 +265,18 @@ try {
                     }
                 }
             }
-
+        };
+        $.fn.feature = function(action) {
+            if (action == 'off') {
+                this.css({
+                    "pointer-events": 'none'
+                });
+            }
+            if (action == 'on') {
+                this.css({
+                    "pointer-events": 'auto'
+                });
+            }
         };
     }(jQuery));
 } catch (e) {}
