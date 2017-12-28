@@ -1,5 +1,4 @@
 @import 'variables'
-
 div.cr.card
 	position: relative 
 
@@ -64,14 +63,19 @@ div.cr.card
 		background: $black 
 		color: $white 
 
-
+	.img-section
+		img 
+			display: block 
+			align-content: center 
+			margin: 0 auto
+			max-width: 100% 
+			height: auto 
+	
 	.card-body
 		height: auto 
 		overflow: auto 
-		position: static 
-		// border-bottom-right-radius: 2px 
-		// border-bottom-left-radius: 2px
-		padding: 15px 10px 15px 20px
+		position: static
+		padding: 15px 15px 15px 15px
 		font-size: 16px
 		background: $white
 
@@ -131,6 +135,7 @@ div.cr.card
 		color: lighten($black, 30)
 		*
 			display: inline
+	
 
 	.card-footer.blue 
 		background: $blue 
@@ -163,11 +168,17 @@ div.cr.card
 	@media screen and (max-width: 767px)
 		width: auto
 
+div.cr.card.no-footer
+	.card-footer
+		display: none !important 
+	.card-body
+		border-bottom-left-radius: 2px 
+		border-bottom-right-radius: 2px
+		padding-bottom: 25px !important  
 
 
-.cr.card.pulse 
-	overflow: hidden 
 
+	
 .cr.card.blue 
 	background: $blue 
 	color: $white
@@ -187,7 +198,6 @@ div.cr.card
 .cr.card.amber 
 	background: darken($amber, 2)
 	color: darken($white, .5)
-
 
 .noraise
 		box-shadow: 0 1px 1px 0 rgba($gray, .6) !important

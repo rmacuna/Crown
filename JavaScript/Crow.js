@@ -1,10 +1,8 @@
 /*---------Inputs---------*/
 jQuery(function($) {
-
     $('.m-input').focus(function() {
         $(this).parent().addClass('is-focused has-label');
     })
-
     $('.markable').blur(function() {
         if (!$(this).parent().is('.cr-material-field')) {
             let value = $(this).val();
@@ -193,7 +191,6 @@ jQuery(function($) {
         });
         return valid;
     })
-
     $('.m-input').blur(function() {
         $parent = $(this).parent();
         if ($(this).val() == '') {
@@ -201,7 +198,6 @@ jQuery(function($) {
         }
         $parent.removeClass('is-focused');
     })
-
     $(".pulse").click(function (e) {
         $('.ripple').remove();
 
@@ -230,10 +226,7 @@ jQuery(function($) {
             left: x + 'px'
         }).addClass("ripple-active");
     })
-
 })
-
-
 var statePressed = false;
 try {
     (function($) {

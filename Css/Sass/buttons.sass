@@ -26,12 +26,11 @@ button.cr.button
 	height: 2.2rem
 
 .cr.button.plain
-	border-radius: 0px
-
+	border-radius: 0 !important
 
 .cr.button.rounded 
 	border-radius: $button-radius
-
+	
 .cr.button
 	transition: background-color 0.3s
 	&:active
@@ -403,7 +402,7 @@ button.cr.button
 		background: $yellow
 		 
 /*----- FLOATING BUTTON --------*/
-button.button-float
+button.cr.button.float
 	position: fixed 
 	width: 56px
 	outline: none
@@ -438,8 +437,7 @@ button.button-float
 button.dark-bg
 	box-shadow: none !important
 
-
-.pulse
+.cr.button.pulse
 	overflow: hidden
 
 .ripple
@@ -473,13 +471,3 @@ button.dark-bg
 	100%
 		transform: scale(2)
 		opacity: 0 
-
-
-
-
-
-
-
-
-
-

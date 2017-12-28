@@ -229,10 +229,6 @@ div.cr.input.label
         &:active
             background: lighten($gray, 20)
 
-    
-
-
-
 /*-----------------------------------MATERIAL INPUT -------------------------*/
 
 .cr-material-field
@@ -263,6 +259,65 @@ div.cr.input.label
         -o-transition: transform 0.3s
         -moz-transition: transform 0.3s
         transition: transform 0.3s
+
+.cr-material-field.blue
+    .is-focused, .m-label 
+        color: $blue !important 
+    &:after 
+        background-color: $blue !important
+
+.cr-material-field.white
+    .is-focused, .m-label
+        color: $white !important
+    &:after
+        background-color: $white !important
+
+   
+
+.cr-material-field.red 
+    .is-focused, .m-label
+        color: $red !important 
+    &:after 
+        background-color: $red !important
+
+.cr-material-field.green
+    .is-focused, .m-label
+        color: $green !important 
+    &:after 
+        background-color: $green !important
+
+.cr-material-field.amber 
+    .is-focused, .m-label
+        color: $amber !important 
+    &:after 
+        background-color: $amber !important 
+    
+.cr-material-field.yellow
+    .is-focused, .m-label
+        color: $yellow !important 
+    &:after 
+        background-color: $yellow !important 
+
+.cr-material-field.gold 
+    .is-focused, .m-label
+        color: $gold !important 
+    &:after 
+        background-color: $gold !important 
+
+.cr-material-field.purple 
+    .is-focused, .m-label
+        color: $purple !important 
+    &:after 
+        background-color: $purple !important
+
+.cr-material-field.orange 
+    .is-focused, .m-label
+        color: $orange !important 
+    &:after 
+        background-color: $orange !important 
+
+
+
 
 .is-focused .m-label
     color: $accent
@@ -312,7 +367,7 @@ div.cr.input.label
 
     transform-origin: 0 50%
 
-span.m-cr-state[data-error].error
+span.m-state[data-error].error
     &:before
         content: attr(data-error)
         width: 30px
@@ -324,7 +379,7 @@ span.m-cr-state[data-error].error
         white-space: nowrap
         font-size: 12px
 
-span.m-cr-state[data-positive].done
+span.m-state[data-positive].done
     &:before
         content: attr(data-positive)
         width: 30px
@@ -336,16 +391,16 @@ span.m-cr-state[data-positive].done
         white-space: nowrap
         font-size: 12px
 
-span.m-cr-state.error.show
+span.m-state.error.show
     &:before
         display: block
         visibility: visible
+        
 
-span.m-cr-state.done.show
+span.m-state.done.show
     &:before
         display: block
         visibility: visible
-
 
 .cr.input.medium
     input

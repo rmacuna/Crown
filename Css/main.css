@@ -49,11 +49,17 @@ div.cr.card {
   div.cr.card .card-head.black {
     background: #000;
     color: #fff; }
+  div.cr.card .img-section img {
+    display: block;
+    align-content: center;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto; }
   div.cr.card .card-body {
     height: auto;
     overflow: auto;
     position: static;
-    padding: 15px 10px 15px 20px;
+    padding: 15px 15px 15px 15px;
     font-size: 16px;
     background: #fff; }
   div.cr.card .card-body.pink {
@@ -133,8 +139,12 @@ div.cr.card {
     div.cr.card {
       width: auto; } }
 
-.cr.card.pulse {
-  overflow: hidden; }
+div.cr.card.no-footer .card-footer {
+  display: none !important; }
+div.cr.card.no-footer .card-body {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  padding-bottom: 25px !important; }
 
 .cr.card.blue {
   background: #2196F3;
@@ -415,6 +425,51 @@ div.cr.input.label {
   -moz-transition: transform 0.3s;
   transition: transform 0.3s; }
 
+.cr-material-field.blue .is-focused, .cr-material-field.blue .m-label {
+  color: #2196F3 !important; }
+.cr-material-field.blue:after {
+  background-color: #2196F3 !important; }
+
+.cr-material-field.white .is-focused, .cr-material-field.white .m-label {
+  color: #fff !important; }
+.cr-material-field.white:after {
+  background-color: #fff !important; }
+
+.cr-material-field.red .is-focused, .cr-material-field.red .m-label {
+  color: #F44336 !important; }
+.cr-material-field.red:after {
+  background-color: #F44336 !important; }
+
+.cr-material-field.green .is-focused, .cr-material-field.green .m-label {
+  color: #00C853 !important; }
+.cr-material-field.green:after {
+  background-color: #00C853 !important; }
+
+.cr-material-field.amber .is-focused, .cr-material-field.amber .m-label {
+  color: #FFC107 !important; }
+.cr-material-field.amber:after {
+  background-color: #FFC107 !important; }
+
+.cr-material-field.yellow .is-focused, .cr-material-field.yellow .m-label {
+  color: #FFEB3B !important; }
+.cr-material-field.yellow:after {
+  background-color: #FFEB3B !important; }
+
+.cr-material-field.gold .is-focused, .cr-material-field.gold .m-label {
+  color: #bf9b30 !important; }
+.cr-material-field.gold:after {
+  background-color: #bf9b30 !important; }
+
+.cr-material-field.purple .is-focused, .cr-material-field.purple .m-label {
+  color: #9C27B0 !important; }
+.cr-material-field.purple:after {
+  background-color: #9C27B0 !important; }
+
+.cr-material-field.orange .is-focused, .cr-material-field.orange .m-label {
+  color: #FF9800 !important; }
+.cr-material-field.orange:after {
+  background-color: #FF9800 !important; }
+
 .is-focused .m-label {
   color: #E91E63; }
 
@@ -457,7 +512,7 @@ div.cr.input.label {
   transition: transform 0.3s, font-size 0.3s;
   transform-origin: 0 50%; }
 
-span.m-cr-state[data-error].error:before {
+span.m-state[data-error].error:before {
   content: attr(data-error);
   width: 30px;
   heigh: 20px;
@@ -468,7 +523,7 @@ span.m-cr-state[data-error].error:before {
   white-space: nowrap;
   font-size: 12px; }
 
-span.m-cr-state[data-positive].done:before {
+span.m-state[data-positive].done:before {
   content: attr(data-positive);
   width: 30px;
   height: 20px;
@@ -479,11 +534,11 @@ span.m-cr-state[data-positive].done:before {
   white-space: nowrap;
   font-size: 12px; }
 
-span.m-cr-state.error.show:before {
+span.m-state.error.show:before {
   display: block;
   visibility: visible; }
 
-span.m-cr-state.done.show:before {
+span.m-state.done.show:before {
   display: block;
   visibility: visible; }
 
@@ -731,7 +786,7 @@ button.cr.button {
   height: 2.2rem; }
 
 .cr.button.plain {
-  border-radius: 0px; }
+  border-radius: 0 !important; }
 
 .cr.button.rounded {
   border-radius: 50px; }
@@ -1100,7 +1155,7 @@ button.cr.button {
     background: #FFEB3B; }
 
 /*----- FLOATING BUTTON -------- */
-button.button-float {
+button.cr.button.float {
   position: fixed;
   width: 56px;
   outline: none;
@@ -1115,7 +1170,7 @@ button.button-float {
   transition: background-color 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 8px #9E9E9E;
   bottom: 4%; }
-  button.button-float i {
+  button.cr.button.float i {
     text-align: center;
     position: absolute;
     -webkit-touch-callout: none;
@@ -1127,14 +1182,14 @@ button.button-float {
     padding: 2px;
     bottom: 0;
     transform: translate(-50%, -50%); }
-  button.button-float:active {
+  button.cr.button.float:active {
     background-color: #c1134e;
     box-shadow: 0 6px 12px #9E9E9E; }
 
 button.dark-bg {
   box-shadow: none !important; }
 
-.pulse {
+.cr.button.pulse {
   overflow: hidden; }
 
 .ripple {
