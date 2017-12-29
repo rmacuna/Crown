@@ -161,7 +161,7 @@ div.cr.card {
   div.cr.card .card-footer.orange {
     background: #FF9800;
     color: #fff; }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 460px) {
     div.cr.card {
       width: auto; } }
 
@@ -330,8 +330,7 @@ div.cr.input.label {
   white-space: nowrap;
   display: inline-block; }
   div.cr.input.label input {
-    left: -1px;
-    display: inline-block; }
+    left: -4px; }
   div.cr.input.label div.label {
     padding-top: 9.5px;
     padding-left: 20px;
