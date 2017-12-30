@@ -21,32 +21,21 @@
     </button>
     <div class="cr container">
         <div class="row">
-            <div class="col-md-2">
-                <div class="cr input label">
-                    <div class="label">Name</div>
-                    <input class="in-label validate numbers bold" type="text" name="">
-                    <span class="cr-message"></span>
+            <div class="col-md-6">
+                <div class="cr-material-field black">
+                    <label class="m-label">Name</label>
+                    <input class="m-input validate numbers" type="text" name="">
+                    <span data-positive="Good, it's a number" data-error="This is not a number" class="m-state"></span>
                 </div>
-                  <div class="cr input label">
-                    <div class="label">Email</div>
-                    <input id="input1" class="in-label validate email " type="text" name="">
-                    <button id="btnClear" class="ender teal">Clear</button>
-                    <span class="cr-message"></span>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <div class="cr button indigo hoverable pulse rounded">Calculate</div>
             </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../JavaScript/Crow.js"></script>
     <script>
-        $("#btnClear").click(function(){
-            $("#input1").val("");
-        })
+    $("#btnClear").click(function() {
+        $("#input1").val("");
+    })
     </script>
 </body>
 

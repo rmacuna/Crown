@@ -509,50 +509,71 @@ div.cr.input.label {
   -moz-transition: transform 0.3s;
   transition: transform 0.3s; }
 
-.cr-material-field.blue .is-focused, .cr-material-field.blue .m-label {
-  color: #2196F3 !important; }
 .cr-material-field.blue:after {
   background-color: #2196F3 !important; }
 
-.cr-material-field.white .is-focused, .cr-material-field.white .m-label {
-  color: #fff !important; }
+.cr-material-field.blue.is-focused .m-label {
+  color: #2196F3 !important; }
+
 .cr-material-field.white:after {
   background-color: #fff !important; }
 
-.cr-material-field.red .is-focused, .cr-material-field.red .m-label {
-  color: #F44336 !important; }
+.cr-material-field.white.is-focused .m-label {
+  color: #fff !important; }
+
 .cr-material-field.red:after {
   background-color: #F44336 !important; }
 
-.cr-material-field.green .is-focused, .cr-material-field.green .m-label {
-  color: #00C853 !important; }
+.cr-material-field.red.is-focused .m-label {
+  color: #F44336 !important; }
+
 .cr-material-field.green:after {
   background-color: #00C853 !important; }
 
-.cr-material-field.amber .is-focused, .cr-material-field.amber .m-label {
-  color: #FFC107 !important; }
+.cr-material-field.green.is-focused .m-label {
+  color: #00C853 !important; }
+
 .cr-material-field.amber:after {
   background-color: #FFC107 !important; }
 
-.cr-material-field.yellow .is-focused, .cr-material-field.yellow .m-label {
-  color: #FFEB3B !important; }
+.cr-material-field.amber.is-focused .m-label {
+  color: #FFC107 !important; }
+
 .cr-material-field.yellow:after {
   background-color: #FFEB3B !important; }
 
-.cr-material-field.gold .is-focused, .cr-material-field.gold .m-label {
-  color: #bf9b30 !important; }
+.cr-material-field.yellow.is-focused .m-label {
+  color: #FFEB3B !important; }
+
 .cr-material-field.gold:after {
   background-color: #bf9b30 !important; }
 
-.cr-material-field.purple .is-focused, .cr-material-field.purple .m-label {
-  color: #9C27B0 !important; }
+.cr-material-field.gold.is-focused .m-label {
+  color: #bf9b30 !important; }
+
 .cr-material-field.purple:after {
   background-color: #9C27B0 !important; }
 
-.cr-material-field.orange .is-focused, .cr-material-field.orange .m-label {
-  color: #FF9800 !important; }
+.cr-material-field.purple.is-focused .m-label {
+  color: #9C27B0 !important; }
+
 .cr-material-field.orange:after {
   background-color: #FF9800 !important; }
+
+.cr-material-field.orange.is-focused .m-label {
+  color: #FF9800 !important; }
+
+.cr-material-field.indigo:after {
+  background-color: #3F51B5 !important; }
+
+.cr-material-field.indigo.is-focused .m-label {
+  color: #3F51B5 !important; }
+
+.cr-material-field.black:after {
+  background-color: #000 !important; }
+
+.cr-material-field.black.is-focused .m-label {
+  color: #000 !important; }
 
 .is-focused .m-label {
   color: #E91E63; }
