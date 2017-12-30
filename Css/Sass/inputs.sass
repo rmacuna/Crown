@@ -187,46 +187,128 @@ div.cr.input.label
         border-right: 0px
 
     div.ender
+        position: absolute 
+        display: inline-block 
+        top: 0 
+
+
         padding-top: 9.5px
         padding-left: 20px
         padding-right: 18px
-        left: -2.5%
+
+        left: 98.5%
         background: lighten($gray, 30)
         color: lighten($black, 30)
+
         height: 31px
-        margin: 0
         border-top-right-radius: 2px
         border-bottom-right-radius: 2px
         border: 0.5px solid lighten($gray, 20)
+
         border-left: 0px
-        position: relative
-        display: inline-block
         text-align: center
         font-weight: bold
 
     button.ender
-        padding-top: 0.3rem
-        position: relative
-        padding-left: 1.5rem
-        outline: none
-        padding-right: 1.5rem
-        padding-bottom: 0.2rem
-        font-size: 1.2rem
-        left: -5px
+        
+        position: absolute
+        display: inline-block
+        outline: none 
+
+        text-decoration: none 
+        padding-left: 1.3rem
+        padding-right: 1.3rem
+
+        font-size: 14px
+        top: 0
+        left: 98.5%
+        height: 42px
         background: lighten($gray, 30)
         color: lighten($black, 30)
-        height: 2.62rem
-        margin: 0
+
         border-top-right-radius: 2px
         border-bottom-right-radius: 2px
         border: 0.5px solid lighten($gray, 20)
+
         border-left: 0px
-        display: inline-block
         text-align: center
         font-weight: bold
+
         transition: background-color 0.3s
         &:active
             background: lighten($gray, 20)
+
+    .ender.teal 
+        background: $teal
+        border-color: $teal 
+        color: $white
+    button.ender.teal 
+        &:active 
+            background: darken($teal, 15)
+    .ender.blue 
+        background: $blue 
+        border-color: $blue 
+        color: $white
+    button.ender.blue  
+        &:active 
+            background: darken($blue, 15)
+    .ender.red 
+        background: $red 
+        border-color: $red 
+        color: $white
+    button.ender.red 
+        &:active 
+            background: darken($red, 15)
+    .ender.indigo
+        background: $indigo 
+        border-color: $indigo 
+        color: $white
+    button.ender.indigo 
+        &:active 
+            background: darken($indigo, 15)
+    .ender.pink 
+        background: $pink 
+        border-color: $pink 
+        color: $white 
+    button.ender.pink 
+        &:active 
+            background: darken($pink, 15)
+    .ender.green 
+        background: $green 
+        border-color: $green 
+        color: $white 
+    button.ender.green 
+        &:active 
+            background: darken($green, 15)
+    .ender.white 
+        background: $white 
+        border-color: $white
+        color: $black 
+    button.ender.white 
+        &:active 
+            background: darken($white, 15)
+    .ender.gold 
+        background: $gold 
+        border-color: $gold 
+        color: $white
+    button.ender.gold 
+        &:active 
+            background: darken($gold , 15)
+    .ender.amber 
+        background: $amber 
+        border-color: $amber 
+        color: $white 
+    button.ender.amber
+        &:active 
+            background: darken($amber, 15)
+    .ender.black
+        background: $black 
+        border-color: $black 
+        color: $white
+    button.ender.black 
+        &:active 
+            background: lighten($black, 10)
+
 
 /*-----------------------------------MATERIAL INPUT -------------------------*/
 

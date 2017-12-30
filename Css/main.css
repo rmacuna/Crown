@@ -382,45 +382,104 @@ div.cr.input.label {
     border: 0.5px solid #F44336;
     border-right: 0px; }
   div.cr.input.label div.ender {
+    position: absolute;
+    display: inline-block;
+    top: 0;
     padding-top: 9.5px;
     padding-left: 20px;
     padding-right: 18px;
-    left: -2.5%;
+    left: 98.5%;
     background: #ebebeb;
     color: #4d4d4d;
     height: 31px;
-    margin: 0;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     border: 0.5px solid #d1d1d1;
     border-left: 0px;
-    position: relative;
-    display: inline-block;
     text-align: center;
     font-weight: bold; }
   div.cr.input.label button.ender {
-    padding-top: 0.3rem;
-    position: relative;
-    padding-left: 1.5rem;
+    position: absolute;
+    display: inline-block;
     outline: none;
-    padding-right: 1.5rem;
-    padding-bottom: 0.2rem;
-    font-size: 1.2rem;
-    left: -5px;
+    text-decoration: none;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    font-size: 14px;
+    top: 0;
+    left: 98.5%;
+    height: 42px;
     background: #ebebeb;
     color: #4d4d4d;
-    height: 2.62rem;
-    margin: 0;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     border: 0.5px solid #d1d1d1;
     border-left: 0px;
-    display: inline-block;
     text-align: center;
     font-weight: bold;
     transition: background-color 0.3s; }
     div.cr.input.label button.ender:active {
       background: #d1d1d1; }
+  div.cr.input.label .ender.teal {
+    background: #009688;
+    border-color: #009688;
+    color: #fff; }
+  div.cr.input.label button.ender.teal:active {
+    background: #004a43; }
+  div.cr.input.label .ender.blue {
+    background: #2196F3;
+    border-color: #2196F3;
+    color: #fff; }
+  div.cr.input.label button.ender.blue:active {
+    background: #0a6ebd; }
+  div.cr.input.label .ender.red {
+    background: #F44336;
+    border-color: #F44336;
+    color: #fff; }
+  div.cr.input.label button.ender.red:active {
+    background: #d2190b; }
+  div.cr.input.label .ender.indigo {
+    background: #3F51B5;
+    border-color: #3F51B5;
+    color: #fff; }
+  div.cr.input.label button.ender.indigo:active {
+    background: #2b387c; }
+  div.cr.input.label .ender.pink {
+    background: #E91E63;
+    border-color: #E91E63;
+    color: #fff; }
+  div.cr.input.label button.ender.pink:active {
+    background: #aa1145; }
+  div.cr.input.label .ender.green {
+    background: #00C853;
+    border-color: #00C853;
+    color: #fff; }
+  div.cr.input.label button.ender.green:active {
+    background: #007c33; }
+  div.cr.input.label .ender.white {
+    background: #fff;
+    border-color: #fff;
+    color: #000; }
+  div.cr.input.label button.ender.white:active {
+    background: #d9d9d9; }
+  div.cr.input.label .ender.gold {
+    background: #bf9b30;
+    border-color: #bf9b30;
+    color: #fff; }
+  div.cr.input.label button.ender.gold:active {
+    background: #826921; }
+  div.cr.input.label .ender.amber {
+    background: #FFC107;
+    border-color: #FFC107;
+    color: #fff; }
+  div.cr.input.label button.ender.amber:active {
+    background: #ba8b00; }
+  div.cr.input.label .ender.black {
+    background: #000;
+    border-color: #000;
+    color: #fff; }
+  div.cr.input.label button.ender.black:active {
+    background: #1a1a1a; }
 
 /*-----------------------------------MATERIAL INPUT ------------------------- */
 .cr-material-field {
