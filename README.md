@@ -73,7 +73,7 @@ and you will get this incredible and simple button
 Floating buttons are very usefull when you are using a phone or a tablet. You could use it like this 
 ```HTML
   <button class="cr button-float pulse">
-  <i class="material-icons">add</i>
+      <i class="material-icons">add</i>
   </button
 ```
 
@@ -126,4 +126,43 @@ Crown inputs uses three diferent styles that includes basic inputs, labeled inpu
   </div>
 ```
  ![](https://lh3.googleusercontent.com/wZnq6hNSI5xJ_PLQy9bacwBHNq2L3LMWwzc4NZGOUf-pftqf3f2o1GtTjYAoERckh7gac43VlJkj63URg7Yk9jqsjwadztBBH7OAqSBSQa5DCVTOSiqjuGoovdV31ydyvRVlWbCvgA)
+ 
+**Input Style**
+
+  * You can set the input for dark backgrounds by adding ``dark-background`` class
+  * You can change the color font of the input by adding the color-font class
+  * You can change the outline color of the input by adding the color-outline 
+  * Add the ``rounded`` class to get a input with a rounded border
+  
+  ```HTML
+    <div class="cr input label">
+      <div class="label">Name</div>
+      <input class="in-label blue-outline blue-font dark-background"></input>
+    </div>
+  ```
+  ***If You prefer the text in bold add the class ``bold`` to the input element***
+  
+  * If you add another ``div`` with class ``ender`` or a button with the same class you will get a pretty label at the end of the input, that could be really usefull when the user are filling forms.
+  ```HTML
+  <div class="cr input label">
+      <div class="label">Name</div>
+      <input class="in-label"></input>
+      <div class="ender">.com</div>
+  </div>
+
+ <div class="cr input label">
+      <div class="label">Name</div>
+      <input class="in-label"></input>
+      <button class="ender">Copy</button>
+  </div>
+```
+Of course you can change the color of all of enders and labels adding the color name that you want 
+
+```HTML
+  <div class="cr input label">
+      <div class="label teal">Name</div>
+      <input class="in-label"></input>
+      <button class="ender teal">Copy</button>
+  </div>
+```
   
