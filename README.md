@@ -202,14 +202,50 @@ Of course you can change the color of all enders and labels adding the color nam
     </div>
 
   ```
-  ```jQuery  
+  ```JavaScript  
       $("#btnClear").click(function(){
             $("#input1").val("");
       })
-
   ```
-
+  
   ![](https://media.giphy.com/media/xUNda1GZOTmVzlMZqg/giphy.gif)
 
 
+**Material Inputs**
+
+  Crown implements material inputs too
   
+```HTML 
+     <div class="cr-material-field ">
+          <label class="m-label">Name</label>
+          <input class="m-input" type="text" name="">
+     </div>
+```
+  The color of the input it's by default the accent of the application ([See full DOCS to see how to modify with SASS](https://github.com/rmacuna/Crown/edit/master)), but you can change it adding the color class, it's really simple!.
+  
+```HTML 
+     <div class="cr-material-field indigo">
+          <label class="m-label">Name</label>
+          <input class="m-input" type="text" name="">
+     </div>
+     
+      <div class="cr-material-field blue">
+          <label class="m-label">Name</label>
+          <input class="m-input" type="text" name="">
+     </div>
+     
+      <div class="cr-material-field black">
+          <label class="m-label">Name</label>
+          <input class="m-input" type="text" name="">
+     </div>
+```
+You can add custom validation messages unlike input basic or input-label, using de attr ``data-error``and ``data-positive``
+
+```HTML 
+  <div class="cr-material-field black">
+        <label class="m-label">Name</label>
+        <input class="m-input validate numbers" type="text" name="">
+        <span data-positive="Good, it's a number" data-error="This is not a number" class="m-state"></span>
+  </div>
+```
+![](https://media.giphy.com/media/3ohjUQbImEG4Jobp0k/giphy.gif)
