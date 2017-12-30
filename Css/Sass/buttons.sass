@@ -15,6 +15,7 @@ button.cr.button
 	text-align: center
 	font-size: 0.9rem
 	font-weight: bold
+	margin-bottom: 0.2rem
 	user-select: none
 	position: relative
 	text-decoration: none
@@ -170,7 +171,7 @@ button.cr.button
 	background: $blue 
 	color: $white
 	&:active
-		background: #1565C0
+		background: darken($blue, 15)
 
 .cr.button.white 
 	background: $white 
@@ -185,49 +186,49 @@ button.cr.button
 	background: $deep-purple
 	color: $white
 	&:active
-		background: #311B92
+		background: darken($deep-purple, 15)
 
 .cr.button.gold
 	background: $gold
 	color: $white
 	&:active
-		background: $gold-deep 
+		background: darken($gold, 15)
 		
 .cr.button.green
 	background: $green 
 	color: $white
 	&:active 
-		background: #009900 
+		background: darken($green, 15) 
 
 .cr.button.red
 	background: $red
 	color: $white
 	&:active 
-		background: #B71C1C 
+		background: darken($red, 15)
 
 .cr.button.orange
 	background: $orange
 	color: $white 
 	&:active 
-		background: #E65100
+		background: darken($orange, 15)
 
 .cr.button.pink
 	background: $pink
 	color: $white 
 	&:active
-		background: #880E4F 
+		background: darken($pink, 15) 
 
 .cr.button.light-blue
 	background: $light-blue
 	color: $white
 	&:active 
-		background: #01579B
+		background: darken($light-blue, 15)
 
 .cr.button.indigo
 	background: $indigo
 	color: $white 
 	&:active 
-		background: #1A237E 
+		background: darken($indigo, 15) 
 
 .cr.button.black
 	background: $black
@@ -238,88 +239,89 @@ button.cr.button
 	background: $teal 
 	color: $white 
 	&:active 
-		background: #004D40 
+		background: darken($teal, 15) 
 
 .cr.button.amber 
 	background: $amber
 	color: $white 
 	&:active 
-		background: #FF6F00
+		background: darken($amber, 15)
+
 
 
 .cr.button.blue.hoverable
 	background: $blue 
 	color: $white
 	&:hover
-		background: #1565C0
+		background: darken($blue, 8)
 	&:active
-		background: #1565C0
+		background: darken($blue, 15)
 
 .cr.button.deep-purple.hoverable
 	background: $deep-purple
 	color: $white
 	&:hover
-		background: #4527A0
+		background: darken($deep-purple, 8)
 	&:active
-		background: $deep-purple
+		background: darken($deep-purple, 15)
 
 
 .cr.button.gold.hoverable
 	background: $gold
 	color: $white
 	&:hover 
-		background: $gold-deep
+		background: darken($gold, 8)
 	&:active
-		background: $gold 
+		background: darken($gold, 15)
 		
 
 .cr.button.green.hoverable
 	background: $green 
 	color: $white
 	&:hover
-		background: #00b300
+		background: darken($green, 8)
 	&:active 
-		background: #009900 
+		background: darken($green, 15) 
 
 .cr.button.red.hoverable
 	background: $red
 	color: $white
 	&:hover 
-		background: #D32F2F
+		background: darken($red, 8)
 	&:active 
-		background: #B71C1C 
+		background: darken($red, 15)
 
 .cr.button.orange.hoverable
 	background: $orange
 	color: $white
 	&:hover 
-		background: #F57C00
+		background: darken($orange, 8)
 	&:active 
-		background: #E65100
+		background: darken($orange, 15)
 
 .cr.button.pink.hoverable
 	background: $pink
 	color: $white
 	&:hover 
-		background: #C2185B 
+		background: darken($orange, 8) 
 	&:active
-		background: #880E4F
+		background: darken($orange, 15)
 
 .cr.button.light-blue.hoverable
 	background: $light-blue
 	color: $white
 	&:hover 
-		background: #0288D1
+		background: darken($light-blue, 8)
 	&:active 
-		background: #01579B
+		background: darken($light-blue, 15)
 
 .cr.button.indigo.hoverable
 	background: $indigo
 	color: $white
 	&:hover 
-		background: #303F9F 
+		background: darken($indigo, 8) 
 	&:active 
-		background: #1A237E 
+		background: darken($indigo, 15) 
 
 .cr.button.black.hoverable
 	background: $black
@@ -330,9 +332,9 @@ button.cr.button
 	background: $teal 
 	color: $white
 	&:hover 
-		background: #00796B 
+		background: darken($teal, 8) 
 	&:active 
-		background: #004D40 
+		background: darken($teal, 15) 
 
 .cr.button.amber.hoverable 
 	background: $amber

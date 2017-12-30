@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../Css/main.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/Grid/flexboxgrid.min.css">
     <title>LearnDesign</title>
     <style type="text/css">
     .sep {
@@ -19,14 +20,33 @@
         <i class="material-icons">add</i>
     </button>
     <div class="cr container">
-        <div class="cr input label">
-            <div class="label blue">Name</div>
-            <input class="blue-font"></input>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="cr input label">
+                    <div class="label">Name</div>
+                    <input class="in-label validate numbers bold" type="text" name="">
+                    <span class="cr-message"></span>
+                </div>
+                  <div class="cr input label">
+                    <div class="label">Email</div>
+                    <input id="input1" class="in-label validate email " type="text" name="">
+                    <button id="btnClear" class="ender teal">Clear</button>
+                    <span class="cr-message"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="cr button indigo hoverable pulse rounded">Calculate</div>
+            </div>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../JavaScript/Crow.js"></script>
     <script>
+        $("#btnClear").click(function(){
+            $("#input1").val("");
+        })
     </script>
 </body>
 

@@ -3,15 +3,14 @@
 
 **v.0.1**
 
-Crown it's a private(**For now**) front-end framework for web-develop that uses a group of components based on material design with a variation of material-design standarts components. With Crown you can use diferent styles and make websites with an elegant design.  
+Crown it's a private(**For now**) front-end framework for web-develop that uses a group of components based on material design with a custom variation. With Crown you can use diferent styles and make elegant websites.  
 
-Crown uses material-icons so use it by adding this line on your HTML code 
+Crown uses material-icons so add this line in the head of your HTML code 
 
 `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
 
-
-See the [live preview](https://github.com/rmacuna/Crown/edit/master/README.md) of this version
+( Live Preview Not Avaliable For Now )[live preview](https://github.com/rmacuna/Crown/edit/master/README.md) of this version
 
 ## Basic Docs
 
@@ -21,7 +20,6 @@ See the [live preview](https://github.com/rmacuna/Crown/edit/master/README.md) o
 ```HTML 
 <div class="cr button">Button</div>
 <button class="cr button">Button</button>
-
 ```
  You can also coloring these buttons adding the color class
  
@@ -149,14 +147,13 @@ Crown inputs uses three diferent styles that includes basic inputs, labeled inpu
       <input class="in-label"></input>
       <div class="ender">.com</div>
   </div>
-
  <div class="cr input label">
       <div class="label">Name</div>
       <input class="in-label"></input>
       <button class="ender">Copy</button>
   </div>
 ```
-Of course you can change the color of all of enders and labels adding the color name that you want 
+Of course you can change the color of all enders and labels adding the color name that you want 
 
 ```HTML
   <div class="cr input label">
@@ -165,4 +162,54 @@ Of course you can change the color of all of enders and labels adding the color 
       <button class="ender teal">Copy</button>
   </div>
 ```
+**Validation**
+  
+  Inputs brings a default validation (Only numbers and email) that you can trigger adding the class ``validate numbers`` or ``validate email``. Add a ``<span>``element to display the error or done icon.
+  
+  ```HTML 
+    <div class="cr input basic">
+      <input type="text" class="in-basic validate numbers">
+      <span class="cr-message"></span>
+    </div>
+    <div class="cr input label">
+      <input type="text" class="in-label validate numbers">
+      <span class="cr-message"></span>
+    </div>
+  ```
+  Take a look of this code that involves everything
+
+  ```HTML 
+   <div class="row">
+        <div class="col-md-2">
+            <div class="cr input label">
+                <div class="label">Name</div>
+                <input class="in-label validate numbers bold" type="text" name="">
+                <span class="cr-message"></span>
+            </div>
+            <div class="cr input label">
+                <div class="label">Email</div>
+                <input id="input1" class="in-label validate email " type="text" name="">
+                <button id="btnClear" class="ender teal">Clear</button>
+                <span class="cr-message"></span>
+            </div>
+        </div>
+    </div>
+
+   <div class="row">
+        <div class="col-md-2">
+            <div class="cr button indigo hoverable pulse rounded">Calculate</div>
+        </div>
+    </div>
+
+  ```
+  ```jQuery  
+      $("#btnClear").click(function(){
+            $("#input1").val("");
+      })
+
+  ```
+
+  ![](https://media.giphy.com/media/xUNda1GZOTmVzlMZqg/giphy.gif)
+
+
   
