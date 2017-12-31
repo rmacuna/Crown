@@ -1,0 +1,46 @@
+div.cr.checkbox
+	width: 200px
+	padding: 6px 2px
+	position: relative
+	margin-bottom: 20px
+
+	label
+		position: absolute 
+		display: inline-block
+		font-family: 'Nunito', open-sans !important
+		left: 8% !important
+		&:before
+			content: ''
+			box-sizing: border-box
+			display: inline-block
+			position: absolute
+			transition: background 0.3s
+			top: 20%
+			left: -30%
+			width: 20px
+			height: 20px
+			border: 1.5px solid $gray
+			border-radius: 2px
+
+	input[type="checkbox"]
+		border: none !important 
+		display: inline 
+		opacity: 1	
+		position: absolute
+		left: -6.5%
+		top: 110%
+		width: 20px
+		z-index: 1
+		height: 20px
+		cursor: pointer
+
+	input[type="checkbox"]
+		&:checked
+			+ label
+				&:before
+					background: $pink		
+
+	
+
+
+

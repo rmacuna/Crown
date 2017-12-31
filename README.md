@@ -9,6 +9,8 @@ Crown uses material-icons so add this line in the head of your HTML code
 
 `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
+Crown uses flexbox grid so read the complete DOCS of grid system ![here](http://flexboxgrid.com/)
+
 
 ( Live Preview Not Avaliable For Now )[live preview](https://github.com/rmacuna/Crown/edit/master/README.md) of this version
 
