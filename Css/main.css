@@ -865,22 +865,27 @@ div.checkbox.pulse input[type="checkbox"]:checked ~ span.pulse:before {
   transform: scale(3);
   opacity: 0; }
 
-div.cr.checkbox.variant input[type="checkbox"]:checked + label:before {
-  transition: transform 0.3s ease-in-out;
-  height: 12px;
-  -webkit-transform: rotate(-405deg);
-  -ms-transform: rotate(-405deg);
-  transform: rotate(-405deg);
-  border-top: none !important;
-  border-right: none !important;
-  border-color: #E91E63;
-  background: none !important; }
+div.cr.checkbox.variant input[type="checkbox"] {
+  outline: none;
+  border: none; }
+  div.cr.checkbox.variant input[type="checkbox"]:checked + label:before {
+    transition: transform 0.3s ease-in-out;
+    height: 10px;
+    -webkit-transform: rotate(-405deg);
+    -ms-transform: rotate(-405deg);
+    transform: rotate(-405deg);
+    border-top: none !important;
+    border-right: none !important;
+    background: none !important; }
+  div.cr.checkbox.variant input[type="checkbox"]:checked + label:after {
+    display: none !important; }
 div.cr.checkbox.variant input[type="checkbox"]:not(:checked) + label:before {
   border: 1.5px solid #9E9E9E;
   transition: transform 0.3s ease-out; }
 
 div.cr.radio-button {
   width: auto;
+  padding: 5px 12px;
   position: relative; }
   div.cr.radio-button label {
     font-family: "Nunito", open-sans;
@@ -897,13 +902,69 @@ div.cr.radio-button {
       left: -15%;
       top: 0;
       width: 18px;
-      height: 18px; }
+      height: 18px;
+      -webkit-transition: background 0.3s ease-out, border-color 0.3s ease-out;
+      -ms-transition: background 0.3s ease-out, border-color 0.3s ease-out;
+      -moz-transition: background 0.3s ease-out, border-color 0.3s ease-out;
+      transition: background 0.3s ease-out, border-color 0.3s ease-out; }
+    div.cr.radio-button label:after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      box-sizing: border-box;
+      border-radius: 100%;
+      left: -13%;
+      top: 15%;
+      background: #fff;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+      -webkit-transition: transform 0.3s ease-out;
+      -ms-transition: transform 0.3s ease-out;
+      -moz-transition: transform 0.3s ease-out;
+      transition: transform 0.3s ease-out; }
   div.cr.radio-button input[type="radio"] {
-    margin-right: 15px;
+    margin-right: 10px;
+    opacity: 0;
     z-index: 1;
     height: 20px;
     position: relative;
     cursor: pointer; }
+  div.cr.radio-button input[type="radio"]:checked + label:after {
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7); }
+  div.cr.radio-button input[type="radio"]:checked + label:before {
+    background: #E91E63;
+    border-color: #E91E63; }
+
+div.cr.radio-button.variant input[type="radio"]:checked + label:after {
+  background: #E91E63; }
+div.cr.radio-button.variant input[type="radio"]:checked + label:before {
+  background: none !important;
+  border-color: #E91E63; }
+
+div.cr.radio-button.pulse span:before {
+  content: "";
+  position: absolute;
+  background: rgba(233, 30, 99, 0.4);
+  width: 15px;
+  height: 15px;
+  left: 1.8%;
+  top: 2%;
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: transform 0.4s ease-out, opacity 0.6s ease-out;
+  -ms-transition: transform 0.4s ease-out, opacity 0.6s ease-out;
+  transition: transform 0.4s ease-out, opacity 0.6s ease-out; }
+div.cr.radio-button.pulse input[type="radio"]:checked ~ span.pulse:before {
+  -webkit-transform: scale(3);
+  -ms-transform: scale(3);
+  transform: scale(3);
+  opacity: 0; }
 
 img.xsmall {
   max-width: 30% !important;
