@@ -865,6 +865,46 @@ div.checkbox.pulse input[type="checkbox"]:checked ~ span.pulse:before {
   transform: scale(3);
   opacity: 0; }
 
+div.cr.checkbox.variant input[type="checkbox"]:checked + label:before {
+  transition: transform 0.3s ease-in-out;
+  height: 12px;
+  -webkit-transform: rotate(-405deg);
+  -ms-transform: rotate(-405deg);
+  transform: rotate(-405deg);
+  border-top: none !important;
+  border-right: none !important;
+  border-color: #E91E63;
+  background: none !important; }
+div.cr.checkbox.variant input[type="checkbox"]:not(:checked) + label:before {
+  border: 1.5px solid #9E9E9E;
+  transition: transform 0.3s ease-out; }
+
+div.cr.radio-button {
+  width: auto;
+  position: relative; }
+  div.cr.radio-button label {
+    font-family: "Nunito", open-sans;
+    position: absolute;
+    left: 5%;
+    top: 0;
+    padding: 0 15px; }
+    div.cr.radio-button label:before {
+      content: "";
+      border: 1.5px solid #9E9E9E;
+      box-sizing: border-box;
+      border-radius: 100%;
+      position: absolute;
+      left: -15%;
+      top: 0;
+      width: 18px;
+      height: 18px; }
+  div.cr.radio-button input[type="radio"] {
+    margin-right: 15px;
+    z-index: 1;
+    height: 20px;
+    position: relative;
+    cursor: pointer; }
+
 img.xsmall {
   max-width: 30% !important;
   height: auto; }

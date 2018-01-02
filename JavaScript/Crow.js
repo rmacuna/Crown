@@ -226,6 +226,17 @@ jQuery(function($) {
             left: x + 'px'
         }).addClass("ripple-active");
     })
+
+    /*$(".cr.checkbox.variant > input[type='checkbox']").click(function () {
+        let input = $(this); 
+
+        if(input[0].checked == false){
+            input.addClass('notcheck')
+        }else{
+            input.removeClass('notcheck')
+        }
+    })*/
+
 })
 var statePressed = false;
 try {
