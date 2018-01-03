@@ -323,7 +323,7 @@ And yes, you can change the color of this snack adding the color-class
 
   As checkboxes, radio-buttons have a variant and pulse effect and the same color styling 
   
-  ```HTML
+```HTML
        <div class="cr radio-button blue pulse">
              <input type="radio" name="c1">
              <label for="c1">RadioButton</label>
@@ -340,7 +340,7 @@ And yes, you can change the color of this snack adding the color-class
   
   Crown card uses three sub-classes. The card-head, card-body and card-footer. Another sub-class is the img-section usefull for img content. The head,body and footer can be colored adding the color class to the element.
   
-  ```HTML  
+```HTML  
      <div class="cr card ">
            <div class="card-head">Hi</div>
            <div class="card-body">
@@ -350,10 +350,12 @@ And yes, you can change the color of this snack adding the color-class
                <button class="cr button simple white pulse">Action</button>
           </div>
      </div>
- ```
+```
+  
+  
  Sizing the card its very simple, just add the class small, medium or use adaptive to fit the container. You can remove the raise effect adding the class noraise 
  
-   ```HTML  
+```HTML  
      <div class="cr card adaptive noraise">
             <div class="card-head">Card 1</div>
             <div class="card-body">
@@ -363,7 +365,7 @@ And yes, you can change the color of this snack adding the color-class
                 <button class="cr button simple adaptive pulse ">Action</button>
              </div>
      </div>
- ```
+```
 **Images**
   For a responsive image embed use the class img-section
   
