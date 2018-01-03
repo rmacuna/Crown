@@ -3,13 +3,13 @@
 
 **v.0.1**
 
-Crown it's a private(**For now**) front-end framework for web-develop that uses a group of components based on material design with a custom variation. With Crown you can use diferent styles and make elegant websites.  
+Crown it's a front-end framework for web-develop that uses a group of components based on material design with a custom variation. With Crown you can use diferent styles and make elegant websites.  
 
 Crown uses material-icons so add this line in the head of your HTML code 
 
 `<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">`
 
-Crown uses flexbox grid so read the complete DOCS of grid system ![here](http://flexboxgrid.com/)
+Crown uses flexbox grid so read the complete DOCS of grid system  [here](http://flexboxgrid.com/)
 
 
 ( Live Preview Not Avaliable For Now )[live preview](https://github.com/rmacuna/Crown/edit/master/README.md) of this version
@@ -18,12 +18,12 @@ Crown uses flexbox grid so read the complete DOCS of grid system ![here](http://
 
 ### Buttons
 
-  You could use `<div>` or `<button>` tag depending what you need, here is an example of how basic buttons looks.
+  You can use `<div>` or `<button>` tag depending what you need, here is an example code.
 ```HTML 
 <div class="cr button">Button</div>
 <button class="cr button">Button</button>
 ```
- You can also coloring these buttons adding the color class
+ You can also coloring this buttons adding the color class
  
  ```HTML 
 <button class="cr button blue">Button</button>
@@ -34,7 +34,7 @@ Crown uses flexbox grid so read the complete DOCS of grid system ![here](http://
 ```
 ![](https://lh3.googleusercontent.com/PI1xZDjQ6QjS5yp_gDgHHwqS9QtNsYhgQp_aRgEqz3YK2BaH4h_JpOj8x1OoJUSSPw_g6D4U__W17LjuXe7wNi6xezeDAFf2yvrJi81ZwWUJ9HBECAtQvuPk5_Scdr5hWJ9ZL8KwrQ)
 
- Buttons can also be styled with outline border and adding hover effects, you can also have a button with a raised and ripple effect (like a Google material design button!)
+ Buttons can also be styled with outline border and adding hover effects, you can use a button with a raised and ripple effect (like a Google material design button!)
  
  **Outline Buttons**
  ```HTML
@@ -43,7 +43,7 @@ Crown uses flexbox grid so read the complete DOCS of grid system ![here](http://
 ```
 **Raised Buttons**
 
-* Notice that class `hoverable` allows a background animation in the button on hover. (Could be usefull and cool)
+* `hoverable` class allows a background animation in the button on hover. (Could be usefull and cool)
 ```HTML
 <button class="cr button green raised hoverable">Button</button>
 <button class="cr button black raised hoverable">Button</button>
@@ -59,18 +59,18 @@ If you want the ripple effect just add the class `pulse` and then you will have 
 
 **Simple crown button** 
 
-You can also use the simple way of buttons adding the class `cr simple button` like this
+Use the simpler style of buttons adding the class `cr simple button` like this
 
 ```HTML
 <button class="cr simple button indigo pulse">BUTTON</button>
 ``` 
-and you will get this incredible and simple button 
+and you will get this incredible button 
 ![](https://media.giphy.com/media/xUNda6dyPPtGRfqoJW/giphy.gif)
 
 
-**The floating button way** 
+**Floating button** 
 
-Floating buttons are very usefull when you are using a phone or a tablet. You could use it like this 
+Floating buttons are very usefull when you are using a phone or a tablet. Use it adding this code 
 ```HTML
   <button class="cr button-float pulse">
       <i class="material-icons">add</i>
@@ -79,7 +79,7 @@ Floating buttons are very usefull when you are using a phone or a tablet. You co
 
 **Sizing** 
 
-All cr buttons have diferent class that modifies the width and height, there are small, medium, large and adaptive buttons. This classes variate the width of the button but no the height, for more height add `big` class. Look the code here: 
+All cr buttons have diferent class that modifies the width and height, there are small, medium, large and adaptive buttons. This classes variate the width of the button but not the height, if you want more height add `big` class. 
 ```HTML 
 <button class="cr button small">Button</button>
 <button class="cr button medium">Button</button>
@@ -93,7 +93,7 @@ All cr buttons have diferent class that modifies the width and height, there are
 
 **Other variations** 
 
-  crown buttons could have a `rounded` class in order to get a rounded cool button 
+  Crown buttons could have a `rounded` class in order to get a circle border.
 ```HTML
   <button class="cr button rounded pink">Button</button>
 ```
@@ -118,7 +118,7 @@ Crown inputs uses three diferent styles that includes basic inputs, labeled inpu
 
 **Label input** 
 
-  A label input is a variation of crown inputs that allows to have a label like a part of the input, which looks more elegant that normal label and replace the placeholder perfectly.
+  A label input is a variation of crown inputs that allows to have a label like a part of the input, which looks more elegant than normal label and replace the placeholder.
  ```HTML 
   <div class="cr input label">
     <div class="label">Name</div> 
@@ -142,7 +142,8 @@ Crown inputs uses three diferent styles that includes basic inputs, labeled inpu
   ```
   ***If You prefer the text in bold add the class ``bold`` to the input element***
   
-  * If you add another ``div`` with class ``ender`` or a button with the same class you will get a pretty label at the end of the input, that could be really usefull when the user are filling forms.
+  * If you add another ``div`` with class ``ender`` or a button with the same class you will get a pretty label at the end of the input.
+  
   ```HTML
   <div class="cr input label">
       <div class="label">Name</div>
@@ -155,7 +156,7 @@ Crown inputs uses three diferent styles that includes basic inputs, labeled inpu
       <button class="ender">Copy</button>
   </div>
 ```
-Of course you can change the color of all enders and labels adding the color name that you want 
+Of course you can change the color of all enders and labels adding the color class that you want 
 
 ```HTML
   <div class="cr input label">
@@ -251,3 +252,93 @@ You can add custom validation messages unlike input basic or input-label, using 
   </div>
 ```
 ![](https://media.giphy.com/media/3ohjUQbImEG4Jobp0k/giphy.gif)
+
+Full docs have more information
+
+**SnackBar** 
+  Snacks are usefull to display short messages or perfom a simple action. Add this line to your HTML code 
+```HTML 
+  <div id="the_ID_you_want" class="cr snackbar">
+    <div class="snack-message"></div>
+  </div>
+```
+Then, add the following script 
+
+```JavaScript
+$("#snack1").snackbar("show", "The short Message", delayTime);
+```
+This will trigger the snack on page load so use it with a click event instead
+
+```JavaScript
+$("#buttonID").click(function(){
+  $("#snack1").snackbar("show", "The short Message");
+});
+```
+
+You can add a button with a custom action on click or use the default UNDO class that close the snack 
+
+```HTML 
+  <div id="the_ID_you_want" class="cr snackbar">
+    <div class="snack-message"></div>
+    <button class="snack-action undo">UNDO</div>
+  </div>
+
+```
+And yes, you can change the color of this snack adding the color-class 
+
+![](https://media.giphy.com/media/26FffBuJQOMoi8B6o/giphy.gif)
+
+**Checkbox**
+
+  There are two diferent crown checkbox, the variant checkbox and normal checkbox. 
+  
+```HTML
+     <div class="cr checkbox ">
+           <input type="checkbox" name="in1">
+           <label for="in1">CheckBox</label>
+     </div>  
+      <div class="cr checkbox variant ">
+           <input type="checkbox" name="in1">
+           <label for="in1">CheckBox</label>
+     </div>  
+```
+  
+  Add the class ``pulse`` and add ``span`` element with same class to get a ripple effect, and of course you can change the color adding the color class. (The default color is the accent of the aplication).
+  
+```HTML
+     <div class="cr checkbox blue pulse ">
+           <input type="checkbox" name="in1">
+           <label for="in1">CheckBox</label>
+            <span class="pulse"></span>
+     </div>  
+      <div class="cr checkbox variant blue pulse">
+           <input type="checkbox" name="in1">
+           <label for="in1">CheckBox</label>
+           <span class="pulse"></span>
+     </div>  
+
+```
+  
+**Radio Buttons** 
+
+  As checkboxes, radio-buttons have a variant and pulse effect and the same color styling 
+  
+  ```HTML
+       <div class="cr radio-button blue pulse">
+             <input type="radio" name="c1">
+             <label for="c1">RadioButton</label>
+             <span class="pulse"></span>
+       </div>
+         <div class="cr radio-button variant blue pulse">
+             <input type="radio" name="c1">
+             <label for="c1">RadioButton</label>
+             <span class="pulse"></span>
+       </div>
+ ```
+  
+**Cards**
+  
+  
+  
+  
+
