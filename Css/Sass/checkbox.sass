@@ -1,3 +1,5 @@
+@import 'variables'
+
 div.cr.checkbox
 	width: auto
 	padding: 5px 3px
@@ -123,6 +125,7 @@ div.cr.radio-button
 	width: auto
 	padding: 5px 3px
 	position: relative
+	margin-bottom: 15px
 	label 
 		font-family: 'Nunito', open-sans 
 		position: absolute 
@@ -205,10 +208,10 @@ div.cr.radio-button.pulse
 			content: ''
 			position: absolute 
 			background: rgba($accent, .4)
-			width: 15px
-			height: 15px 
-			left: 1.8% 
-			top: 2% 
+			width: 20px
+			height: 20px 
+			left: 0
+			top: 0 
 			border-radius: 100%
 			-webkit-transform: scale(0)
 			-ms-transform: scale(0)
@@ -228,11 +231,449 @@ div.cr.radio-button.pulse
 					opacity: 0
 
 
+div.cr.checkbox.blue 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $blue !important 
+					border-color: $blue !important 
+
+			~ span.pulse 
+				&:before 
+					background: rgba($blue, .4) !important
+	span.pulse
+		&:before 
+			background: $blue !important  
+
+div.cr.checkbox.blue.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $blue !important 
+
+			~ span.pulse 
+				&:before 
+					background: rgba($blue, .4) !important 
+
+div.cr.checkbox.red 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $red !important 
+					border-color: $red !important 
+
+			~ span.pulse 
+				&:before 
+					background: rgba($red, .4) !important
+	span.pulse
+		&:before 
+			background: $red !important  
+
+div.cr.checkbox.red.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $red !important 
+
+			~ span.pulse 
+				&:before 
+					background: rgba($red, .4) !important 
+
+div.cr.checkbox.green 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $green !important 
+					border-color: $green !important 
+
+			~ span.pulse 
+				&:before 
+					background: rgba($green, .4) !important
+	span.pulse
+		&:before 
+			background: $green !important  
+
+div.cr.checkbox.green.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $green !important 
+
+			~ span.pulse 
+				&:before 
+					background: rgba($green, .4) !important 
+
+div.cr.checkbox.indigo 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $indigo !important 
+					border-color: $indigo !important 
+
+			~ span.pulse 
+				&:before 
+					background: rgba($indigo, .4) !important
+	span.pulse
+		&:before 
+			background: $indigo !important  
+
+div.cr.checkbox.indigo.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $indigo !important 
+
+			~ span.pulse 
+				&:before 
+					background: rgba($indigo, .4) !important 
+
+div.cr.checkbox.black 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $black !important 
+					border-color: $black !important 
+
+			~ span.pulse 
+				&:before 
+					background: rgba($black, .4) !important
+	span.pulse
+		&:before 
+			background: $black !important  
+
+div.cr.checkbox.black.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $black !important 
+
+			~ span.pulse 
+				&:before 
+					background: rgba($black, .4) !important 
+
+div.cr.checkbox.yellow 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $yellow !important 
+					border-color: $yellow !important 
+
+			~ span.pulse 
+				&:before 
+					background: rgba($yellow, .4) !important
+	span.pulse
+		&:before 
+			background: $yellow !important  
+
+div.cr.checkbox.yellow.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $yellow !important 
+
+			~ span.pulse 
+				&:before 
+					background: rgba($yellow, .4) !important 
+
+div.cr.checkbox.amber 
+	input[type="checkbox"]
+		&:checked
+			+ label 
+				&:before 
+					background: $amber !important 
+					border-color: $amber !important
+			~ span.pulse 
+				&:before 
+					background: rgba($amber, .4) !important 
+
+	span.pulse 
+		&:before 
+			background: $amber !important 
+
+div.cr.checkbox.amber.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $amber !important 
+
+			~ span.pulse 
+				&:before 
+					background: rgba($amber, .4) !important 
+
+div.cr.checkbox.purple 
+	input[type="checkbox"]
+		&:checked
+			+ label 
+				&:before 
+					background: $purple !important 
+					border-color: $purple !important
+			~ span.pulse 
+				&:before 
+					background: rgba($purple, .4) !important 
+
+	span.pulse 
+		&:before 
+			background: $purple !important 
+
+div.cr.checkbox.purple.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $purple !important 
+
+			~ span.pulse 
+				&:before 
+					background: rgba($purple, .4) !important 
+
+div.cr.checkbox.gold 
+	input[type="checkbox"]
+		&:checked
+			+ label 
+				&:before 
+					background: $gold !important 
+					border-color: $gold !important
+			~ span.pulse 
+				&:before 
+					background: rgba($gold, .4) !important 
+
+	span.pulse 
+		&:before 
+			background: $gold !important 
+
+div.cr.checkbox.gold.variant 
+	input[type="checkbox"]
+		&:checked 
+			+ label 
+				&:before 
+					background: none !important 
+					border-color: $gold !important 
+
+			~ span.pulse 
+				&:before 
+					background: rgba($gold, .4) !important 
 
 
 
+div.cr.radio-button.blue 
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $blue !important 
+					border-color: $blue !important 
+			~ span.pulse 
+				&:before 
+					background: rgba($blue, .4) !important	
+					
+	span.pulse 
+		background: $blue !important 
+
+div.cr.radio-button.blue.variant
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					border-color: $blue !important 
+					background: none !important 
+				&:after 
+					background: $blue !important 
+
+
+div.cr.radio-button.red 
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $red !important 
+					border-color: $red !important 
+			~ span.pulse 
+				&:before 
+					background: rgba($red, .4) !important	
+					
+	span.pulse 
+		background: $red !important 
+
+div.cr.radio-button.red.variant
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					border-color: $red !important 
+					background: none !important 
+				&:after 
+					background: $red !important 
+
+
+div.cr.radio-button.amber 
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $amber !important 
+					border-color: $amber !important 
+			~ span.pulse 
+				&:before 
+					background: rgba($amber, .4) !important	
+					
+	span.pulse 
+		background: $amber !important 
+
+div.cr.radio-button.amber.variant
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					border-color: $amber !important 
+					background: none !important 
+				&:after 
+					background: $amber   !important   
+
+
+div.cr.radio-button.indigo 
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $indigo !important 
+					border-color: $indigo !important 
+			~ span.pulse 
+				&:before 
+					background: rgba($indigo, .4) !important	
+					
+	span.pulse 
+		background: $indigo !important 
+
+div.cr.radio-button.indigo.variant
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					border-color: $indigo !important 
+					background: none !important 
+				&:after 
+					background: $indigo !important 
+
+
+div.cr.radio-button.yellow 
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $yellow !important 
+					border-color: $yellow !important 
+			~ span.pulse 
+				&:before 
+					background: rgba($yellow, .4) !important	
+					
+	span.pulse 
+		background: $yellow !important 
+
+div.cr.radio-button.yellow.variant
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					border-color: $yellow !important 
+					background: none !important 
+				&:after 
+					background: $yellow !important 
+
+
+div.cr.radio-button.purple 
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $purple !important 
+					border-color: $purple !important 
+			~ span.pulse 
+				&:before 
+					background: rgba($purple, .4) !important	
+					
+	span.pulse 
+		background: $purple !important 
+
+div.cr.radio-button.purple.variant
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					border-color: $purple !important 
+					background: none !important 
+				&:after 
+					background: $purple !important 
 
 
 
-	
+div.cr.radio-button.black 
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $black !important 
+					border-color: $black !important 
+			~ span.pulse 
+				&:before 
+					background: rgba($black, .4) !important	
+					
+	span.pulse 
+		background: $black !important 
+
+div.cr.radio-button.black.variant
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					border-color: $black !important 
+					background: none !important 
+				&:after 
+					background: $black !important 
+
+
+
+div.cr.radio-button.gold 
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					background: $gold !important 
+					border-color: $gold !important 
+			~ span.pulse 
+				&:before 
+					background: rgba($gold, .4) !important	
+					
+	span.pulse 
+		background: $gold !important 
+
+div.cr.radio-button.gold.variant
+	input[type="radio"]
+		&:checked 
+			+ label 
+				&:before 
+					border-color: $gold !important 
+					background: none !important 
+				&:after 
+					background: $gold !important 
 
