@@ -37,6 +37,7 @@ Crown uses flexbox grid so read the complete DOCS of grid system  [here](http://
  Buttons can also be styled with outline border and adding hover effects, you can use a button with a raised and ripple effect (like a Google material design button!)
  
  **Outline Buttons**
+
  ```HTML
 <button class="cr button blue outline">Button</button>
 <button class="cr button red outline ">Button</button>
@@ -366,7 +367,28 @@ And yes, you can change the color of this snack adding the color-class
              </div>
      </div>
 ```
+
+
 **Images**
+
   For a responsive image embed use the class img-section
+  
+```HTML  
+     <div class="cr card adaptive noraise">
+            <div class="card-head">Card 1</div>
+            <div class="img-section">
+                <img src="../img/dog.png">
+            </div>
+            <div class="card-body">
+               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore                     magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            </div>
+             <div class="card-footer">
+                <button class="cr button simple adaptive pulse ">Action</button>
+             </div>
+     </div>
+```
+
+
+
   
 

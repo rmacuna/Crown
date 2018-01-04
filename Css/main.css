@@ -306,26 +306,30 @@ div.cr.input.basic {
     transform: rotate(45deg); }
 
 div.cr.input.label {
-  margin: 4px 2px 10px 2px;
   position: relative;
   white-space: nowrap;
-  display: inline-block; }
+  margin: 10px auto; }
   div.cr.input.label input {
+    position: relative;
     left: -4px; }
   div.cr.input.label div.label {
-    padding-top: 9.5px;
+    position: relative;
+    top: 0;
+    display: inline;
+    overflow: hidden;
+    padding-top: 9.35px;
     padding-left: 20px;
-    padding-right: 18px;
+    padding-right: 20px;
+    padding-bottom: 9.15px;
     background: #ebebeb;
+    text-align: center;
+    min-width: 15px;
     color: #4d4d4d;
-    height: 31px;
+    height: 22.5px;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
+    border-right: none !important;
     border: 0.5px solid #d1d1d1;
-    border-right: 0px;
-    position: relative;
-    display: inline-block;
-    text-align: center;
     font-weight: bold; }
   div.cr.input.label div.label.blue {
     background: #2196F3;
@@ -363,39 +367,42 @@ div.cr.input.label {
     border: 0.5px solid #F44336;
     border-right: 0px; }
   div.cr.input.label div.ender {
-    position: absolute;
-    display: inline-block;
+    position: relative;
+    display: inline;
     top: 0;
-    padding-top: 9.5px;
+    right: 0.7%;
+    padding-top: 9.52px;
     padding-left: 20px;
     padding-right: 18px;
-    left: 98.5%;
+    padding-bottom: 9.52px;
     background: #ebebeb;
     color: #4d4d4d;
-    height: 31px;
+    height: 22.2px;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     border: 0.5px solid #d1d1d1;
-    border-left: 0px;
+    border-left: none !important;
     text-align: center;
     font-weight: bold; }
   div.cr.input.label button.ender {
-    position: absolute;
-    display: inline-block;
+    position: relative;
+    display: inline;
+    top: 0;
+    right: 0.7%;
     outline: none;
     text-decoration: none;
-    padding-left: 1.3rem;
-    padding-right: 1.3rem;
     font-size: 14px;
-    top: 0;
-    left: 98.5%;
-    height: 42px;
+    padding-top: 9.52px;
+    padding-left: 20px;
+    padding-right: 18px;
+    padding-bottom: 9.52px;
+    height: 41.5px;
     background: #ebebeb;
     color: #4d4d4d;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     border: 0.5px solid #d1d1d1;
-    border-left: 0px;
+    border-left: none;
     text-align: center;
     font-weight: bold;
     transition: background-color 0.3s; }
@@ -637,7 +644,10 @@ div.cr.input.large input {
 div.cr.input.adaptive {
   display: flex; }
   div.cr.input.adaptive input {
-    width: 100%; }
+    width: 100%;
+    left: 0 !important; }
+  div.cr.input.adaptive div.ender, div.cr.input.adaptive button.ender {
+    right: 0 !important; }
 
 input.cr.input.error {
   border: 0.5px solid #F44336; }
