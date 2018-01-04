@@ -6,6 +6,7 @@ div.cr.card {
   height: auto;
   width: 25rem;
   border-radius: 2px;
+  margin: 10px auto;
   min-width: 12rem;
   font-size: 16px;
   z-index: 1; }
@@ -171,26 +172,6 @@ div.cr.card.no-footer .card-body {
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
   padding-bottom: 25px !important; }
-
-.cr.card.blue {
-  background: #2196F3;
-  color: #fff; }
-
-.cr.card.pink {
-  background: #E91E63;
-  color: #fff; }
-
-.cr.card.green {
-  background: #00C853;
-  color: #fff; }
-
-.cr.card.indigo {
-  background: #3F51B5;
-  color: #fff; }
-
-.cr.card.amber {
-  background: #fcbd00;
-  color: #fefefe; }
 
 .noraise {
   box-shadow: 0 1px 1px 0 rgba(158, 158, 158, 0.6) !important; }
@@ -709,6 +690,12 @@ div.cr.snackbar {
       to {
         bottom: -30px;
         opacity: 1; } }
+    @-ms-keyframes fadein {
+      from {
+        bottom: -60px; }
+      to {
+        bottom: -30px;
+        opacity: 1; } }
     @keyframes fadein {
       from {
         bottom: -60px; }
@@ -723,7 +710,13 @@ div.cr.snackbar {
       from {
         bottom: -60px; }
       to {
-        bottom: -30ox;
+        bottom: -30px;
+        opacity: 1; } }
+    @-ms-keyframes fadein {
+      from {
+        bottom: -60px; }
+      to {
+        bottom: -30px;
         opacity: 1; } }
     @keyframes fadein {
       from {
@@ -736,8 +729,7 @@ div.cr.snackbar {
       bottom: 4%; }
     @-webkit-keyframes fadein {
       from {
-        bottom: 0;
-        opacity: 0; }
+        bottom: 0; }
       to {
         bottom: 30px;
         opacity: 1; } }
@@ -750,10 +742,15 @@ div.cr.snackbar {
   @media screen and (min-width: 1200px) {
     div.cr.snackbar {
       bottom: 4%; }
+    @-ms-keyframes fadein {
+      from {
+        bottom: 0; }
+      to {
+        bottom: 30px;
+        opacity: 1; } }
     @-webkit-keyframes fadein {
       from {
-        bottom: 0;
-        opacity: 0; }
+        bottom: 0; }
       to {
         bottom: 30px;
         opacity: 1; } }
@@ -792,6 +789,7 @@ div.cr.snackbar.yellow {
 div.cr.checkbox {
   width: auto;
   padding: 5px 3px;
+  height: auto;
   position: relative; }
   div.cr.checkbox label {
     font-family: "Nunito", open-sans;
@@ -1217,6 +1215,22 @@ img.small {
 img.medium {
   max-width: 65% !important;
   height: auto; }
+
+div.circle-img-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #9E9E9E;
+  box-sizing: border-box; }
+  div.circle-img-box img {
+    max-width: 100%; }
+
+div.circle-img-box.small {
+  width: 35px;
+  height: 35px; }
+
+img.rounded {
+  border-radius: 50%; }
 
 html {
   height: 100vh; }
@@ -1682,7 +1696,7 @@ button.cr.button.float {
 button.dark-bg {
   box-shadow: none !important; }
 
-.cr.button.pulse {
+div.cr.button.pulse, button.cr.button.pulse {
   overflow: hidden; }
 
 .ripple {

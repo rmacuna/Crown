@@ -198,7 +198,7 @@ jQuery(function($) {
         }
         $parent.removeClass('is-focused');
     })
-    $(".pulse").click(function(e) {
+    $("div.cr.button.pulse, button.cr.button.pulse").click(function(e) {
         $('.ripple').remove();
 
         let posX = $(this).offset().left,
@@ -226,17 +226,6 @@ jQuery(function($) {
             left: x + 'px'
         }).addClass("ripple-active");
     })
-
-    /*$(".cr.checkbox.variant > input[type='checkbox']").click(function () {
-        let input = $(this); 
-
-        if(input[0].checked == false){
-            input.addClass('notcheck')
-        }else{
-            input.removeClass('notcheck')
-        }
-    })*/
-
 })
 var statePressed = false;
 try {
@@ -244,27 +233,37 @@ try {
         $.fn.snackbar = function(action, message, delay) {
             let snack = $(this);
             let btnUndo = $(this).find('.snack.action.undo');
+
+            let timeFadeOut;
+            let timeOut;
+
+            if (delay != null) {
+                timeFadeOut = delay;
+                timeOut = (delay + 500);
+            } else {
+                timeFadeOut = 2500;
+                timeOut = 3000;
+            }
             if (statePressed == false) {
                 if (btnUndo) {
-                    btnUndo.on('click', function() {
+                    btnUndo.click(function() {
                         snack.fadeOut();
-                    });
+                    })
                 }
                 if ($(this).is('.cr.snackbar')) {
                     if (action == "show") {
                         statePressed = true;
                         if (message.length != null) {
-                            $(this).find('.snack-message').prepend(message);
+                            $(this).find('.snack-message').html("").prepend(message);
                         }
                         setTimeout(() => {
                             $(this).fadeOut();
-                        }, 2500);
+                        }, timeFadeOut);
 
                         setTimeout(() => {
                             $(this).removeAttr('style');
-                            $(this).find('.snack-message').html("");
                             statePressed = false;
-                        }, 3000);
+                        }, timeOut);
 
                         return this.css({
                             'visibility': "visible",
@@ -274,9 +273,14 @@ try {
                             '-webkit-animation': "fadein 0.3s"
                         });
                     }
+                    if (action == "destroy") {
+                        $(this).fadeOut();
+                        $(this).removeAttr('style');
+                    }
                 }
             }
         };
+        //Card feature 
         $.fn.feature = function(action) {
             if (action == 'off') {
                 this.css({
@@ -289,6 +293,25 @@ try {
                 });
             }
         };
-        
+
+        $.fn.valMessage = function(action, data_value) {
+            if (action == "show") {
+                console.log('')
+                if (data_value == "positive") {
+                    $(this).addClass('done show');
+                }
+                if (data_value == "error") {
+                    $(this).addClass('error show');
+                }
+            }
+            if (action == "hide") {
+                if ($(this).is('.done')) {
+                    $(this).removeClass('done show');
+                }else{
+                    $(this).removeClass('error show');
+                }
+            }
+        }
+
     }(jQuery));
 } catch (e) {}

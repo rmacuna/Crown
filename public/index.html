@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="../Css/Grid/flexboxgrid.min.css">
     <title>LearnDesign</title>
     <style type="text/css">
+    body {
+        /*background: #000;*/
+    }
+
     .sep {
         padding-top: 20px;
     }
@@ -20,31 +24,25 @@
         <i class="material-icons">add</i>
     </button>
     <div class="cr container">
-        <div class="sep"></div>
-        <div class="row">
-            <div class="col-md-4 col-xs-12">
-               <!--  <div class="cr radio-button blue pulse">
-                    <input type="radio" name="c1">
-                    <label for="c1">RadioButton</label>
-                    <span class="pulse"></span>
-                </div> -->
-                <div class="cr checkbox pulse">
-                    <input type="checkbox" name="in1">
-                    <label for="in1">CheckBox</label>
-                    <span class="pulse"></span>
-                </div>
-            </div>
-            <div class="col-md-6 col-xs-12">
-                <div class="cr radio-button blue variant pulse">
-                    <input type="radio" name="c1">
-                    <label for="c1">RadioButton</label>
-                    <span class="pulse"></span>
-                </div>
-            </div>
+        <div class="cr-material-field black">
+            <label class="m-label">Name</label>
+            <input class="m-input" type="text" name="">
+            <span data-positive="Good, it's a number" data-error="This is not a number" class="m-state"></span>
+        </div>
+
+        <div id="snack1" class="cr snackbar">
+            <div class="snack-message"></div>
+            <button class="snack action">COPY</button>
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../JavaScript/Crow.js"></script>
+    <script type="text/javascript">
+    $("button").click(function(e) {
+        e.preventDefault();
+        $("#snack1").snackbar("show", "Message you want");
+    });
+    </script>
 </body>
 
 </html>
