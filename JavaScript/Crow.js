@@ -296,19 +296,26 @@ try {
 
         $.fn.valMessage = function(action, data_value) {
             if (action == "show") {
-                console.log('')
                 if (data_value == "positive") {
+                    if ($(this).is('.error.show')) {
+                        $(this).removeClass('error show')
+                    }
                     $(this).addClass('done show');
                 }
                 if (data_value == "error") {
+                    if ($(this).is('.positive.show')) {
+                        $(this).removeClass('error show')
+                    }
                     $(this).addClass('error show');
                 }
             }
             if (action == "hide") {
-                if ($(this).is('.done')) {
-                    $(this).removeClass('done show');
-                }else{
-                    $(this).removeClass('error show');
+                if ($(this.is('.show'))) {
+                    if ($(this).is('.done')) {
+                        $(this).removeClass('done show');
+                    } else {
+                        $(this).removeClass('error show');
+                    }
                 }
             }
         }

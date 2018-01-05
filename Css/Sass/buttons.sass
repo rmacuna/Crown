@@ -5,23 +5,33 @@ button.cr.button
 	border: none
 	line-height: 2.0rem
 	overflow: hidden
+
+div.cr.button 
+	overflow: hidden 
+	min-width: 30px
 	
 .cr.button
 	background: #F5F5F5
 	border-radius: 0.15rem
 	overflow: hidden
+
 	color: $black
 	font-family: 'Nunito', sans-serif
-	text-align: center
+	text-align: center !important 
+	align-content: center !important 
+
 	font-size: 0.9rem
 	font-weight: bold
 	margin-bottom: 0.2rem
+
 	user-select: none
 	position: relative
 	text-decoration: none
+
 	line-height: 2.2rem
 	padding-right: 20px
 	display: table
+
 	padding-left: 20px
 	cursor: pointer
 	height: 2.2rem
@@ -51,9 +61,9 @@ button.cr.button
 	line-height: $button-big-height
 
 .cr.button.adaptive
-	width: 100%
+	display: flex-inline
+	width: 100%	
 
-	
 /* -------------------------------|RAISED BUTTONS CODE|--------------------------------------------------------*/
 .cr.button.raised
 	-webkit-transition: box-shadow 0.3s

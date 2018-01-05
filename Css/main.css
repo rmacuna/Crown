@@ -122,9 +122,10 @@ div.cr.card {
     left: 0;
     right: 0;
     bottom: 4px;
-    height: aut;
-    padding: 10px 5px;
+    height: auto;
+    padding: 10px 8px;
     text-align: center;
+    align-content: center;
     font-weight: bold;
     color: #4d4d4d;
     font-size: 16px;
@@ -132,9 +133,15 @@ div.cr.card {
     border-top-left-radius: none;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
-    color: #4d4d4d; }
-    div.cr.card .card-footer * {
-      display: inline; }
+    color: #4d4d4d;
+    overflow: hidden; }
+    div.cr.card .card-footer div.cr.button {
+      box-sizing: border-box;
+      text-align: center !important;
+      align-self: center !important; }
+    div.cr.card .card-footer button.cr.button {
+      text-align: center !important;
+      align-self: center !important; }
   div.cr.card .card-footer.blue {
     background: #2196F3;
     color: #fff; }
@@ -191,6 +198,74 @@ div.cr.card.adaptive {
 
 @media screen and (max-width: 767px) {
   width: auto !important; }
+div.cr.card.dark-bg .card-head {
+  color: #fff;
+  background: #242424; }
+div.cr.card.dark-bg .card-body {
+  color: #fff;
+  background: #242424; }
+div.cr.card.dark-bg .card-footer {
+  color: #fff;
+  background: #242424; }
+
+div.mistery-cake {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: none;
+  transform: scale(0.2);
+  border-radius: 50%;
+  transition: transform 0.5s ease-out, background 0.4s ease-out;
+  overflow: hidden;
+  text-align: center;
+  align-content: center;
+  background: #fefefe;
+  background: #E91E63; }
+  div.mistery-cake div.content {
+    color: #fff;
+    position: relative;
+    opacity: 0;
+    display: flex;
+    align-self: center;
+    padding: 30% 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out; }
+  div.mistery-cake:hover {
+    transform: scale(1);
+    background: #930e3b;
+    box-shadow: 0 4px 8px #9E9E9E; }
+    div.mistery-cake:hover div.content {
+      transform: scale(0.7);
+      opacity: 1;
+      color: #fff; }
+  div.mistery-cake:before {
+    content: "?";
+    font-weight: bold;
+    color: #fff;
+    font-size: 163px;
+    opacity: 1;
+    position: absolute;
+    top: 15%;
+    left: 37%;
+    transition: opacity 1s ease-out, transform 1s ease-out; }
+  div.mistery-cake:hover:before {
+    transform: rotate(360deg);
+    opacity: 0; }
+
+div.mistery-cake.shake-1:before {
+  animation: shake 0.82s infinite ease-out; }
+
+div.mistery-cake.shake-2:hover:before {
+  animation: shake 0.82s infinite ease-out; }
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0); }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0); }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0); } }
 .bold {
   font-weight: bold; }
 
@@ -1242,6 +1317,17 @@ div.circle-img-box.small {
 img.rounded {
   border-radius: 50%; }
 
+.centered {
+  align-content: center;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.text-center {
+  align-content: center;
+  text-align: center !important; }
+
 html {
   height: 100vh; }
 
@@ -1282,13 +1368,18 @@ button.cr.button {
   line-height: 2rem;
   overflow: hidden; }
 
+div.cr.button {
+  overflow: hidden;
+  min-width: 30px; }
+
 .cr.button {
   background: #F5F5F5;
   border-radius: 0.15rem;
   overflow: hidden;
   color: #000;
   font-family: "Nunito", sans-serif;
-  text-align: center;
+  text-align: center !important;
+  align-content: center !important;
   font-size: 0.9rem;
   font-weight: bold;
   margin-bottom: 0.2rem;
@@ -1327,6 +1418,7 @@ button.cr.button {
   line-height: 3rem; }
 
 .cr.button.adaptive {
+  display: flex-inline;
   width: 100%; }
 
 /* -------------------------------|RAISED BUTTONS CODE|-------------------------------------------------------- */

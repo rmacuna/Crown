@@ -252,11 +252,37 @@ You can add custom validation messages unlike input basic or input-label, using 
         <span data-positive="Good, it's a number" data-error="This is not a number" class="m-state"></span>
   </div>
 ```
+
+The message of error or positive action it will only be shown on validation numbers or validation email. For a custom validation you must trigger the message with this script.
+
+```JavaScript
+
+  $(#myInput).blur(function(){
+    if(conditionOfValidation == true ){
+      $("#theIdOfSpanElement").valMessage('show', 'positive');
+    }else{
+      $("#theIdOfSpanElement").valMessage('show', 'negative')
+    }
+  });
+  
+  //Or Just Show Positive or Just show negative actions else hide the message
+
+  $(#myInput).blur(function(){
+    if(conditionOfValidation == true ){
+      $("#theIdOfSpanElement").valMessage('hide');
+    }else{
+      $("#theIdOfSpanElement").valMessage('show', 'positive');
+
+    }
+  });
+
+``` 
 ![](https://media.giphy.com/media/3ohjUQbImEG4Jobp0k/giphy.gif)
 
 Full docs have more information
 
 **SnackBar** 
+
   Snacks are usefull to display short messages or perfom a simple action. Add this line to your HTML code 
 ```HTML 
   <div id="the_ID_you_want" class="cr snackbar">
@@ -354,7 +380,7 @@ And yes, you can change the color of this snack adding the color-class
 ```
   
   
- Sizing the card its very simple, just add the class small, medium or use adaptive to fit the container. You can remove the raise effect adding the class noraise 
+ Sizing the card it's very simple, just add the class small, medium or use adaptive to fit the container. You can remove the raise effect adding the class noraise 
  
 ```HTML  
      <div class="cr card adaptive noraise">
@@ -371,7 +397,7 @@ And yes, you can change the color of this snack adding the color-class
 
 **Images**
 
-  For a responsive image embed use the class img-section
+  For a responsive image  use the class img-section
   
 ```HTML  
      <div class="cr card adaptive noraise">

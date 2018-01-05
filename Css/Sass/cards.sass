@@ -153,20 +153,31 @@ div.cr.card
 		left: 0
 		right: 0
 		bottom: 4px
-		height: aut
-		padding: 10px 5px
+		height: auto
+		padding: 10px 8px 
 		text-align: center
+		align-content: center 
 		font-weight: bold
 		color: lighten($black, 30)
+
 		font-size: 16px
 		border-top-right-radius: none 
 		border-top-left-radius: none 
 		border-bottom-left-radius: 2px
 		border-bottom-right-radius: 2px
 		color: lighten($black, 30)
-		*
-			display: inline
-	
+		overflow: hidden
+		// display: block
+		div.cr.button 
+			box-sizing: border-box 
+			text-align: center !important 
+			align-self: center !important 
+		button.cr.button 
+			text-align: center !important
+			align-self: center !important  
+
+
+
 
 	.card-footer.blue 
 		background: $blue 
@@ -227,4 +238,91 @@ div.cr.card.adaptive
 	width: 100%
 @media screen and (max-width: 767px)
 	width: auto !important 
+
+div.cr.card.dark-bg
+	.card-head
+		color: $white 
+		background: lighten($black, 14)
+	.card-body
+		color: $white 
+		background: lighten($black, 14)
+	.card-footer
+		color: $white 
+		background: lighten($black, 14)
+
+div.mistery-cake
+	position: relative 
+	width: 300px 
+	height: 300px 
+	border: none 
+	transform: scale(0.2)
+	border-radius: 50% 
+	transition: transform 0.5s ease-out, background 0.4s ease-out
+	overflow: hidden
+	text-align: center 
+	align-content: center
+	background: darken($white, .4)
+	background: $accent 
+	div.content 
+		color: $white 
+		position: relative
+		opacity: 0
+		display: flex
+		align-self: center
+		padding: 30% 0
+		transition: transform 0.5s ease-out, opacity 0.5s ease-out
+
+	&:hover 
+		transform: scale(1)
+		background: darken($accent, 20)
+		box-shadow: 0 4px 8px $gray
+
+		div.content 
+			transform: scale(0.7) 
+			opacity: 1
+			color: $white
+
+
+	&:before 
+		content: '?'
+		font-weight: bold 
+		color: $white
+		font-size: 163px
+		opacity: 1
+		position: absolute
+		top: 15%
+		left: 37%
+		transition: opacity 1s ease-out, transform 1s ease-out
+		
+
+	&:hover 
+		&:before 
+			transform: rotate(360deg)
+			opacity: 0
+		
+div.mistery-cake.shake-1
+	&:before
+		animation: shake 0.82s infinite ease-out
+
+div.mistery-cake.shake-2
+	&:hover 
+		&:before 
+			animation: shake 0.82s infinite ease-out
+
+
+
+
+@keyframes shake 
+	10%, 90%
+		transform: translate3d(-1px, 0, 0)
+	20%, 80% 
+		transform: translate3d(2px, 0, 0)
+	30%, 50%, 70%
+		transform: translate3d(-4px, 0, 0)
+	40%, 60%
+		transform: translate3d(4px, 0, 0)
+
+
+
+
 
