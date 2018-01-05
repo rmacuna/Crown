@@ -250,11 +250,10 @@ div.cr.card.dark-bg
 		color: $white 
 		background: lighten($black, 14)
 
-div.mistery-cake
+div.cake
 	position: relative 
 	width: 300px 
 	height: 300px 
-	// display: flex
 	transform: scale(0.3)
 	box-shadow: 0 4px 8px rgba($gray, .6)
 	border-radius: 50% 
@@ -264,6 +263,21 @@ div.mistery-cake
 	z-index: 2 
 	background: darken($white, .4)
 	background: $blue 
+	
+	// &:before 
+	// 	content: ''
+	// 	background: rgba($blue, 4)
+	// 	width: 300px 
+	// 	height: 300px 
+	// 	box-sizing: border-box 
+	// 	border-radius: 50% 
+	// 	position: absolute
+	// 	top: 0 
+	// 	left: 0
+	// 	transform: scale(0)
+
+
+
 	div.content 
 		color: $white 
 		position: relative
@@ -277,53 +291,133 @@ div.mistery-cake
 		transform: scale(1)
 		background: darken($blue, 20)
 		z-index: 100
-		
 
 		div.content 
 			transform: scale(0.7) 
 			opacity: 1
 			color: $white
-
-
-	&:before 
-		content: '?'
-		font-weight: bold 
-		color: $white
-		font-size: 163px
-		opacity: 1
+	i 
 		position: absolute
-		top: 15%
-		left: 37%
+		top: 45% 
+		left: 45% 
+		transform: scale(5)
+		color: $white
 		transition: opacity 1s ease-out, transform 1s ease-out
-		
-
-	&:hover 
-		&:before 
-			transform: rotate(360deg)
+	img 
+		position: absolute
+		max-width: 100% 
+		height: auto 
+		top: 0 
+		left: 0
+		transition: opacity 0.7s ease-out
+	img.fade 
+		&:hover 
 			opacity: 0
 
+	&:hover 
+		> i 
+			transform: rotate(180deg)
+			opacity: 0
+
+
 	
+// span.cake-pulse
+// 	&:before 
+// 		content: ''
+// 		background: rgba($blue, 4)
+// 		width: 300px 
+// 		height: 300px 
+// 		border-radius: 50% 
+// 		position: absolute
+// 		top: 0 
+// 		left: 0
+// 		transform: scale(1)
+
+div.cake.red 
+	background: $red
+	&:hover 
+		background: darken($red, 20)
+
+div.cake.yellow 
+	background: darken($yellow, 5)
+	&:hover 
+		background: darken($yellow, 20)
+	
+div.cake.indigo 
+	background: $indigo 
+	&:hover 
+		background: darken($indigo, 20)
+
+div.cake.amber 
+	background: $amber 
+	&:hover 
+		background: darken($amber, 20)
+
+div.cake.green 
+	background: $green 
+	&:hover 
+		background: darken($green, 20)
+
+div.cake.white 
+	background: $white 
+	> i 
+		color: $black 
+	.content
+		color: $black !important
+
+div.cake.black 
+	background: $black 
+
+div.cake.gold 
+	background: $gold 
+	&:hover 
+		background: darken($gold, 20)
+
+div.cake.orange 
+	background: $orange 
+	&:hover 
+		background: darken($orange, 20)
+
+div.cake.purple 
+	background: $purple 
+	&:hover 
+		background: darken($purple, 20)
+
+div.cake.pink
+	background: $pink 
+	&:hover 
+		background: darken($pink, 20)
+
+
 @media screen and (max-width: 1000px)
-	div.mistery-cake
+	div.cake
 		transform: scale(0.7)
 		div.content 
 			opacity: 1
 			transform: scale(0.6)
 		&:before 
 			display: none 
+		i 
+			display: none 
 
 		
 		
-div.mistery-cake.shake-1
-	&:before
+div.cake.shake-1
+	> i
+		transform: none !important
+		font-size: 109px !important
+		top: 32.3% 
+		left: 32.3%
 		animation: shake 0.82s infinite ease-out
 
-div.mistery-cake.shake-2
+div.cake.shake-2
 	&:hover 
-		&:before 
+		> i 
+			transform: none !important
+			font-size: 109px !important
+			top: 32.3% 
+			left: 32.3%
 			animation: shake 0.82s infinite ease-out
-
-
 
 
 @keyframes shake 

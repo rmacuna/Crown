@@ -208,7 +208,7 @@ div.cr.card.dark-bg .card-footer {
   color: #fff;
   background: #242424; }
 
-div.mistery-cake {
+div.cake {
   position: relative;
   width: 300px;
   height: 300px;
@@ -221,7 +221,7 @@ div.mistery-cake {
   z-index: 2;
   background: #fefefe;
   background: #2196F3; }
-  div.mistery-cake div.content {
+  div.cake div.content {
     color: #fff;
     position: relative;
     opacity: 0;
@@ -229,40 +229,111 @@ div.mistery-cake {
     align-self: center;
     padding: 30% 0;
     transition: transform 0.5s ease-out, opacity 0.5s ease-out; }
-  div.mistery-cake:hover {
+  div.cake:hover {
     transform: scale(1);
     background: #0960a5;
     z-index: 100; }
-    div.mistery-cake:hover div.content {
+    div.cake:hover div.content {
       transform: scale(0.7);
       opacity: 1;
       color: #fff; }
-  div.mistery-cake:before {
-    content: "?";
-    font-weight: bold;
-    color: #fff;
-    font-size: 163px;
-    opacity: 1;
+  div.cake i {
     position: absolute;
-    top: 15%;
-    left: 37%;
+    top: 45%;
+    left: 45%;
+    transform: scale(5);
+    color: #fff;
     transition: opacity 1s ease-out, transform 1s ease-out; }
-  div.mistery-cake:hover:before {
-    transform: rotate(360deg);
+  div.cake img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+    transition: opacity 0.7s ease-out; }
+  div.cake img.fade:hover {
+    opacity: 0; }
+  div.cake:hover > i {
+    transform: rotate(180deg);
     opacity: 0; }
 
+div.cake.red {
+  background: #F44336; }
+  div.cake.red:hover {
+    background: #ba160a; }
+
+div.cake.yellow {
+  background: #ffe822; }
+  div.cake.yellow:hover {
+    background: #d4be00; }
+
+div.cake.indigo {
+  background: #3F51B5; }
+  div.cake.indigo:hover {
+    background: #252f69; }
+
+div.cake.amber {
+  background: #FFC107; }
+  div.cake.amber:hover {
+    background: #a07800; }
+
+div.cake.green {
+  background: #00C853; }
+  div.cake.green:hover {
+    background: #006229; }
+
+div.cake.white {
+  background: #fff; }
+  div.cake.white > i {
+    color: #000; }
+  div.cake.white .content {
+    color: #000 !important; }
+
+div.cake.black {
+  background: #000; }
+
+div.cake.gold {
+  background: #bf9b30; }
+  div.cake.gold:hover {
+    background: #6d591c; }
+
+div.cake.orange {
+  background: #FF9800; }
+  div.cake.orange:hover {
+    background: #995b00; }
+
+div.cake.purple {
+  background: #9C27B0; }
+  div.cake.purple:hover {
+    background: #52145d; }
+
+div.cake.pink {
+  background: #E91E63; }
+  div.cake.pink:hover {
+    background: #930e3b; }
+
 @media screen and (max-width: 1000px) {
-  div.mistery-cake {
+  div.cake {
     transform: scale(0.7); }
-    div.mistery-cake div.content {
+    div.cake div.content {
       opacity: 1;
       transform: scale(0.6); }
-    div.mistery-cake:before {
+    div.cake:before {
+      display: none; }
+    div.cake i {
       display: none; } }
-div.mistery-cake.shake-1:before {
+div.cake.shake-1 > i {
+  transform: none !important;
+  font-size: 109px !important;
+  top: 32.3%;
+  left: 32.3%;
   animation: shake 0.82s infinite ease-out; }
 
-div.mistery-cake.shake-2:hover:before {
+div.cake.shake-2:hover > i {
+  transform: none !important;
+  font-size: 109px !important;
+  top: 32.3%;
+  left: 32.3%;
   animation: shake 0.82s infinite ease-out; }
 
 @keyframes shake {
