@@ -254,15 +254,16 @@ div.mistery-cake
 	position: relative 
 	width: 300px 
 	height: 300px 
-	border: none 
-	transform: scale(0.2)
+	// display: flex
+	transform: scale(0.3)
+	box-shadow: 0 4px 8px rgba($gray, .6)
 	border-radius: 50% 
 	transition: transform 0.5s ease-out, background 0.4s ease-out
 	overflow: hidden
-	text-align: center 
-	align-content: center
+	text-align: center
+	z-index: 2 
 	background: darken($white, .4)
-	background: $accent 
+	background: $blue 
 	div.content 
 		color: $white 
 		position: relative
@@ -274,8 +275,9 @@ div.mistery-cake
 
 	&:hover 
 		transform: scale(1)
-		background: darken($accent, 20)
-		box-shadow: 0 4px 8px $gray
+		background: darken($blue, 20)
+		z-index: 100
+		
 
 		div.content 
 			transform: scale(0.7) 
@@ -299,6 +301,18 @@ div.mistery-cake
 		&:before 
 			transform: rotate(360deg)
 			opacity: 0
+
+	
+@media screen and (max-width: 1000px)
+	div.mistery-cake
+		transform: scale(0.7)
+		div.content 
+			opacity: 1
+			transform: scale(0.6)
+		&:before 
+			display: none 
+
+		
 		
 div.mistery-cake.shake-1
 	&:before

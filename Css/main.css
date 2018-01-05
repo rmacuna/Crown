@@ -212,15 +212,15 @@ div.mistery-cake {
   position: relative;
   width: 300px;
   height: 300px;
-  border: none;
-  transform: scale(0.2);
+  transform: scale(0.3);
+  box-shadow: 0 4px 8px rgba(158, 158, 158, 0.6);
   border-radius: 50%;
   transition: transform 0.5s ease-out, background 0.4s ease-out;
   overflow: hidden;
   text-align: center;
-  align-content: center;
+  z-index: 2;
   background: #fefefe;
-  background: #E91E63; }
+  background: #2196F3; }
   div.mistery-cake div.content {
     color: #fff;
     position: relative;
@@ -231,8 +231,8 @@ div.mistery-cake {
     transition: transform 0.5s ease-out, opacity 0.5s ease-out; }
   div.mistery-cake:hover {
     transform: scale(1);
-    background: #930e3b;
-    box-shadow: 0 4px 8px #9E9E9E; }
+    background: #0960a5;
+    z-index: 100; }
     div.mistery-cake:hover div.content {
       transform: scale(0.7);
       opacity: 1;
@@ -251,6 +251,14 @@ div.mistery-cake {
     transform: rotate(360deg);
     opacity: 0; }
 
+@media screen and (max-width: 1000px) {
+  div.mistery-cake {
+    transform: scale(0.7); }
+    div.mistery-cake div.content {
+      opacity: 1;
+      transform: scale(0.6); }
+    div.mistery-cake:before {
+      display: none; } }
 div.mistery-cake.shake-1:before {
   animation: shake 0.82s infinite ease-out; }
 
@@ -1336,7 +1344,7 @@ body {
 
 .cr.container {
   height: 100vh;
-  margin-top: 5px;
+  margin-top: 15px;
   margin-bottom: 5px;
   margin-right: auto;
   margin-left: auto;
