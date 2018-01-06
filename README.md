@@ -414,6 +414,57 @@ And yes, you can change the color of this snack adding the color-class
      </div>
 ```
 
+Add the class ``dark-bg``for a dark card.
+
+![](https://lh3.googleusercontent.com/sOPasFnnIRSwYZVwsf2LzfPdvpEa5PjE9YyE377tD8TYZh4-CiXrJ0JNmiKs8V31Ngmk9Wp46RTBisjUJ-mlpQCVV_AdIGG75k3G0emHYEJvSeYvq90h2-C2XP7zg7lOF6lKhzlmqQ)
+
+
+**Cakes** 
+
+  It's a new component implemented by crown, it's a variation of a card but with standarts dimentions and a circle shape. Cakes are created for show short content not for long text. See how it looks.
+
+  ![](https://lh3.googleusercontent.com/z44aYz6NcsZUnum_4lo8r7PtHleu4HJMYrDG6_maW3EeUbNTtkZPh7jZhpTAqH8VqLghZkpPLNAsE01o9TgeTtHqJfUdwyKmlxTAXpc_5jdtgfjMSuBcYP7vQgCpKJ0h0Qc79Rc5WQ)
+
+  As you see, supports a background image or icons. The component display the message (if you want) increasing the dimentions.
+
+  ![](https://media.giphy.com/media/3ohjV3Ehm7SiONY2Y0/giphy.gif)
+
+  You can customize the background of the cake adding the color class.
+
+
+  This is the code of a cr cake 
+    
+```HTML 
+
+//With image 
+
+<div class="cake black">
+      <div class="content ">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, necessitatibus. Sunt numquam a, expedita vel repellat quos, soluta quidem. Quos officiis delectus nostrum nisi officia rerum, aliquid vitae et ad.
+          Lorem ipsum dolor sit amet, consectetur adipisic
+      </div>
+      <img class="rounded fade " src="https://i.scdn.co/image/93b35ff46a64bbe150ef63c8656cc0c137e4960f">
+</div>
+
+//With icon 
+
+<div class="cake black">
+      <div class="content ">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, necessitatibus. Sunt numquam a, expedita vel repellat quos, soluta quidem. Quos officiis delectus nostrum nisi officia rerum, aliquid vitae et ad.
+          Lorem ipsum dolor sit amet, consectetur adipisic
+      </div>
+      <i class="material-icons">code</i>
+</div>
+
+
+```
+
+To get a shake effect add the class ``shake-1`` for a continue shake animation of the icon or image, ``shake-2`` to get a shake animation on hover.
+
+
+
+  
+
 
 
   
