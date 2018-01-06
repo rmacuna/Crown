@@ -1,6 +1,6 @@
 /*---------Inputs---------*/
 jQuery(function($) {
-    $('.m-input').focus(function() {
+    $('.m-input, .m-area').focus(function() {
         $(this).parent().addClass('is-focused has-label');
     })
     $('.markable').blur(function() {
@@ -80,7 +80,7 @@ jQuery(function($) {
             }
         }
     })
-    $('.m-input.validate.numbers').blur(function() {
+    $('.m-input.validate.numbers, .m-area.validate.numbers').blur(function() {
         let value = $(this).val(); //Valor del input
         let spanClass = $(this).parent().find('span') // Tomo el id del field
         let className = $(this).attr('class'); // Tomo la clase 
@@ -116,7 +116,7 @@ jQuery(function($) {
             }
         }
     })
-    $('.m-input.validate.email').blur(function() {
+    $('.m-input.validate.email, .m-area.validate.email').blur(function() {
         let value = $(this).val();
         let spanClass = $(this).parent().find('span');
         let className = $(this).parent().attr('class');
@@ -153,7 +153,7 @@ jQuery(function($) {
     })
     $("form").submit(function() {
         var valid = true;
-        $('input').each(function() {
+        $('input, textarea').each(function() {
             let hasValidation = $(this).is('.validate');
             // Pregunta si se uso la validacion de Crown
             if (hasValidation) {
@@ -191,7 +191,7 @@ jQuery(function($) {
         });
         return valid;
     })
-    $('.m-input').blur(function() {
+    $('.m-input, .m-area').blur(function() {
         $parent = $(this).parent();
         if ($(this).val() == '') {
             $parent.removeClass('has-label');

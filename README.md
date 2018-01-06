@@ -436,7 +436,7 @@ Add the class ``dark-bg``for a dark card.
     
 ```HTML 
 
-//With image 
+<!-- With image  -->
 
 <div class="cake black">
       <div class="content ">
@@ -446,7 +446,7 @@ Add the class ``dark-bg``for a dark card.
       <img class="rounded fade " src="https://i.scdn.co/image/93b35ff46a64bbe150ef63c8656cc0c137e4960f">
 </div>
 
-//With icon 
+<!-- With icon --> 
 
 <div class="cake black">
       <div class="content ">

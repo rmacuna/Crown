@@ -651,6 +651,13 @@ div.cr.input.label {
   -moz-transition: transform 0.3s;
   transition: transform 0.3s; }
 
+.cr-material-field.area {
+  height: 80px; }
+  .cr-material-field.area textarea {
+    height: 50px !important; }
+  .cr-material-field.area span:before {
+    padding-top: 10px !important; }
+
 .cr-material-field.blue:after {
   background-color: #2196F3 !important; }
 
@@ -743,6 +750,24 @@ div.cr.input.label {
   outline: none;
   border: none;
   -webkit-appearance: none; }
+
+.m-area {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding-bottom: 2px;
+  padding-top: 0;
+  padding-right: 0;
+  padding-left: 0;
+  font-family: "Nunito", open-sans;
+  line-height: 16px;
+  font-size: 16px;
+  background: transparent;
+  outline: none !important;
+  border: none;
+  -webkit-appearance: none;
+  resize: none; }
 
 .m-label {
   position: relative;

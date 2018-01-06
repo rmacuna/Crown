@@ -351,6 +351,44 @@ div.cr.input.label
         -moz-transition: transform 0.3s
         transition: transform 0.3s
 
+
+
+.cr-material-field.area 
+    height: 80px
+    textarea
+        height: 50px !important
+
+    span
+        &:before 
+            padding-top: 10px !important
+
+    // span.m-state[data-error].error
+    //     &:before
+    //         content: attr(data-error)
+    //         width: 30px
+    //         heigh: 20px
+    //         position: relative
+    //         color: $red
+    //         display: none
+    //         visibility: hidden
+    //         white-space: nowrap
+    //         font-size: 12px
+
+    // span.m-state[data-positive].done
+    //     &:before
+    //         content: attr(data-positive)
+    //         width: 30px
+    //         height: 20px
+    //         position: relative 
+    //         color: $green
+    //         display: none 
+    //         visibility: hidden 
+    //         white-space: nowrap
+    //         font-size: 12px
+
+
+
+
 .cr-material-field.blue
     &:after 
         background-color: $blue !important
@@ -464,6 +502,27 @@ div.cr.input.label
     outline: none 
     border: none
     -webkit-appearance: none 
+
+.m-area 
+    position: relative 
+    display: block 
+    width: $m-input-adaptive 
+    height: auto 
+    padding-bottom: 2px 
+    padding-top: 0 
+    padding-right: 0
+    padding-left: 0 
+    font-family: 'Nunito', open-sans
+    line-height: 16px 
+    font-size: 16px 
+
+    background: transparent 
+    outline: none !important 
+    border: none 
+    -webkit-appearance: none 
+
+    resize: none 
+
 
 .m-label
     position: relative 
