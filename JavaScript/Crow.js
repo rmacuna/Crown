@@ -1,5 +1,6 @@
 /*---------Inputs---------*/
 jQuery(function($) {
+    let maxVal;
     $('.m-input, .m-area').focus(function() {
         $(this).parent().addClass('is-focused has-label');
     })
@@ -80,9 +81,44 @@ jQuery(function($) {
             }
         }
     })
+    $('.m-input, .m-area').focus(function() {
+        let parent = $(this).parent();
+        let input = $(this);
+        let counter = parent.find('span.m-counter');
+        if (counter != null) {
+            console.log('finded')
+            let valcount = input.val().length;
+            maxVal = counter.attr('max-value');
+            counter.attr('max-value', valcount + "/" + maxVal.replace(/['"]+/g, ''));
+        }
+    })
+    $('.m-input, .m-area').on("input", function(e) {
+        if ($(this).parent().find('span.m-counter') != null) {
+            if ($(this).data("lastval") != $(this).val()) {
+                let counter = $(this).parent().find('span.m-counter');
+                if (counter != null) {
+                    let valcount = $(this).val().length;
+                    if (valcount > maxVal) {
+                        counter.addClass('error');
+                    } else if (valcount <= maxVal) {
+                        if (counter.is('.error')) { counter.removeClass('error'); }
+                    }
+                    counter.attr('max-value', valcount + "/" + maxVal.replace(/['"]+/g, ''));
+                }
+            };
+        }
+
+    })
+    $('.m-input, .m-area').blur(function() {
+        let parent = $(this).parent();
+        let input = $(this);
+        let counter = parent.find('span.m-counter');
+        if (counter != null) { counter.attr('max-value', maxVal); }
+    })
+
     $('.m-input.validate.numbers, .m-area.validate.numbers').blur(function() {
         let value = $(this).val(); //Valor del input
-        let spanClass = $(this).parent().find('span') // Tomo el id del field
+        let spanClass = $(this).parent().find('span.m-state') // Tomo el id del field
         let className = $(this).attr('class'); // Tomo la clase 
         let elem = $(spanClass);
         //Valido que no se agrege ninguna de las clases de validación como email o letras nada mas
@@ -118,7 +154,7 @@ jQuery(function($) {
     })
     $('.m-input.validate.email, .m-area.validate.email').blur(function() {
         let value = $(this).val();
-        let spanClass = $(this).parent().find('span');
+        let spanClass = $(this).parent().find('span.m-state');
         let className = $(this).parent().attr('class');
         let elem = $(spanClass);
         let re = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
@@ -160,7 +196,7 @@ jQuery(function($) {
                 if ($(this).is('.email')) {
                     let value = $(this).val();
                     let formId = $(this).parent().attr('id');
-                    let elem = $("#" + formId + ">" + "span");
+                    let elem = $("#" + formId + ">" + "span.m-state");
                     let re = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
                     if ($(this).parent().attr('class').search('.numbers') == -1) {
                         if (!re.test(value.trim())) {
@@ -174,7 +210,7 @@ jQuery(function($) {
                 } else if ($(this).is('.numbers')) {
                     let value = $(this).val(); //Valor del input
                     let formId = $(this).parent().attr('id'); // Tomo el id del field
-                    let elem = $("#" + formId + ">" + "span");
+                    let elem = $("#" + formId + ">" + "span.m-state");
                     // Tomo la clase 
                     //Valido que no se agrege ninguna de las clases de validación como email o letras nada mas
                     if ($(this).attr('class').search('email') == -1) {

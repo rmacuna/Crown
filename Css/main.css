@@ -629,6 +629,9 @@ div.cr.input.label {
   height: 52px;
   padding: 16px 0 8px 0;
   width: 100%; }
+  .cr-material-field input:focus ~ span.m-counter:before {
+    display: inline-block;
+    visibility: visible; }
 
 .cr-material-field:after, .cr-material-field:before {
   content: "";
@@ -651,10 +654,24 @@ div.cr.input.label {
   -moz-transition: transform 0.3s;
   transition: transform 0.3s; }
 
+.cr-material-field.simple label {
+  display: none; }
+.cr-material-field.simple span.m-counter:before {
+  padding-top: 10px; }
+.cr-material-field.simple span.m-state:before {
+  padding-top: 10px; }
+.cr-material-field.simple input {
+  padding-top: 20px;
+  padding-left: 0;
+  padding-bottom: 0; }
+
 .cr-material-field.area {
   height: 80px; }
   .cr-material-field.area textarea {
     height: 50px !important; }
+    .cr-material-field.area textarea:focus ~ span.m-counter:before {
+      display: inline-block;
+      visibility: visible; }
   .cr-material-field.area span:before {
     padding-top: 10px !important; }
 
@@ -787,7 +804,7 @@ div.cr.input.label {
 span.m-state[data-error].error:before {
   content: attr(data-error);
   width: 30px;
-  heigh: 20px;
+  height: 20px;
   position: relative;
   color: #F44336;
   display: none;
@@ -806,13 +823,29 @@ span.m-state[data-positive].done:before {
   white-space: nowrap;
   font-size: 12px; }
 
+span.m-counter[max-value]:before {
+  content: attr(max-value);
+  width: 30px;
+  height: 20px;
+  position: absolute;
+  text-align: right;
+  right: 1%;
+  color: #000;
+  display: none;
+  visibility: hidden;
+  white-space: nowrap;
+  font-size: 12px; }
+
 span.m-state.error.show:before {
-  display: block;
+  display: inline-block;
   visibility: visible; }
 
 span.m-state.done.show:before {
-  display: block;
+  display: inline-block;
   visibility: visible; }
+
+.m-counter.error:before {
+  color: #F44336 !important; }
 
 .cr.input.medium input {
   width: 250px; }
@@ -836,6 +869,84 @@ input.cr.input.error {
 
 .text-black {
   color: #000 !important; }
+
+div.cr.chip {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  border-radius: 25px;
+  min-width: 50px;
+  white-space: nowrap;
+  width: auto;
+  height: 30px;
+  background: #dedede;
+  margin: 3px 3px 3px 3px;
+  font-weight: bold;
+  color: #4d4d4d;
+  border: 1px solid #c4c4c4;
+  padding: 4px 10px 10px 25px;
+  overflow: hidden;
+  text-align: center; }
+  div.cr.chip div.content {
+    position: relative;
+    padding: 0 10px 10px 0px;
+    color: #4d4d4d;
+    font-weight: bold;
+    font-size: 14px; }
+  div.cr.chip:after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 10;
+    background: #fff;
+    top: 50%;
+    left: 0;
+    width: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    overflow: hidden;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #c4c4c4; }
+  div.cr.chip i {
+    position: absolute;
+    right: 0;
+    padding-left: 10px;
+    padding-right: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    top: 30%;
+    color: #4d4d4d;
+    font-size: 12px;
+    margin-left: 10px; }
+
+div.cr.chip.blue {
+  background: #2196F3;
+  color: #fff;
+  border-color: #6ab8f7; }
+  div.cr.chip.blue:after {
+    border-color: #6ab8f7; }
+
+div.cr.chip.red {
+  background: #F44336;
+  color: #fff;
+  border-color: #f8877f; }
+  div.cr.chip.red:after {
+    border-color: #f8877f; }
+
+div.cr.chip.amber {
+  background: #FFC107;
+  color: #fff;
+  border-color: #ffd454; }
+  div.cr.chip.amber:after {
+    border-color: #ffd454; }
+
+div.cr.chip.green {
+  background: #00C853;
+  color: #fff;
+  border-color: #16ff76; }
+  div.cr.chip.green:after {
+    border-color: #16ff76; }
 
 div.cr.snackbar {
   visibility: hidden;

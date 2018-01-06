@@ -1,0 +1,80 @@
+div.cr.chip 
+	box-sizing: border-box 
+	position: relative 
+	display: inline-block 
+	border-radius: 25px 
+	min-width: 50px
+	white-space: nowrap
+	width: auto 
+	height: 30px
+	background: lighten($gray, 25)
+	margin: 3px 3px 3px 3px
+	font-weight: bold 
+	color: lighten($black, 30)
+	border: 1px solid lighten($gray, 15)
+	padding: 4px 10px 10px 25px
+	overflow: hidden
+	text-align: center
+
+	div.content 
+		position: relative 
+		padding: 0 10px 10px 0px 
+		color: lighten($black, 30) 
+		font-weight: bold 
+		font-size: 14px
+	&:after 
+		content: ''
+		box-sizing: border-box
+		position: absolute 
+		z-index: 10 
+		background: $white
+		top: 50% 
+		left: 0
+		width: 10px
+		margin-right: 10px
+		margin-left: 10px
+		overflow: hidden
+		height: 10px 
+		border-radius: 50%
+		border: 1px solid lighten($gray, 15)
+
+	i 
+		position: absolute
+		right: 0
+		padding-left: 10px
+		padding-right: 5px 
+		margin-left: 10px
+		cursor: pointer
+		top: 30%
+		color: lighten($black, 30) 
+		font-size: 12px
+		margin-left: 10px
+
+
+div.cr.chip.blue 
+	background: $blue 
+	color: $white 
+	border-color: lighten($blue, 15)
+	&:after 
+		border-color: lighten($blue, 15)
+
+div.cr.chip.red 
+	background: $red 
+	color: $white 
+	border-color: lighten($red, 15)
+	&:after 
+		border-color: lighten($red, 15)
+
+div.cr.chip.amber 
+	background: $amber 
+	color: $white 
+	border-color: lighten($amber, 15)
+	&:after 
+		border-color: lighten($amber, 15)
+
+div.cr.chip.green 
+	background: $green 
+	color: $white 
+	border-color: lighten($green, 15)
+	&:after 
+		border-color: lighten($green, 15)

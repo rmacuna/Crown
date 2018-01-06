@@ -327,6 +327,14 @@ div.cr.input.label
     height: 52px
     padding: 16px 0 8px 0
     width: $m-input-adaptive
+    input 
+        &:focus
+            ~ span.m-counter
+                &:before
+                    display: inline-block 
+                    visibility: visible
+
+
 
 .cr-material-field
     &:after, &:before
@@ -352,11 +360,30 @@ div.cr.input.label
         transition: transform 0.3s
 
 
+.cr-material-field.simple
+    label 
+        display: none 
+    span.m-counter
+        &:before 
+            padding-top: 10px
+    span.m-state
+        &:before 
+            padding-top: 10px
+
+    input 
+        padding-top: 20px 
+        padding-left: 0
+        padding-bottom: 0 
 
 .cr-material-field.area 
     height: 80px
     textarea
         height: 50px !important
+        &:focus
+            ~ span.m-counter
+                &:before
+                    display: inline-block 
+                    visibility: visible 
 
     span
         &:before 
@@ -385,8 +412,6 @@ div.cr.input.label
     //         visibility: hidden 
     //         white-space: nowrap
     //         font-size: 12px
-
-
 
 
 .cr-material-field.blue
@@ -547,7 +572,7 @@ span.m-state[data-error].error
     &:before
         content: attr(data-error)
         width: 30px
-        heigh: 20px
+        height: 20px
         position: relative
         color: $red
         display: none
@@ -567,16 +592,37 @@ span.m-state[data-positive].done
         white-space: nowrap
         font-size: 12px
 
+span.m-counter[max-value]
+    &:before 
+        content: attr(max-value)
+        width: 30px 
+        height: 20px 
+        position: absolute
+        text-align: right
+        right: 1% 
+        color: $black 
+        display: none 
+        visibility: hidden 
+        white-space: nowrap 
+        font-size: 12px 
+
+
 span.m-state.error.show
     &:before
-        display: block
+        display: inline-block
         visibility: visible
         
 
 span.m-state.done.show
     &:before
-        display: block
+        display: inline-block
         visibility: visible
+
+
+.m-counter.error
+    &:before 
+        color: $red !important
+
 
 .cr.input.medium
     input

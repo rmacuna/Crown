@@ -11,6 +11,10 @@ Crown uses material-icons so add this line in the head of your HTML code
 
 Crown uses flexbox grid so read the complete DOCS of grid system  [here](http://flexboxgrid.com/)
 
+Copy and paste this code for jQuery
+
+`<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>`
+
 
 ( Live Preview Not Avaliable For Now )[live preview](https://github.com/rmacuna/Crown/edit/master/README.md) of this version
 
@@ -280,6 +284,7 @@ The message of error or positive action it will only be shown on validation numb
 ![](https://media.giphy.com/media/3ohjUQbImEG4Jobp0k/giphy.gif)
 
 Full docs have more information
+
 
 **SnackBar** 
 
