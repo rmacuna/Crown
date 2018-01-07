@@ -922,31 +922,154 @@ div.cr.chip {
 
 div.cr.chip.blue {
   background: #2196F3;
-  color: #fff;
   border-color: #6ab8f7; }
+  div.cr.chip.blue i {
+    color: #fff; }
+  div.cr.chip.blue .content {
+    color: #fff; }
   div.cr.chip.blue:after {
     border-color: #6ab8f7; }
 
 div.cr.chip.red {
   background: #F44336;
-  color: #fff;
   border-color: #f8877f; }
+  div.cr.chip.red i {
+    color: #fff; }
+  div.cr.chip.red .content {
+    color: #fff; }
   div.cr.chip.red:after {
     border-color: #f8877f; }
 
 div.cr.chip.amber {
   background: #FFC107;
-  color: #fff;
   border-color: #ffd454; }
+  div.cr.chip.amber i {
+    color: #fff; }
+  div.cr.chip.amber .content {
+    color: #fff; }
   div.cr.chip.amber:after {
     border-color: #ffd454; }
 
 div.cr.chip.green {
   background: #00C853;
-  color: #fff;
   border-color: #16ff76; }
+  div.cr.chip.green i {
+    color: #fff; }
+  div.cr.chip.green .content {
+    color: #fff; }
   div.cr.chip.green:after {
     border-color: #16ff76; }
+
+div.cr.chip.indigo {
+  background: #3F51B5;
+  border-color: #7280ce; }
+  div.cr.chip.indigo i {
+    color: #fff; }
+  div.cr.chip.indigo .content {
+    color: #fff; }
+  div.cr.chip.indigo:after {
+    border-color: #7280ce; }
+
+div.cr.chip.pink {
+  background: #E91E63;
+  border-color: #f06493; }
+  div.cr.chip.pink i {
+    color: #fff; }
+  div.cr.chip.pink .content {
+    color: #fff; }
+  div.cr.chip.pink:after {
+    border-color: #f06493; }
+
+div.cr.chip.black {
+  background: #000;
+  border-color: #262626; }
+  div.cr.chip.black i {
+    color: #fff; }
+  div.cr.chip.black .content {
+    color: #fff; }
+  div.cr.chip.black:after {
+    border-color: #262626; }
+
+div.cr.chip.yellow {
+  background: #eed500;
+  border-color: #FFEB3B; }
+  div.cr.chip.yellow i {
+    color: #fff; }
+  div.cr.chip.yellow .content {
+    color: #fff; }
+  div.cr.chip.yellow:after {
+    border-color: #fff388; }
+
+div.cr.chip.gold {
+  background: #bf9b30;
+  border-color: #d8bb64; }
+  div.cr.chip.gold i {
+    color: #fff; }
+  div.cr.chip.gold .content {
+    color: #fff; }
+  div.cr.chip.gold:after {
+    border-color: #d8bb64; }
+
+div.cr.chip.purple {
+  background: #9C27B0;
+  border-color: #c34cd7; }
+  div.cr.chip.purple i {
+    color: #fff; }
+  div.cr.chip.purple .content {
+    color: #fff; }
+  div.cr.chip.purple:after {
+    border-color: #c34cd7; }
+
+span.cr.badge {
+  width: auto;
+  height: auto;
+  border-radius: 2px;
+  background: #dedede;
+  color: #404040;
+  overflow: hidden;
+  position: absolute;
+  z-index: 10;
+  font-weight: bold;
+  display: inline-block;
+  margin: 2px 2px 2px 2px;
+  padding: 5px 5px 0px 5px;
+  font-size: 12px; }
+
+span.cr.badge.blue {
+  background: #2196F3;
+  color: #fff; }
+
+span.cr.badge.green {
+  background: #00C853;
+  color: #fff; }
+
+span.cr.badge.red {
+  background: #F44336;
+  color: #fff; }
+
+span.cr.badge.amber {
+  background: #FFC107;
+  color: #fff; }
+
+span.cr.badge.indigo {
+  background: #3F51B5;
+  color: #fff; }
+
+span.cr.badge.purple {
+  background: #9C27B0;
+  color: #fff; }
+
+span.cr.badge.black {
+  background: #000;
+  color: #fff; }
+
+span.cr.badge.white {
+  background: #fff;
+  color: #000; }
+
+span.cr.badge.yellow {
+  background: #FFEB3B;
+  color: #000; }
 
 div.cr.snackbar {
   visibility: hidden;
@@ -1683,6 +1806,14 @@ div.cr.button {
     background: #2196F3;
     color: #fff; }
 
+.cr.button.outline.yellow {
+  background: none;
+  border: 1px solid #FFEB3B;
+  color: #FFEB3B; }
+  .cr.button.outline.yellow:hover {
+    background: #FFEB3B;
+    color: #000; }
+
 .cr.button.outline.green {
   background: none;
   border: 1px solid #8BC34A;
@@ -1815,6 +1946,10 @@ div.cr.button {
 .cr.button.black {
   background: #000;
   color: #fff; }
+
+.cr.button.yellow {
+  background: #FFEB3B;
+  color: #000; }
 
 .cr.button.teal {
   background: #009688;
@@ -2009,6 +2144,68 @@ button.cr.button.float {
   button.cr.button.float:active {
     background-color: #c1134e;
     box-shadow: 0 6px 12px #9E9E9E; }
+
+button.cr.button.float.blue {
+  background-color: #2196F3; }
+  button.cr.button.float.blue:active {
+    background-color: #0c7cd5; }
+
+button.cr.button.float.red {
+  background-color: #F44336; }
+  button.cr.button.float.red:active {
+    background-color: #ea1c0d; }
+
+button.cr.button.float.yellow {
+  background-color: #FFEB3B;
+  color: #000; }
+  button.cr.button.float.yellow:active {
+    background-color: #ffe608; }
+
+button.cr.button.float.amber {
+  background-color: #FFC107; }
+  button.cr.button.float.amber:active {
+    background-color: #d39e00; }
+
+button.cr.button.float.green {
+  background-color: #00C853; }
+  button.cr.button.float.green:active {
+    background-color: #00953e; }
+
+button.cr.button.float.indigo {
+  background-color: #3F51B5; }
+  button.cr.button.float.indigo:active {
+    background-color: #32408f; }
+
+button.cr.button.float.purple {
+  background-color: #9C27B0; }
+  button.cr.button.float.purple:active {
+    background-color: #771e86; }
+
+button.cr.button.float.gold {
+  background-color: #bf9b30; }
+  button.cr.button.float.gold:active {
+    background-color: #967a26; }
+
+button.cr.button.float.teal {
+  background-color: #009688; }
+  button.cr.button.float.teal:active {
+    background-color: #00635a; }
+
+button.cr.button.float.pink {
+  background-color: #E91E63; }
+  button.cr.button.float.pink:active {
+    background-color: #c1134e; }
+
+button.cr.button.float.black {
+  background-color: #000; }
+  button.cr.button.float.black:active {
+    background-color: black; }
+
+button.cr.button.float.white {
+  background-color: #f7f7f7;
+  color: #000; }
+  button.cr.button.float.white:active {
+    background-color: #e6e6e6; }
 
 button.dark-bg {
   box-shadow: none !important; }

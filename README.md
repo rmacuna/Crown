@@ -466,7 +466,17 @@ Add the class ``dark-bg``for a dark card.
 
 To get a shake effect add the class ``shake-1`` for a continue shake animation of the icon or image, ``shake-2`` to get a shake animation on hover.
 
+**Chips**
 
+  For use chips add this code 
+  
+  ```HTML 
+  <div class="cr chip purple">
+      <div class="content">Solid</div>
+      <i class="material-icons">close</i>
+  </div>
+  ```
+  By default, using the icon close automatically close and delete the tag from the DOM
 
   
 

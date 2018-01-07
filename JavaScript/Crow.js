@@ -82,14 +82,15 @@ jQuery(function($) {
         }
     })
     $('.m-input, .m-area').focus(function() {
-        let parent = $(this).parent();
-        let input = $(this);
-        let counter = parent.find('span.m-counter');
-        if (counter != null) {
-            console.log('finded')
-            let valcount = input.val().length;
-            maxVal = counter.attr('max-value');
-            counter.attr('max-value', valcount + "/" + maxVal.replace(/['"]+/g, ''));
+        if ($(this).parent().find('span.m-counter') != null) {
+            let parent = $(this).parent();
+            let input = $(this);
+            let counter = parent.find('span.m-counter');
+            if (counter != null) {
+                let valcount = input.val().length;
+                maxVal = counter.attr('max-value');
+                counter.attr('max-value', valcount + "/" + maxVal.replace(/['"]+/g, ''));
+            }
         }
     })
     $('.m-input, .m-area').on("input", function(e) {
@@ -107,7 +108,6 @@ jQuery(function($) {
                 }
             };
         }
-
     })
     $('.m-input, .m-area').blur(function() {
         let parent = $(this).parent();
@@ -115,7 +115,19 @@ jQuery(function($) {
         let counter = parent.find('span.m-counter');
         if (counter != null) { counter.attr('max-value', maxVal); }
     })
-
+    $('.cr.chip').find('i').click(function () { 
+        let elem = $(this); //Tomo el icono 
+        if (elem[0].innerText == "close") {
+            let parent = $(this).parent();
+            parent.css({
+                'transition': "transform 0.4s ease-out",
+                'transform': "scale(0)"
+            });
+            setTimeout(function () {
+               $(parent).remove();
+            },410);
+        }        
+    })
     $('.m-input.validate.numbers, .m-area.validate.numbers').blur(function() {
         let value = $(this).val(); //Valor del input
         let spanClass = $(this).parent().find('span.m-state') // Tomo el id del field
