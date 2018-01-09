@@ -76,25 +76,22 @@ div.cr.card
 			margin: 0 auto
 			max-width: 100% 
 			height: auto
+
 		.cr.feature
 			position: absolute 
 			background: rgba($black, .8)
 			width: 100% 
 			height: 100%
-			display: inline-block
-			align-content: center 
-			text-align: center 
-			opacity: 0 
+			top: 0 
+			opacity: 0
 			transition: opacity 0.3s ease-out
 			&:hover 
 				opacity: 1
 
 			.content 
 				position: relative
-				vertical-align: middle
-				display: inline
+				padding: 20px 10px 0 10px
 				color: $white 
-				overflow: hidden 
 				background: none 
 				font-size: 14px
 				font-weight: bold
@@ -218,8 +215,6 @@ div.cr.card.no-footer
 		border-bottom-right-radius: 2px
 		padding-bottom: 25px !important  
 	
-
-
 
 .noraise
 		box-shadow: 0 1px 1px 0 rgba($gray, .6) !important
@@ -429,6 +424,19 @@ div.cake.shake-2
 	40%, 60%
 		transform: translate3d(4px, 0, 0)
 
+
+div.cr.card.variant 
+	border-radius: 4px
+	border: 1px solid rgba($gray, .2)
+	box-shadow: 0 1px 1px 0 rgba($gray, .6) !important
+	.card-head 
+		border-top-right-radius: 4px 
+		border-top-left-radius: 4px
+	.card-footer 
+		border-top-right-radius: none 
+		border-top-left-radius: none 
+		border-bottom-left-radius: 4px
+		border-bottom-right-radius: 4px
 
 
 

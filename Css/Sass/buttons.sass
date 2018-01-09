@@ -470,8 +470,10 @@ button.cr.button.float.red
 button.cr.button.float.yellow 
 	background-color: $yellow 
 	color: $black
+	.ripple 
+		background: darken(rgba($yellow, .5), 20)
 	&:active 
-		background-color: darken($yellow, 10) 
+		background-color: darken($yellow, 15) 
 
 button.cr.button.float.amber 
 	background-color: $amber 
@@ -527,8 +529,6 @@ button.cr.button.float.white
 		background-color: darken($white, 10) 
 
 
-
-
 button.dark-bg
 	box-shadow: none !important
 
@@ -539,7 +539,7 @@ div.cr.button.pulse, button.cr.button.pulse
 	width: 0
 	height: 0
 	border-radius: 50%
-	background: rgba($white, .4)
+	background: rgba($white, .5)
 	transform: scale(0)
 	position: absolute 
 	opacity: 1

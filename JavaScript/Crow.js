@@ -368,5 +368,19 @@ try {
             }
         }
 
+        $.fn.modal = function(action){
+            if (action == 'show') {
+                $(this).style = "";
+                if (!$(this).is('.opened')) {
+                    $(this).addClass('opened');
+                }
+            }
+            if (action == 'hide') {
+                if ($(this).is('.opened')) {
+                     $(this).removeClass('opened');
+                }
+            }
+        }
+
     }(jQuery));
 } catch (e) {}

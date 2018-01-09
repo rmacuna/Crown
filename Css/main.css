@@ -66,19 +66,15 @@ div.cr.card {
       background: rgba(0, 0, 0, 0.8);
       width: 100%;
       height: 100%;
-      display: inline-block;
-      align-content: center;
-      text-align: center;
+      top: 0;
       opacity: 0;
       transition: opacity 0.3s ease-out; }
       div.cr.card .img-section .cr.feature:hover {
         opacity: 1; }
       div.cr.card .img-section .cr.feature .content {
         position: relative;
-        vertical-align: middle;
-        display: inline;
+        padding: 20px 10px 0 10px;
         color: #fff;
-        overflow: hidden;
         background: none;
         font-size: 14px;
         font-weight: bold; }
@@ -345,6 +341,19 @@ div.cake.shake-2:hover > i {
     transform: translate3d(-4px, 0, 0); }
   40%, 60% {
     transform: translate3d(4px, 0, 0); } }
+div.cr.card.variant {
+  border-radius: 4px;
+  border: 1px solid rgba(158, 158, 158, 0.2);
+  box-shadow: 0 1px 1px 0 rgba(158, 158, 158, 0.6) !important; }
+  div.cr.card.variant .card-head {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px; }
+  div.cr.card.variant .card-footer {
+    border-top-right-radius: none;
+    border-top-left-radius: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px; }
+
 .bold {
   font-weight: bold; }
 
@@ -1071,6 +1080,111 @@ span.cr.badge.yellow {
   background: #FFEB3B;
   color: #000; }
 
+div.cr.modal {
+  position: fixed;
+  border-radius: 4px;
+  width: 500px;
+  height: 200px;
+  top: 30%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -250px;
+  display: none;
+  z-index: 200;
+  overflow: auto;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  box-shadow: 1px 1px 1px 1px rgba(158, 158, 158, 0.3);
+  background: #fcfcfc;
+  color: #4d4d4d; }
+
+div.cr.modal.opened {
+  animation: appear 0.4s ease-in-out !important;
+  display: block; }
+
+@-moz-keyframes appear {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0;
+    transform: scale(0); }
+  100% {
+    opacity: 1 !important;
+    transform: scale(1); } }
+@-ms-keyframes appear {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0;
+    transform: scale(0); }
+  100% {
+    opacity: 1 !important;
+    transform: scale(1); } }
+@-webkit-keyframes appear {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0;
+    transform: scale(0); }
+  100% {
+    opacity: 1 !important;
+    transform: scale(1); } }
+@keyframes appear {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0;
+    transform: scale(0); }
+  100% {
+    opacity: 1 !important;
+    transform: scale(1); } }
+@-moz-keyframes disappear {
+  0% {
+    display: block;
+    opacity: 1; }
+  1% {
+    transform: scale(1);
+    opacity: 0; }
+  100% {
+    display: none;
+    transform: scale(0); } }
+@-ms-keyframes disappear {
+  0% {
+    display: block;
+    opacity: 1; }
+  1% {
+    transform: scale(1);
+    opacity: 0; }
+  100% {
+    display: none;
+    transform: scale(0); } }
+@-webkit-keyframes disappear {
+  0% {
+    display: block;
+    opacity: 1; }
+  1% {
+    transform: scale(1);
+    opacity: 0; }
+  100% {
+    display: none;
+    transform: scale(0); } }
+@keyframes disappear {
+  0% {
+    display: block;
+    opacity: 1; }
+  1% {
+    transform: scale(1);
+    opacity: 0; }
+  100% {
+    display: none;
+    transform: scale(0); } }
 div.cr.snackbar {
   visibility: hidden;
   position: absolute;
@@ -1655,12 +1769,8 @@ div.circle-img-box.small {
 img.rounded {
   border-radius: 50%; }
 
-.centered {
-  align-content: center;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
+.center {
+  padding-top: 50% !important; }
 
 .text-center {
   align-content: center;
@@ -2158,8 +2268,10 @@ button.cr.button.float.red {
 button.cr.button.float.yellow {
   background-color: #FFEB3B;
   color: #000; }
+  button.cr.button.float.yellow .ripple {
+    background: rgba(212, 190, 0, 0.5); }
   button.cr.button.float.yellow:active {
-    background-color: #ffe608; }
+    background-color: #eed500; }
 
 button.cr.button.float.amber {
   background-color: #FFC107; }
@@ -2217,7 +2329,7 @@ div.cr.button.pulse, button.cr.button.pulse {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.5);
   transform: scale(0);
   position: absolute;
   opacity: 1; }

@@ -399,6 +399,10 @@ And yes, you can change the color of this snack adding the color-class
      </div>
 ```
 
+By default, cards brings  material desing so, for Crown custom cards add the class ``variant`` to get a different card style. 
+
+
+ 
 
 **Images**
 
@@ -421,7 +425,51 @@ And yes, you can change the color of this snack adding the color-class
 
 Add the class ``dark-bg``for a dark card.
 
+
 ![](https://lh3.googleusercontent.com/sOPasFnnIRSwYZVwsf2LzfPdvpEa5PjE9YyE377tD8TYZh4-CiXrJ0JNmiKs8V31Ngmk9Wp46RTBisjUJ-mlpQCVV_AdIGG75k3G0emHYEJvSeYvq90h2-C2XP7zg7lOF6lKhzlmqQ)
+
+
+By default, cards brings  material desing so, for Crown custom cards add the class ``variant`` to get a different card style.
+
+**Features** 
+
+Show or hide a feature in card-images. Just add the ``img-section`` and then a div with class ``cr feature`` with a child div ``content``. 
+
+```HTML 
+ <div class="cr card variant">
+      <div class="card-head">So far away </div>
+           <div class="img-section">
+              <img id="img1" src="https://i.scdn.co/image/93b35ff46a64bbe150ef63c8656cc0c137e4960f" alt="">
+              <div id="myID" class="cr feature">
+                  <div class="content center ">
+                      <div class="row">
+                          <div class="col-xs-12 col-md-6">
+                              <button class="cr outline button green adaptive">Replay</button>
+                          </div>
+                          <div class="col-xs-12 col-md-6">
+                              <button class="cr outline button green adaptive">Pause</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+      <div class="card-body text-center ">
+          So far away, it's a song produced by Martin Garrix and David Guetta released on December 1, 2017.
+      </div>
+      <div class="card-footer ">
+          <button class="cr simple button  adaptive pulse">NEXT</button>
+      </div>
+ </div>
+
+```
+
+```JavaScript 
+//Activate the feature
+  $('#myID').feature('on');
+
+//Disable the feature 
+  $('#myID').feature('off');
+```
 
 
 **Cakes** 
@@ -467,8 +515,6 @@ Add the class ``dark-bg``for a dark card.
 To get a shake effect add the class ``shake-1`` for a continue shake animation of the icon or image, ``shake-2`` to get a shake animation on hover.
 
 **Chips**
-
-  For use chips add this code 
   
   ```HTML 
   <div class="cr chip purple">
