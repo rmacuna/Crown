@@ -107,7 +107,7 @@ div.cr.modal
         box-sizing: border-box 
         padding: 10px 10px 10px 10px 
         min-height: 118px
-        overflow: auto 
+        overflow: hidden 
         width: 100% 
         color: lighten($black, 30)
 
@@ -207,7 +207,8 @@ div.cr.modal.opened
     animation: appear 0.4s ease-in-out !important 
     display: block 
 
-
+div.cr.modal.shadow
+    box-shadow: 0 8px 16px rgba($black, .3) !important
 
 span.overlay 
     position: fixed
@@ -225,6 +226,13 @@ span.overlay
 
 span.overlay.hide 
     opacity: 0
+
+
+/*Modal login*/
+div.cr.modal.small-login
+    width: 350px 
+    margin-left: -13%
+    margin-top: -80px
 
 
 
@@ -277,6 +285,31 @@ span.overlay.hide
         transform: scale(1)
 
 
+@-ms-keyframes fadeIn 
+    0%
+        opacity: 0 
+    50% 
+        opacity: 0.5 
+    100%
+        opacity: 1 !important  
+
+@-webkit-keyframes fadeIn 
+    0%
+        opacity: 0 
+    50% 
+        opacity: 0.5 
+    100%
+        opacity: 1 !important 
+
+@-moz-keyframes fadeIn 
+    0%
+        opacity: 0 
+    50% 
+        opacity: 0.5 
+    100%
+        opacity: 1 !important 
+
+
 @keyframes fadeIn 
     0%
         opacity: 0 
@@ -284,6 +317,7 @@ span.overlay.hide
         opacity: 0.5 
     100%
         opacity: 1 !important 
+
 
 
 

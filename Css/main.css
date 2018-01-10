@@ -471,28 +471,26 @@ div.cr.input.basic {
 div.cr.input.label {
   position: relative;
   white-space: nowrap;
-  margin: 10px auto; }
+  margin: 10px auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: inline-block; }
   div.cr.input.label input {
     position: relative;
+    display: inline-block;
     left: -4px; }
   div.cr.input.label div.label {
     position: relative;
-    top: 0;
+    padding: 9px 22px 9px 15px !important;
     display: inline;
-    overflow: hidden;
-    padding-top: 9.35px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 9.15px;
     background: #ebebeb;
     text-align: center;
-    min-width: 15px;
     color: #4d4d4d;
-    height: 22.5px;
+    height: 22.5;
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
-    border-right: none !important;
-    border: 0.5px solid #d1d1d1;
+    border-right: none;
+    border: 0.5px solid rgba(158, 158, 158, 0.4);
     font-weight: bold; }
   div.cr.input.label div.label.blue {
     background: #2196F3;
@@ -559,7 +557,7 @@ div.cr.input.label {
     padding-left: 20px;
     padding-right: 18px;
     padding-bottom: 9.52px;
-    height: 41.5px;
+    height: 42px;
     background: #ebebeb;
     color: #4d4d4d;
     border-top-right-radius: 2px;
@@ -869,6 +867,8 @@ div.cr.input.adaptive {
     left: 0 !important; }
   div.cr.input.adaptive div.ender, div.cr.input.adaptive button.ender {
     right: 0 !important; }
+  div.cr.input.adaptive div.label {
+    left: 0 !important; }
 
 input.cr.input.error {
   border: 0.5px solid #F44336; }
@@ -1174,7 +1174,7 @@ div.cr.modal {
     box-sizing: border-box;
     padding: 10px 10px 10px 10px;
     min-height: 118px;
-    overflow: auto;
+    overflow: hidden;
     width: 100%;
     color: #4d4d4d; }
   div.cr.modal div.modal-body.blue {
@@ -1270,6 +1270,9 @@ div.cr.modal.opened {
   animation: appear 0.4s ease-in-out !important;
   display: block; }
 
+div.cr.modal.shadow {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3) !important; }
+
 span.overlay {
   position: fixed;
   z-index: 199;
@@ -1286,6 +1289,12 @@ span.overlay {
 
 span.overlay.hide {
   opacity: 0; }
+
+/*Modal login */
+div.cr.modal.small-login {
+  width: 350px;
+  margin-left: -13%;
+  margin-top: -80px; }
 
 @-moz-keyframes appear {
   0% {
@@ -1331,6 +1340,27 @@ span.overlay.hide {
   100% {
     opacity: 1 !important;
     transform: scale(1); } }
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1 !important; } }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1 !important; } }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1 !important; } }
 @keyframes fadeIn {
   0% {
     opacity: 0; }

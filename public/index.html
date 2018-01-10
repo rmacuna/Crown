@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="../Css/Grid/flexboxgrid.min.css">
     <title>LearnDesign</title>
     <style type="text/css">
-     
         /* body{
             background: rgba(0, 0, 0, 0.575)
         } */
+
         .sep {
             padding-top: 20px;
         }
@@ -24,29 +24,38 @@
         <i class="material-icons">add</i>
     </button>
     <div class="cr container">
-        <div class="cr modal plain ">
-            <i class="material-icons close text-white">close</i>
-            <div class="modal-head black center">Modal Head.</div>
-            <div class="modal-body black">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehende
-              lorem
-            </div>
-            <div class="modal-footer no-line black center">
+        <div class="cr modal small-login ">
+            <i class="material-icons close">close</i>
+            <div class="modal-head center">Login</div>
+            <div class="modal-body ">
                 <div class="row">
-                    <div class="col-xs-12 col-md-6">
-                        <button class="cr simple button green pulse adaptive ">DELETE</button>
+                    <div class="col-xs-12 col-md-12">
+                        <div class="cr input label adaptive">
+                            <div class="label">Name</div>
+                            <input class="in-label " type="text" name="">
+                        </div>
                     </div>
-                    <div class="col-xs-12 col-md-6">
-                        <button class="cr simple button green pulse adaptive">ACCEPT</button>
+                    <div class="col-xs-12 col-md-12">
+                        <div class="cr input label adaptive">
+                            <div class="label">Password</div>
+                            <input class="in-label " type="password" name="">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>      
-        
-       
+            <div class="modal-footer no-line center">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <button class="cr simple button green pulse adaptive ">CANCEL</button>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <button class="cr simple button green pulse adaptive">LOGIN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -54,8 +63,8 @@
     <script type="text/javascript">
         function triggerModal() {
             if (!$('.cr.modal').is('.opened')) {
-                 $('.cr.modal').modal('show');
-            }else{
+                $('.cr.modal').modal('show');
+            } else {
                 $('.cr.modal').modal('hide');
             }
         }
