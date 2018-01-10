@@ -30,6 +30,23 @@ div.cr.modal.opened
     display: block 
 
 
+span.overlay 
+    position: fixed
+    z-index: 1 
+    top: 0 
+    left: 0 
+    width: 100%
+    height: 100vh
+    transition: opacity 0.3s ease-out 
+    opacity: 1
+    background: rgba($black, 0.476)
+    animation: fadeIn 0.4s ease-in-out 
+
+span.overlay.hide 
+    opacity: 0
+
+
+
 @-moz-keyframes appear 
     0% 
         display: none 
@@ -42,7 +59,6 @@ div.cr.modal.opened
         opacity: 1 !important
         transform: scale(1)
 
-
 @-ms-keyframes appear 
     0% 
         display: none 
@@ -54,7 +70,6 @@ div.cr.modal.opened
     100% 
         opacity: 1 !important
         transform: scale(1)
-
 
 @-webkit-keyframes appear
     0% 
@@ -81,53 +96,15 @@ div.cr.modal.opened
         transform: scale(1)
 
 
-
-@-moz-keyframes disappear 
-    0% 
-        display: block 
-        opacity: 1
-    1% 
-        transform: scale(1)
+@keyframes fadeIn 
+    0%
         opacity: 0 
-    100% 
-        display: none
-        transform: scale(0)
+    50% 
+        opacity: 0.5 
+    100%
+        opacity: 1 !important 
 
-@-ms-keyframes disappear 
-    0% 
-        display: block 
-        opacity: 1
-    1% 
-        transform: scale(1)
-        opacity: 0 
-    100% 
-        display: none
-        transform: scale(0)
 
-@-webkit-keyframes disappear
-    0% 
-        display: block 
-        opacity: 1
-    1% 
-        transform: scale(1)
-        opacity: 0 
-    100% 
-        display: none
-        transform: scale(0)
-
-@keyframes disappear 
-    0% 
-        display: block 
-        opacity: 1
-    1% 
-        transform: scale(1)
-        opacity: 0 
-    100% 
-        display: none
-        transform: scale(0)
-    
-  
-        
 
 
 

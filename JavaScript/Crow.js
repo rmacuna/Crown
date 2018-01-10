@@ -274,8 +274,14 @@ jQuery(function($) {
             left: x + 'px'
         }).addClass("ripple-active");
     })
+    
 })
+
+
+
+
 var statePressed = false;
+var overlay;
 try {
     (function($) {
         $.fn.snackbar = function(action, message, delay) {
@@ -369,18 +375,36 @@ try {
         }
 
         $.fn.modal = function(action){
-            if (action == 'show') {
-                $(this).style = "";
+            if (action == 'show') {               
                 if (!$(this).is('.opened')) {
                     $(this).addClass('opened');
+                    $('body').append('<span id="crOverLay" class="overlay"></span>');
+                    overlay = $('#crOverLay');
                 }
             }
             if (action == 'hide') {
                 if ($(this).is('.opened')) {
                      $(this).removeClass('opened');
+                     $('#crOverLay').addClass('hide');
+                    setTimeout(() => {
+                        $('#crOverLay').remove();
+                        overlay = null;
+                    }, 310);
                 }
             }
         }
 
     }(jQuery));
 } catch (e) {}
+
+window.onclick = function (e) {
+    e.preventDefault();
+    if (event.target == overlay) {
+        $('.cr.modal').removeClass('opened');
+        overlay.className += 'hide'
+        setTimeout(() => {
+            $('#crOverLay').remove();
+        }, 310);
+    }
+    
+}
