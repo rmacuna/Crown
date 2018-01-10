@@ -9,20 +9,39 @@ div.cr.modal
     top: 30% 
     left: 50% 
     margin-top: -50px
-    margin-left: -250px 
 
-    border: 1px solid rgba($gray, .9)
 
     display: none 
 
     z-index: 200 
-    overflow: auto 
+
+    overflow: hidden 
 
     transition: transform 0.4s ease-out, opacity 0.4s ease-out, border-color 0.6s ease-out
 
     box-shadow: 1px 1px 1px 1px rgba($gray, .3)
     background: darken($white, 1)
     color: lighten($black, 30)
+
+    @media screen and (max-width: 767px)
+        width: auto 
+        margin-left: -47.5%
+        max-width: 95% !important
+
+    @media screen and (min-width: 768px)
+        width: 500px
+        margin-left: -30%
+
+    @media screen and (max-width: 1199px) and (min-width: 992px)
+        width: 500px
+        margin-left: -20%
+
+    @media screen and (min-width: 1200px)
+        width: 500px 
+        margin-left: -20%
+
+
+
     .center 
         text-align: center 
 
@@ -47,16 +66,87 @@ div.cr.modal
         color: lighten($black, 30)
         background: lighten($gray, 25) 
 
- 
-
+    div.modal-head.blue
+        background: $blue 
+        color: $white 
+    div.modal-head.green 
+        background: $green 
+        color: $white 
+    div.modal-head.white 
+        background: $white 
+        color: $black 
+    div.modal-head.red
+        background: $red 
+        color: $white 
+    div.modal-head.indigo 
+        background: $indigo 
+        color: $white 
+    div.modal-head.purple 
+        background: $purple 
+        color: $white 
+    div.modal-head.amber 
+        background: $amber 
+        color: $white 
+    div.modal-head.yellow 
+        background: $yellow 
+        color: $black 
+    div.modal-head.black 
+        background: $black 
+        color: $white 
+    div.modal-head.gold 
+        background: $gold 
+        color: $white 
+    div.modal-head.teal 
+        background: $teal 
+        color: $white 
+    div.modal-head.pink 
+        background: $pink 
+        color: $white
     div.modal-body 
         position: relative 
         box-sizing: border-box 
-        padding: 10px 5px 10px 5px 
+        padding: 10px 10px 10px 10px 
         min-height: 118px
         overflow: auto 
         width: 100% 
         color: lighten($black, 30)
+
+    div.modal-body.blue
+        background: $blue 
+        color: $white 
+    div.modal-body.green 
+        background: $green 
+        color: $white 
+    div.modal-body.white 
+        background: $white 
+        color: $black 
+    div.modal-body.red
+        background: $red 
+        color: $white 
+    div.modal-body.indigo 
+        background: $indigo 
+        color: $white 
+    div.modal-body.purple 
+        background: $purple 
+        color: $white 
+    div.modal-body.amber 
+        background: $amber 
+        color: $white 
+    div.modal-body.yellow 
+        background: $yellow 
+        color: $black 
+    div.modal-body.black 
+        background: $black 
+        color: $white 
+    div.modal-body.gold 
+        background: $gold 
+        color: $white 
+    div.modal-body.teal 
+        background: $teal 
+        color: $white 
+    div.modal-body.pink 
+        background: $pink 
+        color: $white
 
     div.modal-footer 
         position: relative 
@@ -72,15 +162,46 @@ div.cr.modal
             box-sizing: border-box !important
         button.cr.button 
             box-sizing: border-box !important 
-
-        
-
-
-
-    &:hover 
-        border-color: rgba($blue, .9)
-
-
+    div.modal-footer.no-line
+        border-top: none
+    
+    div.modal-footer.blue
+        background: $blue 
+        color: $white 
+    div.modal-footer.green 
+        background: $green 
+        color: $white 
+    div.modal-footer.white 
+        background: $white 
+        color: $black 
+    div.modal-footer.red
+        background: $red 
+        color: $white 
+    div.modal-footer.indigo 
+        background: $indigo 
+        color: $white 
+    div.modal-footer.purple 
+        background: $purple 
+        color: $white 
+    div.modal-footer.amber 
+        background: $amber 
+        color: $white 
+    div.modal-footer.yellow 
+        background: $yellow 
+        color: $black 
+    div.modal-footer.black 
+        background: $black 
+        color: $white 
+    div.modal-footer.gold 
+        background: $gold 
+        color: $white 
+    div.modal-footer.teal 
+        background: $teal 
+        color: $white 
+    div.modal-footer.pink 
+        background: $pink 
+        color: $white
+       
 
 div.cr.modal.opened 
     animation: appear 0.4s ease-in-out !important 
@@ -90,14 +211,16 @@ div.cr.modal.opened
 
 span.overlay 
     position: fixed
-    z-index: 1 
+    z-index: 199 
     top: 0 
     left: 0 
     width: 100%
     height: 100vh
     transition: opacity 0.3s ease-out 
     opacity: 1
-    background: rgba($black, 0.476)
+    background: rgba($black, 0.2)
+    -webkit-animation: fadeIn 0.4s ease-in-out
+    -ms-animation: fadeIn 0.4s ease-in-out
     animation: fadeIn 0.4s ease-in-out 
 
 span.overlay.hide 

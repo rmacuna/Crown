@@ -1088,15 +1088,30 @@ div.cr.modal {
   top: 30%;
   left: 50%;
   margin-top: -50px;
-  margin-left: -250px;
-  border: 1px solid rgba(158, 158, 158, 0.9);
   display: none;
   z-index: 200;
-  overflow: auto;
+  overflow: hidden;
   transition: transform 0.4s ease-out, opacity 0.4s ease-out, border-color 0.6s ease-out;
   box-shadow: 1px 1px 1px 1px rgba(158, 158, 158, 0.3);
   background: #fcfcfc;
   color: #4d4d4d; }
+  @media screen and (max-width: 767px) {
+    div.cr.modal {
+      width: auto;
+      margin-left: -47.5%;
+      max-width: 95% !important; } }
+  @media screen and (min-width: 768px) {
+    div.cr.modal {
+      width: 500px;
+      margin-left: -30%; } }
+  @media screen and (max-width: 1199px) and (min-width: 992px) {
+    div.cr.modal {
+      width: 500px;
+      margin-left: -20%; } }
+  @media screen and (min-width: 1200px) {
+    div.cr.modal {
+      width: 500px;
+      margin-left: -20%; } }
   div.cr.modal .center {
     text-align: center; }
   div.cr.modal i.close {
@@ -1118,14 +1133,86 @@ div.cr.modal {
     padding: 10px 5px 10px 5px;
     color: #4d4d4d;
     background: #dedede; }
+  div.cr.modal div.modal-head.blue {
+    background: #2196F3;
+    color: #fff; }
+  div.cr.modal div.modal-head.green {
+    background: #00C853;
+    color: #fff; }
+  div.cr.modal div.modal-head.white {
+    background: #fff;
+    color: #000; }
+  div.cr.modal div.modal-head.red {
+    background: #F44336;
+    color: #fff; }
+  div.cr.modal div.modal-head.indigo {
+    background: #3F51B5;
+    color: #fff; }
+  div.cr.modal div.modal-head.purple {
+    background: #9C27B0;
+    color: #fff; }
+  div.cr.modal div.modal-head.amber {
+    background: #FFC107;
+    color: #fff; }
+  div.cr.modal div.modal-head.yellow {
+    background: #FFEB3B;
+    color: #000; }
+  div.cr.modal div.modal-head.black {
+    background: #000;
+    color: #fff; }
+  div.cr.modal div.modal-head.gold {
+    background: #bf9b30;
+    color: #fff; }
+  div.cr.modal div.modal-head.teal {
+    background: #009688;
+    color: #fff; }
+  div.cr.modal div.modal-head.pink {
+    background: #E91E63;
+    color: #fff; }
   div.cr.modal div.modal-body {
     position: relative;
     box-sizing: border-box;
-    padding: 10px 5px 10px 5px;
+    padding: 10px 10px 10px 10px;
     min-height: 118px;
     overflow: auto;
     width: 100%;
     color: #4d4d4d; }
+  div.cr.modal div.modal-body.blue {
+    background: #2196F3;
+    color: #fff; }
+  div.cr.modal div.modal-body.green {
+    background: #00C853;
+    color: #fff; }
+  div.cr.modal div.modal-body.white {
+    background: #fff;
+    color: #000; }
+  div.cr.modal div.modal-body.red {
+    background: #F44336;
+    color: #fff; }
+  div.cr.modal div.modal-body.indigo {
+    background: #3F51B5;
+    color: #fff; }
+  div.cr.modal div.modal-body.purple {
+    background: #9C27B0;
+    color: #fff; }
+  div.cr.modal div.modal-body.amber {
+    background: #FFC107;
+    color: #fff; }
+  div.cr.modal div.modal-body.yellow {
+    background: #FFEB3B;
+    color: #000; }
+  div.cr.modal div.modal-body.black {
+    background: #000;
+    color: #fff; }
+  div.cr.modal div.modal-body.gold {
+    background: #bf9b30;
+    color: #fff; }
+  div.cr.modal div.modal-body.teal {
+    background: #009688;
+    color: #fff; }
+  div.cr.modal div.modal-body.pink {
+    background: #E91E63;
+    color: #fff; }
   div.cr.modal div.modal-footer {
     position: relative;
     height: auto;
@@ -1140,8 +1227,44 @@ div.cr.modal {
       box-sizing: border-box !important; }
     div.cr.modal div.modal-footer button.cr.button {
       box-sizing: border-box !important; }
-  div.cr.modal:hover {
-    border-color: rgba(33, 150, 243, 0.9); }
+  div.cr.modal div.modal-footer.no-line {
+    border-top: none; }
+  div.cr.modal div.modal-footer.blue {
+    background: #2196F3;
+    color: #fff; }
+  div.cr.modal div.modal-footer.green {
+    background: #00C853;
+    color: #fff; }
+  div.cr.modal div.modal-footer.white {
+    background: #fff;
+    color: #000; }
+  div.cr.modal div.modal-footer.red {
+    background: #F44336;
+    color: #fff; }
+  div.cr.modal div.modal-footer.indigo {
+    background: #3F51B5;
+    color: #fff; }
+  div.cr.modal div.modal-footer.purple {
+    background: #9C27B0;
+    color: #fff; }
+  div.cr.modal div.modal-footer.amber {
+    background: #FFC107;
+    color: #fff; }
+  div.cr.modal div.modal-footer.yellow {
+    background: #FFEB3B;
+    color: #000; }
+  div.cr.modal div.modal-footer.black {
+    background: #000;
+    color: #fff; }
+  div.cr.modal div.modal-footer.gold {
+    background: #bf9b30;
+    color: #fff; }
+  div.cr.modal div.modal-footer.teal {
+    background: #009688;
+    color: #fff; }
+  div.cr.modal div.modal-footer.pink {
+    background: #E91E63;
+    color: #fff; }
 
 div.cr.modal.opened {
   animation: appear 0.4s ease-in-out !important;
@@ -1149,14 +1272,16 @@ div.cr.modal.opened {
 
 span.overlay {
   position: fixed;
-  z-index: 1;
+  z-index: 199;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   transition: opacity 0.3s ease-out;
   opacity: 1;
-  background: rgba(0, 0, 0, 0.476);
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-animation: fadeIn 0.4s ease-in-out;
+  -ms-animation: fadeIn 0.4s ease-in-out;
   animation: fadeIn 0.4s ease-in-out; }
 
 span.overlay.hide {
