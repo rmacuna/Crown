@@ -1084,18 +1084,64 @@ div.cr.modal {
   position: fixed;
   border-radius: 4px;
   width: 500px;
-  height: 200px;
+  min-height: 200px;
   top: 30%;
   left: 50%;
   margin-top: -50px;
   margin-left: -250px;
+  border: 1px solid rgba(158, 158, 158, 0.9);
   display: none;
   z-index: 200;
   overflow: auto;
-  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out, border-color 0.6s ease-out;
   box-shadow: 1px 1px 1px 1px rgba(158, 158, 158, 0.3);
   background: #fcfcfc;
   color: #4d4d4d; }
+  div.cr.modal .center {
+    text-align: center; }
+  div.cr.modal i.close {
+    position: absolute;
+    font-weight: bold;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-right: 5px;
+    cursor: pointer; }
+  div.cr.modal div.modal-head {
+    position: relative;
+    top: 0;
+    box-sizing: border-box;
+    width: 100%;
+    font-weight: bold;
+    padding: 10px 5px 10px 5px;
+    color: #4d4d4d;
+    background: #dedede; }
+  div.cr.modal div.modal-body {
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px 5px 10px 5px;
+    min-height: 118px;
+    overflow: auto;
+    width: 100%;
+    color: #4d4d4d; }
+  div.cr.modal div.modal-footer {
+    position: relative;
+    height: auto;
+    box-sizing: border-box;
+    padding: 5px 5px 5px 5px;
+    width: 100%;
+    font-weight: bold;
+    border-top: 1px solid rgba(158, 158, 158, 0.4);
+    color: #4d4d4d;
+    display: inline-block; }
+    div.cr.modal div.modal-footer div.cr.button {
+      box-sizing: border-box !important; }
+    div.cr.modal div.modal-footer button.cr.button {
+      box-sizing: border-box !important; }
+  div.cr.modal:hover {
+    border-color: rgba(33, 150, 243, 0.9); }
 
 div.cr.modal.opened {
   animation: appear 0.4s ease-in-out !important;
@@ -1751,12 +1797,15 @@ div.circle-img-box.small {
 img.rounded {
   border-radius: 50%; }
 
-.center {
-  padding-top: 50% !important; }
-
 .text-center {
   align-content: center;
   text-align: center !important; }
+
+.text-white {
+  color: #fff !important; }
+
+.text-black {
+  color: #000 !important; }
 
 html {
   height: 100vh; }

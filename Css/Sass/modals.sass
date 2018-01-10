@@ -4,30 +4,88 @@ div.cr.modal
     border-radius: 4px 
 
     width: 500px
-    height: 200px
+    min-height: 200px
 
     top: 30% 
     left: 50% 
     margin-top: -50px
     margin-left: -250px 
 
+    border: 1px solid rgba($gray, .9)
 
     display: none 
 
     z-index: 200 
     overflow: auto 
 
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out, border-color 0.6s ease-out
 
     box-shadow: 1px 1px 1px 1px rgba($gray, .3)
     background: darken($white, 1)
     color: lighten($black, 30)
+    .center 
+        text-align: center 
+
+    i.close 
+        position: absolute 
+        font-weight: bold 
+        right: 0 
+        top: 0 
+        z-index: 1
+        font-size: 16px 
+        padding-top: 5px
+        padding-right: 5px 
+        cursor: pointer 
+
+    div.modal-head 
+        position: relative 
+        top: 0 
+        box-sizing: border-box
+        width: 100% 
+        font-weight: bold
+        padding: 10px 5px 10px 5px
+        color: lighten($black, 30)
+        background: lighten($gray, 25) 
+
+ 
+
+    div.modal-body 
+        position: relative 
+        box-sizing: border-box 
+        padding: 10px 5px 10px 5px 
+        min-height: 118px
+        overflow: auto 
+        width: 100% 
+        color: lighten($black, 30)
+
+    div.modal-footer 
+        position: relative 
+        height: auto 
+        box-sizing: border-box 
+        padding: 5px 5px 5px 5px 
+        width: 100% 
+        font-weight: bold
+        border-top: 1px solid rgba($gray, .4)
+        color: lighten($black, 30)
+        display: inline-block
+        div.cr.button 
+            box-sizing: border-box !important
+        button.cr.button 
+            box-sizing: border-box !important 
+
+        
+
+
+
+    &:hover 
+        border-color: rgba($blue, .9)
 
 
 
 div.cr.modal.opened 
     animation: appear 0.4s ease-in-out !important 
     display: block 
+
 
 
 span.overlay 

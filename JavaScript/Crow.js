@@ -115,7 +115,7 @@ jQuery(function($) {
         let counter = parent.find('span.m-counter');
         if (counter != null) { counter.attr('max-value', maxVal); }
     })
-    $('.cr.chip').find('i').click(function () { 
+    $('.cr.chip').find('i').click(function() {
         let elem = $(this); //Tomo el icono 
         if (elem[0].innerText == "close") {
             let parent = $(this).parent();
@@ -123,10 +123,10 @@ jQuery(function($) {
                 'transition': "transform 0.4s ease-out",
                 'transform': "scale(0)"
             });
-            setTimeout(function () {
-               $(parent).remove();
-            },410);
-        }        
+            setTimeout(function() {
+                $(parent).remove();
+            }, 410);
+        }
     })
     $('.m-input.validate.numbers, .m-area.validate.numbers').blur(function() {
         let value = $(this).val(); //Valor del input
@@ -274,7 +274,7 @@ jQuery(function($) {
             left: x + 'px'
         }).addClass("ripple-active");
     })
-    
+
 })
 
 
@@ -282,6 +282,7 @@ jQuery(function($) {
 
 var statePressed = false;
 var overlay;
+var iclose;
 try {
     (function($) {
         $.fn.snackbar = function(action, message, delay) {
@@ -374,18 +375,25 @@ try {
             }
         }
 
-        $.fn.modal = function(action){
-            if (action == 'show') {               
+        $.fn.modal = function(action) {
+            if (action == 'show') {
                 if (!$(this).is('.opened')) {
                     $(this).addClass('opened');
                     $('body').append('<span id="crOverLay" class="overlay"></span>');
-                    overlay = $('#crOverLay');
+                    overlay = document.getElementById('crOverLay');
+                }
+                let icon = $(this).find('i');
+                if (icon != null) {
+                    let i = icon[0].innerText;
+                    if (i == 'close') {
+                        iclose = icon[0]; 
+                    }
                 }
             }
             if (action == 'hide') {
                 if ($(this).is('.opened')) {
-                     $(this).removeClass('opened');
-                     $('#crOverLay').addClass('hide');
+                    $(this).removeClass('opened');
+                    $('#crOverLay').addClass('hide');
                     setTimeout(() => {
                         $('#crOverLay').remove();
                         overlay = null;
@@ -397,14 +405,22 @@ try {
     }(jQuery));
 } catch (e) {}
 
-window.onclick = function (e) {
-    e.preventDefault();
+window.onclick = function(e) {
     if (event.target == overlay) {
         $('.cr.modal').removeClass('opened');
-        overlay.className += 'hide'
+        overlay.className += ' hide'
+
         setTimeout(() => {
             $('#crOverLay').remove();
         }, 310);
     }
-    
+    if (event.target == iclose) {
+        $('.cr.modal').removeClass('opened');
+        overlay.className += ' hide'
+
+        setTimeout(() => {
+            $('#crOverLay').remove();
+        }, 310);
+    }
+
 }
