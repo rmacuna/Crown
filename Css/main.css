@@ -1335,6 +1335,39 @@ div.cr.modal.medium {
     div.cr.modal.medium {
       margin-left: -22%; } }
 
+div.cr.modal.big {
+  width: 800px;
+  margin-top: -80px; }
+  @media screen and (max-width: 680px) {
+    div.cr.modal.big {
+      margin-left: -46% !important;
+      width: 100%;
+      max-width: 95% !important; } }
+  @media screen and (max-width: 767px) {
+    div.cr.modal.big {
+      margin-left: -47%;
+      max-width: 95% !important; } }
+  @media screen and (min-width: 768px) and (max-width: 850px) {
+    div.cr.modal.big {
+      margin-left: -47%;
+      max-width: 95% !important; } }
+  @media screen and (min-width: 851px) and (max-width: 991px) {
+    div.cr.modal.big {
+      margin-left: -44%; } }
+  @media screen and (max-width: 1199px) and (min-width: 992px) {
+    div.cr.modal.big {
+      margin-left: -37.6%;
+      max-width: 95% !important; } }
+  @media screen and (min-width: 1200px) {
+    div.cr.modal.big {
+      margin-left: -30%; } }
+
+div.cr.modal.content-scroll {
+  margin-top: -150px; }
+  div.cr.modal.content-scroll div.modal-body {
+    max-height: 500px !important;
+    overflow-y: auto; }
+
 @-moz-keyframes appear {
   0% {
     display: none;
