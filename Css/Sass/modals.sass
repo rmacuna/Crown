@@ -231,8 +231,26 @@ span.overlay.hide
 /*Modal login*/
 div.cr.modal.small-login
     width: 350px 
-    margin-left: -13%
+    // margin-left: -13%
     margin-top: -80px
+
+    @media screen and (max-width: 550px)
+        margin-left: -46% !important
+        width: auto 
+        max-width: 95% !important
+
+    @media screen and (max-width: 767px)
+        margin-left: -25%
+        max-width: 95% !important
+
+    @media screen and (min-width: 768px)
+        margin-left: -19%
+
+    @media screen and (max-width: 1199px) and (min-width: 992px)
+        margin-left: -15%
+
+    @media screen and (min-width: 1200px)
+        margin-left: -14%
 
 
 

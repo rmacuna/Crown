@@ -1293,8 +1293,25 @@ span.overlay.hide {
 /*Modal login */
 div.cr.modal.small-login {
   width: 350px;
-  margin-left: -13%;
   margin-top: -80px; }
+  @media screen and (max-width: 550px) {
+    div.cr.modal.small-login {
+      margin-left: -46% !important;
+      width: auto;
+      max-width: 95% !important; } }
+  @media screen and (max-width: 767px) {
+    div.cr.modal.small-login {
+      margin-left: -25%;
+      max-width: 95% !important; } }
+  @media screen and (min-width: 768px) {
+    div.cr.modal.small-login {
+      margin-left: -19%; } }
+  @media screen and (max-width: 1199px) and (min-width: 992px) {
+    div.cr.modal.small-login {
+      margin-left: -15%; } }
+  @media screen and (min-width: 1200px) {
+    div.cr.modal.small-login {
+      margin-left: -14%; } }
 
 @-moz-keyframes appear {
   0% {
