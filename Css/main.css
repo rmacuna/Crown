@@ -1291,27 +1291,49 @@ span.overlay.hide {
   opacity: 0; }
 
 /*Modal login */
-div.cr.modal.small-login {
+div.cr.modal.small {
   width: 350px;
   margin-top: -80px; }
   @media screen and (max-width: 550px) {
-    div.cr.modal.small-login {
+    div.cr.modal.small {
       margin-left: -46% !important;
       width: auto;
       max-width: 95% !important; } }
   @media screen and (max-width: 767px) {
-    div.cr.modal.small-login {
+    div.cr.modal.small {
       margin-left: -25%;
       max-width: 95% !important; } }
   @media screen and (min-width: 768px) {
-    div.cr.modal.small-login {
+    div.cr.modal.small {
       margin-left: -19%; } }
   @media screen and (max-width: 1199px) and (min-width: 992px) {
-    div.cr.modal.small-login {
+    div.cr.modal.small {
       margin-left: -15%; } }
   @media screen and (min-width: 1200px) {
-    div.cr.modal.small-login {
+    div.cr.modal.small {
       margin-left: -14%; } }
+
+div.cr.modal.medium {
+  width: 600px;
+  margin-top: -80px; }
+  @media screen and (max-width: 680px) {
+    div.cr.modal.medium {
+      margin-left: -46% !important;
+      width: 100%;
+      max-width: 95% !important; } }
+  @media screen and (max-width: 767px) {
+    div.cr.modal.medium {
+      margin-left: -40%;
+      max-width: 95% !important; } }
+  @media screen and (min-width: 768px) {
+    div.cr.modal.medium {
+      margin-left: -35%; } }
+  @media screen and (max-width: 1199px) and (min-width: 992px) {
+    div.cr.modal.medium {
+      margin-left: -30%; } }
+  @media screen and (min-width: 1200px) {
+    div.cr.modal.medium {
+      margin-left: -22%; } }
 
 @-moz-keyframes appear {
   0% {
