@@ -562,10 +562,10 @@ To get a shake effect add the class ``shake-1`` for a continue shake animation o
   </div>
 
 ```
-  Ass you see, modals requires a header a body and a footer in order to get a formated modal, you can do also: 
+  Ass you see, modals uses a header a body and a footer in order to get a formated modal, you can use the modal without these three components, but i'ts not recommended. Here's another actions: 
 
-  * Add a close icon that works adding ``<i class="material-icons close">close</i> 
-  * Sizing the modal adding small, medium and big class
+  * Add a close icon that works adding ``<i class="material-icons close">close</i> ``
+  * Modify the size of the modal by adding small, medium or big class
   * Add an scroll content by adding the class ``scroll-content``
   * Coloring the head, body and footer adding the color class 
   * Add ``dark-bg``to get a dark modal 
@@ -575,11 +575,23 @@ To get a shake effect add the class ``shake-1`` for a continue shake animation o
 ```JavaScript 
 
 //Show the modal
-  $(#yourModalID).modal('show);
+  $(#yourModalID).modal('show');
 
 //Hide the modal 
-  $(#yourModalID).modal('hide);
+  $(#yourModalID).modal('hide');
 
 ```
-  
+ **List** 
+ 
+ Use Crown list by adding this code: 
+ 
+ ```HTML 
+<ul class="cr list">
+  <li>Dogs</li>
+  <li>Cats</li>
+  <li>Humans</li>
+</ul>
+
+```
+This is the basic list that you can use just to display a list of components. Customize by adding the color class, or make it complex adding an icon or image section. Or display hidden content creating a ``li info``.
 
