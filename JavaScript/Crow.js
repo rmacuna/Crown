@@ -128,6 +128,34 @@ jQuery(function($) {
             }, 410);
         }
     })
+    var finded = false;
+    var lastPressed;
+    $('.cr.list.content > li').click(function() {
+        let parentUL = $(this).parent().find('li'); //Obtengo la UL padre de la lista a la cual doy click
+        parentUL.each(function(idx, li) {
+            let item = $(li);
+            if (item.is('.active')) {
+                item.find('.li.info').removeClass('show');
+                item.removeClass('active grow');
+                finded = true;
+                lastPressed = item;
+            }
+        });
+        if (finded) {
+            if (lastPressed.is($(this))) {
+                finded = false;
+            } else {
+                $(this).addClass('active grow');
+                $(this).find('.li.info').addClass('show');
+                lastPressed = $(this);
+            }
+        } else {
+            $(this).addClass('active grow');
+            $(this).find('.li.info').addClass('show');
+            lastPressed = $(this);
+        }
+
+    })
     $('.m-input.validate.numbers, .m-area.validate.numbers').blur(function() {
         let value = $(this).val(); //Valor del input
         let spanClass = $(this).parent().find('span.m-state') // Tomo el id del field
@@ -386,7 +414,7 @@ try {
                 if (icon != null) {
                     let i = icon[0].innerText;
                     if (i == 'close') {
-                        iclose = icon[0]; 
+                        iclose = icon[0];
                     }
                 }
             }
@@ -422,5 +450,6 @@ window.onclick = function(e) {
             $('#crOverLay').remove();
         }, 310);
     }
+
 
 }

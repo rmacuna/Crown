@@ -525,8 +525,61 @@ To get a shake effect add the class ``shake-1`` for a continue shake animation o
   By default, using the icon close automatically close and delete the tag from the DOM
 
   
+**Modals**
+  To use modals put it them inside a cr container div, then add this code
 
+```HTML 
 
+ <div class="cr modal small">
+            <i class="material-icons close">close</i>
+            <div class="modal-head center">Login</div>
+            <div class="modal-body ">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <div class="cr-material-field">
+                            <label class="m-label">Username</label>
+                            <input class="m-input" type="text" name="in1">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12">
+                        <div class="cr-material-field">
+                            <label class="m-label" for="in2">Password</label>
+                            <input class="m-input" type="password" name="in2">
+                        </div>
+                    </div>
+                </div>        
+            </div>
+            <div class="modal-footer no-line center">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <button class="cr simple button green pulse adaptive">REGISTER</button>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <button class="cr simple button green pulse adaptive">LOGIN</button>
+                    </div>
+                </div>
+            </div>
+  </div>
 
+```
+  Ass you see, modals requires a header a body and a footer in order to get a formated modal, you can do also: 
+
+  * Add a close icon that works adding ``<i class="material-icons close">close</i> 
+  * Sizing the modal adding small, medium and big class
+  * Add an scroll content by adding the class ``scroll-content``
+  * Coloring the head, body and footer adding the color class 
+  * Add ``dark-bg``to get a dark modal 
+  * Add a deep shadow effect adding the class ``shadow``
+  * Add the class ``center`` in the head,body or footer to get a centered text 
+
+```JavaScript 
+
+//Show the modal
+  $(#yourModalID).modal('show);
+
+//Hide the modal 
+  $(#yourModalID).modal('hide);
+
+```
   
 

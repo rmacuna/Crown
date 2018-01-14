@@ -879,6 +879,114 @@ input.cr.input.error {
 .text-black {
   color: #000 !important; }
 
+ul.cr.list {
+  position: relative;
+  color: #4d4d4d;
+  width: 400px;
+  margin: 2px 2px 2px 2px;
+  box-sizing: border-box; }
+  ul.cr.list li {
+    background: #fafafa;
+    color: #4d4d4d;
+    position: relative;
+    width: auto;
+    padding: 15px 15px 15px 15px;
+    box-sizing: border-box;
+    min-height: 30px;
+    border: 1px solid #dedede;
+    list-style-type: none;
+    border-top: 0;
+    box-shadow: 0.5px 0.5px 0.5px #dedede;
+    transition: background 0.3s ease-out; }
+    ul.cr.list li:first-child {
+      border-top: 1px solid #dedede !important;
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px; }
+    ul.cr.list li:last-child {
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px; }
+    ul.cr.list li:hover {
+      background: #f2f2f2; }
+      ul.cr.list li:hover > div.li.info {
+        background: #f2f2f2; }
+    ul.cr.list li i {
+      position: absolute;
+      padding: 0px 20px 0px 20px;
+      font-size: 20px;
+      cursor: pointer;
+      right: 0; }
+    ul.cr.list li div.img-section {
+      position: absolute;
+      right: 0;
+      box-sizing: border-box;
+      padding: 0 20px 0 20px;
+      width: 30px;
+      top: 30%;
+      height: auto; }
+      ul.cr.list li div.img-section img {
+        width: 30px;
+        border-radius: 50%;
+        max-width: 80% !important;
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        padding: 0 20px 0 20px; }
+  @media screen and (max-width: 341px) {
+    ul.cr.list {
+      text-align: right; }
+      ul.cr.list div.img-section {
+        position: relative !important;
+        left: -22px !important;
+        top: -35px !important; }
+        ul.cr.list div.img-section img {
+          position: absolute !important;
+          left: 0 !important; } }
+  @media screen and (max-width: 375px) {
+    ul.cr.list div.img-section {
+      position: relative !important;
+      right: -230px !important; } }
+  @media screen and (max-width: 767px) {
+    ul.cr.list {
+      width: auto;
+      margin-left: -9%; }
+      ul.cr.list span.cr.badge {
+        transform: scale(0.8); } }
+  @media screen and (max-width: 1199px) and (min-width: 992px) {
+    ul.cr.list {
+      width: 400px; } }
+  @media screen and (min-width: 1200px) {
+    ul.cr.list {
+      width: 400px; } }
+
+ul.cr.list.content li {
+  transition: height 0.4s ease-out, transform 0.4s ease-out; }
+ul.cr.list.content li.grow {
+  z-index: 1;
+  transform: scale(1.03);
+  border-top: 1px solid #dedede;
+  border-radius: 4px;
+  animation: grow 0.4s ease-out; }
+  ul.cr.list.content li.grow > div.img-section {
+    top: 2% !important; }
+ul.cr.list.content div.li.info {
+  display: none;
+  background: #fafafa;
+  color: #4d4d4d;
+  box-sizing: border-box;
+  padding: 15px 15px 15px 15px;
+  opacity: 0;
+  position: relative;
+  height: 0; }
+ul.cr.list.content div.li.info.show {
+  height: auto;
+  opacity: 1;
+  display: block;
+  transition: opacity 0.3s ease-out;
+  animation: growAppear 0.4s ease-in-out; }
+
+ul.cr.list.adaptive {
+  width: auto !important; }
+
 div.cr.chip {
   box-sizing: border-box;
   position: relative;
@@ -1036,7 +1144,7 @@ span.cr.badge {
   background: #dedede;
   color: #404040;
   overflow: hidden;
-  position: absolute;
+  position: relative;
   z-index: 10;
   font-weight: bold;
   display: inline-block;
@@ -1092,7 +1200,7 @@ div.cr.modal {
   z-index: 200;
   overflow: hidden;
   transition: transform 0.4s ease-out, opacity 0.4s ease-out, border-color 0.6s ease-out;
-  box-shadow: 1px 1px 1px 1px rgba(158, 158, 158, 0.3);
+  box-shadow: 1px 1px 1px 1px rgba(158, 158, 158, 0.3), -1px 1px 1px 1px rgba(158, 158, 158, 0.3);
   background: #fcfcfc;
   color: #4d4d4d; }
   @media screen and (max-width: 767px) {
@@ -1368,78 +1476,6 @@ div.cr.modal.content-scroll {
     max-height: 500px !important;
     overflow-y: auto; }
 
-@-moz-keyframes appear {
-  0% {
-    display: none;
-    opacity: 0; }
-  1% {
-    display: block;
-    opacity: 0;
-    transform: scale(0); }
-  100% {
-    opacity: 1 !important;
-    transform: scale(1); } }
-@-ms-keyframes appear {
-  0% {
-    display: none;
-    opacity: 0; }
-  1% {
-    display: block;
-    opacity: 0;
-    transform: scale(0); }
-  100% {
-    opacity: 1 !important;
-    transform: scale(1); } }
-@-webkit-keyframes appear {
-  0% {
-    display: none;
-    opacity: 0; }
-  1% {
-    display: block;
-    opacity: 0;
-    transform: scale(0); }
-  100% {
-    opacity: 1 !important;
-    transform: scale(1); } }
-@keyframes appear {
-  0% {
-    display: none;
-    opacity: 0; }
-  1% {
-    display: block;
-    opacity: 0;
-    transform: scale(0); }
-  100% {
-    opacity: 1 !important;
-    transform: scale(1); } }
-@-ms-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  50% {
-    opacity: 0.5; }
-  100% {
-    opacity: 1 !important; } }
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  50% {
-    opacity: 0.5; }
-  100% {
-    opacity: 1 !important; } }
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  50% {
-    opacity: 0.5; }
-  100% {
-    opacity: 1 !important; } }
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  50% {
-    opacity: 0.5; }
-  100% {
-    opacity: 1 !important; } }
 div.cr.snackbar {
   visibility: hidden;
   position: absolute;
@@ -1578,6 +1614,129 @@ div.cr.snackbar.yellow {
     div.cr.snackbar.yellow button.snack.action:active {
       background-color: #ffe822; }
 
+@-moz-keyframes appear {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0;
+    transform: scale(0); }
+  100% {
+    opacity: 1 !important;
+    transform: scale(1); } }
+@-ms-keyframes appear {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0;
+    transform: scale(0); }
+  100% {
+    opacity: 1 !important;
+    transform: scale(1); } }
+@-webkit-keyframes appear {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0;
+    transform: scale(0); }
+  100% {
+    opacity: 1 !important;
+    transform: scale(1); } }
+@keyframes appear {
+  0% {
+    display: none;
+    opacity: 0; }
+  1% {
+    display: block;
+    opacity: 0;
+    transform: scale(0); }
+  100% {
+    opacity: 1 !important;
+    transform: scale(1); } }
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1 !important; } }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1 !important; } }
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1 !important; } }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1 !important; } }
+@-ms-keyframes growAppear {
+  from {
+    opacity: 0.1;
+    transform: scale(0);
+    display: none; }
+  to {
+    opacity: 1 !important;
+    display: block;
+    height: auto;
+    transform: scale(1); } }
+@-webkit-keyframes growAppear {
+  from {
+    opacity: 0.1;
+    transform: scale(0);
+    display: none; }
+  to {
+    opacity: 1 !important;
+    display: block;
+    height: auto;
+    transform: scale(1); } }
+@keyframes growAppear {
+  from {
+    opacity: 0.1;
+    transform: scale(0);
+    display: none; }
+  to {
+    opacity: 1 !important;
+    display: block;
+    height: auto;
+    transform: scale(1); } }
+@-ms-keyframes grow {
+  from {
+    z-index: 0;
+    transform: scale(1); }
+  to {
+    z-index: 1;
+    transform: scale(1.03); } }
+@-webkit-keyframes grow {
+  from {
+    z-index: 0;
+    transform: scale(1); }
+  to {
+    z-index: 1;
+    transform: scale(1.03); } }
+@keyframes grow {
+  from {
+    z-index: 0;
+    transform: scale(1); }
+  to {
+    z-index: 1;
+    transform: scale(1.03); } }
 div.cr.checkbox {
   width: auto;
   padding: 5px 3px;
@@ -2493,7 +2652,7 @@ button.cr.button.float {
   color: #fff;
   border-radius: 50px;
   text-align: center;
-  z-index: 3;
+  z-index: 190;
   transition: background-color 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 8px #9E9E9E;
   bottom: 4%; }

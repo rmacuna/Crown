@@ -10,7 +10,7 @@ div.cr.modal
     z-index: 200 
     overflow: hidden 
     transition: transform 0.4s ease-out, opacity 0.4s ease-out, border-color 0.6s ease-out
-    box-shadow: 1px 1px 1px 1px rgba($gray, .3)
+    box-shadow: 1px 1px 1px 1px rgba($gray, .3), -1px 1px 1px 1px rgba($gray, .3)
     background: darken($white, 1)
     color: lighten($black, 30)
     @media screen and (max-width: 767px)
@@ -29,8 +29,6 @@ div.cr.modal
     @media screen and (min-width: 1200px)
         width: 500px 
         margin-left: -20%
-
-
 
     .center 
         text-align: center 
@@ -222,7 +220,6 @@ span.overlay.hide
 div.cr.modal.small
     width: 350px 
     margin-top: -80px
-
     @media screen and (max-width: 550px)
         margin-left: -46% !important
         width: auto 
@@ -289,99 +286,7 @@ div.cr.modal.big
         margin-left: -30%
 
 div.cr.modal.content-scroll
-    // height: 500px
     margin-top: -150px 
     div.modal-body 
         max-height: 500px !important 
         overflow-y: auto 
-
-
-
-@-moz-keyframes appear 
-    0% 
-        display: none 
-        opacity: 0
-    1% 
-        display: block
-        opacity: 0
-        transform: scale(0)
-    100% 
-        opacity: 1 !important
-        transform: scale(1)
-
-@-ms-keyframes appear 
-    0% 
-        display: none 
-        opacity: 0
-    1% 
-        display: block
-        opacity: 0
-        transform: scale(0)
-    100% 
-        opacity: 1 !important
-        transform: scale(1)
-
-@-webkit-keyframes appear
-    0% 
-        display: none 
-        opacity: 0
-    1% 
-        display: block
-        opacity: 0
-        transform: scale(0)
-    100% 
-        opacity: 1 !important
-        transform: scale(1)
-
-@keyframes appear 
-    0% 
-        display: none 
-        opacity: 0
-    1% 
-        display: block
-        opacity: 0
-        transform: scale(0)
-    100% 
-        opacity: 1 !important
-        transform: scale(1)
-
-
-@-ms-keyframes fadeIn 
-    0%
-        opacity: 0 
-    50% 
-        opacity: 0.5 
-    100%
-        opacity: 1 !important  
-
-@-webkit-keyframes fadeIn 
-    0%
-        opacity: 0 
-    50% 
-        opacity: 0.5 
-    100%
-        opacity: 1 !important 
-
-@-moz-keyframes fadeIn 
-    0%
-        opacity: 0 
-    50% 
-        opacity: 0.5 
-    100%
-        opacity: 1 !important 
-
-
-@keyframes fadeIn 
-    0%
-        opacity: 0 
-    50% 
-        opacity: 0.5 
-    100%
-        opacity: 1 !important 
-
-
-
-
-
-
-
