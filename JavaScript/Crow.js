@@ -130,7 +130,8 @@ jQuery(function($) {
     })
     var finded = false;
     var lastPressed;
-    $('.cr.list.content > li').click(function() {
+    $('.cr.list.content > li').click(function(e) {
+        e.preventDefault();
         let parentUL = $(this).parent().find('li'); //Obtengo la UL padre de la lista a la cual doy click
         parentUL.each(function(idx, li) {
             let item = $(li);

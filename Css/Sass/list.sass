@@ -4,6 +4,21 @@ ul.cr.list
 	width: 400px 
 	margin: 2px 2px 2px 2px
 	box-sizing: border-box
+
+	div.ul-head 
+		position: relative
+		box-sizing: border-box 
+		top: 0
+		width: auto
+		padding: 15px 15px 15px 15px
+		text-align: center 
+		font-weight: bold 
+		color: lighten($black, 30)
+		border: 1px solid lighten($gray, 25) !important 
+		border-top-left-radius: 4px 
+		border-top-right-radius: 4px 
+		border-bottom: 0 
+		box-shadow: 0.5px 0.5px 0.5px lighten($gray, 25), -0.5px 0.5px 0.5px lighten($gray, 25)
 	li
 		&:first-child 
 			border-top: 1px solid lighten($gray, 25) !important 
@@ -23,7 +38,7 @@ ul.cr.list
 		border: 1px solid lighten($gray, 25)
 		list-style-type: none
 		border-top: 0
-		box-shadow: 0.5px 0.5px 0.5px  lighten($gray, 25)
+		box-shadow: 0.5px 0.5px 0.5px  lighten($gray, 25), -0.5px 0.5px 0.5px  lighten($gray, 25)
 		transition: background 0.3s ease-out
 		&:hover 
 			background: darken($white, 5)
@@ -34,7 +49,11 @@ ul.cr.list
 			padding: 0px 20px 0px 20px 
 			font-size: 20px
 			cursor: pointer 
+			display: inline
+			z-index: 2 
+			transition: opacity 0.3s ease-out, transform 0.3s ease-out
 			right: 0
+			top: 30%
 
 		div.img-section
 			position: absolute 
@@ -44,6 +63,8 @@ ul.cr.list
 			width: 30px 
 			top: 30%
 			height: auto 
+			z-index: 1
+			transition: top 0.3s ease-out
 			img 
 				width: 30px 
 				border-radius: 50% 
@@ -60,7 +81,7 @@ ul.cr.list
 		div.img-section
 			position: relative !important  
 			left: -22px !important
-			top: -35px !important 
+			top: -35px !important
 			img 
 				position: absolute !important  
 				left: 0 !important
@@ -97,6 +118,9 @@ ul.cr.list.content
 		animation: grow 0.4s ease-out
 		> div.img-section
 			top: 2% !important 
+		> i 
+			opacity: 0 
+			transform: rotate(-180deg)
 
 	div.li.info
 		display: none 
@@ -114,15 +138,245 @@ ul.cr.list.content
 		transition: opacity 0.3s ease-out
 		animation: growAppear 0.4s ease-in-out 
 
+
 ul.cr.list.adaptive 
 	width: auto !important 
 
 
+ul.cr.list.blue 
+	li 
+		background: $blue 
+		color: $white  !important 
+		border-color: $blue 
+		div.li.info 
+			color: $white 
+			background: $blue
+		&:hover 
+			background: darken($blue, 5)
+			> div.li.info 
+				background: darken($blue, 5)
+	i 
+		color: $white !important 
+
+ul.cr.list.blue 
+	li 
+		background: $blue 
+		color: $white  !important 
+		border-color: $blue 
+		div.li.info 
+			color: $white 
+			background: $blue
+		&:hover 
+			background: darken($blue, 5)
+			> div.li.info 
+				background: darken($blue, 5)
+	i 
+		color: $white !important 
+
+
+ul.cr.list.green 
+	li 
+		background: $green 
+		color: $white  !important 
+		border-color: $green 
+		div.li.info 
+			color: $white 
+			background: $green
+		&:hover 
+			background: darken($green, 5)
+			> div.li.info 
+				background: darken($green, 5)
+	i 
+		color: $white !important 
+
+ul.cr.list.red 
+	li 
+		background: $red 
+		color: $white  !important 
+		border-color: $red 
+		div.li.info 
+			color: $white 
+			background: $red
+		&:hover 
+			background: darken($red, 5)
+			> div.li.info 
+				background: darken($red, 5)
+	i 
+		color: $white !important 
+
+ul.cr.list.indigo 
+	li 
+		background: $indigo 
+		color: $white  !important 
+		border-color: $indigo 
+		div.li.info 
+			color: $white 
+			background: $indigo
+		&:hover 
+			background: darken($indigo, 5)
+			> div.li.info 
+				background: darken($indigo, 5)
+	i 
+		color: $white !important 
+
+ul.cr.list.yellow 
+	li 
+		background: $yellow 
+		color: $black  !important 
+		border-color: $yellow 
+		div.li.info 
+			color: $black 
+			background: $yellow
+		&:hover 
+			background: darken($yellow, 5)
+			> div.li.info 
+				background: darken($yellow, 5)
+	i 
+		color: $black !important 
+
+ul.cr.list.purple 
+	li 
+		background: $purple 
+		color: $white  !important 
+		border-color: $purple 
+		div.li.info 
+			color: $white 
+			background: $purple
+		&:hover 
+			background: darken($purple, 5)
+			> div.li.info 
+				background: darken($purple, 5)
+	i 
+		color: $white !important 
+
+ul.cr.list.black 
+	li 
+		background: $black 
+		color: $white  !important 
+		border-color: $black 
+		div.li.info 
+			color: $white 
+			background: $black
+		&:hover 
+			background: darken($black, 5)
+			> div.li.info 
+				background: darken($black, 5)
+	i 
+		color: $white !important 
+
+ul.cr.list.white 
+	li 
+		&:first-child 
+			border-top-color: lighten($gray, 30) !important
+	li 
+		background: $white 
+		color: $black  !important 
+		border-color: $white 
+		div.li.info 
+			color: $black 
+			background: $white
+		&:hover 
+			background: darken($white, 5)
+			> div.li.info 
+				background: darken($white, 5)
+	i 
+		color: $black !important 
+
+ul.cr.list.amber 
+	li 
+		background: $amber 
+		color: $white  !important 
+		border-color: $amber 
+		div.li.info 
+			color: $white 
+			background: $amber
+		&:hover 
+			background: darken($amber, 5)
+			> div.li.info 
+				background: darken($amber, 5)
+	i 
+		color: $white !important 
+
+ul.cr.list.pink 
+	li 
+		background: $pink 
+		color: $white  !important 
+		border-color: $pink 
+		div.li.info 
+			color: $white 
+			background: $pink
+		&:hover 
+			background: darken($pink, 5)
+			> div.li.info 
+				background: darken($pink, 5)
+	i 
+		color: $white !important 
+
+
+ul.cr.list.teal 
+	li 
+		background: $teal 
+		color: $white  !important 
+		border-color: $teal 
+		div.li.info 
+			color: $white 
+			background: $teal
+		&:hover 
+			background: darken($teal, 5)
+			> div.li.info 
+				background: darken($teal, 5)
+	i 
+		color: $white !important 
 
  
+ul.cr.list.gold 
+	li 
+		background: $gold 
+		color: $white  !important 
+		border-color: $gold 
+		div.li.info 
+			color: $white 
+			background: $gold
+		&:hover 
+			background: darken($gold, 5)
+			> div.li.info 
+				background: darken($gold, 5)
+	i 
+		color: $white !important 
 
 
-
-	
+div.ul-head.blue 
+	background: $blue 
+	color: $white !important
+div.ul-head.green 
+	background: $green 
+	color: $white !important
+div.ul-head.red 
+	background: $red 
+	color: $white !important
+div.ul-head.indigo 
+	background: $indigo 
+	color: $white !important
+div.ul-head.yellow 
+	background: $yellow 
+	color: $black !important
+div.ul-head.amber 
+	background: $amber 
+	color: $white !important
+div.ul-head.teal 
+	background: $teal 
+	color: $white !important
+div.ul-head.pink 
+	background: $pink 
+	color: $white !important
+div.ul-head.gold 
+	background: $gold 
+	color: $white !important
+div.ul-head.purple 
+	background: $purple 
+	color: $white !important
+div.ul-head.black	 
+	background: $black 
+	color: $white !important 
 
 
