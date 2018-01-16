@@ -157,6 +157,40 @@ jQuery(function($) {
         }
 
     })
+    $('.cr.list > div.ul-head > i.close').click(function() {
+        let parent = $(this).parent().parent();
+        parent.css({
+            'transition': "transform 0.4s ease-out",
+            'transform': "scale(0)"
+        });
+        setTimeout(function() {
+            $(parent).remove();
+        }, 410);
+    })
+    $('.cr.list > li > i.close').click(function() {
+        let ul = $(this).parent().parent();
+        let li_arr = ul.find('li');
+        let parent = $(this).parent();
+        if (li_arr.length > 1) {
+            parent.css({
+                'transition': "transform 0.4s ease-out, opacity 0.3s ease-out",
+                'transform': "translateX(-100px)",
+                'opacity': "0"
+            });
+            setTimeout(function() {
+                $(parent).remove();
+            }, 410);
+        } else if (li_arr.length == 1) {
+            ul.css({
+                'transition': "transform 0.4s ease-out",
+                'transform': "scale(0)"
+            });
+            setTimeout(function() {
+                $(ul).remove();
+            }, 410);
+        }
+
+    })
     $('.m-input.validate.numbers, .m-area.validate.numbers').blur(function() {
         let value = $(this).val(); //Valor del input
         let spanClass = $(this).parent().find('span.m-state') // Tomo el id del field
@@ -428,6 +462,53 @@ try {
                         overlay = null;
                     }, 310);
                 }
+            }
+        }
+
+        $.fn.list = function(action, li_position) {
+            if (action == 'hide') {
+                $(this).css({
+                    'transition': "transform 0.4s ease-out",
+                    'transform': "scale(0)"
+                })
+            }
+            if (action == 'show') {
+                $(this).css({
+                    'transition': "transform 0.4s ease-out",
+                    'transform': "scale(1)"
+                })
+            }
+            if (action == 'destroy') {
+                if (li_position != null && li_position <= $(this).find('li').length && li_position > 0)  {
+                    let li = $(this).find("li:nth-child(" + (li_position+ 1) + ')');
+                    if (li != null) {
+                        li.css({
+                            'transition': "transform 0.4s ease-out, opacity 0.3s ease-out",
+                            'opacity': "0",
+                            'transform': "translateX(-100px)"
+                        });
+                        setTimeout(function() {
+                            li.remove();
+                        }, 410);
+                    }
+                } else {
+                    $(this).css({
+                        'transition': "transform 0.4s ease-out",
+                        'transform': "scale(0)"
+                    });
+                    setTimeout(function() {
+                        $(this).remove();
+                    }, 410);
+                }
+
+            }
+            if (action == 'checked') {
+                let checks = 0;
+                let checkboxes = $(this).find('li > div.cr.checkbox > input[type="checkbox"]');
+                checkboxes.each(function() {
+                    if ($(this).is(':checked')) checks++;
+                });
+                return checks;
             }
         }
 

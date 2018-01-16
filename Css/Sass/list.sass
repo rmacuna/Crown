@@ -4,6 +4,7 @@ ul.cr.list
 	width: 400px 
 	margin: 2px 2px 2px 2px
 	box-sizing: border-box
+	min-width: 283px 
 
 	div.ul-head 
 		position: relative
@@ -54,6 +55,25 @@ ul.cr.list
 			transition: opacity 0.3s ease-out, transform 0.3s ease-out
 			right: 0
 			top: 30%
+		div.cr.checkbox 
+			position: absolute 
+			top: 30% 
+			right: 0 
+			padding: 10px 10px 10px 12px
+			label 
+				&:after 
+					top: 5px !important
+
+			input[type="checkbox"]
+				position: relative !important
+				right: 10px !important 
+		div.cr.radio-button
+			position: absolute 
+			top: 30% 
+			right: 8% 
+			label 
+				&:after 
+					top: 3px !important
 
 		div.img-section
 			position: absolute 
@@ -76,24 +96,23 @@ ul.cr.list
 
 
 	@media screen and (max-width: 341px)
-		text-align: right 
-		
 		div.img-section
-			position: relative !important  
-			left: -22px !important
-			top: -35px !important
-			img 
-				position: absolute !important  
-				left: 0 !important
+			position: absolute !important
+			left: 50% !important
+			top: 0 !important
+			display: block !important
+
+
 
 	@media screen and (max-width: 375px)
+		width: auto 
 		div.img-section
 			position: relative !important
 			right: -230px !important
 			
 	@media screen and (max-width: 767px)
-		width: auto 
-		margin-left: -9%
+		width: 400px 
+		margin-left: -5%
 		span.cr.badge 
 			transform: scale(0.8)
 		
@@ -103,8 +122,6 @@ ul.cr.list
 	@media screen and (min-width: 1200px)
 		width: 400px 
 
-
-   
 
 			
 ul.cr.list.content
@@ -141,6 +158,8 @@ ul.cr.list.content
 
 ul.cr.list.adaptive 
 	width: auto !important 
+	li 
+		width: 100% !important 
 
 
 ul.cr.list.blue 
@@ -345,38 +364,73 @@ ul.cr.list.gold
 		color: $white !important 
 
 
+div.ul-head 
+	i.close 
+		color: lighten($black, 30)
+		position: absolute 
+		top: 0 
+		right: 0
+		font-size: 14px
+		padding: 10px 10px 10px 10px
+		cursor: pointer 
+		font-weight: bold
+
+
+
 div.ul-head.blue 
 	background: $blue 
-	color: $white !important
+	color: $white !important 
+	i 
+		color: $white !important 
 div.ul-head.green 
 	background: $green 
 	color: $white !important
+	i 
+		color: $white !important 
 div.ul-head.red 
 	background: $red 
 	color: $white !important
+	i 
+		color: $white !important 
 div.ul-head.indigo 
 	background: $indigo 
 	color: $white !important
+	i 
+		color: $white !important 
 div.ul-head.yellow 
 	background: $yellow 
 	color: $black !important
+	i 
+		color: $white !important 
 div.ul-head.amber 
 	background: $amber 
 	color: $white !important
+	i 
+		color: $white !important 
 div.ul-head.teal 
 	background: $teal 
 	color: $white !important
+	i 
+		color: $white !important 
 div.ul-head.pink 
 	background: $pink 
 	color: $white !important
+	i 
+		color: $white !important 
 div.ul-head.gold 
 	background: $gold 
 	color: $white !important
+	i 
+		color: $white !important 
 div.ul-head.purple 
 	background: $purple 
 	color: $white !important
+	i 
+		color: $white !important 
 div.ul-head.black	 
 	background: $black 
 	color: $white !important 
+	i 
+		color: $white !important 
 
 
