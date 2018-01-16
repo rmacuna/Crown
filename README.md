@@ -15,6 +15,7 @@ Copy and paste this code for jQuery
 
 `<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>`
 
+[Full Docs](https://rmacuna.github.io/Crown/)
 
 [live preview](https://rmacuna.github.io/Crown/public) of this version
 
