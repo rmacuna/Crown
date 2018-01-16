@@ -1,4 +1,5 @@
 theme: jekyll-theme-merlot
+
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
   input: GFM
@@ -7,59 +8,59 @@ kramdown:
   syntax_highlighter_opts:
     # Use existing pygments syntax highlighting css
     css_class: 'highlight'
-     
-# HTML:
-#   type: markup
-#   tm_scope: text.html.basic
-#   ace_mode: html
-#   codemirror_mode: htmlmixed
-#   codemirror_mime_type: text/html
-#   color: "#e34c26"
-#   aliases:
-#   - xhtml
-#   extensions:
-#   - ".html"
-#   - ".htm"
-#   - ".html.hl"
-#   - ".inc"
-#   - ".st"
-#   - ".xht"
-#   - ".xhtml"
-#   language_id: 146
+
+HTML:
+  type: markup
+  tm_scope: text.html.basic
+  ace_mode: html
+  codemirror_mode: htmlmixed
+  codemirror_mime_type: text/html
+  color: "#e34c26"
+  aliases:
+  - xhtml
+  extensions:
+  - ".html"
+  - ".htm"
+  - ".html.hl"
+  - ".inc"
+  - ".st"
+  - ".xht"
+  - ".xhtml"
+  language_id: 146
   
-# JavaScript:
-#   type: programming
-#   tm_scope: source.js
-#   ace_mode: javascript
-#   codemirror_mode: javascript
-#   codemirror_mime_type: text/javascript
-#   color: "#f1e05a"
-#   aliases:
-#   - js
-#   - node
-#   extensions:
-#   - ".js"
-#   - "._js"
-#   - ".bones"
-#   - ".es"
-#   - ".es6"
-#   - ".frag"
-#   - ".gs"
-#   - ".jake"
-#   - ".jsb"
-#   - ".jscad"
-#   - ".jsfl"
-#   - ".jsm"
-#   - ".jss"
-#   - ".mjs"
-#   - ".njs"
-#   - ".pac"
-#   - ".sjs"
-#   - ".ssjs"
-#   - ".xsjs"
-#   - ".xsjslib"
-#   filenames:
-#   - Jakefile
-#   interpreters:
-#   - node
-#   language_id: 183
+JavaScript:
+  type: programming
+  tm_scope: source.js
+  ace_mode: javascript
+  codemirror_mode: javascript
+  codemirror_mime_type: text/javascript
+  color: "#f1e05a"
+  aliases:
+  - js
+  - node
+  extensions:
+  - ".js"
+  - "._js"
+  - ".bones"
+  - ".es"
+  - ".es6"
+  - ".frag"
+  - ".gs"
+  - ".jake"
+  - ".jsb"
+  - ".jscad"
+  - ".jsfl"
+  - ".jsm"
+  - ".jss"
+  - ".mjs"
+  - ".njs"
+  - ".pac"
+  - ".sjs"
+  - ".ssjs"
+  - ".xsjs"
+  - ".xsjslib"
+  filenames:
+  - Jakefile
+  interpreters:
+  - node
+  language_id: 183
