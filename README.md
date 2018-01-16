@@ -30,46 +30,49 @@ Copy and paste this code for jQuery
 ```
  You can also coloring this buttons adding the color class
  
- ```HTML 
+{% highlight HTML %} 
 <button class="cr button blue">Button</button>
 <button class="cr button red">Button</button>
 <button class="cr button green">Button</button>
 <button class="cr button black">Button</button>
 <button class="cr button indigo">Button</button>
-```
+{% endhighlight HTML %} 
+
 ![](https://lh3.googleusercontent.com/PI1xZDjQ6QjS5yp_gDgHHwqS9QtNsYhgQp_aRgEqz3YK2BaH4h_JpOj8x1OoJUSSPw_g6D4U__W17LjuXe7wNi6xezeDAFf2yvrJi81ZwWUJ9HBECAtQvuPk5_Scdr5hWJ9ZL8KwrQ)
 
  Buttons can also be styled with outline border and adding hover effects, you can use a button with a raised and ripple effect (like a Google material design button!)
  
  **Outline Buttons**
 
- ```HTML
+{% highlight HTML %} 
 <button class="cr button blue outline">Button</button>
 <button class="cr button red outline ">Button</button>
-```
+{% endhighlight HTML %} 
+
 **Raised Buttons**
 
 * `hoverable` class allows a background animation in the button on hover. (Could be usefull and cool)
-```HTML
-<button class="cr button green raised hoverable">Button</button>
-<button class="cr button black raised hoverable">Button</button>
-```
+{% highlight HTML %} 
+  <button class="cr button green raised hoverable">Button</button>
+  <button class="cr button black raised hoverable">Button</button>
+{% endhighlight HTML %} 
+
 **Pulse Effect**
 
 If you want the ripple effect just add the class `pulse` and then you will have a pretty wave effect on click
 
-```HTML
+{% highlight HTML %} 
 <button class="cr button indigo raised pulse ">Button</button>
-```
+{% endhighlight HTML %} 
 ![](https://media.giphy.com/media/xT1R9z6C6C4cNZHXnG/giphy.gif)
 
 **Simple crown button** 
 
 Use the simpler style of buttons adding the class `cr simple button` like this
 
-```HTML
+{% highlight HTML %} 
 <button class="cr simple button indigo pulse">BUTTON</button>
-``` 
+{% endhighlight HTML %} 
 and you will get this incredible button 
 ![](https://media.giphy.com/media/xUNda6dyPPtGRfqoJW/giphy.gif)
 
@@ -77,16 +80,16 @@ and you will get this incredible button
 **Floating button** 
 
 Floating buttons are very usefull when you are using a phone or a tablet. Use it adding this code 
-```HTML
+{% highlight HTML %} 
   <button class="cr button-float pulse">
       <i class="material-icons">add</i>
   </button
-```
+{% endhighlight HTML %} 
 
 **Sizing** 
 
 All cr buttons have diferent class that modifies the width and height, there are small, medium, large and adaptive buttons. This classes variate the width of the button but not the height, if you want more height add `big` class. 
-```HTML 
+{% highlight HTML %} 
 <button class="cr button small">Button</button>
 <button class="cr button medium">Button</button>
 <button class="cr button large">Button</button>
@@ -95,14 +98,14 @@ All cr buttons have diferent class that modifies the width and height, there are
 <button class="cr button big medium ">Button</button>
 <button class="cr button big large">Button</button>
 <button class="cr button big adaptive">Button</button>
-```
+{% endhighlight HTML %} 
 
 **Other variations** 
 
   Crown buttons could have a `rounded` class in order to get a circle border.
-```HTML
+{% highlight HTML %} 
   <button class="cr button rounded pink">Button</button>
-```
+{% endhighlight HTML %} 
 
 More variations of buttons will be added in other releases 
 
@@ -114,23 +117,23 @@ Crown inputs uses three diferent styles that includes basic inputs, labeled inpu
 **Basic Input**
 
   Use this code for basic inputs
- ```HTML 
+{% highlight HTML %}  
   <div class="cr input basic">
     <label>Name</label> 
     <input placeholder="Your Name" class="in-basic"></input>
   </div>
-```
+{% endhighlight HTML %} 
 ![](https://lh3.googleusercontent.com/qXSIKskoFFxp3LoiD6pxu6BjwJIMYeT5jjCxRO2-SDIFm4ERfZJLypvDzKJgA9hSxrO6OkFnMwLVOV-GU55xJpeKHsZZoEoHjNp32kCvk0t7Qqu4GuzGf-24SWyAdDs6vgwSPs-S6w)
 
 **Label input** 
 
   A label input is a variation of crown inputs that allows to have a label like a part of the input, which looks more elegant than normal label and replace the placeholder.
- ```HTML 
+{% highlight HTML %} 
   <div class="cr input label">
     <div class="label">Name</div> 
     <input class="in-label"></input>
   </div>
-```
+{% endhighlight HTML %} 
  ![](https://lh3.googleusercontent.com/wZnq6hNSI5xJ_PLQy9bacwBHNq2L3LMWwzc4NZGOUf-pftqf3f2o1GtTjYAoERckh7gac43VlJkj63URg7Yk9jqsjwadztBBH7OAqSBSQa5DCVTOSiqjuGoovdV31ydyvRVlWbCvgA)
  
 **Input Style**
@@ -140,17 +143,17 @@ Crown inputs uses three diferent styles that includes basic inputs, labeled inpu
   * You can change the outline color of the input by adding the color-outline 
   * Add the ``rounded`` class to get a input with a rounded border
   
-  ```HTML
-    <div class="cr input label">
-      <div class="label">Name</div>
-      <input class="in-label blue-outline blue-font dark-background"></input>
-    </div>
-  ```
+{% highlight HTML %} 
+  <div class="cr input label">
+    <div class="label">Name</div>
+    <input class="in-label blue-outline blue-font dark-background"></input>
+  </div>
+{% endhighlight HTML %} 
   ***If You prefer the text in bold add the class ``bold`` to the input element***
   
   * If you add another ``div`` with class ``ender`` or a button with the same class you will get a pretty label at the end of the input.
   
-  ```HTML
+{% highlight HTML %} 
   <div class="cr input label">
       <div class="label">Name</div>
       <input class="in-label"></input>
@@ -161,7 +164,7 @@ Crown inputs uses three diferent styles that includes basic inputs, labeled inpu
       <input class="in-label"></input>
       <button class="ender">Copy</button>
   </div>
-```
+{% endhighlight HTML %} 
 Of course you can change the color of all enders and labels adding the color class that you want 
 
 ```HTML
@@ -175,7 +178,7 @@ Of course you can change the color of all enders and labels adding the color cla
   
   Inputs brings a default validation (Only numbers and email) that you can trigger adding the class ``validate numbers`` or ``validate email``. Add a ``<span>``element to display the error or done icon.
   
-  ```HTML 
+ {% highlight HTML %} 
     <div class="cr input basic">
       <input type="text" class="in-basic validate numbers">
       <span class="cr-message"></span>
@@ -184,10 +187,10 @@ Of course you can change the color of all enders and labels adding the color cla
       <input type="text" class="in-label validate numbers">
       <span class="cr-message"></span>
     </div>
-  ```
+ {% endhighlight HTML %} 
   Take a look of this code that involves everything
 
-  ```HTML 
+  {% highlight HTML %} 
    <div class="row">
         <div class="col-md-2">
             <div class="cr input label">
@@ -210,12 +213,13 @@ Of course you can change the color of all enders and labels adding the color cla
         </div>
     </div>
 
-  ```
-  ```JavaScript  
+  {% endhighlight HTML %} 
+  
+  {% highlight JavaScript %}  
       $("#btnClear").click(function(){
             $("#input1").val("");
       })
-  ```
+  {% endhighlight JavaScript %} 
   
   ![](https://media.giphy.com/media/xUNda1GZOTmVzlMZqg/giphy.gif)
 
@@ -224,15 +228,15 @@ Of course you can change the color of all enders and labels adding the color cla
 
   Crown implements material inputs too
   
-```HTML 
+{% highlight HTML %}  
      <div class="cr-material-field ">
           <label class="m-label">Name</label>
           <input class="m-input" type="text" name="">
      </div>
-```
+{% endhighlight HTML %} 
   The color of the input it's by default the accent of the application ([See full DOCS to see how to modify with SASS](https://rmacuna.github.io/Crown/)), but you can change it adding the color class, it's really simple!.
   
-```HTML 
+{% highlight HTML %} 
      <div class="cr-material-field indigo">
           <label class="m-label">Name</label>
           <input class="m-input" type="text" name="">
@@ -247,20 +251,20 @@ Of course you can change the color of all enders and labels adding the color cla
           <label class="m-label">Name</label>
           <input class="m-input" type="text" name="">
      </div>
-```
+{% endhighlight HTML %} 
 You can add custom validation messages unlike input basic or input-label, using de attr ``data-error``and ``data-positive``
 
-```HTML 
+{% highlight HTML %} 
   <div class="cr-material-field black">
         <label class="m-label">Name</label>
         <input class="m-input validate numbers" type="text" name="">
         <span data-positive="Good, it's a number" data-error="This is not a number" class="m-state"></span>
   </div>
-```
+{% endhighlight HTML %} 
 
 The message of error or positive action it will only be shown on validation numbers or validation email. For a custom validation you must trigger the message with this script.
 
-```JavaScript
+{% highlight JavaScript %} 
 
   $(#myInput).blur(function(){
     if(conditionOfValidation == true ){
@@ -280,8 +284,8 @@ The message of error or positive action it will only be shown on validation numb
 
     }
   });
+{% endhighlight JavaScript %}
 
-``` 
 ![](https://media.giphy.com/media/3ohjUQbImEG4Jobp0k/giphy.gif)
 
 Full docs have more information
@@ -290,33 +294,33 @@ Full docs have more information
 **SnackBar** 
 
   Snacks are usefull to display short messages or perfom a simple action. Add this line to your HTML code 
-```HTML 
+{% highlight HTML %} 
   <div id="the_ID_you_want" class="cr snackbar">
     <div class="snack-message"></div>
   </div>
-```
+{% endhighlight HTML %} 
 Then, add the following script 
 
-```JavaScript
+{% highlight JavaScript %} 
 $("#snack1").snackbar("show", "The short Message", delayTime);
-```
+{% endhighlight JavaScript %} 
 This will trigger the snack on page load so use it with a click event instead
 
-```JavaScript
+{% highlight JavaScript %} 
 $("#buttonID").click(function(){
   $("#snack1").snackbar("show", "The short Message");
 });
-```
+{% highlight JavaScript %} 
 
 You can add a button with a custom action on click or use the default UNDO class that close the snack 
 
-```HTML 
+{% highlight HTML %} 
   <div id="the_ID_you_want" class="cr snackbar">
     <div class="snack-message"></div>
     <button class="snack-action undo">UNDO</div>
   </div>
+{% endhighlight HTML %} 
 
-```
 And yes, you can change the color of this snack adding the color-class 
 
 ![](https://media.giphy.com/media/26FffBuJQOMoi8B6o/giphy.gif)
@@ -325,7 +329,7 @@ And yes, you can change the color of this snack adding the color-class
 
   There are two diferent crown checkbox, the variant checkbox and normal checkbox. 
   
-```HTML
+{% highlight HTML %} 
      <div class="cr checkbox ">
            <input type="checkbox" name="in1">
            <label for="in1">CheckBox</label>
@@ -334,11 +338,11 @@ And yes, you can change the color of this snack adding the color-class
            <input type="checkbox" name="in1">
            <label for="in1">CheckBox</label>
      </div>  
-```
+{% endhighlight HTML %} 
   
   Add the class ``pulse`` and add ``span`` element with same class to get a ripple effect, and of course you can change the color adding the color class. (The default color is the accent of the aplication).
   
-```HTML
+{% highlight HTML %} 
      <div class="cr checkbox blue pulse ">
            <input type="checkbox" name="in1">
            <label for="in1">CheckBox</label>
@@ -350,13 +354,13 @@ And yes, you can change the color of this snack adding the color-class
            <span class="pulse"></span>
      </div>  
 
-```
+{% endhighlight HTML %} 
   
 **Radio Buttons** 
 
   As checkboxes, radio-buttons have a variant and pulse effect and the same color styling 
   
-```HTML
+{% highlight HTML %} 
        <div class="cr radio-button blue pulse">
              <input type="radio" name="c1">
              <label for="c1">RadioButton</label>
@@ -367,13 +371,13 @@ And yes, you can change the color of this snack adding the color-class
              <label for="c1">RadioButton</label>
              <span class="pulse"></span>
        </div>
- ```
+{% endhighlight HTML %} 
   
 **Cards**
   
   Crown card uses three sub-classes. The card-head, card-body and card-footer. Another sub-class is the img-section usefull for img content. The head,body and footer can be colored adding the color class to the element.
   
-```HTML  
+{% highlight HTML %}  
      <div class="cr card ">
            <div class="card-head">Hi</div>
            <div class="card-body">
@@ -383,12 +387,12 @@ And yes, you can change the color of this snack adding the color-class
                <button class="cr button simple white pulse">Action</button>
           </div>
      </div>
-```
+{% endhighlight HTML %} 
   
   
  Sizing the card it's very simple, just add the class small, medium or use adaptive to fit the container. You can remove the raise effect adding the class noraise 
  
-```HTML  
+{% highlight HTML %} 
      <div class="cr card adaptive noraise">
             <div class="card-head">Card 1</div>
             <div class="card-body">
@@ -398,7 +402,7 @@ And yes, you can change the color of this snack adding the color-class
                 <button class="cr button simple adaptive pulse ">Action</button>
              </div>
      </div>
-```
+{% endhighlight HTML %} 
 
 By default, cards brings  material desing so, for Crown custom cards add the class ``variant`` to get a different card style. 
 
@@ -409,7 +413,7 @@ By default, cards brings  material desing so, for Crown custom cards add the cla
 
   For a responsive image  use the class img-section
   
-```HTML  
+{% highlight HTML %} 
      <div class="cr card adaptive noraise">
             <div class="card-head">Card 1</div>
             <div class="img-section">
@@ -422,7 +426,7 @@ By default, cards brings  material desing so, for Crown custom cards add the cla
                 <button class="cr button simple adaptive pulse ">Action</button>
              </div>
      </div>
-```
+{% endhighlight HTML %} 
 
 Add the class ``dark-bg``for a dark card.
 
@@ -436,7 +440,7 @@ By default, cards brings  material desing so, for Crown custom cards add the cla
 
 Show or hide a feature in card-images. Just add the ``img-section`` and then a div with class ``cr feature`` with a child div ``content``. 
 
-```HTML 
+{% highlight HTML %} 
  <div class="cr card variant">
       <div class="card-head">So far away </div>
            <div class="img-section">
@@ -462,15 +466,15 @@ Show or hide a feature in card-images. Just add the ``img-section`` and then a d
       </div>
  </div>
 
-```
+{% endhighlight HTML %} 
 
-```JavaScript 
+{% highlight JavaScript %} 
 //Activate the feature
   $('#myID').feature('on');
 
 //Disable the feature 
   $('#myID').feature('off');
-```
+{% endhighlight JavaScript %} 
 
 
 **Cakes** 
@@ -488,7 +492,7 @@ Show or hide a feature in card-images. Just add the ``img-section`` and then a d
 
   This is the code of a cr cake 
     
-```HTML 
+{% highlight HTML %} 
 
 <!-- With image  -->
 
@@ -511,25 +515,25 @@ Show or hide a feature in card-images. Just add the ``img-section`` and then a d
 </div>
 
 
-```
+{% endhighlight HTML %} 
 
 To get a shake effect add the class ``shake-1`` for a continue shake animation of the icon or image, ``shake-2`` to get a shake animation on hover.
 
 **Chips**
   
-  ```HTML 
+ {% highlight HTML %} 
   <div class="cr chip purple">
       <div class="content">Solid</div>
       <i class="material-icons">close</i>
   </div>
-  ```
+ {% endhighlight HTML %} 
   By default, using the icon close automatically close and delete the tag from the DOM
 
   
 **Modals**
   To use modals put it them inside a cr container div, then add this code
 
-```HTML 
+{% highlight HTML %} 
 
  <div class="cr modal small">
             <i class="material-icons close">close</i>
@@ -562,7 +566,8 @@ To get a shake effect add the class ``shake-1`` for a continue shake animation o
             </div>
   </div>
 
-```
+{% endhighlight HTML %} 
+
   Ass you see, modals uses a header a body and a footer in order to get a formated modal, you can use the modal without these three components, but i'ts not recommended. Here's another actions: 
 
   * Add a close icon that works adding ``<i class="material-icons close">close</i> ``
@@ -573,7 +578,7 @@ To get a shake effect add the class ``shake-1`` for a continue shake animation o
   * Add a deep shadow effect adding the class ``shadow``
   * Add the class ``center`` in the head,body or footer to get a centered text 
 
-```JavaScript 
+{% highlight JavaScript %}  
 
 //Show the modal
   $(#yourModalID).modal('show');
@@ -581,18 +586,19 @@ To get a shake effect add the class ``shake-1`` for a continue shake animation o
 //Hide the modal 
   $(#yourModalID).modal('hide');
 
-```
+{% endhighlight JavaScript %} 
+
  **List** 
  
  Use Crown list by adding this code: 
  
- ```HTML 
+{% highlight HTML %} 
 <ul class="cr list">
   <li>Dogs</li>
   <li>Cats</li>
   <li>Humans</li>
 </ul>
+{% endhighlight HTML %} 
 
-```
 This is the basic list that you can use just to display a list of components. Customize by adding the color class, or make it complex adding an icon or image section. Or display hidden content creating a ``li info``.
 
