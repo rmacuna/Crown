@@ -16,7 +16,7 @@ Copy and paste this code for jQuery
 `<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>`
 
 
-( Live Preview Not Avaliable For Now )[live preview](https://github.com/rmacuna/Crown/edit/master/README.md) of this version
+[live preview](https://rmacuna.github.io/Crown/public) of this version
 
 ## Basic Docs
 
@@ -229,7 +229,7 @@ Of course you can change the color of all enders and labels adding the color cla
           <input class="m-input" type="text" name="">
      </div>
 ```
-  The color of the input it's by default the accent of the application ([See full DOCS to see how to modify with SASS](https://github.com/rmacuna/Crown/edit/master)), but you can change it adding the color class, it's really simple!.
+  The color of the input it's by default the accent of the application ([See full DOCS to see how to modify with SASS](https://rmacuna.github.io/Crown/public)), but you can change it adding the color class, it's really simple!.
   
 ```HTML 
      <div class="cr-material-field indigo">
