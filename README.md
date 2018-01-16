@@ -465,15 +465,16 @@ Show or hide a feature in card-images. Just add the ``img-section`` and then a d
           <button class="cr simple button  adaptive pulse">NEXT</button>
       </div>
  </div>
-
 {% endhighlight HTML %} 
 
+
 {% highlight JavaScript %} 
-//Activate the feature
+  //Activate the feature
   $('#myID').feature('on');
 
-//Disable the feature 
+  //Disable the feature 
   $('#myID').feature('off');
+
 {% endhighlight JavaScript %} 
 
 
@@ -501,7 +502,7 @@ Show or hide a feature in card-images. Just add the ``img-section`` and then a d
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, necessitatibus. Sunt numquam a, expedita vel repellat quos, soluta quidem. Quos officiis delectus nostrum nisi officia rerum, aliquid vitae et ad.
           Lorem ipsum dolor sit amet, consectetur adipisic
       </div>
-      <img class="rounded fade " src="https://i.scdn.co/image/93b35ff46a64bbe150ef63c8656cc0c137e4960f">
+      <img class="rounded fade" src="https://i.scdn.co/image/93b35ff46a64bbe150ef63c8656cc0c137e4960f">
 </div>
 
 <!-- With icon --> 
@@ -521,20 +522,20 @@ To get a shake effect add the class ``shake-1`` for a continue shake animation o
 
 **Chips**
   
- {% highlight HTML %} 
+{% highlight HTML %} 
   <div class="cr chip purple">
       <div class="content">Solid</div>
       <i class="material-icons">close</i>
   </div>
- {% endhighlight HTML %} 
-  By default, using the icon close automatically close and delete the tag from the DOM
+{% endhighlight HTML %} 
+  
+By default, using the icon close automatically close and delete the tag from the DOM
 
   
 **Modals**
   To use modals put it them inside a cr container div, then add this code
 
 {% highlight HTML %} 
-
  <div class="cr modal small">
             <i class="material-icons close">close</i>
             <div class="modal-head center">Login</div>
@@ -565,7 +566,6 @@ To get a shake effect add the class ``shake-1`` for a continue shake animation o
                 </div>
             </div>
   </div>
-
 {% endhighlight HTML %} 
 
   Ass you see, modals uses a header a body and a footer in order to get a formated modal, you can use the modal without these three components, but i'ts not recommended. Here's another actions: 
@@ -579,13 +579,11 @@ To get a shake effect add the class ``shake-1`` for a continue shake animation o
   * Add the class ``center`` in the head,body or footer to get a centered text 
 
 {% highlight JavaScript %}  
-
-//Show the modal
+  //Show the modal
   $(#yourModalID).modal('show');
 
-//Hide the modal 
+  //Hide the modal   
   $(#yourModalID).modal('hide');
-
 {% endhighlight JavaScript %} 
 
  **List** 
