@@ -30,13 +30,14 @@ Copy and paste this code for jQuery
 ```
  You can also coloring this buttons adding the color class
  
- ```HTML 
+{% highlight HTML %}
 <button class="cr button blue">Button</button>
 <button class="cr button red">Button</button>
 <button class="cr button green">Button</button>
 <button class="cr button black">Button</button>
 <button class="cr button indigo">Button</button>
-```
+{% endhighlight %}
+
 ![](https://lh3.googleusercontent.com/PI1xZDjQ6QjS5yp_gDgHHwqS9QtNsYhgQp_aRgEqz3YK2BaH4h_JpOj8x1OoJUSSPw_g6D4U__W17LjuXe7wNi6xezeDAFf2yvrJi81ZwWUJ9HBECAtQvuPk5_Scdr5hWJ9ZL8KwrQ)
 
  Buttons can also be styled with outline border and adding hover effects, you can use a button with a raised and ripple effect (like a Google material design button!)
