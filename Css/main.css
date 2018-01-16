@@ -884,7 +884,8 @@ ul.cr.list {
   color: #4d4d4d;
   width: 400px;
   margin: 2px 2px 2px 2px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  min-width: 283px; }
   ul.cr.list div.ul-head {
     position: relative;
     box-sizing: border-box;
@@ -933,6 +934,22 @@ ul.cr.list {
       transition: opacity 0.3s ease-out, transform 0.3s ease-out;
       right: 0;
       top: 30%; }
+    ul.cr.list li div.cr.checkbox {
+      position: absolute;
+      top: 30%;
+      right: 0;
+      padding: 10px 10px 10px 12px; }
+      ul.cr.list li div.cr.checkbox label:after {
+        top: 5px !important; }
+      ul.cr.list li div.cr.checkbox input[type="checkbox"] {
+        position: relative !important;
+        right: 10px !important; }
+    ul.cr.list li div.cr.radio-button {
+      position: absolute;
+      top: 30%;
+      right: 8%; }
+      ul.cr.list li div.cr.radio-button label:after {
+        top: 3px !important; }
     ul.cr.list li div.img-section {
       position: absolute;
       right: 0;
@@ -952,23 +969,21 @@ ul.cr.list {
         right: 0;
         padding: 0 20px 0 20px; }
   @media screen and (max-width: 341px) {
+    ul.cr.list div.img-section {
+      position: absolute !important;
+      left: 50% !important;
+      top: 0 !important;
+      display: block !important; } }
+  @media screen and (max-width: 375px) {
     ul.cr.list {
-      text-align: right; }
+      width: auto; }
       ul.cr.list div.img-section {
         position: relative !important;
-        left: -22px !important;
-        top: -35px !important; }
-        ul.cr.list div.img-section img {
-          position: absolute !important;
-          left: 0 !important; } }
-  @media screen and (max-width: 375px) {
-    ul.cr.list div.img-section {
-      position: relative !important;
-      right: -230px !important; } }
+        right: -230px !important; } }
   @media screen and (max-width: 767px) {
     ul.cr.list {
-      width: auto;
-      margin-left: -9%; }
+      width: 400px;
+      margin-left: -5%; }
       ul.cr.list span.cr.badge {
         transform: scale(0.8); } }
   @media screen and (max-width: 1199px) and (min-width: 992px) {
@@ -1009,6 +1024,8 @@ ul.cr.list.content div.li.info.show {
 
 ul.cr.list.adaptive {
   width: auto !important; }
+  ul.cr.list.adaptive li {
+    width: 100% !important; }
 
 ul.cr.list.blue li {
   background: #2196F3;
@@ -1194,49 +1211,81 @@ ul.cr.list.gold li {
 ul.cr.list.gold i {
   color: #fff !important; }
 
+div.ul-head i.close {
+  color: #4d4d4d;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 14px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  font-weight: bold; }
+
 div.ul-head.blue {
   background: #2196F3;
   color: #fff !important; }
+  div.ul-head.blue i {
+    color: #fff !important; }
 
 div.ul-head.green {
   background: #00C853;
   color: #fff !important; }
+  div.ul-head.green i {
+    color: #fff !important; }
 
 div.ul-head.red {
   background: #F44336;
   color: #fff !important; }
+  div.ul-head.red i {
+    color: #fff !important; }
 
 div.ul-head.indigo {
   background: #3F51B5;
   color: #fff !important; }
+  div.ul-head.indigo i {
+    color: #fff !important; }
 
 div.ul-head.yellow {
   background: #FFEB3B;
   color: #000 !important; }
+  div.ul-head.yellow i {
+    color: #fff !important; }
 
 div.ul-head.amber {
   background: #FFC107;
   color: #fff !important; }
+  div.ul-head.amber i {
+    color: #fff !important; }
 
 div.ul-head.teal {
   background: #009688;
   color: #fff !important; }
+  div.ul-head.teal i {
+    color: #fff !important; }
 
 div.ul-head.pink {
   background: #E91E63;
   color: #fff !important; }
+  div.ul-head.pink i {
+    color: #fff !important; }
 
 div.ul-head.gold {
   background: #bf9b30;
   color: #fff !important; }
+  div.ul-head.gold i {
+    color: #fff !important; }
 
 div.ul-head.purple {
   background: #9C27B0;
   color: #fff !important; }
+  div.ul-head.purple i {
+    color: #fff !important; }
 
 div.ul-head.black {
   background: #000;
   color: #fff !important; }
+  div.ul-head.black i {
+    color: #fff !important; }
 
 div.cr.chip {
   box-sizing: border-box;
@@ -1396,12 +1445,11 @@ span.cr.badge {
   color: #404040;
   overflow: hidden;
   position: relative;
-  z-index: 10;
+  z-index: 1;
   font-weight: bold;
   display: inline-block;
-  margin: 2px 2px 2px 2px;
-  padding: 5px 5px 0px 5px;
-  font-size: 12px; }
+  padding: 5px 5px 5px 5px;
+  font-size: 10px; }
 
 span.cr.badge.blue {
   background: #2196F3;
@@ -2405,6 +2453,10 @@ div.cr.radio-button.gold.variant input[type="radio"]:checked + label:before {
   background: none !important; }
 div.cr.radio-button.gold.variant input[type="radio"]:checked + label:after {
   background: #bf9b30 !important; }
+
+html {
+  height: 100vh !important;
+  width: 100% !important; }
 
 img.xsmall {
   max-width: 30% !important;
