@@ -1,6 +1,6 @@
 ul.cr.list 
 	position: relative
-	color: lighten($black, 30)
+	// color: lighten($black, 30)
 	width: 400px 
 	margin: 2px 2px 2px 2px
 	box-sizing: border-box
@@ -40,7 +40,7 @@ ul.cr.list
 		list-style-type: none
 		border-top: 0
 		box-shadow: 0.5px 0.5px 0.5px  lighten($gray, 25), -0.5px 0.5px 0.5px  lighten($gray, 25)
-		transition: background 0.3s ease-out
+		transition: background 0.3s ease-out, color 0.3s ease-out
 		&:hover 
 			background: darken($white, 5)
 			> div.li.info 
@@ -364,9 +364,11 @@ ul.cr.list.gold
 		color: $white !important 
 
 
-div.ul-head 
+div.ul-head
+	background: $white
+
 	i.close 
-		color: lighten($black, 30)
+		// color: lighten($black, 30)
 		position: absolute 
 		top: 0 
 		right: 0

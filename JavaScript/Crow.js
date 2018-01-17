@@ -131,31 +131,31 @@ jQuery(function($) {
     var finded = false;
     var lastPressed;
     $('.cr.list.content > li').click(function(e) {
-        e.preventDefault();
         let parentUL = $(this).parent().find('li'); //Obtengo la UL padre de la lista a la cual doy click
-        parentUL.each(function(idx, li) {
-            let item = $(li);
-            if (item.is('.active')) {
-                item.find('.li.info').removeClass('show');
-                item.removeClass('active grow');
-                finded = true;
-                lastPressed = item;
-            }
-        });
-        if (finded) {
-            if (lastPressed.is($(this))) {
-                finded = false;
+        if ($(e.target).is($(this))) {
+            parentUL.each(function(idx, li) {
+                let item = $(li);
+                if (item.is('.active')) {
+                    item.find('.li.info').removeClass('show');
+                    item.removeClass('active grow');
+                    finded = true;
+                    lastPressed = item;
+                }
+            });
+            if (finded) {
+                if (lastPressed.is($(this))) {
+                    finded = false;
+                } else {
+                    $(this).addClass('active grow');
+                    $(this).find('.li.info').addClass('show');
+                    lastPressed = $(this);
+                }
             } else {
                 $(this).addClass('active grow');
                 $(this).find('.li.info').addClass('show');
                 lastPressed = $(this);
             }
-        } else {
-            $(this).addClass('active grow');
-            $(this).find('.li.info').addClass('show');
-            lastPressed = $(this);
         }
-
     })
     $('.cr.list > div.ul-head > i.close').click(function() {
         let parent = $(this).parent().parent();
@@ -479,8 +479,8 @@ try {
                 })
             }
             if (action == 'destroy') {
-                if (li_position != null && li_position <= $(this).find('li').length && li_position > 0)  {
-                    let li = $(this).find("li:nth-child(" + (li_position+ 1) + ')');
+                if (li_position != null && li_position <= $(this).find('li').length && li_position > 0) {
+                    let li = $(this).find("li:nth-child(" + (li_position + 1) + ')');
                     if (li != null) {
                         li.css({
                             'transition': "transform 0.4s ease-out, opacity 0.3s ease-out",
@@ -503,12 +503,73 @@ try {
 
             }
             if (action == 'checked') {
-                let checks = 0;
-                let checkboxes = $(this).find('li > div.cr.checkbox > input[type="checkbox"]');
+                let checks = 0,
+                    arr_checked = [],
+                    checkboxes = $(this).find('li > div.cr.checkbox > input[type="checkbox"]'),
+                    checked_cbxs = {};
+
                 checkboxes.each(function() {
-                    if ($(this).is(':checked')) checks++;
+                    if ($(this).is(':checked')) {
+                        checks++;
+                        arr_checked.push($(this).parent());
+                    };
                 });
-                return checks;
+                checked_cbxs = {
+                    number: checks,
+                    checkboxs: arr_checked
+                }
+                return checked_cbxs;
+            }
+        }
+
+        $.fn.color = function(options) {
+            let elem = $(this);
+            var settings = $.extend({
+                background: "#fafafa",
+                font: "#4f4d4d",
+                border: "#dedede",
+                header: "#FFFFFF"
+            }, options);
+            if (elem.is('ul.cr.list')) {
+                let li; 
+                let header = $(this).find('div.ul-head');
+                let header_icon = header.find('i');
+                if (header != null) {
+                    header.css({
+                        'transition': "background 0.3s ease-out, color 0.3s ease-out",
+                        'background': settings.header, 
+                        'color': settings.font
+                    })
+                }
+                if (header_icon != null) 
+                    header_icon.css({ 'color': settings.font + "!important" })
+
+                li = elem.find('li');
+                li.each(function() {
+                    $(this).css({
+                        'transition': "background 0.3s ease-out, color 0.3s ease-out",
+                        'background': settings.background,
+                        'color': settings.font,
+                        'border-color': settings.border
+                    })
+                    $(this).find('.li.info').css({
+                        'color': settings.font,
+                        'background': settings.background
+                    })
+                    $(this).hover(
+                        function() {
+                            $(this).css({
+                                'background': "darken(" + settings.background + ", 5)"
+                            });
+                            $(this).find('.li.info').css({
+                                'background': "darken(" + settings.background + ", 5)"
+                            });
+                        }
+                    );
+                    if ($(this).find('i') != null)
+                        $(this).css({ 'color': settings.font + "!important" })
+                })
+                return $(this).css();
             }
         }
 

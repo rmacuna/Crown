@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../Css/main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/Grid/flexboxgrid.min.css">
+    <title>LearnDesign</title>
+    <style type="text/css">
+    /* body{
+            background: rgba(0, 0, 0, 0.575)
+        } */
+
+    .sep {
+        padding-top: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="cr container">
+        <button onclick="triggerModal();" class="cr button  float pulse">
+            <i class="material-icons">add</i>
+        </button>
+        <div class="cr modal shadow small">
+            <i class="material-icons close">close</i>
+            <div class="modal-head center">Login</div>
+            <div class="modal-body ">
+                <div class="row">
+                    <div class="col-xs-12 col-md-12">
+                        <div class="cr-material-field">
+                            <label class="m-label">Username</label>
+                            <input class="m-input" type="text" name="in1">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12">
+                        <div class="cr-material-field">
+                            <label class="m-label" for="in2">Password</label>
+                            <input class="m-input" type="password" name="in2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer no-line center">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <button class="cr simple button green pulse adaptive">REGISTER</button>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <button class="cr simple button green pulse adaptive">LOGIN</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <ul id="list1" class="cr list content adaptive">
+                    <div class="ul-head">
+                        <i class="material-icons close">close</i> Best Movies
+                    </div>
+                    <li>
+                        The avengers
+                        <i class="material-icons close">close </i>
+                        <div class="li info">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                    </li>
+                    <li>Thor
+                        <div class="cr checkbox variant blue pulse">
+                            <input type="checkbox" name="in1">
+                            <label for="in1"></label>
+                            <span class="pulse"></span>
+                        </div>
+                        <span class="cr badge green">good</span>
+                    </li>
+                    <li>Captain America: The winter solider
+                        <div class="cr checkbox variant blue pulse">
+                            <input type="checkbox" name="in1">
+                            <label for="in1"></label>
+                            <span class="pulse"></span>
+                        </div>
+                        <span class="cr badge green">Very good</span>
+                    </li>
+                    <li>Spiderman
+                        <div class="cr checkbox variant blue pulse">
+                            <input type="checkbox" name="in1">
+                            <label for="in1"></label>
+                            <span class="pulse"></span>
+                        </div>
+                        <span class="cr badge yellow">Not seen</span>
+                    </li>
+                    <li>Spiderman
+                        <div class="cr checkbox variant blue pulse">
+                            <input type="checkbox" name="in1">
+                            <label for="in1"></label>
+                            <span class="pulse"></span>
+                        </div>
+                        <span class="cr badge yellow">Not seen</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../JavaScript/Crow.js"></script>
+    <script type="text/javascript">
+    function triggerModal() {
+        // if (!$('.cr.modal').is('.opened')) {
+        //     $('.cr.modal').modal('show');
+        // } else {
+        //     $('.cr.modal').modal('hide');
+        // }
+        setTimeout(function() {
+            $("#list1").color({
+                background: "#F44336",
+                font: "#FFFFFF",
+                header: "#F44336"
+            })
+        }, 1000);
+
+        setTimeout(function() {
+            $("#list1").color({
+                background: "#4A148C",
+                font: "#FFFFFF",
+                header: "#4A148C"
+            })
+        }, 3000)
+
+        setTimeout(function() {
+            $("#list1").color();
+        }, 5000)
+
+        // let checks = $("#list1").list('checked');
+        // console.log(checks.number);
+        // console.log(checks.checkboxs);
+    }
+    </script>
+</body>
+
+</html>
