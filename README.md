@@ -24,10 +24,10 @@ Copy and paste this code for jQuery
 ### Buttons
 
   You can use `<div>` or `<button>` tag depending what you need, here is an example code.
-```HTML 
+{% highlight HTML %}
 <div class="cr button">Button</div>
 <button class="cr button">Button</button>
-```
+{% endhighlight %}
  You can also coloring this buttons adding the color class
  
 {% highlight HTML %}

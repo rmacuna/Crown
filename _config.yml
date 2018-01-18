@@ -1,4 +1,4 @@
-theme: jekyll-theme-merlot
+theme: jekyll-theme-cayman
 
 kramdown:
   # Use GitHub flavored markdown, including triple backtick fenced code blocks
