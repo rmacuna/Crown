@@ -1925,6 +1925,7 @@ div.cr.loader.circular {
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  margin: 2px 0 2px 0;
   background: none;
   transition: transform 0.3s ease-out;
   animation: spin 2s linear infinite; }
@@ -1953,6 +1954,51 @@ div.cr.loader.circular.fast {
 
 div.cr.loader.circular.s-fast {
   animation: spin 0.5s linear infinite; }
+
+div.cr.loader.circular.dark-bg {
+  border: 5px solid rgba(255, 255, 255, 0.4);
+  border-top: 5px solid #fff !important; }
+
+div.cr.loader.circular.colored {
+  transition: border-color 0.3s ease-out;
+  animation: spinColor 2s linear infinite; }
+
+div.cr.loader.bouncy {
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: rgba(244, 67, 54, 0.8);
+  -webkit-transition: background 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out;
+  transition: background 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out;
+  -webkit-animation: bouncy 2s infinite ease-in-out;
+  animation: bouncy 2s infinite ease-in-out; }
+
+div.cr.loader.pulse {
+  width: 40px;
+  height: 40px;
+  background: #4d4d4d;
+  border-radius: 50%;
+  -webkit-animation: pulse 1s infinite ease-in-out;
+  animation: pulse 1s infinite ease-in-out; }
+
+div.cr.loader.dots {
+  width: 80px;
+  text-align: center; }
+  div.cr.loader.dots div.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #4d4d4d;
+    -webkit-animation: dots 1.4s ease-in-out 0s infinite both;
+    animation: dots 1.4s ease-in-out 0s infinite both; }
+  div.cr.loader.dots div.d1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s; }
+  div.cr.loader.dots div.d2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s; }
 
 @-moz-keyframes appear {
   0% {
@@ -2077,11 +2123,129 @@ div.cr.loader.circular.s-fast {
   to {
     z-index: 1;
     transform: scale(1.03); } }
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+@-ms-keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 @keyframes spin {
   from {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+@keyframes spinColor {
+  0% {
+    border-top: 5px solid #00C853;
+    transform: rotate(0deg); }
+  35% {
+    border-top: 5px solid #F44336; }
+  80% {
+    border-top: 5px solid #2196F3; }
+  100% {
+    border-top: 5px solid #00C853;
+    transform: rotate(360deg); } }
+@-ms-keyframes spinColor {
+  0% {
+    border-top: 5px solid #00C853;
+    transform: rotate(0deg); }
+  35% {
+    border-top: 5px solid #F44336; }
+  80% {
+    border-top: 5px solid #2196F3; }
+  100% {
+    border-top: 5px solid #00C853;
+    transform: rotate(360deg); } }
+@-webkit-keyframes spinColor {
+  0% {
+    border-top: 5px solid #00C853;
+    transform: rotate(0deg); }
+  35% {
+    border-top: 5px solid #F44336; }
+  80% {
+    border-top: 5px solid #2196F3; }
+  100% {
+    border-top: 5px solid #00C853;
+    transform: rotate(360deg); } }
+@keyframes bouncy {
+  0% {
+    transform: scale(1);
+    background: rgba(244, 67, 54, 0.8); }
+  50% {
+    transform: scale(0.5);
+    background: rgba(33, 150, 243, 0.5); }
+  75% {
+    transform: scale(1);
+    background: rgba(33, 150, 243, 0.8); }
+  100% {
+    transform: scale(1); } }
+@-webkit-keyframes bouncy {
+  0% {
+    transform: scale(1);
+    background: rgba(244, 67, 54, 0.8); }
+  50% {
+    transform: scale(0.5);
+    background: rgba(33, 150, 243, 0.5); }
+  75% {
+    transform: scale(1);
+    background: rgba(33, 150, 243, 0.8); }
+  100% {
+    transform: scale(1); } }
+@-ms-keyframes bouncy {
+  0% {
+    transform: scale(1);
+    background: rgba(244, 67, 54, 0.8); }
+  50% {
+    transform: scale(0.5);
+    background: rgba(33, 150, 243, 0.5); }
+  75% {
+    transform: scale(1);
+    background: rgba(33, 150, 243, 0.8); }
+  100% {
+    transform: scale(1); } }
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+    transform: scale(1); } }
+@-ms-keyframes pulse {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+    transform: scale(1); } }
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+    transform: scale(1); } }
+@-webkit-keyframes dots {
+  0%, 80%, 100% {
+    transform: scale(0); }
+  40% {
+    transform: scale(1); } }
+@-ms-keyframes dots {
+  0%, 80%, 100% {
+    transform: scale(0); }
+  40% {
+    transform: scale(1); } }
+@keyframes dots {
+  0%, 80%, 100% {
+    transform: scale(0); }
+  40% {
+    transform: scale(1); } }
 div.cr.checkbox {
   width: auto;
   padding: 5px 3px;
