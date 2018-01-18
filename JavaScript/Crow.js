@@ -189,7 +189,6 @@ jQuery(function($) {
                 $(ul).remove();
             }, 410);
         }
-
     })
     $('.m-input.validate.numbers, .m-area.validate.numbers').blur(function() {
         let value = $(this).val(); //Valor del input
@@ -571,8 +570,20 @@ try {
                 })
                 return $(this).css();
             }
+            if (elem.is('li')) {
+                elem.css({
+                    'transition': "background 0.3s ease-out, color 0.3s ease-out",
+                    'background': settings.background,
+                    'color': settings.font,
+                    'border-color': settings.border 
+                })
+                elem.find('.li.info').css({
+                    'color': settings.font,
+                    'background': settings.background
+                })
+            }
         }
-
+        
     }(jQuery));
 } catch (e) {}
 

@@ -54,13 +54,13 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+       <!--  <div class="row">
             <div class="col-xs-12 col-md-6">
-                <ul id="list1" class="cr list content adaptive">
+                <ul id="list1" class="cr list content tiny">
                     <div class="ul-head">
                         <i class="material-icons close">close</i> Best Movies
                     </div>
-                    <li>
+                    <li id="item1" onclick="coloring();">
                         The avengers
                         <i class="material-icons close">close </i>
                         <div class="li info">
@@ -73,7 +73,6 @@
                             <label for="in1"></label>
                             <span class="pulse"></span>
                         </div>
-                        <span class="cr badge green">good</span>
                     </li>
                     <li>Captain America: The winter solider
                         <div class="cr checkbox variant blue pulse">
@@ -81,7 +80,6 @@
                             <label for="in1"></label>
                             <span class="pulse"></span>
                         </div>
-                        <span class="cr badge green">Very good</span>
                     </li>
                     <li>Spiderman
                         <div class="cr checkbox variant blue pulse">
@@ -101,7 +99,11 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
+
+        <div class="cr loader circular x-small"></div>
+        <div class="cr loader circular small"></div>
+        <div class="cr loader circular x-large"></div>
     </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -113,29 +115,18 @@
         // } else {
         //     $('.cr.modal').modal('hide');
         // }
-        setTimeout(function() {
-            $("#list1").color({
-                background: "#F44336",
-                font: "#FFFFFF",
-                header: "#F44336"
-            })
-        }, 1000);
-
-        setTimeout(function() {
-            $("#list1").color({
-                background: "#4A148C",
-                font: "#FFFFFF",
-                header: "#4A148C"
-            })
-        }, 3000)
-
-        setTimeout(function() {
-            $("#list1").color();
-        }, 5000)
-
+            //  $("#list1").color({
+            //     background: "#F44336",
+            //     font: "#FFFFFF",
+            //     header: "#F44336"
+            // })
         // let checks = $("#list1").list('checked');
         // console.log(checks.number);
         // console.log(checks.checkboxs);
+        // $("#item1").color({
+        //     background: '#F44336',
+        //     font: '#FFFFFF'
+        // })
     }
     </script>
 </body>

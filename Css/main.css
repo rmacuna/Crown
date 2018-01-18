@@ -1026,6 +1026,11 @@ ul.cr.list.adaptive {
   ul.cr.list.adaptive li {
     width: 100% !important; }
 
+ul.cr.list.tiny {
+  width: 300px !important; }
+  ul.cr.list.tiny li {
+    padding: 10px 10px 10px 10px !important; }
+
 ul.cr.list.blue li {
   background: #2196F3;
   color: #fff !important;
@@ -1913,6 +1918,42 @@ div.cr.snackbar.yellow {
     div.cr.snackbar.yellow button.snack.action:active {
       background-color: #ffe822; }
 
+div.cr.loader.circular {
+  position: relative;
+  border: 5px solid #dedede;
+  border-top: 5px solid #4d4d4d;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: none;
+  transition: transform 0.3s ease-out;
+  animation: spin 2s linear infinite; }
+
+div.cr.loader.circular.inline {
+  display: inline-block !important; }
+
+div.cr.loader.circular.x-small {
+  width: 15px;
+  height: 15px; }
+
+div.cr.loader.circular.small {
+  width: 20px;
+  height: 20px; }
+
+div.cr.loader.circular.large {
+  width: 50px;
+  height: 50px; }
+
+div.cr.loader.circular.x-large {
+  width: 80px;
+  height: 80px; }
+
+div.cr.loader.circular.fast {
+  animation: spin 1s linear infinite; }
+
+div.cr.loader.circular.s-fast {
+  animation: spin 0.5s linear infinite; }
+
 @-moz-keyframes appear {
   0% {
     display: none;
@@ -2036,6 +2077,11 @@ div.cr.snackbar.yellow {
   to {
     z-index: 1;
     transform: scale(1.03); } }
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 div.cr.checkbox {
   width: auto;
   padding: 5px 3px;

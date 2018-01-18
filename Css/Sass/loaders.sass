@@ -1,0 +1,35 @@
+div.cr.loader.circular 
+	position: relative 
+	border: 5px solid lighten($gray, 25)
+	border-top: 5px solid lighten($black, 30)
+
+	width: 30px 
+	height: 30px 
+	border-radius: 50%
+
+	background: none 
+	transition: transform 0.3s ease-out 
+	animation: spin 2s linear infinite
+
+
+div.cr.loader.circular.inline 
+	display: inline-block !important 
+
+div.cr.loader.circular.x-small
+	width: 15px
+	height: 15px 
+div.cr.loader.circular.small 
+	width: 20px 
+	height: 20px 
+div.cr.loader.circular.large 
+	width: 50px 
+	height: 50px 
+div.cr.loader.circular.x-large 
+	width: 80px 
+	height: 80px
+
+div.cr.loader.circular.fast 
+	animation: spin 1s linear infinite 
+div.cr.loader.circular.s-fast 
+	animation: spin 0.5s linear infinite 
+
