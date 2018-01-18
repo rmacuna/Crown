@@ -1,0 +1,110 @@
+div.cr.loader.circular 
+	position: relative 
+	border: 5px solid lighten($gray, 25)
+	border-top: 5px solid lighten($black, 30)
+
+	width: 30px 
+	height: 30px 
+	border-radius: 50%
+	
+	margin: 2px 0 2px 0
+	background: none 
+	transition: transform 0.3s ease-out 
+	animation: spin 2s linear infinite
+
+
+div.cr.loader.circular.inline 
+	display: inline-block !important 
+
+div.cr.loader.circular.x-small
+	width: 15px
+	height: 15px 
+div.cr.loader.circular.small 
+	width: 20px 
+	height: 20px 
+div.cr.loader.circular.large 
+	width: 50px 
+	height: 50px 
+div.cr.loader.circular.x-large 
+	width: 80px 
+	height: 80px
+
+div.cr.loader.circular.fast 
+	animation: spin 1s linear infinite 
+div.cr.loader.circular.s-fast 
+	animation: spin 0.5s linear infinite 
+
+div.cr.loader.circular.dark-bg
+	border: 5px solid rgba($white, .4) 
+	border-top: 5px solid $white !important
+
+div.cr.loader.circular.colored 
+	transition: border-color 0.3s ease-out
+	animation: spinColor 2s linear infinite 
+
+div.cr.loader.bouncy
+	width: 40px
+	height: 40px 
+	box-sizing: border-box 
+	border-radius: 50% 
+	background: rgba($red, .8)
+	-webkit-transition: background 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out
+	transition: background 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out
+	-webkit-animation: bouncy 2s  infinite  ease-in-out
+	animation: bouncy 2s  infinite  ease-in-out
+
+div.cr.loader.pulse 
+	width: 40px 
+	height: 40px 
+	background: lighten($black, 30)
+	border-radius: 50% 
+	-webkit-animation: pulse 1s infinite ease-in-out 
+	animation: pulse 1s infinite ease-in-out 
+
+div.cr.loader.dots
+	width: 80px 
+	text-align: center 
+	div.dot
+		width: 20px 
+		height: 20px
+		border-radius: 50% 
+		display: inline-block
+		background: lighten($black, 30)
+		-webkit-animation: dots 1.4s ease-in-out 0s infinite both 
+		animation: dots 1.4s ease-in-out 0s infinite both 
+	div.d1 
+		-webkit-animation-delay: -0.32s 
+		animation-delay: -0.32s
+	div.d2 
+		-webkit-animation-delay: -0.16s 
+		animation-delay: -0.16s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
