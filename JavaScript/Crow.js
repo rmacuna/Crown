@@ -464,6 +464,131 @@ try {
             }
         }
 
+        $.fn.loader = function(action, loadname, options) {
+            if (action == 'show') {
+                var settings = $.extend({
+                    time: '6300',
+                    color: '#4F4D4D',
+                    background: '#FFFFFF',
+                    dfloadercolor: '#4F4D4D'
+                }, options);
+
+                if (loadname == 'dots') {
+                    $(this).append('<div class="cr loader screen dots">' +
+                        '<div class="dot d1"></div>' +
+                        '<div class="dot d2"></div>' +
+                        '<div class="dot d3"></div>' +
+                        '</div>' +
+                        '<span id="crloadOverLay" class="load-overlay"></span>');
+                    let loader = $('body').find('div.cr.loader > div.dot');
+                    let overlay = $('body').find('span.load-overlay');
+                    loader.css({
+                        'background': settings.color
+                    })
+                    overlay.css({
+                        'background': settings.background
+                    })
+                    setTimeout(function() {
+                        loader.css({
+                            'transition': "opacity 0.3s ease-out",
+                            'opacity': "0"
+                        })
+                        overlay.addClass('hide');
+                    }, settings.time);
+
+                    setTimeout(function() {
+                        loader.remove();
+                        $('#crloadOverLay').remove();
+                    }, (settings.time * 1 + 350));
+                } else if (loadname == 'balls') {
+                    $(this).append('<div class="cr loader screen balls"></div>');
+                    $(this).append('<span id="crloadOverLay" class="load-overlay"></span>');
+
+                    let loader = $('body').find('div.cr.loader.screen-balls');
+                    let overlay = $('body').find('span.load-overlay');
+                    overlay.css({
+                        'background': settings.background
+                    })
+                    setTimeout(function() {
+                        loader.css({
+                            'transition': "opacity 0.3s ease-out",
+                            'opacity': "0"
+                        })
+                        overlay.addClass('hide');
+                    }, settings.time);
+
+                    setTimeout(function() {
+                        loader.remove();
+                        $('#crloadOverLay').remove();
+                    }, (settings.time * 1 + 350));
+                } else if (loadname == 'pulse') {
+                    $(this).append('<div id="crLoadPulse" class="cr loader screen pulse"></div>');
+                    $(this).append('<span id="crloadOverLay" class="load-overlay"></span');
+
+                    let loader = $(this).find('#crLoadPulse');
+                    let overlay = $(this).find('span.load-overlay');
+
+                    loader.css({
+                        'background': settings.color
+                    })
+                    overlay.css({
+                        'background': settings.background
+                    })
+                    setTimeout(function() {
+                        loader.css({
+                            'transition': "opacity 0.3s ease-out",
+                            'opacity': "0"
+                        })
+                        overlay.addClass('hide');
+                    }, settings.time);
+
+                    setTimeout(function() {
+                        loader.remove();
+                        $('#crloadOverLay').remove();
+                    }, (settings.time * 1 + 350));
+                } else if (loadname == 'default') {
+                    $(this).append('<div id="crLoadCircular" class="cr loader screen circular"></div>');
+                    $(this).append('<span id="crloadOverLay" class="load-overlay"></span');
+
+                    let loader = $(this).find('#crLoadCircular');
+                    let overlay = $(this).find('span.load-overlay');
+
+                    loader.css({
+                        'border-top-color': settings.dfloadercolor
+                    })
+                    overlay.css({
+                        'background': settings.background
+                    })
+                    setTimeout(function() {
+                        loader.css({
+                            'transition': "opacity 0.3s ease-out",
+                            'opacity': "0"
+                        })
+                        overlay.addClass('hide');
+                    }, settings.time);
+
+                    setTimeout(function() {
+                        loader.remove();
+                        $('#crloadOverLay').remove();
+                    }, (settings.time * 1 + 350));
+                }
+            }
+            if (action == 'quit') {
+                let loader = $(this).find('div.cr.loader.screen')
+                let overlay = $(this).find('span.load-overlay')
+                loader.css({
+                    'transition': "opacity 0.3s ease-out",
+                    'opacity': "0"
+                })
+                overlay.addClass('hide');
+
+                setTimeout(function() {
+                    loader.remove();
+                    overlay.remove();
+                }, 350);
+            }
+        }
+
         $.fn.list = function(action, li_position) {
             if (action == 'hide') {
                 $(this).css({
@@ -530,17 +655,17 @@ try {
                 header: "#FFFFFF"
             }, options);
             if (elem.is('ul.cr.list')) {
-                let li; 
+                let li;
                 let header = $(this).find('div.ul-head');
                 let header_icon = header.find('i');
                 if (header != null) {
                     header.css({
                         'transition': "background 0.3s ease-out, color 0.3s ease-out",
-                        'background': settings.header, 
+                        'background': settings.header,
                         'color': settings.font
                     })
                 }
-                if (header_icon != null) 
+                if (header_icon != null)
                     header_icon.css({ 'color': settings.font + "!important" })
 
                 li = elem.find('li');
@@ -575,7 +700,7 @@ try {
                     'transition': "background 0.3s ease-out, color 0.3s ease-out",
                     'background': settings.background,
                     'color': settings.font,
-                    'border-color': settings.border 
+                    'border-color': settings.border
                 })
                 elem.find('.li.info').css({
                     'color': settings.font,
@@ -583,7 +708,7 @@ try {
                 })
             }
         }
-        
+
     }(jQuery));
 } catch (e) {}
 
@@ -604,6 +729,4 @@ window.onclick = function(e) {
             $('#crOverLay').remove();
         }, 310);
     }
-
-
 }
