@@ -22,7 +22,6 @@ div.cr.loader.screen.circular
 	top: 40% 
 	left: 48% 
 	border: 5px solid rgba($gray, .1)
-	// border-top: 5px solid lighten($white, 30)
 	z-index: 201
 
 	width: 50px 
@@ -105,6 +104,11 @@ div.cr.loader.screen.bouncy
 	border-radius: 50% 
 	background: rgba($red, .8)
 
+	position: fixed 
+	top: 40% 
+	left: 46%
+	
+	z-index: 201
 	-webkit-transition: background 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out
 	-ms-transition: background 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out
 	transition: background 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out
@@ -209,47 +213,47 @@ div.cr.loader.screen.balls
 		background: #2196F3
 		box-shadow: 30px 0 0 #4CAF50
 
-div.cr.loader.screen.bars
-	color: $white 
-	margin: 0 auto 
-	position: fixed 
-	z-index: 201 
-	left: 46% 
-	top: 40% 
-	-webkit-transition: opacity 0.3s ease-out 
-	-ms-transition: opacity 0.3s ease-out
-	transition: opacity 0.3s ease-out
+// div.cr.loader.screen.bars
+// 	color: $white 
+// 	margin: 0 auto 
+// 	position: fixed 
+// 	z-index: 201 
+// 	left: 46% 
+// 	top: 40% 
+// 	-webkit-transition: opacity 0.3s ease-out 
+// 	-ms-transition: opacity 0.3s ease-out
+// 	transition: opacity 0.3s ease-out
 
-	-webkit-transform: translateZ(0)
-	-ms-transform: translateZ(0)
-	transform: translateZ(0)
+// 	-webkit-transform: translateZ(0)
+// 	-ms-transform: translateZ(0)
+// 	transform: translateZ(0)
 
-	-webkit-animation-delay: -0.16s
-	-ms-animation-delay: -0.16s
-	animation-delay: -0.16s
-	font-size: 12px
+// 	-webkit-animation-delay: -0.16s
+// 	-ms-animation-delay: -0.16s
+// 	animation-delay: -0.16s
+// 	font-size: 12px
 
-	-webkit-animation: bar1 1s infinite ease-out 
-	-ms-animation: bar1 1s infinite ease-out 
-	animation: bar1 1s infinite ease-out 
+// 	-webkit-animation: bar1 1s infinite ease-out 
+// 	-ms-animation: bar1 1s infinite ease-out 
+// 	animation: bar1 1s infinite ease-out 
 
-	&:before, &:after 
-		background-color: #fff 
-		-webkit-animation: bar1 1s infinite ease-out 
-		-ms-animation: bar1 1s infinite ease-out 
-		animation: bar1 1s infinite ease-out 
-		width: 16px 
-		height: 84px 
-		position: absolute 
-		top: 0 
-		content: ''
-	&:before 
-		left: -24px
-		-webkit-animation-delay: -0.32s 
-		-ms-animation-delay: -0.32s 
-		animation-delay: -0.32s 
-	&:after 
-		left: 24px 
+// 	&:before, &:after 
+// 		background-color: #fff 
+// 		-webkit-animation: bar1 1s infinite ease-out 
+// 		-ms-animation: bar1 1s infinite ease-out 
+// 		animation: bar1 1s infinite ease-out 
+// 		width: 16px 
+// 		height: 84px 
+// 		position: absolute 
+// 		top: 0 
+// 		content: ''
+// 	&:before 
+// 		left: -24px
+// 		-webkit-animation-delay: -0.32s 
+// 		-ms-animation-delay: -0.32s 
+// 		animation-delay: -0.32s 
+// 	&:after 
+// 		left: 24px 
 
 		
 

@@ -467,7 +467,7 @@ try {
         $.fn.loader = function(action, loadname, options) {
             if (action == 'show') {
                 var settings = $.extend({
-                    time: '6300',
+                    time: '3300',
                     color: '#4F4D4D',
                     background: '#FFFFFF',
                     dfloadercolor: '#4F4D4D'
@@ -504,8 +504,9 @@ try {
                     $(this).append('<div class="cr loader screen balls"></div>');
                     $(this).append('<span id="crloadOverLay" class="load-overlay"></span>');
 
-                    let loader = $('body').find('div.cr.loader.screen-balls');
+                    let loader = $('body').find('div.cr.loader.screen.balls');
                     let overlay = $('body').find('span.load-overlay');
+
                     overlay.css({
                         'background': settings.background
                     })
@@ -521,6 +522,30 @@ try {
                         loader.remove();
                         $('#crloadOverLay').remove();
                     }, (settings.time * 1 + 350));
+
+                } else if (loadname == 'bouncy'){
+                    $(this).append('<div class="cr loader screen bouncy"></div>')
+                    $(this).append('<span class="load-overlay"></span>'); 
+
+                    let loader = $(this).find('cr.loader.screen.bouncy');
+                    let overlay = $(this).find('span.load-overlay');
+                    overlay.css({
+                        'background': settings.background
+                    })
+
+                    setTimeout(function() {
+                        loader.css({
+                            'transition': "opacity 0.3s ease-out",
+                            'opacity': "0"
+                        })
+                        overlay.addClass('hide');
+                    }, settings.time);
+
+                    setTimeout(function() {
+                        loader.remove();
+                        $('#crloadOverLay').remove();
+                    }, (settings.time * 1 + 350));
+
                 } else if (loadname == 'pulse') {
                     $(this).append('<div id="crLoadPulse" class="cr loader screen pulse"></div>');
                     $(this).append('<span id="crloadOverLay" class="load-overlay"></span');
