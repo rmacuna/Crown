@@ -2,11 +2,10 @@ div.cr.loader.circular
 	position: relative 
 	border: 5px solid lighten($gray, 25)
 	border-top: 5px solid lighten($black, 30)
-
 	width: 30px 
 	height: 30px 
 	border-radius: 50%
-	
+
 	margin: 2px 0 2px 0
 	background: none 
 	-webkit-transition: transform 0.3s ease-out 
@@ -16,11 +15,41 @@ div.cr.loader.circular
 	-webkit-animation: transform 0.3s ease-out
 	-ms-transition: transform 0.3s ease-out
 	animation: spin 2s linear infinite
+div.cr.loader.circular.blue 
+	border-top-color: $blue !important
+	border-color: lighten($blue, 30)
+div.cr.loader.circular.red 
+	border-top-color: $red !important
+	border-color: lighten($red, 30)
+div.cr.loader.circular.green 
+	border-top-color: $green !important
+	border-color: lighten($green, 50)
+div.cr.loader.circular.teal 
+	border-top-color: $teal !important
+	border-color: lighten($teal, 60)
+div.cr.loader.circular.amber 
+	border-top-color: $amber !important
+	border-color: lighten($amber, 30)
+div.cr.loader.circular.yellow 
+	border-top-color: $yellow !important
+	border-color: lighten($yellow, 30)
+div.cr.loader.circular.purple 
+	border-top-color: $purple !important
+	border-color: lighten($purple, 50)
+div.cr.loader.circular.indigo 
+	border-top-color: $indigo !important
+	border-color: lighten($indigo, 40)
+div.cr.loader.circular.gold 
+	border-top-color: $gold !important
+	border-color: lighten($gold, 40)
+div.cr.loader.circular.pink 
+	border-top-color: $pink !important
+	border-color: lighten($pink, 40)
 
 div.cr.loader.screen.circular 
 	position: fixed 
 	top: 40% 
-	left: 48% 
+	left: 47% 
 	border: 5px solid rgba($gray, .1)
 	z-index: 201
 
@@ -97,16 +126,18 @@ div.cr.loader.screen.pulse
 	-ms-animation: pulse 1s infinite ease-in-out
 	animation: pulse 1s infinite ease-in-out 
 
+
 div.cr.loader.screen.bouncy
 	width: 40px
 	height: 40px 
 	box-sizing: border-box 
 	border-radius: 50% 
-	background: rgba($red, .8)
+	background: $red
 
 	position: fixed 
 	top: 40% 
-	left: 46%
+	left: 47.5%
+
 	
 	z-index: 201
 	-webkit-transition: background 0.3s ease-out, transform 0.3s ease-out, opacity 0.3s ease-out
@@ -117,6 +148,20 @@ div.cr.loader.screen.bouncy
 	-ms-transition: bouncy 2s  infinite  ease-in-out
 	animation: bouncy 2s  infinite  ease-in-out
 
+div.load-shadow 
+	position: fixed 
+	height: 9px
+	z-index: 201 !important 
+	top: 47% 
+	left: 47.4% 
+	background: $black 
+	width: 42px
+	border-radius: 50% 
+	filter: blur(5px)
+	animation: growShadow 2s infinite ease-in-out
+
+
+
 div.cr.loader.screen.bouncy.fast 
 	-webkit-animation: bouncy 1s  infinite  ease-in-out
 	-ms-transition: bouncy 1s  infinite  ease-in-out
@@ -125,8 +170,6 @@ div.cr.loader.screen.bouncy.s-fast
 	-webkit-animation: bouncy 0.5s  infinite  ease-in-out
 	-ms-transition: bouncy 0.5s  infinite  ease-in-out
 	animation: bouncy 0.5s  infinite  ease-in-out
-
-
 
 div.cr.loader.screen.dots
 	width: 80px 
@@ -174,8 +217,6 @@ span.load-overlay
 span.load-overlay.hide 
 	opacity: 0 
 
-
-
 div.cr.loader.screen.balls 
 	position: fixed 
 	z-index: 201 
@@ -213,49 +254,80 @@ div.cr.loader.screen.balls
 		background: #2196F3
 		box-shadow: 30px 0 0 #4CAF50
 
-// div.cr.loader.screen.bars
-// 	color: $white 
-// 	margin: 0 auto 
-// 	position: fixed 
-// 	z-index: 201 
-// 	left: 46% 
-// 	top: 40% 
-// 	-webkit-transition: opacity 0.3s ease-out 
-// 	-ms-transition: opacity 0.3s ease-out
-// 	transition: opacity 0.3s ease-out
+div.cr.loader.screen 
+	@media screen and (max-width: 471px)
+		margin-left: -20px !important 
 
-// 	-webkit-transform: translateZ(0)
-// 	-ms-transform: translateZ(0)
-// 	transform: translateZ(0)
 
-// 	-webkit-animation-delay: -0.16s
-// 	-ms-animation-delay: -0.16s
-// 	animation-delay: -0.16s
-// 	font-size: 12px
+div.cr.linear.loader 
+	width: 280px 
+	position: relative
+	margin: 4px 2px 2px 0
+	height: 6px 
+	border-radius: 4px
+	box-sizing: border-box 
+	background: lighten($gray, 32)
+	color: lighten($black, 30)
+	overflow: hidden
+	div.progress
+		box-sizing: border-box 
+		width: 0% 
+		position: absolute
+		max-width: 100% 
+		overflow: hidden
+		border-radius: 4px 
+		height: 100% 
+		background: lighten($black, 30)
+		-ms-transition: width 0.8s ease-out, left 0.4s ease-out
+		-webkit-transition: width 0.8s ease-out, left 0.4s ease-out
+		transition: width 0.8s ease-out, left 0.4s ease-out
 
-// 	-webkit-animation: bar1 1s infinite ease-out 
-// 	-ms-animation: bar1 1s infinite ease-out 
-// 	animation: bar1 1s infinite ease-out 
+	div.progress.indeterminate 
+		animation: charging1 1.1s infinite ease-in-out
 
-// 	&:before, &:after 
-// 		background-color: #fff 
-// 		-webkit-animation: bar1 1s infinite ease-out 
-// 		-ms-animation: bar1 1s infinite ease-out 
-// 		animation: bar1 1s infinite ease-out 
-// 		width: 16px 
-// 		height: 84px 
-// 		position: absolute 
-// 		top: 0 
-// 		content: ''
-// 	&:before 
-// 		left: -24px
-// 		-webkit-animation-delay: -0.32s 
-// 		-ms-animation-delay: -0.32s 
-// 		animation-delay: -0.32s 
-// 	&:after 
-// 		left: 24px 
 
-		
+div.cr.linear.loader.adaptive
+	width: 100% 
+
+div.cr.linear.loader.blue 
+	background: lighten($blue, 30)
+	div.progress
+		background: $blue 
+div.cr.linear.loader.red 
+	background: lighten($red, 30)
+	div.progress
+		background: $red
+div.cr.linear.loader.green 
+	background: lighten($green, 50)
+	div.progress
+		background: $green
+div.cr.linear.loader.yellow 
+	background: lighten($yellow, 30)
+	div.progress
+		background: $yellow
+div.cr.linear.loader.teal 
+	background: lighten($teal, 60)
+	div.progress
+		background: $teal
+div.cr.linear.loader.purple 
+	background: lighten($purple, 50)
+	div.progress
+		background: $purple
+div.cr.linear.loader.pink 
+	background: lighten($pink, 30)
+	div.progress
+		background: $pink 
+div.cr.linear.loader.gold 
+	background: lighten($gold, 35)
+	div.progress
+		background: $gold 
+div.cr.linear.loader.amber 
+	background: lighten($amber, 30)
+	div.progress
+		background: $amber 
+div.cr.linear.loader.black 
+	div.progress
+		background: $black 
 
 
 

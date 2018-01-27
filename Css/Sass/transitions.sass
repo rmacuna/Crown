@@ -199,49 +199,98 @@
 
 @keyframes bouncy 
     0% 
-        transform: scale(1)
-        background: rgba($red, .8)
-    50% 
-        transform: scale(0.5)
-        background: rgba($blue, .5)
+        transform: scale(1) translateY(0)
+        background: $red
 
-    75% 
-        transform: scale(1)
-        background: rgba($blue, .8)
+    50% 
+        transform: scale(1) translateY(-90px)
+        background: $yellow
 
     100% 
-        transform: scale(1)
+        transform: scale(1) translateY(0)
+        background: $red 
 
 @-webkit-keyframes bouncy 
     0% 
-        transform: scale(1)
-        background: rgba($red, .8)
-    50% 
-        transform: scale(0.5)
-        background: rgba($blue, .5)
+        transform: scale(1) translateY(0)
+        background: $red
 
-    75% 
-        transform: scale(1)
-        background: rgba($blue, .8)
+    50% 
+        transform: scale(1) translateY(-90px)
+        background: $yellow
 
     100% 
-        transform: scale(1)
+        transform: scale(1) translateY(0)
+        background: $red 
 
 @-ms-keyframes bouncy 
     0% 
+        transform: scale(1) translateY(0)
+        background: $red
+
+    50% 
+        transform: scale(1) translateY(-90px)
+        background: $yellow
+
+    100% 
+        transform: scale(1) translateY(0)
+        background: $red 
+
+@-webkit-keyframes growShadow
+    0% 
         transform: scale(1)
-        background: rgba($red, .8)
     50% 
         transform: scale(0.5)
-        background: rgba($blue, .5)
-
-    75% 
+    100% 
         transform: scale(1)
-        background: rgba($blue, .8)
-
+        
+@-ms-keyframes growShadow
+    0% 
+        transform: scale(1)
+    50% 
+        transform: scale(0.5)
     100% 
         transform: scale(1)
 
+@keyframes growShadow 
+    0% 
+        transform: scale(1)
+    50% 
+        transform: scale(0.5)
+    100% 
+        transform: scale(1)
+
+@-webkit-keyframes
+    0% 
+        left: -100% 
+        width: 100%
+    50% 
+        transform: scaleX(0.5)
+    100% 
+        transform: scaleX(0.5)
+        left: 100%
+        width: 100% 
+@-ms-keyframes 
+    0% 
+        left: -100% 
+        width: 100%
+    50% 
+        transform: scaleX(0.5)
+    100% 
+        transform: scaleX(0.5)
+        left: 100%
+        width: 100%
+         
+@keyframes charging1
+    0% 
+        left: -100% 
+        width: 100%
+    50% 
+        transform: scaleX(0.5)
+    100% 
+        transform: scaleX(0.5)
+        left: 100%
+        width: 100% 
 
 @-webkit-keyframes pulse 
     0% 

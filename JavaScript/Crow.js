@@ -336,12 +336,7 @@ jQuery(function($) {
             left: x + 'px'
         }).addClass("ripple-active");
     })
-
 })
-
-
-
-
 var statePressed = false;
 var overlay;
 var iclose;
@@ -472,7 +467,6 @@ try {
                     background: '#FFFFFF',
                     dfloadercolor: '#4F4D4D'
                 }, options);
-
                 if (loadname == 'dots') {
                     $(this).append('<div class="cr loader screen dots">' +
                         '<div class="dot d1"></div>' +
@@ -497,7 +491,7 @@ try {
                     }, settings.time);
 
                     setTimeout(function() {
-                        loader.remove();
+                        $('div.cr.loader.screen').remove();
                         $('#crloadOverLay').remove();
                     }, (settings.time * 1 + 350));
                 } else if (loadname == 'balls') {
@@ -522,13 +516,13 @@ try {
                         loader.remove();
                         $('#crloadOverLay').remove();
                     }, (settings.time * 1 + 350));
-
-                } else if (loadname == 'bouncy'){
-                    $(this).append('<div class="cr loader screen bouncy"></div>')
-                    $(this).append('<span class="load-overlay"></span>'); 
-
-                    let loader = $(this).find('cr.loader.screen.bouncy');
+                } else if (loadname == 'bouncy') {
+                    $(this).append('<div class="cr loader screen bouncy">'+'</div>')
+                    $(this).append('<span class="load-overlay"></span>');
+                    $(this).append('<div class="load-shadow"></div>');
+                    let loader = $(this).find('.cr.loader.screen.bouncy');
                     let overlay = $(this).find('span.load-overlay');
+                    let shadow = $(this).find('div.load-shadow');
                     overlay.css({
                         'background': settings.background
                     })
@@ -538,14 +532,18 @@ try {
                             'transition': "opacity 0.3s ease-out",
                             'opacity': "0"
                         })
+                        shadow.css({
+                            'transition': "opacity 0.3s ease-out",
+                            'opacity': "0"             
+                        })
                         overlay.addClass('hide');
                     }, settings.time);
 
                     setTimeout(function() {
                         loader.remove();
-                        $('#crloadOverLay').remove();
+                        shadow.remove();
+                        overlay.remove();
                     }, (settings.time * 1 + 350));
-
                 } else if (loadname == 'pulse') {
                     $(this).append('<div id="crLoadPulse" class="cr loader screen pulse"></div>');
                     $(this).append('<span id="crloadOverLay" class="load-overlay"></span');
@@ -733,13 +731,20 @@ try {
                 })
             }
         }
-
     }(jQuery));
 } catch (e) {}
 
 window.onclick = function(e) {
     if (event.target == overlay) {
-        $('.cr.modal').removeClass('opened');
+        $('.cr.modal').css({
+            'transition': "transform 0.3s ease-out, opacity 0.3s ease-out",
+            'transform': "scale(0) translateY(-580px)",
+            'opacity': "0"
+        })
+        setTimeout(function() {
+            $('.cr.modal').removeAttr('style');
+            $('.cr.modal').removeClass('opened');
+        }, 310);
         overlay.className += ' hide'
 
         setTimeout(() => {
@@ -747,7 +752,14 @@ window.onclick = function(e) {
         }, 310);
     }
     if (event.target == iclose) {
-        $('.cr.modal').removeClass('opened');
+        $('.cr.modal').css({
+            'transition': "transform 0.3s ease-out",
+            'transform': "scale(0) translateY(-580px)"
+        })
+        setTimeout(function() {
+            $('.cr.modal').removeAttr('style');
+            $('.cr.modal').removeClass('opened');
+        }, 310);
         overlay.className += ' hide'
 
         setTimeout(() => {
