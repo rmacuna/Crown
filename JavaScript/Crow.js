@@ -731,6 +731,21 @@ try {
                 })
             }
         }
+
+        $.fn.progress = function (action, value, time) {
+            if (action == 'increase') {
+                console.log($(this))
+                $(this).find('div').css({
+                    'width': value + "%"
+                })
+            }
+            if (action == 'interval') {
+                $(this).find('div').css({
+                    'transition': "width " + time +"s" + " ease-out",
+                    'width': value + "%"
+                })
+            }
+        }
     }(jQuery));
 } catch (e) {}
 

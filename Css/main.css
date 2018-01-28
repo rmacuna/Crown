@@ -5,8 +5,8 @@ div.cr.card {
   transition: box-shadow 0.3s;
   height: auto;
   width: 25rem;
-  border-radius: 2px;
-  margin: 10px auto;
+  border-radius: 4px;
+  margin: 5px 5px 5px 5px;
   min-width: 12rem;
   font-size: 16px;
   z-index: 1; }
@@ -14,10 +14,11 @@ div.cr.card {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2); }
   div.cr.card .card-head {
     text-align: center;
-    border-top-right-radius: 2px;
-    border-top-left-radius: 2px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
     border-bottom-right-radius: none;
     border-bottom-left-radius: none;
+    box-sizing: border-box;
     height: auto;
     font-weight: bold;
     position: relative;
@@ -81,7 +82,8 @@ div.cr.card {
   div.cr.card .card-body {
     height: auto;
     overflow: auto;
-    position: static;
+    box-sizing: border-box;
+    position: relative;
     padding: 15px 15px 15px 15px;
     font-size: 16px;
     background: #fff; }
@@ -113,31 +115,20 @@ div.cr.card {
     background: #FF9800;
     color: #fff; }
   div.cr.card .card-footer {
-    position: static;
-    top: auto;
-    left: 0;
-    right: 0;
-    bottom: 4px;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
     height: auto;
-    padding: 10px 8px;
-    text-align: center;
-    align-content: center;
+    padding: 10px 5px 10px 5px;
     font-weight: bold;
     color: #4d4d4d;
     font-size: 16px;
     border-top-right-radius: none;
     border-top-left-radius: none;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
     color: #4d4d4d;
     overflow: hidden; }
-    div.cr.card .card-footer div.cr.button {
-      box-sizing: border-box;
-      text-align: center !important;
-      align-self: center !important; }
-    div.cr.card .card-footer button.cr.button {
-      text-align: center !important;
-      align-self: center !important; }
   div.cr.card .card-footer.blue {
     background: #2196F3;
     color: #fff; }
@@ -172,8 +163,8 @@ div.cr.card {
 div.cr.card.no-footer .card-footer {
   display: none !important; }
 div.cr.card.no-footer .card-body {
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   padding-bottom: 25px !important; }
 
 .noraise {
@@ -206,8 +197,8 @@ div.cr.card.dark-bg .card-footer {
 
 div.cake {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   transform: scale(0.3);
   box-shadow: 0 4px 8px rgba(158, 158, 158, 0.6);
   border-radius: 50%;
@@ -217,13 +208,16 @@ div.cake {
   z-index: 2;
   background: #fefefe;
   background: #2196F3; }
+  div.cake:active:hover {
+    transform: scale(10); }
+    div.cake:active:hover div.content {
+      opacity: 0; }
   div.cake div.content {
     color: #fff;
     position: relative;
     opacity: 0;
     display: flex;
     align-self: center;
-    padding: 30% 0;
     transition: transform 0.5s ease-out, opacity 0.5s ease-out; }
   div.cake:hover {
     transform: scale(1);
@@ -2190,7 +2184,7 @@ div.cr.linear.loader {
     position: absolute;
     max-width: 100%;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 8px;
     height: 100%;
     background: #4d4d4d;
     -ms-transition: width 0.8s ease-out, left 0.4s ease-out;
@@ -3151,10 +3145,15 @@ button.cr.button {
   border: none;
   line-height: 2rem;
   overflow: hidden; }
+  button.cr.button i {
+    transition: color 0.3s ease-out; }
 
 div.cr.button {
   overflow: hidden;
-  min-width: 30px; }
+  min-width: 30px;
+  box-sizing: border-box; }
+  div.cr.button i {
+    transition: color 0.3s ease-out; }
 
 .cr.button {
   background: #F5F5F5;
@@ -3177,6 +3176,18 @@ div.cr.button {
   cursor: pointer;
   height: 2.2rem; }
 
+.cr.button.icon {
+  height: auto; }
+  .cr.button.icon div.i-label {
+    position: relative;
+    float: right;
+    display: inline-block;
+    white-space: nowrap;
+    transform: translateY(5px); }
+    .cr.button.icon div.i-label i {
+      position: relative;
+      right: -10px; }
+
 .cr.button.plain {
   border-radius: 0 !important; }
 
@@ -3184,7 +3195,10 @@ div.cr.button {
   border-radius: 50px; }
 
 .cr.button {
-  transition: background-color 0.3s; }
+  -ms-transition: background 0.3s ease-out, box-shadow 0.3s ease-out !important;
+  -moz-transition: background 0.3s ease-out, box-shadow 0.3s ease-out !important;
+  -webkit-transition: background 0.3s ease-out, box-shadow 0.3s ease-out !important;
+  transition: background 0.3s, box-shadow 0.3s ease-out !important; }
   .cr.button:active {
     background: rgba(0, 0, 0, 0.2); }
 
@@ -3210,19 +3224,13 @@ div.cr.button {
   -webkit-transition: box-shadow 0.3s;
   -moz-transition: box-shadow 0.3s;
   -o-transition: box-shadow 0.3s;
-  transition: box-shadow 0.3s;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
 
 .cr.button.raised:active {
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.4); }
 
-.cr.button.hoverable {
-  -o-transition: box-shadow 0.3s;
-  -moz-transition: background 0.3s, box-shadow 0.2s;
-  -webkit-transition: background 0.3s, box-shadow 0.2s;
-  transition: background 0.3s, box-shadow 0.3s; }
-  .cr.button.hoverable:hover {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.3); }
+.cr.button.hoverable:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3); }
 
 /* --------------------------------------- OUTLINED BUTTONS -------------------------------------------------- */
 .cr.button.outline {
@@ -3504,8 +3512,7 @@ div.cr.button {
 /*-------------------------------SIMPLE BUTTON------------------------------------ */
 .cr.simple.button {
   color: #1a1a1a;
-  background: none !important;
-  transition: background 0.3s !important; }
+  background: none !important; }
   .cr.simple.button .ripple {
     background: #9E9E9E; }
   .cr.simple.button:active {
@@ -3534,8 +3541,7 @@ div.cr.button {
     background: #bf9b30; }
 
 .cr.simple.button.indigo {
-  color: #3F51B5;
-  transition: background-color 0.3s; }
+  color: #3F51B5; }
   .cr.simple.button.indigo .ripple {
     background: #3F51B5; }
 
@@ -3671,12 +3677,17 @@ div.cr.button.pulse, button.cr.button.pulse {
   height: 0;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.5);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
   transform: scale(0);
   position: absolute;
   opacity: 1; }
 
 .ripple-active {
-  animation: ripple-anim 0.4s linear; }
+  -webkit-animation: ripple-anim 0.5s linear;
+  -ms-animation: ripple-anim 0.5s linear;
+  -moz-animation: ripple-anim 0.5s linear;
+  animation: ripple-anim 0.5s linear; }
 
 @-o-keyframes ripple-anim {
   100% {

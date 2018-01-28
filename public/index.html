@@ -21,7 +21,7 @@
 
 <body>
     <div class="cr container">
-        <button onclick="triggerModal();" class="cr button  float pulse">
+        <button onclick="triggerModal();" class="cr button float pulse">
             <i class="material-icons">add</i>
         </button>
         <div class="cr modal shadow medium ">
@@ -54,7 +54,18 @@
                 </div>
             </div>
         </div>
-        
+        <button class="cr button outline large rounded big red pulse icon ">
+            <div class="i-label">
+                <i class="material-icons">favorite</i>
+            </div>
+            Like this account
+        </button>
+        <div class="cr button  medium big hoverable indigo pulse icon ">
+            <div class="i-label">
+                <i class="material-icons">input</i>
+            </div>
+            Import files and media 
+        </div>
         <!--  <div class="row">
             <div class="col-xs-12 col-md-6">
                 <ul id="list1" class="cr list content tiny">
@@ -109,10 +120,10 @@
  -->
         <!-- <div class="cr loader screen-bouncy "></div> -->
 
-        <div class="cr loader circular pink"></div>
-        <div id="loadbar" class="cr linear loader adaptive pink">
-            <div  class="progress indeterminate"></div>
-        </div>
+     <!--    <div class="cr loader circular red"></div>
+        <div id="loadbar" class="cr linear loader adaptive red">
+            <div class="progress determinate"></div>
+        </div> -->
     </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -143,7 +154,10 @@
         //     dfloadercolor: '#fff'
         // });
 
-        //Create function of progress up...        
+
+        // //Create function of progress up...   
+        // var random = Math.random() * (100 - 10) + 10;
+        // $("#loadbar").progress('interval', random, 5);  el intervalo se da en segundos
     }
     </script>
 </body>
