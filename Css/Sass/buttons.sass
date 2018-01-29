@@ -6,12 +6,18 @@ button.cr.button
 	line-height: 2.0rem
 	overflow: hidden
 	i 
+		-webkit-transition: color 0.3s ease-out 
+		-moz-transition: color 0.3s ease-out 
+		-o-transition: color 0.3s ease-out 
 		transition: color 0.3s ease-out 
 div.cr.button 
 	overflow: hidden 
 	min-width: 30px
 	box-sizing: border-box
 	i 
+		-webkit-transition: color 0.3s ease-out 
+		-moz-transition: color 0.3s ease-out 
+		-o-transition: color 0.3s ease-out 
 		transition: color 0.3s ease-out
 	
 .cr.button
@@ -49,14 +55,12 @@ div.cr.button
 		float: right
 		display: inline-block
 		white-space: nowrap 
+		-webkit-transform: translateY(5px)
+		-ms-transform: translateY(5px)
 		transform: translateY(5px)
 		i 
 			position: relative 
 			right: -10px
-
-
-
-
 
 .cr.button.plain
 	border-radius: 0 !important
@@ -461,6 +465,9 @@ button.cr.button.float
 	border-radius: 50px
 	text-align: center
 	z-index: 190
+	-o-transition:  background-color 0.3s, box-shadow 0.3s 
+	-moz-transition:  background-color 0.3s, box-shadow 0.3s 
+	-webkit-transition: background-color 0.3s, box-shadow 0.3s 
 	transition: background-color 0.3s, box-shadow 0.3s 
 	box-shadow: 0 4px 8px $gray
 	bottom: 4%
@@ -475,6 +482,7 @@ button.cr.button.float
 		margin-top: 0 auto
 		padding: 2px
 		bottom: 0 
+		-webkit-transform: translate(-50%, -50%)
 		transform: translate(-50%, -50%)
 
 	&:active 
@@ -565,7 +573,8 @@ div.cr.button.pulse, button.cr.button.pulse
 	background: rgba($white, .5)
 
 	-webkit-transform: scale(0)
-	-ms-transform: scale(0)
+	-o-transform: scale(0)
+	-moz-transform: scale(0)
 	transform: scale(0)
 
 	position: absolute 
@@ -580,19 +589,23 @@ div.cr.button.pulse, button.cr.button.pulse
 
 @-o-keyframes ripple-anim
 	100%
+		-webkit-transform: scale(2)
 		transform: scale(2)
 		opacity: 0 
 @-webkit-keyframes ripple-anim
 	100% 
+		-webkit-transform: scale(2)
 		transform: scale(2)
 		opacity: 0 
 
 @-ms-keyframes ripple-anim
 	100%
+		-webkit-transform: scale(2)
 		transform: scale(2)
 		opacity: 0 
 
 @keyframes ripple-anim
 	100%
+		-webkit-transform: scale(2)
 		transform: scale(2)
 		opacity: 0 

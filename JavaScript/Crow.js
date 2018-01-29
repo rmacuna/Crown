@@ -324,7 +324,7 @@ jQuery(function($) {
         } else {
             btn_width = btn_height;
         }
-
+        
         let x = e.pageX - posX - btn_width / 2;
         let y = e.pageY - posY - btn_height / 2;
 

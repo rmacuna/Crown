@@ -905,6 +905,9 @@ ul.cr.list {
     list-style-type: none;
     border-top: 0;
     box-shadow: 0.5px 0.5px 0.5px #dedede, -0.5px 0.5px 0.5px #dedede;
+    -webkit-transition: background 0.3s ease-out, color 0.3s ease-out;
+    -moz-transition: background 0.3s ease-out, color 0.3s ease-out;
+    -o-transition: background 0.3s ease-out, color 0.3s ease-out;
     transition: background 0.3s ease-out, color 0.3s ease-out; }
     ul.cr.list li:first-child {
       border-top: 1px solid #dedede !important;
@@ -924,6 +927,9 @@ ul.cr.list {
       cursor: pointer;
       display: inline;
       z-index: 2;
+      -webkit-transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+      -moz-transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+      -o-transition: opacity 0.3s ease-out, transform 0.3s ease-out;
       transition: opacity 0.3s ease-out, transform 0.3s ease-out;
       right: 0;
       top: 30%; }
@@ -998,6 +1004,9 @@ ul.cr.list.content li.grow {
     top: 2% !important; }
   ul.cr.list.content li.grow > i {
     opacity: 0;
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
     transform: rotate(-180deg); }
 ul.cr.list.content div.li.info {
   display: none;
@@ -1012,7 +1021,13 @@ ul.cr.list.content div.li.info.show {
   height: auto;
   opacity: 1;
   display: block;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
+  -webkit-animation: growAppear 0.4s ease-in-out;
+  -moz-animation: growAppear 0.4s ease-in-out;
+  -o-animation: growAppear 0.4s ease-in-out;
   animation: growAppear 0.4s ease-in-out; }
 
 ul.cr.list.adaptive {
@@ -1497,6 +1512,9 @@ div.cr.modal {
   display: none;
   z-index: 200;
   overflow: hidden;
+  -webkit-transition: transform 0.4s ease-out, opacity 0.4s ease-out, border-color 0.6s ease-out;
+  -moz-transition: transform 0.4s ease-out, opacity 0.4s ease-out, border-color 0.6s ease-out;
+  -o-transition: transform 0.4s ease-out, opacity 0.4s ease-out, border-color 0.6s ease-out;
   transition: transform 0.4s ease-out, opacity 0.4s ease-out, border-color 0.6s ease-out;
   box-shadow: 1px 1px 1px 1px rgba(158, 158, 158, 0.3), -1px 1px 1px 1px rgba(158, 158, 158, 0.3);
   background: #fcfcfc;
@@ -1673,6 +1691,9 @@ div.cr.modal {
     color: #fff; }
 
 div.cr.modal.opened {
+  -webkit-animation: appear 0.4s ease-in-out !important;
+  -moz-animation: appear 0.4s ease-in-out !important;
+  -o-animation: appear 0.4s ease-in-out !important;
   animation: appear 0.4s ease-in-out !important;
   display: block; }
 
@@ -1690,7 +1711,8 @@ span.overlay {
   opacity: 1;
   background: rgba(0, 0, 0, 0.2);
   -webkit-animation: fadeIn 0.4s ease-in-out;
-  -ms-animation: fadeIn 0.4s ease-in-out;
+  -moz-animation: fadeIn 0.4s ease-in-out;
+  -o-animation: fadeIn 0.4s ease-in-out;
   animation: fadeIn 0.4s ease-in-out; }
 
 span.overlay.hide {
@@ -2071,6 +2093,9 @@ div.load-shadow {
   width: 42px;
   border-radius: 50%;
   filter: blur(5px);
+  -webkit-animation: growShadow 2s infinite ease-in-out;
+  -moz-animation: growShadow 2s infinite ease-in-out;
+  -o-animation: growShadow 2s infinite ease-in-out;
   animation: growShadow 2s infinite ease-in-out; }
 
 div.cr.loader.screen.bouncy.fast {
@@ -2094,6 +2119,9 @@ div.cr.loader.screen.dots {
   z-index: 201;
   left: 46%;
   top: 40%;
+  -webkit-animation: fadeIn 0.3s ease-out;
+  -moz-animation: fadeIn 0.3s ease-out;
+  -o-animation: fadeIn 0.3s ease-out;
   animation: fadeIn 0.3s ease-out; }
   div.cr.loader.screen.dots div.dot {
     width: 20px;
@@ -2255,7 +2283,7 @@ div.cr.linear.loader.black div.progress {
   100% {
     opacity: 1 !important;
     transform: scale(1); } }
-@-ms-keyframes appear {
+@-o-keyframes appear {
   0% {
     display: none;
     opacity: 0; }
@@ -2288,7 +2316,7 @@ div.cr.linear.loader.black div.progress {
   100% {
     opacity: 1 !important;
     transform: scale(1); } }
-@-ms-keyframes fadeIn {
+@-o-keyframes fadeIn {
   0% {
     opacity: 0; }
   100% {
@@ -2308,7 +2336,7 @@ div.cr.linear.loader.black div.progress {
     opacity: 0; }
   100% {
     opacity: 1 !important; } }
-@-ms-keyframes growAppear {
+@-moz-keyframes growAppear {
   from {
     opacity: 0.1;
     transform: scale(0);
@@ -2338,7 +2366,7 @@ div.cr.linear.loader.black div.progress {
     display: block;
     height: auto;
     transform: scale(1); } }
-@-ms-keyframes grow {
+@-moz-keyframes grow {
   from {
     z-index: 0;
     transform: scale(1); }
@@ -2364,7 +2392,7 @@ div.cr.linear.loader.black div.progress {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
-@-ms-keyframes spin {
+@-moz-keyframes spin {
   from {
     transform: rotate(0deg); }
   to {
@@ -2385,7 +2413,7 @@ div.cr.linear.loader.black div.progress {
   100% {
     border-top: 5px solid #00C853;
     transform: rotate(360deg); } }
-@-ms-keyframes spinColor {
+@-moz-keyframes spinColor {
   0% {
     border-top: 5px solid #00C853;
     transform: rotate(0deg); }
@@ -2427,7 +2455,7 @@ div.cr.linear.loader.black div.progress {
   100% {
     transform: scale(1) translateY(0);
     background: #F44336; } }
-@-ms-keyframes bouncy {
+@-moz-keyframes bouncy {
   0% {
     transform: scale(1) translateY(0);
     background: #F44336; }
@@ -2444,7 +2472,7 @@ div.cr.linear.loader.black div.progress {
     transform: scale(0.5); }
   100% {
     transform: scale(1); } }
-@-ms-keyframes growShadow {
+@-moz-keyframes growShadow {
   0% {
     transform: scale(1); }
   50% {
@@ -2468,7 +2496,7 @@ div.cr.linear.loader.black div.progress {
     transform: scaleX(0.5);
     left: 100%;
     width: 100%; } }
-@-ms-keyframes {
+@-moz-keyframes {
   0% {
     left: -100%;
     width: 100%; }
@@ -2496,7 +2524,7 @@ div.cr.linear.loader.black div.progress {
     -webkit-transform: scale(1.5);
     opacity: 0;
     transform: scale(1.5); } }
-@-ms-keyframes pulse {
+@-moz-keyframes pulse {
   0% {
     -webkit-transform: scale(0);
     transform: scale(0); }
@@ -2517,7 +2545,7 @@ div.cr.linear.loader.black div.progress {
     transform: scale(0); }
   40% {
     transform: scale(1); } }
-@-ms-keyframes dots {
+@-moz-keyframes dots {
   0%, 80%, 100% {
     transform: scale(0); }
   40% {
@@ -2553,7 +2581,7 @@ div.cr.linear.loader.black div.progress {
     -webkit-transform: rotate(720deg) scale(0.8);
     -moz-transform: rotate(720deg) scale(0.8);
     transform: rotate(720deg) scale(0.8); } }
-@-ms-keyframes spinRotate {
+@-o-keyframes spinRotate {
   0% {
     -webkit-transform: rotate(0deg) scale(0.8);
     -moz-transform: rotate(0deg) scale(0.8);
@@ -2589,7 +2617,7 @@ div.cr.linear.loader.black div.progress {
   100% {
     box-shadow: 30px 0 0 #f8b334;
     margin-bottom: 10px; } }
-@-ms-keyframes ball1 {
+@-moz-keyframes ball1 {
   0% {
     box-shadow: 30px 0 0 #f8b334; }
   50% {
@@ -2619,7 +2647,7 @@ div.cr.linear.loader.black div.progress {
   100% {
     box-shadow: 30px 0 0 #4CAF50;
     margin-top: 0; } }
-@-ms-keyframes ball2 {
+@-moz-keyframes ball2 {
   0% {
     box-shadow: 30px 0 0 #4CAF50; }
   50% {
@@ -2664,7 +2692,6 @@ div.cr.checkbox {
       -webkit-transition: background 0.3s ease-out, border-color 0.5s ease-out;
       -moz-transition: background 0.3s ease-out, border-color 0.5s ease-out;
       -o-transition: background 0.3s ease-out, border-color 0.5s ease-out;
-      -ms-transition: background 0.3s ease-out, border-color 0.5s ease-out;
       transition: background 0.3s ease-out, border-color 0.5s ease-out;
       top: 0;
       left: 0;
@@ -2676,6 +2703,9 @@ div.cr.checkbox {
       box-sizing: border-box;
       position: absolute;
       top: 0;
+      -webkit-transition: transform 0.5s ease-out;
+      -moz-transition: transform 0.5s ease-out;
+      -o-transition: transform 0.5s ease-out;
       transition: transform 0.5s ease-out; }
   div.cr.checkbox input[type="checkbox"] {
     margin-right: 10px;
@@ -2690,6 +2720,7 @@ div.cr.checkbox {
   div.cr.checkbox input[type="checkbox"]:checked + label:after {
     content: "";
     -webkit-transform: scale(-45deg);
+    -moz-transform: scale(-45deg);
     -ms-transform: scale(-45deg);
     transform: rotate(-45deg);
     top: 22%;
@@ -2717,7 +2748,12 @@ div.checkbox.pulse span.pulse:before {
   height: 20px;
   border-radius: 100%;
   background: rgba(233, 30, 99, 0.4);
+  -webkit-transition: transform 0.2s ease-out, opacity 0.4s ease-out;
+  -moz-transition: transform 0.2s ease-out, opacity 0.4s ease-out;
+  -o-transition: transform 0.2s ease-out, opacity 0.4s ease-out;
   transition: transform 0.2s ease-out, opacity 0.4s ease-out;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
   transform: scale(0); }
 div.checkbox.pulse input[type="checkbox"]:checked ~ span.pulse:before {
   transform: scale(3);
@@ -2730,6 +2766,7 @@ div.cr.checkbox.variant input[type="checkbox"] {
     transition: transform 0.3s ease-in-out;
     height: 10px;
     -webkit-transform: rotate(-405deg);
+    -moz-transform: rotate(-405deg);
     -ms-transform: rotate(-405deg);
     transform: rotate(-405deg);
     border-top: none !important;
@@ -2739,6 +2776,9 @@ div.cr.checkbox.variant input[type="checkbox"] {
     display: none !important; }
 div.cr.checkbox.variant input[type="checkbox"]:not(:checked) + label:before {
   border: 1.5px solid #9E9E9E;
+  -webkit-transition: transform 0.3s ease-out;
+  -moz-transition: transform 0.3s ease-out;
+  -o-transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out; }
 
 div.cr.radio-button {
@@ -2818,10 +2858,12 @@ div.cr.radio-button.pulse span:before {
   -ms-transform: scale(0);
   transform: scale(0);
   -webkit-transition: transform 0.4s ease-out, opacity 0.6s ease-out;
-  -ms-transition: transform 0.4s ease-out, opacity 0.6s ease-out;
+  -moz-transition: transform 0.4s ease-out, opacity 0.6s ease-out;
+  -o-transition: transform 0.4s ease-out, opacity 0.6s ease-out;
   transition: transform 0.4s ease-out, opacity 0.6s ease-out; }
 div.cr.radio-button.pulse input[type="radio"]:checked ~ span.pulse:before {
   -webkit-transform: scale(3);
+  -moz-transform: scale(3);
   -ms-transform: scale(3);
   transform: scale(3);
   opacity: 0; }
@@ -3146,6 +3188,9 @@ button.cr.button {
   line-height: 2rem;
   overflow: hidden; }
   button.cr.button i {
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
     transition: color 0.3s ease-out; }
 
 div.cr.button {
@@ -3153,6 +3198,9 @@ div.cr.button {
   min-width: 30px;
   box-sizing: border-box; }
   div.cr.button i {
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
     transition: color 0.3s ease-out; }
 
 .cr.button {
@@ -3183,6 +3231,8 @@ div.cr.button {
     float: right;
     display: inline-block;
     white-space: nowrap;
+    -webkit-transform: translateY(5px);
+    -ms-transform: translateY(5px);
     transform: translateY(5px); }
     .cr.button.icon div.i-label i {
       position: relative;
@@ -3583,6 +3633,9 @@ button.cr.button.float {
   border-radius: 50px;
   text-align: center;
   z-index: 190;
+  -o-transition: background-color 0.3s, box-shadow 0.3s;
+  -moz-transition: background-color 0.3s, box-shadow 0.3s;
+  -webkit-transition: background-color 0.3s, box-shadow 0.3s;
   transition: background-color 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 8px #9E9E9E;
   bottom: 4%; }
@@ -3597,6 +3650,7 @@ button.cr.button.float {
     margin-top: 0 auto;
     padding: 2px;
     bottom: 0;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
   button.cr.button.float:active {
     background-color: #c1134e;
@@ -3678,7 +3732,8 @@ div.cr.button.pulse, button.cr.button.pulse {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.5);
   -webkit-transform: scale(0);
-  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  -moz-transform: scale(0);
   transform: scale(0);
   position: absolute;
   opacity: 1; }
@@ -3691,18 +3746,22 @@ div.cr.button.pulse, button.cr.button.pulse {
 
 @-o-keyframes ripple-anim {
   100% {
+    -webkit-transform: scale(2);
     transform: scale(2);
     opacity: 0; } }
 @-webkit-keyframes ripple-anim {
   100% {
+    -webkit-transform: scale(2);
     transform: scale(2);
     opacity: 0; } }
 @-ms-keyframes ripple-anim {
   100% {
+    -webkit-transform: scale(2);
     transform: scale(2);
     opacity: 0; } }
 @keyframes ripple-anim {
   100% {
+    -webkit-transform: scale(2);
     transform: scale(2);
     opacity: 0; } }
 

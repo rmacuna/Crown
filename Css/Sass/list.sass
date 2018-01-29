@@ -39,6 +39,9 @@ ul.cr.list
 		list-style-type: none
 		border-top: 0
 		box-shadow: 0.5px 0.5px 0.5px  lighten($gray, 25), -0.5px 0.5px 0.5px  lighten($gray, 25)
+		-webkit-transition: background 0.3s ease-out, color 0.3s ease-out
+		-moz-transition: background 0.3s ease-out, color 0.3s ease-out
+		-o-transition: background 0.3s ease-out, color 0.3s ease-out
 		transition: background 0.3s ease-out, color 0.3s ease-out
 		&:hover 
 			background: darken($white, 5)
@@ -51,6 +54,9 @@ ul.cr.list
 			cursor: pointer 
 			display: inline
 			z-index: 2 
+			-webkit-transition: opacity 0.3s ease-out, transform 0.3s ease-out
+			-moz-transition: opacity 0.3s ease-out, transform 0.3s ease-out
+			-o-transition: opacity 0.3s ease-out, transform 0.3s ease-out
 			transition: opacity 0.3s ease-out, transform 0.3s ease-out
 			right: 0
 			top: 30%
@@ -134,7 +140,10 @@ ul.cr.list.content
 		> div.img-section
 			top: 2% !important 
 		> i 
-			opacity: 0 
+			opacity: 0
+			-webkit-transform: rotate(-180deg)
+			-ms-transform: rotate(-180deg)
+			-moz-transform: rotate(-180deg) 
 			transform: rotate(-180deg)
 
 	div.li.info
@@ -150,7 +159,14 @@ ul.cr.list.content
 		height: auto 
 		opacity: 1
 		display: block 
+		-webkit-transition: opacity 0.3s ease-out 
+		-moz-transition: opacity 0.3s ease-out 
+		-o-transition: opacity 0.3s ease-out
 		transition: opacity 0.3s ease-out
+		
+		-webkit-animation: growAppear 0.4s ease-in-out 
+		-moz-animation: growAppear 0.4s ease-in-out 
+		-o-animation: growAppear 0.4s ease-in-out 
 		animation: growAppear 0.4s ease-in-out 
 
 
