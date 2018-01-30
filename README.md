@@ -551,7 +551,8 @@ To get a shake effect add the class ``shake-1`` for a continue shake animation o
 By default, using the icon close automatically close and delete the tag from the DOM
 
   
-**Modals**
+**Modals** 
+
   To use modals put it them inside a cr container div, then add this code
 
 {% highlight HTML %}
@@ -589,7 +590,8 @@ By default, using the icon close automatically close and delete the tag from the
 
   Ass you see, modals uses a header a body and a footer in order to get a formated modal, you can use the modal without these three components, but i'ts not recommended. Here's another actions: 
 
-  * Add a close icon that works adding ``<i class="material-icons close">close</i> ``
+
+  * Add a close icon that works adding ``<i class="material-icons close">close</i>``
   * Modify the size of the modal by adding small, medium or big class
   * Add an scroll content by adding the class ``scroll-content``
   * Coloring the head, body and footer adding the color class 
@@ -629,8 +631,9 @@ badges are really usefull with lists to display a little description of an item,
 You can combine a list with checkboxes to get a checklist. 
 
 **li info** 
-  li info displays huge content hidden in the list, reducing the visual space used in the list title.
-  
+
+li info displays huge content hidden in the list, reducing the visual space used in the list title.
+
 {% highlight HTML %}
    <ul id="list1" class="cr list content tiny">
       <div class="ul-head">
@@ -662,6 +665,7 @@ You can combine a list with checkboxes to get a checklist.
                   <input type="checkbox" name="in1">
                   <label for="in1"></label>
                   <span class="pulse"></span>
+
               </div>
                <span class="cr badge yellow">Not seen</span>
            </li>
@@ -674,5 +678,23 @@ You can combine a list with checkboxes to get a checklist.
                <span class="cr badge yellow">Not seen</span>
            </li>
    </ul>
+{% endhighlight%}
+
+You can change the color of the list and li item with jQuery using this code 
+
+{% highlight JavaScript%}
+     $("#list1").color({
+          background: "#F44336",
+          font: "#FFFFFF",
+          header: "#F44336"
+     })
+{% endhighlight%}
+
+You can remove elements in the list giving the position of the li element, or remove the entire list with 
+no position specifiation. 
+
+
+{% highlight JavaScript%}
+     $("#list1").list('destroy', 4);
 {% endhighlight%}
 
