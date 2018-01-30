@@ -282,7 +282,7 @@ The message of error or positive action it will only be shown on validation numb
 
 {% highlight JavaScript %}
 
-$(#myInput).blur(function(){
+$("#myInput").blur(function(){
     if(conditionOfValidation == true ){
       $("#theIdOfSpanElement").valMessage('show', 'positive');
     }else{
@@ -292,7 +292,7 @@ $(#myInput).blur(function(){
   
 //Or Just Show Positive or Just show negative actions else hide the message
 
-$(#myInput).blur(function(){
+$("#myInput").blur(function(){
     if(conditionOfValidation == true ){
       $("#theIdOfSpanElement").valMessage('hide');
     }else{
@@ -600,10 +600,10 @@ By default, using the icon close automatically close and delete the tag from the
 {% highlight JavaScript %}
 
 //Show the modal
-  $(#yourModalID).modal('show');
+  $("#yourModalID").modal('show');
 
 //Hide the modal 
-  $(#yourModalID).modal('hide');
+  $("#yourModalID").modal('hide');
 
 {% endhighlight %}
 
@@ -619,5 +619,60 @@ By default, using the icon close automatically close and delete the tag from the
 </ul>
 {% endhighlight %}
 
-This is the basic list that you can use just to display a list of components. Customize by adding the color class, or make it complex adding an icon or image section. Or display hidden content creating a ``li info``.
+This is the basic list that you can use just to display a list of components. Customize by adding the color class, or make it complex adding an icon or image section, you can display hidden content creating a ``li info``.
+
+for sizing adding class ``adaptive`` to fit the container or  ``tiny`` for a smallest list 
+
+
+badges are really usefull with lists to display a little description of an item, providing an elegant design. 
+
+You can combine a list with checkboxes to get a checklist. 
+
+**li info** 
+  li info displays huge content hidden in the list, reducing the visual space used in the list title.
+  
+{% highlight HTML %}
+   <ul id="list1" class="cr list content tiny">
+      <div class="ul-head">
+          <i class="material-icons close">close</i> Best Movies
+      </div>
+          <li>
+              The avengers
+            <i class="material-icons close">close </i>
+            <div class="li info">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+          </li>
+          <li>Thor
+            <div class="cr checkbox variant blue pulse">
+                <input type="checkbox" name="in1">
+                <label for="in1"></label>
+                <span class="pulse"></span>
+                </div>
+          </li>
+          <li>Captain America: The winter solider
+              <div class="cr checkbox variant blue pulse">
+                  <input type="checkbox" name="in1">
+                  <label for="in1"></label>
+                  <span class="pulse"></span>
+               </div>
+          </li>
+          <li>Spiderman
+               <div class="cr checkbox variant blue pulse">
+                  <input type="checkbox" name="in1">
+                  <label for="in1"></label>
+                  <span class="pulse"></span>
+              </div>
+               <span class="cr badge yellow">Not seen</span>
+           </li>
+           <li>Spiderman
+               <div class="cr checkbox variant blue pulse">
+                   <input type="checkbox" name="in1">
+                   <label for="in1"></label>
+                   <span class="pulse"></span>
+               </div>
+               <span class="cr badge yellow">Not seen</span>
+           </li>
+   </ul>
+{% endhighlight%}
 
