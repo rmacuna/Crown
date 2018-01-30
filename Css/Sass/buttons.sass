@@ -5,10 +5,20 @@ button.cr.button
 	border: none
 	line-height: 2.0rem
 	overflow: hidden
-
+	i 
+		-webkit-transition: color 0.3s ease-out 
+		-moz-transition: color 0.3s ease-out 
+		-o-transition: color 0.3s ease-out 
+		transition: color 0.3s ease-out 
 div.cr.button 
 	overflow: hidden 
 	min-width: 30px
+	box-sizing: border-box
+	i 
+		-webkit-transition: color 0.3s ease-out 
+		-moz-transition: color 0.3s ease-out 
+		-o-transition: color 0.3s ease-out 
+		transition: color 0.3s ease-out
 	
 .cr.button
 	background: #F5F5F5
@@ -36,6 +46,22 @@ div.cr.button
 	cursor: pointer
 	height: 2.2rem
 
+
+
+.cr.button.icon
+	height: auto  
+	div.i-label 
+		position: relative
+		float: right
+		display: inline-block
+		white-space: nowrap 
+		-webkit-transform: translateY(5px)
+		-ms-transform: translateY(5px)
+		transform: translateY(5px)
+		i 
+			position: relative 
+			right: -10px
+
 .cr.button.plain
 	border-radius: 0 !important
 
@@ -43,7 +69,10 @@ div.cr.button
 	border-radius: $button-radius
 	
 .cr.button
-	transition: background-color 0.3s
+	-ms-transition: background 0.3s ease-out, box-shadow 0.3s ease-out !important 
+	-moz-transition: background 0.3s ease-out, box-shadow 0.3s ease-out !important 
+	-webkit-transition: background 0.3s ease-out, box-shadow 0.3s ease-out !important 
+	transition: background 0.3s, box-shadow 0.3s ease-out !important 
 	&:active
 		background: rgba(0,0,0,0.2)
 
@@ -69,7 +98,6 @@ div.cr.button
 	-webkit-transition: box-shadow 0.3s
 	-moz-transition: box-shadow 0.3s
 	-o-transition: box-shadow 0.3s
-	transition: box-shadow 0.3s
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
 
 .cr.button.raised
@@ -77,12 +105,8 @@ div.cr.button
 		box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0, 0.12), 0 5px 5px -3px rgba(0,0,0, 0.4)
 
 .cr.button.hoverable
-	-o-transition: box-shadow 0.3s
-	-moz-transition: background 0.3s, box-shadow 0.2s
-	-webkit-transition: background 0.3s,box-shadow 0.2s
-	transition: background 0.3s,box-shadow 0.3s
 	&:hover
-		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .3)
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .3)
 /* --------------------------------------- OUTLINED BUTTONS --------------------------------------------------*/
 .cr.button.outline
 	background: none 
@@ -370,7 +394,6 @@ div.cr.button
 .cr.simple.button 
 	color: lighten($black, 10)
 	background: none !important
-	transition: background 0.3s !important
 	.ripple 
 		background: $gray
 	&:active 
@@ -401,7 +424,6 @@ div.cr.button
 
 .cr.simple.button.indigo 
 	color: $indigo
-	transition: background-color 0.3s 
 	.ripple 
 		background: $indigo
 
@@ -419,6 +441,11 @@ div.cr.button
 	color: $purple 
 	.ripple 
 		background: $purple 
+
+.cr.simple.button.pink 
+	color: $pink 
+	.ripple 
+		background-color: $pink
 
 .cr.simple.button.yellow
 	color: $yellow 
@@ -438,6 +465,9 @@ button.cr.button.float
 	border-radius: 50px
 	text-align: center
 	z-index: 190
+	-o-transition:  background-color 0.3s, box-shadow 0.3s 
+	-moz-transition:  background-color 0.3s, box-shadow 0.3s 
+	-webkit-transition: background-color 0.3s, box-shadow 0.3s 
 	transition: background-color 0.3s, box-shadow 0.3s 
 	box-shadow: 0 4px 8px $gray
 	bottom: 4%
@@ -452,6 +482,7 @@ button.cr.button.float
 		margin-top: 0 auto
 		padding: 2px
 		bottom: 0 
+		-webkit-transform: translate(-50%, -50%)
 		transform: translate(-50%, -50%)
 
 	&:active 
@@ -540,29 +571,41 @@ div.cr.button.pulse, button.cr.button.pulse
 	height: 0
 	border-radius: 50%
 	background: rgba($white, .5)
+
+	-webkit-transform: scale(0)
+	-o-transform: scale(0)
+	-moz-transform: scale(0)
 	transform: scale(0)
+
 	position: absolute 
 	opacity: 1
 
 .ripple-active 
-	animation: ripple-anim .4s linear 
+	-webkit-animation: ripple-anim .5s linear
+	-ms-animation: ripple-anim .5s linear 
+	-moz-animation: ripple-anim .5s linear 
+	animation: ripple-anim .5s linear 
 
 
 @-o-keyframes ripple-anim
 	100%
+		-webkit-transform: scale(2)
 		transform: scale(2)
 		opacity: 0 
 @-webkit-keyframes ripple-anim
 	100% 
+		-webkit-transform: scale(2)
 		transform: scale(2)
 		opacity: 0 
 
 @-ms-keyframes ripple-anim
 	100%
+		-webkit-transform: scale(2)
 		transform: scale(2)
 		opacity: 0 
 
 @keyframes ripple-anim
 	100%
+		-webkit-transform: scale(2)
 		transform: scale(2)
 		opacity: 0 

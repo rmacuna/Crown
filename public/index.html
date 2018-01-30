@@ -21,12 +21,12 @@
 
 <body>
     <div class="cr container">
-        <button onclick="triggerModal();" class="cr button  float pulse">
+        <button onclick="triggerModal();" class="cr button float pulse">
             <i class="material-icons">add</i>
         </button>
-        <div class="cr modal shadow small">
-            <i class="material-icons close">close</i>
-            <div class="modal-head center">Login</div>
+        <div class="cr modal shadow medium ">
+            <i class="material-icons text-white close">close</i>
+            <div class="modal-head indigo center">Login</div>
             <div class="modal-body ">
                 <div class="row">
                     <div class="col-xs-12 col-md-12">
@@ -46,15 +46,27 @@
             <div class="modal-footer no-line center">
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
-                        <button class="cr simple button green pulse adaptive">REGISTER</button>
+                        <button class="cr simple button pink pulse adaptive">REGISTER</button>
                     </div>
                     <div class="col-xs-12 col-md-6">
-                        <button class="cr simple button green pulse adaptive">LOGIN</button>
+                        <button class="cr simple button pink pulse adaptive">LOGIN</button>
                     </div>
                 </div>
             </div>
         </div>
-       <!--  <div class="row">
+        <button class="cr button outline large rounded big red pulse icon ">
+            <div class="i-label">
+                <i class="material-icons">favorite</i>
+            </div>
+            Like this account
+        </button>
+        <div class="cr button  medium big hoverable indigo pulse icon ">
+            <div class="i-label">
+                <i class="material-icons">input</i>
+            </div>
+            Import files and media 
+        </div>
+        <!--  <div class="row">
             <div class="col-xs-12 col-md-6">
                 <ul id="list1" class="cr list content tiny">
                     <div class="ul-head">
@@ -100,13 +112,18 @@
                 </ul>
             </div>
         </div> -->
-
-        <div class="cr loader dots">
+        <!--    <div class="cr loader screen-dots">
             <div class="dot d1"></div>
             <div class="dot d2"></div>
             <div class="dot d3"></div>
         </div>
+ -->
+        <!-- <div class="cr loader screen-bouncy "></div> -->
 
+     <!--    <div class="cr loader circular red"></div>
+        <div id="loadbar" class="cr linear loader adaptive red">
+            <div class="progress determinate"></div>
+        </div> -->
     </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -118,11 +135,11 @@
         // } else {
         //     $('.cr.modal').modal('hide');
         // }
-            //  $("#list1").color({
-            //     background: "#F44336",
-            //     font: "#FFFFFF",
-            //     header: "#F44336"
-            // })
+        //  $("#list1").color({
+        //     background: "#F44336",
+        //     font: "#FFFFFF",
+        //     header: "#F44336"
+        // })
         // let checks = $("#list1").list('checked');
         // console.log(checks.number);
         // console.log(checks.checkboxs);
@@ -130,6 +147,17 @@
         //     background: '#F44336',
         //     font: '#FFFFFF'
         // })
+
+        // $('body').loader('show', 'default', {
+        //     time: 5000,
+        //     background: '#311B92',
+        //     dfloadercolor: '#fff'
+        // });
+
+
+        // //Create function of progress up...   
+        // var random = Math.random() * (100 - 10) + 10;
+        // $("#loadbar").progress('interval', random, 5);  el intervalo se da en segundos
     }
     </script>
 </body>
