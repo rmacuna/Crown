@@ -19,16 +19,18 @@ Copy and paste this code for jQuery
 
 [live preview](https://rmacuna.github.io/Crown/public) of this version
 
-## Basic Docs
+# Basic Docs
 
 ### Buttons
 
-  You can use `<div>` or `<button>` tag depending what you need, here is an example code.
+  Basic buttons code: 
+
 {% highlight HTML %}
 <div class="cr button">Button</div>
 <button class="cr button">Button</button>
 {% endhighlight %}
- You can also coloring this buttons adding the color class
+
+ You can coloring this buttons adding the color class
  
 {% highlight HTML %}
 <button class="cr button blue">Button</button>
@@ -52,18 +54,17 @@ Copy and paste this code for jQuery
 
 **Raised Buttons**
 
-* `hoverable` class allows a background animation in the button on hover. (Could be usefull and cool)
+* `hoverable` class allows a background-shadow animation on hover.
 
  
 {% highlight HTML %}
-<button class="cr button green raised hoverable">Button</button>
-<button class="cr button black raised hoverable">Button</button>
+<button class="cr button green  hoverable">Button</button>
+<button class="cr button black  hoverable">Button</button>
 {% endhighlight %}
 
 **Pulse Effect**
 
 If you want the ripple effect just add the class `pulse` and then you will have a pretty wave effect on click
-
  
 {% highlight HTML %}
 <button class="cr button indigo raised pulse ">Button</button>
@@ -97,7 +98,8 @@ Floating buttons are very usefull when you are using a phone or a tablet. Use it
 
 **Sizing** 
 
-All cr buttons have diferent class that modifies the width and height, there are small, medium, large and adaptive buttons. This classes variate the width of the button but not the height, if you want more height add `big` class. 
+All cr buttons have diferent classes that modifies the width and height, there are small, medium, large and adaptive buttons. This classes variate the width of the button but not the height, if you want more height add `big` class. 
+
 {% highlight HTML %}
 <button class="cr button small">Button</button>
 <button class="cr button medium">Button</button>
@@ -111,16 +113,26 @@ All cr buttons have diferent class that modifies the width and height, there are
 
 **Other variations** 
 
-  Crown buttons could have a `rounded` class in order to get a circle border.
+  Add `rounded` class to get a circle border.
+
 {% highlight HTML %}
   <button class="cr button rounded pink">Button</button>
 {% endhighlight %}
 
-More variations of buttons will be added in other releases 
+  To add icons to the button use this code.
+
+  {% highlight HTML %}
+    <div class="cr button  medium big  indigo  icon ">
+      <div class="i-label">
+          <i class="material-icons">input</i>
+      </div>
+      Import files and media 
+    </div>
+  {% endhighlight %}
 
 ### Inputs
 
-Crown inputs uses three diferent styles that includes basic inputs, labeled inputs and material inputs. You can use it depending what are you looking for.
+Crown inputs uses three diferent styles that includes basic inputs, labeled inputs and material inputs.
 
 
 **Basic Input**
@@ -308,7 +320,7 @@ $("#myInput").blur(function(){
 Full docs have more information
 
 
-**SnackBar** 
+### SnackBar
 
   Snacks are usefull to display short messages or perfom a simple action. Add this line to your HTML code 
 ```HTML 
@@ -345,7 +357,7 @@ And yes, you can change the color of this snack adding the color-class
 
 ![](https://media.giphy.com/media/26FffBuJQOMoi8B6o/giphy.gif)
 
-**Checkbox**
+### Checkbox
 
   There are two diferent crown checkbox, the variant checkbox and normal checkbox. 
 
@@ -376,7 +388,7 @@ And yes, you can change the color of this snack adding the color-class
 {% endhighlight %}
 
   
-**Radio Buttons** 
+### Radio Buttons
 
   As checkboxes, radio-buttons have a variant and pulse effect and the same color styling 
   
@@ -393,7 +405,7 @@ And yes, you can change the color of this snack adding the color-class
        </div>
 {% endhighlight %}
   
-**Cards**
+### Cards
   
   Crown card uses three sub-classes. The card-head, card-body and card-footer. Another sub-class is the img-section usefull for img content. The head,body and footer can be colored adding the color class to the element.
   
@@ -429,7 +441,7 @@ By default, cards brings  material desing so, for Crown custom cards add the cla
 
  
 
-**Images**
+### Images
 
   For a responsive image  use the class img-section
   
@@ -456,7 +468,7 @@ Add the class ``dark-bg``for a dark card.
 
 By default, cards brings  material desing so, for Crown custom cards add the class ``variant`` to get a different card style.
 
-**Features** 
+### Features 
 
 Show or hide a feature in card-images. Just add the ``img-section`` and then a div with class ``cr feature`` with a child div ``content``. 
 
@@ -497,7 +509,7 @@ Show or hide a feature in card-images. Just add the ``img-section`` and then a d
 {% endhighlight %}
 
 
-**Cakes** 
+### Cakes
 
   It's a new component implemented by crown, it's a variation of a card but with standarts dimentions and a circle shape. Cakes are created for show short content not for long text. See how it looks.
 
@@ -539,7 +551,7 @@ Show or hide a feature in card-images. Just add the ``img-section`` and then a d
 
 To get a shake effect add the class ``shake-1`` for a continue shake animation of the icon or image, ``shake-2`` to get a shake animation on hover.
 
-**Chips**
+### Chips
   
 {% highlight HTML %}
   <div class="cr chip purple">
@@ -551,7 +563,7 @@ To get a shake effect add the class ``shake-1`` for a continue shake animation o
 By default, using the icon close automatically close and delete the tag from the DOM
 
   
-**Modals** 
+### Modals
 
   To use modals put it them inside a cr container div, then add this code
 
@@ -690,11 +702,109 @@ You can change the color of the list and li item with jQuery using this code
      })
 {% endhighlight%}
 
-You can remove elements in the list giving the position of the li element, or remove the entire list with 
-no position specifiation. 
+You can remove elements in the list giving the position of the li element, or remove the entire list. 
 
 
 {% highlight JavaScript%}
+
+  //Removes li element at position 4 
      $("#list1").list('destroy', 4);
+
+  //Removes entire li element 
+     $("#list1").list('destroy');
+
+  //Hide the list  
+    $("#list1").list('hide');
+
+  //Show the list 
+    $("#list1").list('show');
+
 {% endhighlight%}
+
+
+### loaders 
+  
+There are three different type of loaders, the normal circular-loader, the linear loader and the screen loader. The last one uses an overlay that covers the entire screen, usefull for ajax loads or transitions without page reload.
+
+Here's the code: 
+
+{% highlight HTML%}
+
+  <!-- Circular loader -->
+
+  <div class="cr loader circular"></div>
+
+
+
+  <!-- Linear loader with a determinate progesss, this means that you define how much is fill the bar -->
+   <div id="loadbar" class="cr linear loader ">
+        <div class="progress determinate"></div>
+   </div>
+  
+  <!-- Linear loader with indeterminate progress uses a charge infinite animation  -->
+
+  <div id="loadbar" class="cr linear loader red">
+      <div class="progress indeterminate"></div>
+  </div>
+
+{% endhighlight %}
+
+The determinate progress can be controlled with jQuery
+
+
+{% highlight JavaScript %}
+
+   $("#loadbar").progress('increase', 50); // To increase the loadbar size 50% 
+  
+   $("#loadbar").progress('interval', 50, 4) // Use interval to set the speed of fill animation given the time in seconds
+
+{% endhighlight %}
+
+  The screen loaders  are triggered with jQuery adding one of this codes 
+
+{% highlight JavaScript %}
+
+
+    $("body").loader('show', 'dots', {
+        time: theTimeYouWant, 
+        background: backgroundYouWant,
+        color: font-color
+    })
+
+
+    $("body").loader('show', 'balls', {
+        time: theTimeYouWant, 
+        background: backgroundYouWant,
+        color: font-color
+    })
+
+    $("body").loader('show', 'bouncy', {
+        time: theTimeYouWant, 
+        background: backgroundYouWant,
+        color: font-color
+    })
+  
+    $("body").loader('show', 'pulse', {
+        time: theTimeYouWant, 
+        background: backgroundYouWant,
+        color: font-color
+    })
+
+    $("body").loader('show', 'default', {
+        time: theTimeYouWant, 
+        background: backgroundYouWant,
+        color: font-color,
+        dfloadercolor: color //Only works with the default loader 
+    })
+
+    $("body").loader('quit')
+
+{% endhighlight %}
+
+If you want to customize the loader, you can add the loader without using jQuery here's the code 
+
+
+
+
+
 
