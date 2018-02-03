@@ -602,8 +602,7 @@ By default, using the icon close automatically close and delete the tag from the
 
   Ass you see, modals uses a header a body and a footer in order to get a formated modal, you can use the modal without these three components, but i'ts not recommended. Here's another actions: 
 
-
-  * Add a close icon that works adding ``<i class="material-icons close">close</i>``
+  * Add a close icon that works adding ``<i class="material-icons close">close</i>``
   * Modify the size of the modal by adding small, medium or big class
   * Add an scroll content by adding the class ``scroll-content``
   * Coloring the head, body and footer adding the color class 
@@ -621,7 +620,7 @@ By default, using the icon close automatically close and delete the tag from the
 
 {% endhighlight %}
 
- **List** 
+### List 
  
  Use Crown list by adding this code: 
  
@@ -642,7 +641,7 @@ badges are really usefull with lists to display a little description of an item,
 
 You can combine a list with checkboxes to get a checklist. 
 
-**li info** 
+**Info** 
 
 li info displays huge content hidden in the list, reducing the visual space used in the list title.
 
@@ -801,7 +800,41 @@ The determinate progress can be controlled with jQuery
 
 {% endhighlight %}
 
-If you want to customize the loader, you can add the loader without using jQuery here's the code 
+If you want to customize the loader, you can add the loader by your way without using jQuery. Here's the code: 
+
+{% highlight HTML %}
+  
+  <!-- Dots  -->
+
+  <div class="cr loader screen dots">
+    <div class="dot d1"></div>
+    <div class="dot d2"></div>
+    <div class="dot d3"></div>
+  </div> 
+  <span id="crloadOverLay" class="load-overlay"></span>
+  
+  <!-- Balls  -->
+
+  <div class="cr loader screen balls"></div>
+  <span id="crloadOverLay" class="load-overlay"></span>
+
+ <!-- Bouncy  -->
+
+      <div class="cr loader screen bouncy"></div>
+      <span class="load-overlay"></span>
+      <div class="load-shadow"></div>
+  
+  <!-- Pulse -->
+
+    <div id="crLoadPulse" class="cr loader screen pulse"></div>
+    <span id="crloadOverLay" class="load-overlay"></span
+
+  <!-- Default -->
+
+  <div id="crLoadCircular" class="cr loader screen circular"></div>
+  <span id="crloadOverLay" class="load-overlay"></span>
+
+{% endhighlight %}
 
 
 
