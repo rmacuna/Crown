@@ -1,0 +1,30 @@
+div.cr.menubar
+    overflow: hidden 
+    position: relative 
+    background: lighten($gray, 32)
+    height: 50px
+    margin: 0 !important 
+    padding: 5px 5px
+    border-bottom-left-radius: 2px
+    border-bottom-right-radius: 2px 
+    box-shadow: 0 2px 1px rgba($gray, .5)
+
+    a.menu-item
+        position: relative
+        box-sizing: border-box
+        color: lighten($black, 30)
+        height: 100%
+        float: left
+        text-align: center 
+        text-decoration: none 
+        min-width: 120px
+        padding: 15px 15px
+        border-radius: 2px
+        -webkit-transition: background 0.3s ease-out 
+        -moz-transition: background 0.3s ease-out 
+        -o-transition: background 0.3s ease-out 
+        transition: background 0.3s ease-out 
+        &:active
+            background: lighten($gray, 20)
+
+

@@ -2,6 +2,9 @@
 div.cr.card {
   position: relative;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: box-shadow 0.3s;
+  -moz-transition: box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s;
   transition: box-shadow 0.3s;
   height: auto;
   width: 25rem;
@@ -58,6 +61,9 @@ div.cr.card {
     div.cr.card .img-section img {
       display: block;
       align-content: center;
+      -webkit-transtion: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
       transition: all 0.3s ease-out;
       margin: 0 auto;
       max-width: 100%;
@@ -69,6 +75,9 @@ div.cr.card {
       height: 100%;
       top: 0;
       opacity: 0;
+      -webkit-transition: opacity 0.3s ease-out;
+      -moz-transition: opacity 0.3s ease-out;
+      -o-transition: opacity 0.3s ease-out;
       transition: opacity 0.3s ease-out; }
       div.cr.card .img-section .cr.feature:hover {
         opacity: 1; }
@@ -202,6 +211,9 @@ div.cake {
   transform: scale(0.3);
   box-shadow: 0 4px 8px rgba(158, 158, 158, 0.6);
   border-radius: 50%;
+  -webkit-transition: transform 0.5s ease-out, background 0.4s ease-out;
+  -moz-transition: transform 0.5s ease-out, background 0.4s ease-out;
+  -o-transition: transform 0.5s ease-out, background 0.4s ease-out;
   transition: transform 0.5s ease-out, background 0.4s ease-out;
   overflow: hidden;
   text-align: center;
@@ -209,6 +221,8 @@ div.cake {
   background: #fefefe;
   background: #2196F3; }
   div.cake:active:hover {
+    -webkit-transform: scale(10);
+    -moz-transform: scale(10);
     transform: scale(10); }
     div.cake:active:hover div.content {
       opacity: 0; }
@@ -218,9 +232,14 @@ div.cake {
     opacity: 0;
     display: flex;
     align-self: center;
+    -webkit-transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    -moz-transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    -o-transition: transform 0.5s ease-out, opacity 0.5s ease-out;
     transition: transform 0.5s ease-out, opacity 0.5s ease-out; }
   div.cake:hover {
     transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
     background: #0960a5;
     z-index: 100; }
     div.cake:hover div.content {
@@ -233,6 +252,9 @@ div.cake {
     left: 45%;
     transform: scale(5);
     color: #fff;
+    -webkit-transition: opacity 1s ease-out, transform 1s ease-out;
+    -moz-transition: opacity 1s ease-out, transform 1s ease-out;
+    -o-transition: opacity 1s ease-out, transform 1s ease-out;
     transition: opacity 1s ease-out, transform 1s ease-out; }
   div.cake img {
     position: absolute;
@@ -240,10 +262,15 @@ div.cake {
     height: auto;
     top: 0;
     left: 0;
+    -webkit-transition: opacity 0.7s ease-out;
+    -moz-transition: opacity 0.7s ease-out;
+    -o-transition: opacity 0.7s ease-out;
     transition: opacity 0.7s ease-out; }
   div.cake img.fade:hover {
     opacity: 0; }
   div.cake:hover > i {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
     transform: rotate(180deg);
     opacity: 0; }
 
@@ -304,36 +331,58 @@ div.cake.pink {
 
 @media screen and (max-width: 1000px) {
   div.cake {
+    -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
     transform: scale(0.7); }
     div.cake div.content {
       opacity: 1;
+      -webkit-transform: scale(0.6);
+      -moz-transform: scale(0.6);
       transform: scale(0.6); }
     div.cake:before {
       display: none; }
     div.cake i {
       display: none; } }
 div.cake.shake-1 > i {
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
   transform: none !important;
   font-size: 109px !important;
   top: 32.3%;
   left: 32.3%;
+  -webkit-animation: shake 0.82s infinite ease-out;
+  -moz-animation: shake 0.82s infinite ease-out;
+  -o-animation: shake 0.82s infinite ease-out;
   animation: shake 0.82s infinite ease-out; }
 
 div.cake.shake-2:hover > i {
+  -webkit-transform: none !important;
+  -moz-transform: none !important;
   transform: none !important;
   font-size: 109px !important;
   top: 32.3%;
   left: 32.3%;
+  -webkit-animation: shake 0.82s infinite ease-out;
+  -moz-animation: shake 0.82s infinite ease-out;
+  -o-animation: shake 0.82s infinite ease-out;
   animation: shake 0.82s infinite ease-out; }
 
 @keyframes shake {
   10%, 90% {
+    -webkit-transform: translate3d(-1px, 0, 0);
+    -moz-transform: translate3d(-1px, 0, 0);
     transform: translate3d(-1px, 0, 0); }
   20%, 80% {
+    -webkit-transform: translate3d(2px, 0, 0);
+    -moz-transform: translate3d(2px, 0, 0);
     transform: translate3d(2px, 0, 0); }
   30%, 50%, 70% {
+    -webkit-transform: translate3d(-4px, 0, 0);
+    -moz-transform: translate3d(-4px, 0, 0);
     transform: translate3d(-4px, 0, 0); }
   40%, 60% {
+    -webkit-transform: translate3d(4px, 0, 0);
+    -moz-transform: translate3d(4px, 0, 0);
     transform: translate3d(4px, 0, 0); } }
 div.cr.card.variant {
   border-radius: 4px;
@@ -2272,6 +2321,34 @@ div.cr.linear.loader.amber {
 div.cr.linear.loader.black div.progress {
   background: #000; }
 
+div.cr.menubar {
+  overflow: hidden;
+  position: relative;
+  background: #f0f0f0;
+  height: 50px;
+  margin: 0 !important;
+  padding: 5px 5px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  box-shadow: 0 2px 1px rgba(158, 158, 158, 0.5); }
+  div.cr.menubar a.menu-item {
+    position: relative;
+    box-sizing: border-box;
+    color: #4d4d4d;
+    height: 100%;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+    min-width: 120px;
+    padding: 15px 15px;
+    border-radius: 2px;
+    -webkit-transition: background 0.3s ease-out;
+    -moz-transition: background 0.3s ease-out;
+    -o-transition: background 0.3s ease-out;
+    transition: background 0.3s ease-out; }
+    div.cr.menubar a.menu-item:active {
+      background: #d1d1d1; }
+
 @-moz-keyframes appear {
   0% {
     display: none;
@@ -3152,7 +3229,8 @@ html {
   height: 100vh; }
 
 body {
-  font-family: "Nunito", sans-serif; }
+  font-family: "Nunito", sans-serif;
+  margin: 0 !important; }
 
 .cr.container {
   height: 100vh;
