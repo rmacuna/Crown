@@ -474,8 +474,8 @@ try {
                         '<div class="dot d3"></div>' +
                         '</div>' +
                         '<span id="crloadOverLay" class="load-overlay"></span>');
-                    let loader = $('body').find('div.cr.loader > div.dot');
-                    let overlay = $('body').find('span.load-overlay');
+                    let loader = $(this).find('div.cr.loader > div.dot');
+                    let overlay = $(this).find('span.load-overlay');
                     loader.css({
                         'background': settings.color
                     })

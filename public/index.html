@@ -20,13 +20,20 @@
 </head>
 
 <body>
-    <div class="cr menubar">
+    <div class="cr menubar red ">
+        <div class="brand">CrownDarken
+        </div>
         <a href="#" class="menu-item">Home</a>
-        <a href="#" class="menu-item">News</a>
-        <a href="#" class="menu-item">Contact</a>
-        <a href="#" class="menu-item">Sign in</a>
+        <!-- <a href="#" class="menu-item">News</a> -->
+        <!-- <a href="#" class="menu-item">Contact</a> -->
+        <div class="nav-input">
+            <input class="large" placeholder="Search" type="text">
+            <i class="material-icons">search</i>
+        </div>
+        <a href="#" class="menu-item right">Register</a>
+        <a href="#" class="menu-item right">Log in</a>
     </div>
-    <div class="cr container">
+    <div id="bd" class="cr container">
         <button onclick="triggerModal();" class="cr button float  pulse">
             <i class="material-icons">add</i>
         </button>
@@ -154,11 +161,11 @@
         //     font: '#FFFFFF'
         // })
 
-        // $('body').loader('show', 'default', {
-        //     time: 5000,
-        //     background: '#311B92',
-        //     dfloadercolor: '#fff'
-        // });
+        $('#bd').loader('show', 'dots', {
+            time: 5000,
+            background: '#311B92',
+            dfloadercolor: '#fff'
+        });
 
 
         // //Create function of progress up...   
