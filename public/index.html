@@ -20,19 +20,22 @@
 </head>
 
 <body>
-    <div class="cr menubar red ">
-        <div class="brand">CrownDarken
-        </div>
-        <a href="#" class="menu-item">Home</a>
-        <!-- <a href="#" class="menu-item">News</a> -->
-        <!-- <a href="#" class="menu-item">Contact</a> -->
+    <div class="cr menubar plain  red huge  mobile-top">
+        <div class="brand">Crown</div>   
+        <a href="#" class="menu-item ">Home</a>
+        <a href="#" class="menu-item">News</a>
+        <a href="#" class="menu-item">Contact</a>
         <div class="nav-input">
             <input class="large" placeholder="Search" type="text">
             <i class="material-icons">search</i>
         </div>
-        <a href="#" class="menu-item right">Register</a>
-        <a href="#" class="menu-item right">Log in</a>
+        <a href="#" class="menu-item pulse right">Register</a>
+        <a href="#" class="menu-item pulse right">Log in</a>
     </div>
+
+
+
+
     <div id="bd" class="cr container">
         <button onclick="triggerModal();" class="cr button float  pulse">
             <i class="material-icons">add</i>
@@ -161,7 +164,7 @@
         //     font: '#FFFFFF'
         // })
 
-        $('#bd').loader('show', 'dots', {
+        $('#bd').loader('show', 'bouncy', {
             time: 5000,
             background: '#311B92',
             dfloadercolor: '#fff'

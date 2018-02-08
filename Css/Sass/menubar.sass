@@ -13,12 +13,12 @@ div.cr.menubar
         position: relative
         box-sizing: border-box
         color: lighten($black, 30)
+        width: auto 
         height: 100%
         float: left
         text-align: center 
         text-decoration: none 
-        min-width: 120px
-        padding: 15px 15px
+        padding: 15px 25px
         border-radius: 2px
         -webkit-transition: background 0.3s ease-out 
         -moz-transition: background 0.3s ease-out 
@@ -26,6 +26,25 @@ div.cr.menubar
         transition: background 0.3s ease-out 
         &:active
             background: lighten($gray, 10)
+            
+    a.hoverable 
+        &:after 
+            content: ' '
+            width: auto  
+            height: 2px 
+            border-radius: 4px 
+            background: $white
+            position: relative
+            display: block 
+            bottom: 0 
+            left: 0 
+            transition: transform 0.3s ease-out 
+            transform: scaleX(0)
+        &:hover 
+            &:after 
+                transform: scaleX(1) 
+
+
     a.menu-item.right
         float: right
     div.brand
@@ -63,17 +82,23 @@ div.cr.menubar
             color: $white
             font-size: 16px
             height: 32px
-            width: 300px
             text-indent: 5px
             padding-right: 28px
             &::placeholder
                 color: rgba($white, .3)
+            &:focus 
+                + i 
+                    transform: rotate(720deg) 
+        input.large 
+            width: 300px !important
+                    
         input.rounded 
             border-radius: 50px
     
         i 
             position: absolute 
             right: 0 
+            transition: transform 0.3s ease-out
             top: 0 
             width: 1.271em
             line-height: 2
@@ -84,9 +109,79 @@ div.cr.menubar
             &:hover 
                 animation: shake 0.82s 1s ease-out
 
+
+
+
+
+
+
+
+div.cr.menubar.mobile-top 
+    @media screen and (max-width: 968px)
+        height: auto !important
+        a
+            &:nth-child(2)
+                width: 100% !important
+                display: block 
+        a.menu-item 
+            position: relative
+            float: none 
+            display: block 
+            width: 100% 
+            text-align: center
+        div.nav-input 
+            display: block 
+            position: relative
+            left: 35%  
+        div.brand 
+            position: relative !important 
+            height: auto !important 
+            left: 45%
+            float: none !important 
+            display: block !important
+
+        &:after 
+            content: 'menu'
+            font-family: 'material icons'
+            position: absolute
+            right: 2%
+            top: 20px
+            cursor: pointer
+            font-size: 24px
+        
+div.cr.menubar.mobile-top.hide 
+    a.menu-item 
+        display: none 
+    div.nav-input 
+        display: none 
+    div.brand 
+        display: none 
+
+
+
+div.cr.menubar.plain 
+    box-shadow: none
+    
+div.cr.menubar.deep-shadow
+    box-shadow: 0 4px 16px rgba($black, .5)
+
+div.cr.menubar.huge 
+    height: 70px
+    a.menu-item 
+        padding: 20px 20px !important 
+    div.brand 
+        padding: 20px 20px !important 
+    div.nav-input 
+        padding-top: 12px !important 
+        i 
+            line-height: 2.5
+
+
 div.cr.menubar.blue 
     background: $blue 
     div.brand 
+        color: $white 
+    &:after 
         color: $white 
     a 
         color: $white
@@ -103,6 +198,8 @@ div.cr.menubar.red
     background: $red 
     div.brand 
         color: $white 
+    &:after 
+        color: $white
     a 
         color: $white 
         &:active 
@@ -118,6 +215,8 @@ div.cr.menubar.green
     background: $green 
     div.brand 
         color: $white
+    &:after 
+        color: $white 
     a 
         color: $white 
         &:active 
@@ -133,14 +232,15 @@ div.cr.menubar.yellow
     background: $yellow 
     div.brand 
         color: $black
+    &:after 
+        color: $black 
     a 
         color: $black 
         &:active 
             background: darken($yellow, 15)
     input 
-        background: rgba($white, .2) !important 
-        color: $black 
-     
+        background: rgba($amber, .2) !important 
+        color: $black !important 
     i 
         color: $black 
 
@@ -148,6 +248,8 @@ div.cr.menubar.amber
     background: $amber 
     div.brand 
         color: $white
+    &:after 
+        color: $white 
     a 
         color: $white 
         &:active 
@@ -162,6 +264,8 @@ div.cr.menubar.amber
 div.cr.menubar.indigo 
     background: $indigo
     div.brand 
+        color: $white 
+    &:after 
         color: $white 
     a 
         color: $white 
@@ -178,6 +282,8 @@ div.cr.menubar.gold
     background: $gold
     div.brand 
         color: $white
+    &:after 
+        color: $white 
     a 
         color: $white 
         &:active 
@@ -193,6 +299,8 @@ div.cr.menubar.purple
     background: $purple 
     div.brand 
         color: $white
+    &:after 
+        color: $white 
     a 
         color: $white 
         &:active 
@@ -208,6 +316,8 @@ div.cr.menubar.black
     background: lighten($black, 10) 
     div.brand 
         color: $white
+    &:after 
+        color: $white 
     a 
         color: $white 
         &:active 
@@ -221,6 +331,8 @@ div.cr.menubar.white
     background: darken($white, 3) 
     div.brand 
         color: $black
+    &:after 
+        color: $black 
     a 
         color: $black 
         &:active 
@@ -237,6 +349,8 @@ div.cr.menubar.pink
     background: $pink
     div.brand 
         color: $white
+    &:after 
+        color: $white 
     a 
         color: $white 
         &:active 

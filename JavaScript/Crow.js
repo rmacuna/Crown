@@ -308,7 +308,7 @@ jQuery(function($) {
         }
         $parent.removeClass('is-focused');
     })
-    $("div.cr.button.pulse, button.cr.button.pulse").click(function(e) {
+    $("div.cr.button.pulse, button.cr.button.pulse, a.menu-item.pulse").click(function(e) {
         $('.ripple').remove();
 
         let posX = $(this).offset().left,
@@ -336,6 +336,33 @@ jQuery(function($) {
             left: x + 'px'
         }).addClass("ripple-active");
     })
+
+    $(".nav-input").find("input").on('focus', function () {
+        setTimeout(() => {
+            let icon =  $(this).parent().find('i');
+            icon.remove();
+            $(this).parent().append('<i class="material-icons close">close</i>');
+            $(".nav-input").find("i.material-icons.close").click(function () {
+                $(this).parent().find("input").val("");
+            })
+        }, 310);
+    })
+    $(".nav-input").find("input").on('focusout', function () {
+        setTimeout(() => {
+            let icon =  $(this).parent().find('i');
+            icon.remove();
+            $(this).parent().append('<i class="material-icons">search</i>');
+        }, 310);
+    })
+
+    $("input.increase-to-large").on('focus', function () {
+        $(this).animate({width: ($(this).width() + 200) }, 310)
+    })
+    $("input.increase-to-large").on('focusout', function () {
+        console.log($(this).width())
+        $(this).animate({width: ($(this).width() - 200) }, 310)
+    })
+    
 })
 var statePressed = false;
 var overlay;

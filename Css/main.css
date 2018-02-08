@@ -2335,12 +2335,12 @@ div.cr.menubar {
     position: relative;
     box-sizing: border-box;
     color: #4d4d4d;
+    width: auto;
     height: 100%;
     float: left;
     text-align: center;
     text-decoration: none;
-    min-width: 120px;
-    padding: 15px 15px;
+    padding: 15px 25px;
     border-radius: 2px;
     -webkit-transition: background 0.3s ease-out;
     -moz-transition: background 0.3s ease-out;
@@ -2348,6 +2348,20 @@ div.cr.menubar {
     transition: background 0.3s ease-out; }
     div.cr.menubar a.menu-item:active {
       background: #b8b8b8; }
+  div.cr.menubar a.hoverable:after {
+    content: " ";
+    width: auto;
+    height: 2px;
+    border-radius: 4px;
+    background: #fff;
+    position: relative;
+    display: block;
+    bottom: 0;
+    left: 0;
+    transition: transform 0.3s ease-out;
+    transform: scaleX(0); }
+  div.cr.menubar a.hoverable:hover:after {
+    transform: scaleX(1); }
   div.cr.menubar a.menu-item.right {
     float: right; }
   div.cr.menubar div.brand {
@@ -2385,16 +2399,20 @@ div.cr.menubar {
       color: #fff;
       font-size: 16px;
       height: 32px;
-      width: 300px;
       text-indent: 5px;
       padding-right: 28px; }
       div.cr.menubar div.nav-input input::placeholder {
         color: rgba(255, 255, 255, 0.3); }
+      div.cr.menubar div.nav-input input:focus + i {
+        transform: rotate(720deg); }
+    div.cr.menubar div.nav-input input.large {
+      width: 300px !important; }
     div.cr.menubar div.nav-input input.rounded {
       border-radius: 50px; }
     div.cr.menubar div.nav-input i {
       position: absolute;
       right: 0;
+      transition: transform 0.3s ease-out;
       top: 0;
       width: 1.271em;
       line-height: 2;
@@ -2405,9 +2423,66 @@ div.cr.menubar {
       div.cr.menubar div.nav-input i:hover {
         animation: shake 0.82s 1s ease-out; }
 
+@media screen and (max-width: 968px) {
+  div.cr.menubar.mobile-top {
+    height: auto !important; }
+    div.cr.menubar.mobile-top a:nth-child(2) {
+      width: 100% !important;
+      display: block; }
+    div.cr.menubar.mobile-top a.menu-item {
+      position: relative;
+      float: none;
+      display: block;
+      width: 100%;
+      text-align: center; }
+    div.cr.menubar.mobile-top div.nav-input {
+      display: block;
+      position: relative;
+      left: 35%; }
+    div.cr.menubar.mobile-top div.brand {
+      position: relative !important;
+      height: auto !important;
+      left: 45%;
+      float: none !important;
+      display: block !important; }
+    div.cr.menubar.mobile-top:after {
+      content: "menu";
+      font-family: "material icons";
+      position: absolute;
+      right: 2%;
+      top: 20px;
+      cursor: pointer;
+      font-size: 24px; } }
+
+div.cr.menubar.mobile-top.hide a.menu-item {
+  display: none; }
+div.cr.menubar.mobile-top.hide div.nav-input {
+  display: none; }
+div.cr.menubar.mobile-top.hide div.brand {
+  display: none; }
+
+div.cr.menubar.plain {
+  box-shadow: none; }
+
+div.cr.menubar.deep-shadow {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5); }
+
+div.cr.menubar.huge {
+  height: 70px; }
+  div.cr.menubar.huge a.menu-item {
+    padding: 20px 20px !important; }
+  div.cr.menubar.huge div.brand {
+    padding: 20px 20px !important; }
+  div.cr.menubar.huge div.nav-input {
+    padding-top: 12px !important; }
+    div.cr.menubar.huge div.nav-input i {
+      line-height: 2.5; }
+
 div.cr.menubar.blue {
   background: #2196F3; }
   div.cr.menubar.blue div.brand {
+    color: #fff; }
+  div.cr.menubar.blue:after {
     color: #fff; }
   div.cr.menubar.blue a {
     color: #fff; }
@@ -2423,6 +2498,8 @@ div.cr.menubar.red {
   background: #F44336; }
   div.cr.menubar.red div.brand {
     color: #fff; }
+  div.cr.menubar.red:after {
+    color: #fff; }
   div.cr.menubar.red a {
     color: #fff; }
     div.cr.menubar.red a:active {
@@ -2436,6 +2513,8 @@ div.cr.menubar.red {
 div.cr.menubar.green {
   background: #00C853; }
   div.cr.menubar.green div.brand {
+    color: #fff; }
+  div.cr.menubar.green:after {
     color: #fff; }
   div.cr.menubar.green a {
     color: #fff; }
@@ -2451,19 +2530,23 @@ div.cr.menubar.yellow {
   background: #FFEB3B; }
   div.cr.menubar.yellow div.brand {
     color: #000; }
+  div.cr.menubar.yellow:after {
+    color: #000; }
   div.cr.menubar.yellow a {
     color: #000; }
     div.cr.menubar.yellow a:active {
       background: #eed500; }
   div.cr.menubar.yellow input {
-    background: rgba(255, 255, 255, 0.2) !important;
-    color: #000; }
+    background: rgba(255, 193, 7, 0.2) !important;
+    color: #000 !important; }
   div.cr.menubar.yellow i {
     color: #000; }
 
 div.cr.menubar.amber {
   background: #FFC107; }
   div.cr.menubar.amber div.brand {
+    color: #fff; }
+  div.cr.menubar.amber:after {
     color: #fff; }
   div.cr.menubar.amber a {
     color: #fff; }
@@ -2479,6 +2562,8 @@ div.cr.menubar.indigo {
   background: #3F51B5; }
   div.cr.menubar.indigo div.brand {
     color: #fff; }
+  div.cr.menubar.indigo:after {
+    color: #fff; }
   div.cr.menubar.indigo a {
     color: #fff; }
     div.cr.menubar.indigo a:active {
@@ -2492,6 +2577,8 @@ div.cr.menubar.indigo {
 div.cr.menubar.gold {
   background: #bf9b30; }
   div.cr.menubar.gold div.brand {
+    color: #fff; }
+  div.cr.menubar.gold:after {
     color: #fff; }
   div.cr.menubar.gold a {
     color: #fff; }
@@ -2507,6 +2594,8 @@ div.cr.menubar.purple {
   background: #9C27B0; }
   div.cr.menubar.purple div.brand {
     color: #fff; }
+  div.cr.menubar.purple:after {
+    color: #fff; }
   div.cr.menubar.purple a {
     color: #fff; }
     div.cr.menubar.purple a:active {
@@ -2521,6 +2610,8 @@ div.cr.menubar.black {
   background: #1a1a1a; }
   div.cr.menubar.black div.brand {
     color: #fff; }
+  div.cr.menubar.black:after {
+    color: #fff; }
   div.cr.menubar.black a {
     color: #fff; }
     div.cr.menubar.black a:active {
@@ -2533,6 +2624,8 @@ div.cr.menubar.black {
 div.cr.menubar.white {
   background: #f7f7f7; }
   div.cr.menubar.white div.brand {
+    color: #000; }
+  div.cr.menubar.white:after {
     color: #000; }
   div.cr.menubar.white a {
     color: #000; }
@@ -2549,6 +2642,8 @@ div.cr.menubar.white {
 div.cr.menubar.pink {
   background: #E91E63; }
   div.cr.menubar.pink div.brand {
+    color: #fff; }
+  div.cr.menubar.pink:after {
     color: #fff; }
   div.cr.menubar.pink a {
     color: #fff; }
@@ -4012,7 +4107,7 @@ button.cr.button.float.white {
 button.dark-bg {
   box-shadow: none !important; }
 
-div.cr.button.pulse, button.cr.button.pulse {
+div.cr.button.pulse, button.cr.button.pulse, a.menu-item.pulse {
   overflow: hidden; }
 
 .ripple {
