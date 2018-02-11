@@ -350,9 +350,26 @@ jQuery(function($) {
     $(".nav-input").find("input").on('focusout', function () {
         setTimeout(() => {
             let icon =  $(this).parent().find('i');
-            icon.remove();
-            $(this).parent().append('<i class="material-icons">search</i>');
+            icon.html("search")
         }, 310);
+    })
+    var lastPosOfNavInput = $(document).find('.nav-input').index();
+    $(".cr.menubar.mobile-top").find('div.menu-icon > i').click(function (e) {
+        let menubar = $(this).parent().parent();
+        let navinput = menubar.find('.nav-input');
+        let copynav_input = navinput;
+        if (!menubar.is('.trigger')) {
+            menubar.addClass('trigger');
+            if (navinput != null) {
+                menubar.get(0).insertBefore(copynav_input.get(0), menubar.get(0).children[1]);
+            }
+            $(this).html("close");
+            
+        }else{
+        menubar.removeClass('trigger');
+        menubar.get(0).insertBefore(copynav_input.get(0), menubar.get(0).children[lastPosOfNavInput]);
+        $(this).html("menu");
+        }
     })
 
     $("input.increase-to-large").on('focus', function () {
@@ -362,6 +379,7 @@ jQuery(function($) {
         console.log($(this).width())
         $(this).animate({width: ($(this).width() - 200) }, 310)
     })
+
     
 })
 var statePressed = false;

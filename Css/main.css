@@ -2325,12 +2325,13 @@ div.cr.menubar {
   overflow: hidden;
   position: relative;
   background: #f0f0f0;
-  height: 50px;
+  max-height: 100px;
   margin: 0 !important;
   padding: 5px 5px;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
-  box-shadow: 0 2px 1px rgba(158, 158, 158, 0.5); }
+  box-shadow: 0 2px 1px rgba(158, 158, 158, 0.5);
+  transition: max-height 1s ease-out; }
   div.cr.menubar a.menu-item {
     position: relative;
     box-sizing: border-box;
@@ -2364,6 +2365,16 @@ div.cr.menubar {
     transform: scaleX(1); }
   div.cr.menubar a.menu-item.right {
     float: right; }
+  div.cr.menubar div.menu-icon {
+    display: none;
+    position: absolute;
+    top: 0;
+    padding: 10px 10px 10px 10px;
+    transition: transform 0.3s ease-out; }
+  div.cr.menubar div.menu-icon.right {
+    right: 0; }
+  div.cr.menubar div.menu-icon.left {
+    left: 0; }
   div.cr.menubar div.brand {
     position: relative;
     box-sizing: border-box;
@@ -2424,35 +2435,48 @@ div.cr.menubar {
         animation: shake 0.82s 1s ease-out; }
 
 @media screen and (max-width: 968px) {
-  div.cr.menubar.mobile-top {
-    height: auto !important; }
-    div.cr.menubar.mobile-top a:nth-child(2) {
-      width: 100% !important;
-      display: block; }
-    div.cr.menubar.mobile-top a.menu-item {
-      position: relative;
-      float: none;
-      display: block;
-      width: 100%;
-      text-align: center; }
-    div.cr.menubar.mobile-top div.nav-input {
-      display: block;
-      position: relative;
-      left: 35%; }
-    div.cr.menubar.mobile-top div.brand {
-      position: relative !important;
-      height: auto !important;
-      left: 45%;
-      float: none !important;
-      display: block !important; }
-    div.cr.menubar.mobile-top:after {
-      content: "menu";
-      font-family: "material icons";
-      position: absolute;
-      right: 2%;
-      top: 20px;
+  div.cr.menubar.mobile-top a:nth-child(2) {
+    width: 100% !important;
+    display: block; }
+  div.cr.menubar.mobile-top a.menu-item {
+    position: relative;
+    float: none;
+    display: none;
+    width: 100%;
+    text-align: center; }
+  div.cr.menubar.mobile-top div.menu-icon {
+    display: block; }
+    div.cr.menubar.mobile-top div.menu-icon i {
       cursor: pointer;
-      font-size: 24px; } }
+      right: 0;
+      text-align: center;
+      padding: 5px 5px;
+      font-size: 24px;
+      transition: transform 0.5s ease-out; }
+  div.cr.menubar.mobile-top div.nav-input {
+    display: none;
+    position: relative;
+    float: none;
+    box-sizing: border-box;
+    width: 95%;
+    left: 5px; }
+    div.cr.menubar.mobile-top div.nav-input input {
+      width: 95% !important; }
+  div.cr.menubar.mobile-top div.brand {
+    position: relative !important;
+    height: auto !important;
+    left: 45%;
+    float: none !important;
+    display: block; } }
+
+div.cr.menubar.mobile-top.trigger {
+  max-height: 1000px !important; }
+  div.cr.menubar.mobile-top.trigger a {
+    display: block; }
+  div.cr.menubar.mobile-top.trigger div.nav-input {
+    display: block; }
+  div.cr.menubar.mobile-top.trigger div.menu-icon {
+    transform: rotate(-360deg); }
 
 div.cr.menubar.mobile-top.hide a.menu-item {
   display: none; }

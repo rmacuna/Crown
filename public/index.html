@@ -20,13 +20,14 @@
 </head>
 
 <body>
-    <div class="cr menubar plain  red huge  mobile-top">
+    <div id="mybar" class="cr menubar  red   mobile-top">
         <div class="brand">Crown</div>   
+        <div class="menu-icon right"><i class="material-icons">menu</i></div>
         <a href="#" class="menu-item ">Home</a>
         <a href="#" class="menu-item">News</a>
         <a href="#" class="menu-item">Contact</a>
         <div class="nav-input">
-            <input class="large" placeholder="Search" type="text">
+            <input class="increase-to-large" placeholder="Search" type="text">
             <i class="material-icons">search</i>
         </div>
         <a href="#" class="menu-item pulse right">Register</a>
@@ -164,9 +165,9 @@
         //     font: '#FFFFFF'
         // })
 
-        $('#bd').loader('show', 'bouncy', {
+        $('#bd').loader('show', 'balls', {
             time: 5000,
-            background: '#311B92',
+            background: '#F44336',
             dfloadercolor: '#fff'
         });
 
