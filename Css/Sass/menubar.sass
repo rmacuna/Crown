@@ -6,8 +6,9 @@ div.cr.menubar
     margin: 0 !important 
     padding: 5px 5px
     border-bottom-left-radius: 2px
+    white-space: nowrap
     border-bottom-right-radius: 2px 
-    box-shadow: 0 2px 1px rgba($gray, .5)
+    box-shadow: 0 2px 1px rgba($black, .4)
     transition: max-height 1s ease-out 
 
     a.menu-item
@@ -133,6 +134,7 @@ div.cr.menubar
 
 div.cr.menubar.mobile-top
     @media screen and (max-width: 968px)
+        white-space: nowrap
         a
             &:nth-child(2)
                 width: 100% !important
@@ -159,10 +161,10 @@ div.cr.menubar.mobile-top
             position: relative 
             float: none 
             box-sizing: border-box
-            width: 95%
+            width: 97%
             left: 5px
             input 
-                width: 95% !important 
+                width: 97% !important
             
         
         div.brand 
@@ -171,6 +173,23 @@ div.cr.menubar.mobile-top
             left: 45%
             float: none !important 
             display: block  
+
+    @media screen and (max-width: 460px)
+        div.brand 
+            margin-left: -5%
+
+    @media screen and (max-width: 840px)
+        div.nav-input
+            width: 93%
+            input 
+                width: 93%
+    @media screen and (max-width: 443px)
+        div.nav-input
+            width: 90% 
+            input 
+                width: 90%
+
+
 
 div.cr.menubar.mobile-top.trigger
     max-height: 1000px !important
