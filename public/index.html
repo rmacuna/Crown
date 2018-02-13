@@ -19,7 +19,7 @@
         background-image: url('there.jpg');
         background-color: #000;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         transition: background-image 0.4s ease-out
     }
@@ -28,7 +28,7 @@
         background-image: url('guetta.jpeg');
         background-color: #D50000;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         transition: background-image 0.4s ease-out
     }
@@ -36,7 +36,7 @@
         background-image: url('avicii.png');
         background-color: #9C27B0;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         transition: background-image 0.4s ease-out
     }
@@ -44,7 +44,7 @@
         background-image: url('mello.jpg');
         background-color: #fff;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         background-position: center;
         transition: background-image 0.4s ease-out
     }
@@ -68,6 +68,7 @@
         top: 20%;
         height: auto;
     }
+
     </style>
 </head>
 
@@ -85,7 +86,7 @@
         <a href="#" class="menu-item pulse right">Register</a>
         <a href="#" class="menu-item pulse right">Log in</a>
     </div>
-    <div id="bd" class="cr container">
+    <div id="bd" class="cr container ">
         <button onclick="triggerModal();" class="cr button white  float  pulse">
             <i class="material-icons">add</i>
         </button>
@@ -140,10 +141,11 @@
                 <div onclick="mello();" style="display: inline-block;" class="cr button white big pulse rounded adaptive hoverable">Marshmello</div>
             </div>
         </div>
-        <div class="card-contain">
+        <div class="cr container">
+              <div class="card-contain ">
             <div class="row">
-                <div class="col-md-12 col-xs-12">
-                    <div class="cr card adaptive">
+                <div class="col-md col-md-offset-1 col-xs-12 ">
+                    <div class="cr card adaptive full-shadow">
                         <div class="card-head ">Letters</div>
                         <div class="card-body">
                             <h3>[Verse 1: Jamie Scott]</h3>
@@ -183,6 +185,8 @@
                 </div>
             </div>
         </div>
+        </div>
+      
         <!-- <button class="cr button outline large rounded big red pulse icon ">
             <div class="i-label">
                 <i class="material-icons">favorite</i>
@@ -294,15 +298,13 @@
         $('body').css({
             "transition": 'background 0.4s ease-out, background-image 1s ease-out'
         })
-         $("#song-name").html("Martin Garrix & David Guetta ft Romy Dya & Jamie Scott - So Far Away")
+        $("#song-name").html("Martin Garrix & David Guetta ft Romy Dya & Jamie Scott - So Far Away")
         $('body').addClass('garrix');
         $("#mybar > a").css({
             "transition": "color 0.4s ease-out",
             "color": "#00E676"
         })
-        $("#mybar").css({
-            "transition": "background 0.4s ease-out"
-        })
+       
         $("#mybar").removeClass('white');
         $("#mybar").addClass('black');
 
