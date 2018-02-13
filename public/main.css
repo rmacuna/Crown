@@ -14,7 +14,7 @@ div.cr.card {
   font-size: 16px;
   z-index: 1; }
   div.cr.card:hover {
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4); }
   div.cr.card .card-head {
     text-align: center;
     border-top-right-radius: 4px;
@@ -398,6 +398,9 @@ div.cr.card.variant {
     border-top-left-radius: none;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px; }
+
+div.cr.card.full-shadow {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 8px 26px rgba(0, 0, 0, 0.3), 0 8px 26px rgba(0, 0, 0, 0.3); }
 
 .bold {
   font-weight: bold; }
