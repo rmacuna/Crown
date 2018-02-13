@@ -12,21 +12,60 @@
     body {
         background: #FF1744;
         /*background: #FF3D00;*/
+        /*background: #000;*/
     }
 
+    body.garrix {
+        background-image: url('there.jpg');
+        background-color: #000;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transition: background-image 0.4s ease-out
+    }
+
+    body.guetta {
+        background-image: url('guetta.jpeg');
+        background-color: #D50000;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transition: background-image 0.4s ease-out
+    }
+    body.avicii {
+        background-image: url('avicii.png');
+        background-color: #9C27B0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transition: background-image 0.4s ease-out
+    }
+    body.mello {
+        background-image: url('mello.jpg');
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transition: background-image 0.4s ease-out
+    }
     .sep {
         padding-top: 20px;
     }
 
     .center-div {
-        position: absolute;
-        top: 35%;
-        left: 10%;
-        display: inline-block;
+        position: relative;
+        left: 5%;
+        top: 20%;
+    }
+
+    .center-btns {
+        position: relative;
+        top: 10%;
     }
 
     .card-contain {
-        width: 40%;
+        position: relative;
+        top: 20%;
         height: auto;
     }
     </style>
@@ -50,85 +89,98 @@
         <button onclick="triggerModal();" class="cr button white  float  pulse">
             <i class="material-icons">add</i>
         </button>
-        <div class="cr modal shadow medium ">
-            <i class="material-icons text-white close">close</i>
-            <div class="modal-head indigo center">Login</div>
+        <div class="cr modal  shadow  ">
+            <i class="material-icons text-black close">close</i>
+            <div class="modal-head white center">Publish comment</div>
             <div class="modal-body ">
                 <div class="row">
                     <div class="col-xs-12 col-md-12">
-                        <div class="cr-material-field">
+                        <div class="cr-material-field green">
                             <label class="m-label">Username</label>
-                            <input class="m-input" type="text" name="in1">
+                            <input class="m-input " type="text" name="in1">
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-12">
-                        <div class="cr-material-field">
+                        <div class="cr-material-field green text-white">
                             <label class="m-label" for="in2">Password</label>
-                            <input class="m-input" type="password" name="in2">
+                            <input class="m-input " type="password" name="in2">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer no-line center">
+            <div class="modal-footer no-line white center">
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
-                        <button class="cr simple button pink pulse adaptive">REGISTER</button>
+                        <button class="cr simple button green pulse adaptive">CANCEL</button>
                     </div>
                     <div class="col-xs-12 col-md-6">
-                        <button class="cr simple button pink pulse adaptive">LOGIN</button>
+                        <button class="cr simple button green pulse adaptive">PUBLISH</button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="center-div">
-            <h1 class="text-white ">Martin Garrix & David Guetta ft Romy Dya & Jamie Scott - So Far Away</h1>
-            <div style="display: inline-block;" class="cr button white big pulse large hoverable">Martin Garrix</div>
-            <div style="display: inline-block;" class="cr button white big pulse large hoverable">David Guetta</div>
-            <div style="display: inline-block;" class="cr button white big pulse large hoverable">Romy Dya</div>
-            <div style="display: inline-block;" class="cr button white big pulse large hoverable">Jamie Scott</div>
-        </div>
-        <div style="position: absolute; top: 60%; left: 25%;" class="cr card medium">
-            <div class="card-head ">Letters</div>
-            <div class="card-body">
-                <h3>[Verse 1: Jamie Scott]</h3>
-                <p>Light 'em up, light 'em up Tell me where you are, tell me where you are The summer nights, the bright lights And the shooting stars, they break my heart</p>
-                <h3>[Pre-Chorus 1: Jamie Scott]</h3>
-                <p>I'm calling you now, but you're not picking up Your shadows so close if you are still in love Then light a match, light a match Baby, in the dark, show me where you are</p>
-                <h3>[Chorus: Jamie Scott]</h3>
-                <p>
-                    Oh, love How I miss you every single day when I see you on those streets Oh, love Tell me there's a river I can swim that will bring you back to me 'Cause I don't know how to love someone else I don't know how to forget your face Oh, love God, I miss you every single day and now you're so far away
-                </p>
-                <h3>[Post-Chorus: Jamie Scott]</h3>
-                <strong>So far away</strong>
-                <h3>[Verse 2: Romy Dya]</h3>
-                <p>
-                    It's breaking me, I'm losing you We were far from perfect, but we were worth it Too many fights, and we cried, but never said we're sorry Stop saying you love me
-                </p>
-                <h3>[Pre-Chorus 2: Romy Dya]</h3>
-                <p>You're calling me now, but I can't pick up Your shadow's too close, and I'm still in love The summer's over now, but somehow, it still breaks my heart We could have had the stars, oh</p>
-                <h3>[Chorus: Jamie Scott & Romy Dya]</h3>
-                <p>Oh, love How I miss you every single day when I see you on those streets Oh, love Tell me there's a river I can swim that will bring you back to me 'Cause I don't know how to love someone else I don't know how to forget your face Oh, love God, I miss you every single day and now you're so far away</p>
-                <h3>[Post-Chorus: Romy Dya & Jamie Scott]</h3>
-                <p>So far away So far away Oh, so far away So far away</p>
-                <h3>[Outro: Romy Dya]</h3>
-                <p>
-                    Oh, love How I miss you every single day when I see you on those streets Oh, love Tell me there's a river I can swim that will bring you back to me 'Cause I don't know how to love someone else I don't know how to forget your face Oh, love God, I miss you every single day when you're so far away
-                </p>
-            </div>
-            <div class="card-footer">
-                <div style="position: relative; left: 35%" class="cr button medium  big icon ">
-                    <div class="i-label">
-                        <i class="material-icons">play_arrow</i>
-                    </div>
-                    Play
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <div class="center-div">
+                    <h1 id="song-name" class="text-white ">Martin Garrix & David Guetta ft Romy Dya & Jamie Scott - So Far Away</h1>
                 </div>
             </div>
         </div>
-
-        <div style="position: absolute; top: 80%; left: 0" class="cake white">
-            <i class="material-icons">help</i>
-            <div class="content">
-                <h3>Martin Garrix & David Guetta</h3>
+        <div class="row center-btns">
+            <div class="col-xs-12 col-md-3">
+                <div onclick="martin();" style="display: inline-block;" class="cr button white big pulse rounded adaptive hoverable">Martin Garrix</div>
+            </div>
+            <div  class="col-xs-12 col-md-3">
+                <div onclick="guetta();" style="display: inline-block;" class="cr button white big pulse rounded adaptive hoverable">David Guetta</div>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div onclick="avicii();" style="display: inline-block;" class="cr button white big pulse rounded adaptive hoverable">Avicii</div>
+            </div>
+            <div class="col-xs-12 col-md-3">
+                <div onclick="mello();" style="display: inline-block;" class="cr button white big pulse rounded adaptive hoverable">Marshmello</div>
+            </div>
+        </div>
+        <div class="card-contain">
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <div class="cr card adaptive">
+                        <div class="card-head ">Letters</div>
+                        <div class="card-body">
+                            <h3>[Verse 1: Jamie Scott]</h3>
+                            <p>Light 'em up, light 'em up Tell me where you are, tell me where you are The summer nights, the bright lights And the shooting stars, they break my heart</p>
+                            <h3>[Pre-Chorus 1: Jamie Scott]</h3>
+                            <p>I'm calling you now, but you're not picking up Your shadows so close if you are still in love Then light a match, light a match Baby, in the dark, show me where you are</p>
+                            <h3>[Chorus: Jamie Scott]</h3>
+                            <p>
+                                Oh, love How I miss you every single day when I see you on those streets Oh, love Tell me there's a river I can swim that will bring you back to me 'Cause I don't know how to love someone else I don't know how to forget your face Oh, love God, I miss you every single day and now you're so far away
+                            </p>
+                            <h3>[Post-Chorus: Jamie Scott]</h3>
+                            <strong>So far away</strong>
+                            <h3>[Verse 2: Romy Dya]</h3>
+                            <p>
+                                It's breaking me, I'm losing you We were far from perfect, but we were worth it Too many fights, and we cried, but never said we're sorry Stop saying you love me
+                            </p>
+                            <h3>[Pre-Chorus 2: Romy Dya]</h3>
+                            <p>You're calling me now, but I can't pick up Your shadow's too close, and I'm still in love The summer's over now, but somehow, it still breaks my heart We could have had the stars, oh</p>
+                            <h3>[Chorus: Jamie Scott & Romy Dya]</h3>
+                            <p>Oh, love How I miss you every single day when I see you on those streets Oh, love Tell me there's a river I can swim that will bring you back to me 'Cause I don't know how to love someone else I don't know how to forget your face Oh, love God, I miss you every single day and now you're so far away</p>
+                            <h3>[Post-Chorus: Romy Dya & Jamie Scott]</h3>
+                            <p>So far away So far away Oh, so far away So far away</p>
+                            <h3>[Outro: Romy Dya]</h3>
+                            <p>
+                                Oh, love How I miss you every single day when I see you on those streets Oh, love Tell me there's a river I can swim that will bring you back to me 'Cause I don't know how to love someone else I don't know how to forget your face Oh, love God, I miss you every single day when you're so far away
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <div style="position: relative; left: 35%" class="cr button medium  big icon ">
+                                <div class="i-label">
+                                    <i class="material-icons">play_arrow</i>
+                                </div>
+                                Play
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- <button class="cr button outline large rounded big red pulse icon ">
@@ -205,11 +257,11 @@
     <script src="../JavaScript/Crow.js"></script>
     <script type="text/javascript">
     function triggerModal() {
-        // if (!$('.cr.modal').is('.opened')) {
-        //     $('.cr.modal').modal('show');
-        // } else {
-        //     $('.cr.modal').modal('hide');
-        // }
+        if (!$('.cr.modal').is('.opened')) {
+            $('.cr.modal').modal('show');
+        } else {
+            $('.cr.modal').modal('hide');
+        }
         //  $("#list1").color({
         //     background: "#F44336",
         //     font: "#FFFFFF",
@@ -223,16 +275,120 @@
         //     font: '#FFFFFF'
         // })
 
-        $('#bd').loader('show', 'balls', {
-            time: 5000,
-            background: '#fff',
-            dfloadercolor: '#fff'
-        });
+        // $('#bd').loader('show', 'balls', {
+        //     time: 5000,
+        //     background: '#fff',
+        //     dfloadercolor: '#fff'
+        // });
 
 
         // //Create function of progress up...   
         // var random = Math.random() * (100 - 10) + 10;
         // $("#loadbar").progress('interval', random, 5);  el intervalo se da en segundos
+    }
+
+    function martin() {
+        if ($('body').is('.guetta') || $('body').is('.avicii') || $('body').is('.mello')) {
+            $('body').removeAttr('class');
+        }
+        $('body').css({
+            "transition": 'background 0.4s ease-out, background-image 1s ease-out'
+        })
+         $("#song-name").html("Martin Garrix & David Guetta ft Romy Dya & Jamie Scott - So Far Away")
+        $('body').addClass('garrix');
+        $("#mybar > a").css({
+            "transition": "color 0.4s ease-out",
+            "color": "#00E676"
+        })
+        $("#mybar").css({
+            "transition": "background 0.4s ease-out"
+        })
+        $("#mybar").removeClass('white');
+        $("#mybar").addClass('black');
+
+        $('.cr.button').css({
+            "transition": "background 0.4s ease-out"
+        })
+        $(".cr.button").removeClass('white').addClass('green');
+    }
+
+    function guetta() {
+
+       if ($('body').is('.garrix') || $('body').is('.avicii') || $('body').is('.mello')) {
+            $('body').removeAttr('class');
+        }
+       $('body').css({
+            "transition": 'background 0.4s ease-out, background-image 1s ease-out'
+        })
+       $("#song-name").html("David Guetta - Lovers on the Sun (feat. Sam Martin) ")
+        $('body').addClass('guetta');
+        $("#mybar > a").css({
+            "transition": "color 0.4s ease-out",
+            "color": "#00E676"
+        })
+        $("#mybar").css({
+            "transition": "background 0.4s ease-out"
+        })
+        $("#mybar").removeClass('white');
+        $("#mybar").addClass('black');
+
+        $('.cr.button').css({
+            "transition": "background 0.4s ease-out"
+        })
+        $(".cr.button").removeClass('white').addClass('green');
+
+    }
+
+    function avicii() {
+
+       if ($('body').is('.garrix') || $('body').is('.guetta') || $('body').is('.mello')) {
+            $('body').removeAttr('class');
+        }
+       $('body').css({
+            "transition": 'background 0.4s ease-out, background-image 1s ease-out'
+        })
+        $("#song-name").html("Avicii - Waiting For Love ")
+        $('body').addClass('avicii');
+        $("#mybar > a").css({
+            "transition": "color 0.4s ease-out",
+            "color": "#00E676"
+        })
+        $("#mybar").css({
+            "transition": "background 0.4s ease-out"
+        })
+        $("#mybar").removeClass('white');
+        $("#mybar").addClass('black');
+
+        $('.cr.button').css({
+            "transition": "background 0.4s ease-out"
+        })
+        $(".cr.button").removeClass('white').addClass('green');
+    }
+    function mello() {
+
+       if ($('body').is('.garrix') || $('body').is('.guetta') || $('body').is('.avicii')) {
+            $('body').removeAttr('class');
+        }
+       $('body').css({
+            "transition": 'background 0.4s ease-out, background-image 1s ease-out'
+        })
+       $("#song-name").html("Marshmello - Silence Ft. Khalid");
+        $('body').addClass('mello');
+        $("#mybar > a").css({
+            "transition": "color 0.4s ease-out",
+            "color": "#00E676"
+        })
+        $('.center-div').addClass('text-black')
+        $("#mybar").css({
+            "transition": "background 0.4s ease-out"
+        })
+        $("#mybar").removeClass('white');
+        $("#mybar").addClass('black');
+
+        $('.cr.button').css({
+            "transition": "background 0.4s ease-out"
+        })
+        $(".cr.button").removeClass('white').addClass('green');
     }
     </script>
 </body>
