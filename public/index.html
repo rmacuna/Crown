@@ -83,17 +83,17 @@
             <input class="increase-to-large" placeholder="Search" type="text">
             <i class="material-icons">search</i>
         </div>
-        <a href="#" class="menu-item pulse right">Register</a>
-        <a href="#" class="menu-item pulse right">Log in</a>
+        <a href="#" onclick="register();" class="menu-item pulse right">Register</a>
+        <a href="#" onclick="login();" class="menu-item pulse right">Log in</a>
     </div>
     <div id="bd" class="cr container ">
         <button onclick="triggerModal();" class="cr button white  float  pulse">
             <i class="material-icons">add</i>
         </button>
-        <div class="cr modal  shadow  ">
+        <div class="cr modal content-scroll shadow  ">
             <i class="material-icons text-black close">close</i>
             <div class="modal-head white center">Publish comment</div>
-            <div class="modal-body ">
+            <div class="modal-body white ">
                 <div class="row">
                     <div class="col-xs-12 col-md-12">
                         <div class="cr-material-field green">
@@ -105,6 +105,13 @@
                         <div class="cr-material-field green text-white">
                             <label class="m-label" for="in2">Password</label>
                             <input class="m-input " type="password" name="in2">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12">
+                        <div class="cr-material-field green area">
+                            <span class="m-label">Comment</span>
+                            <textarea class="m-area"></textarea>
+                            <span max-value="120" class="m-counter"></span>
                         </div>
                     </div>
                 </div>
@@ -121,23 +128,23 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12 col-md-12">
+            <div class="col-xs-12 col-md-12 col-lg-12 ">
                 <div class="center-div">
                     <h1 id="song-name" class="text-white ">Martin Garrix & David Guetta ft Romy Dya & Jamie Scott - So Far Away</h1>
                 </div>
             </div>
         </div>
         <div class="row center-btns">
-            <div class="col-xs-12 col-md-3">
+            <div class="col-xs-12 col-md-3 col-lg-3">
                 <div onclick="martin();" style="display: inline-block;" class="cr button white big pulse rounded adaptive hoverable">Martin Garrix</div>
             </div>
-            <div  class="col-xs-12 col-md-3">
+            <div  class="col-xs-12 col-md-3 col-lg-3">
                 <div onclick="guetta();" style="display: inline-block;" class="cr button white big pulse rounded adaptive hoverable">David Guetta</div>
             </div>
-            <div class="col-xs-12 col-md-3">
+            <div class="col-xs-12 col-md-3 col-lg-3">
                 <div onclick="avicii();" style="display: inline-block;" class="cr button white big pulse rounded adaptive hoverable">Avicii</div>
             </div>
-            <div class="col-xs-12 col-md-3">
+            <div class="col-xs-12 col-md-3 col-lg-3">
                 <div onclick="mello();" style="display: inline-block;" class="cr button white big pulse rounded adaptive hoverable">Marshmello</div>
             </div>
         </div>
