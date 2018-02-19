@@ -9,7 +9,7 @@ div.cr.card {
   height: auto;
   width: 25rem;
   border-radius: 4px;
-  margin: 5px 5px 5px 5px;
+  margin: 5px 5px;
   min-width: 12rem;
   font-size: 16px;
   z-index: 1; }
@@ -220,14 +220,7 @@ div.cake {
   overflow: hidden;
   text-align: center;
   z-index: 2;
-  background: #fefefe;
-  background: #2196F3; }
-  div.cake:active:hover {
-    -webkit-transform: scale(10);
-    -moz-transform: scale(10);
-    transform: scale(10); }
-    div.cake:active:hover div.content {
-      opacity: 0; }
+  background: #fefefe; }
   div.cake div.content {
     color: #fff;
     position: relative;
@@ -242,7 +235,6 @@ div.cake {
     transform: scale(1);
     -webkit-transform: scale(1);
     -moz-transform: scale(1);
-    background: #0960a5;
     z-index: 100; }
     div.cake:hover div.content {
       transform: scale(0.7);
@@ -1757,7 +1749,7 @@ span.overlay {
   height: 100vh;
   transition: opacity 0.3s ease-out;
   opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   -webkit-animation: fadeIn 0.4s ease-in-out;
   -moz-animation: fadeIn 0.4s ease-in-out;
   -o-animation: fadeIn 0.4s ease-in-out;
@@ -2268,8 +2260,7 @@ div.cr.menubar {
   border-bottom-left-radius: 2px;
   white-space: nowrap;
   border-bottom-right-radius: 2px;
-  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4);
-  transition: max-height 1s ease-out; }
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.4); }
   div.cr.menubar a.menu-item {
     position: relative;
     box-sizing: border-box;
@@ -3516,7 +3507,7 @@ body {
   margin: 0 !important; }
 
 .cr.container {
-  height: 100vh;
+  position: relative;
   margin-top: 15px;
   margin-bottom: 5px;
   margin-right: auto;
@@ -3530,17 +3521,13 @@ body {
       max-width: 90% !important; } }
   @media screen and (min-width: 768px) {
     .cr.container {
-      width: 750px;
       max-width: 90% !important; } }
   @media screen and (max-width: 1199px) and (min-width: 992px) {
     .cr.container {
-      width: 100%;
-      margin-left: 25px;
-      max-width: 90% !important; } }
+      width: 100%; } }
   @media screen and (min-width: 1200px) {
     .cr.container {
-      width: 100%;
-      margin-left: 35px; } }
+      width: 100%; } }
 
 /*-----------------------------------All  BUTTONS CODE---------------------------------------------------------- */
 button.cr.button {

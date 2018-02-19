@@ -9,7 +9,7 @@ div.cr.card
 	height: auto
 	width: 25.0rem
 	border-radius: 4px
-	margin: 5px 5px 5px 5px 
+	margin: 5px 5px
 	min-width: 12.0rem
 	font-size: 16px
 	z-index: 1
@@ -260,13 +260,12 @@ div.cake
 	text-align: center
 	z-index: 2 
 	background: darken($white, .4)
-	background: $blue 
-	&:active:hover
-		-webkit-transform: scale(10)
-		-moz-transform: scale(10)
-		transform: scale(10)
-		div.content 
-			opacity: 0
+	// &:active:hover
+	// 	-webkit-transform: scale(10)
+	// 	-moz-transform: scale(10)
+	// 	transform: scale(10)
+	// 	div.content 
+	// 		opacity: 0
 
 	div.content 
 		color: $white 
@@ -283,7 +282,6 @@ div.cake
 		transform: scale(1)
 		-webkit-transform: scale(1)
 		-moz-transform: scale(1)
-		background: darken($blue, 20)
 		z-index: 100
 		div.content 
 			transform: scale(0.7) 

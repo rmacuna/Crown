@@ -9,73 +9,101 @@
     <link rel="stylesheet" href="../Css/Grid/flexboxgrid.min.css">
     <title>LearnDesign</title>
     <style type="text/css">
-    body {
-        background: #FF1744;
-        /*background: #FF3D00;*/
-        /*background: #000;*/
-    }
+        body {
+            background: #FF1744;
+            /*background: #FF3D00;*/
+            /*background: #000;*/
+        }
 
-    body.garrix {
-        background-image: url('there.jpg');
-        background-color: #000;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        transition: background-image 0.4s ease-out
-    }
+        body.garrix {
+            background-image: url('there.jpg');
+            background-color: #37474F;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.4s ease-out
+        }
 
-    body.guetta {
-        background-image: url('guetta.jpeg');
-        background-color: #D50000;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        transition: background-image 0.4s ease-out
-    }
-    body.avicii {
-        background-image: url('avicii.png');
-        background-color: #9C27B0;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        transition: background-image 0.4s ease-out
-    }
-    body.mello {
-        background-image: url('mello.jpg');
-        background-color: #fff;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        transition: background-image 0.4s ease-out
-    }
-    .sep {
-        padding-top: 20px;
-    }
+        .cake-center {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-    .center-div {
-        position: relative;
-        left: 5%;
-        top: 20%;
-    }
+        body.guetta {
+            background-image: url('guetta.jpeg');
+            background-color: #D50000;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.4s ease-out
+        }
 
-    .center-btns {
-        position: relative;
-        top: 10%;
-    }
+        body.avicii {
+            background-image: url('avicii.png');
+            background-color: #9C27B0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.4s ease-out
+        }
 
-    .card-contain {
-        position: relative;
-        top: 20%;
-        height: auto;
-    }
+        body.mello {
+            background-image: url('mello.jpg');
+            background-color: #fff;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            transition: background-image 0.4s ease-out
+        }
 
+        h1#txtHead2 {
+            color: white;
+        }
+
+        .sep {
+            padding-top: 20px;
+        }
+
+        .center-div {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding: 5px 5px 5px 5px;
+            box-sizing: border-box;
+
+        }
+
+        .center-div h1 {
+            position: relative;
+            text-align: center;
+        }
+
+        .center-btns {
+            position: relative;
+            margin-top: 10%
+        }
+
+        .card-contain {
+            position: relative;
+            margin-top: 10%;
+            width: 100%;
+            height: auto;
+        }
+
+        .card-contain .cr.card {
+            left: 50%;
+            transform: translateX(-50%);
+        }
     </style>
 </head>
 
 <body>
     <div id="mybar" class="cr menubar  white   mobile-top">
         <div class="brand">Crown</div>
-        <div class="menu-icon right"><i class="material-icons">menu</i></div>
+        <div class="menu-icon right">
+            <i class="material-icons">menu</i>
+        </div>
         <a href="#" class="menu-item ">Home</a>
         <a href="#" class="menu-item">News</a>
         <a href="#" class="menu-item">Contact</a>
@@ -86,11 +114,10 @@
         <a href="#" onclick="register();" class="menu-item pulse right">Register</a>
         <a href="#" onclick="login();" class="menu-item pulse right">Log in</a>
     </div>
-    <div id="bd" class="cr container ">
-        <button onclick="triggerModal();" class="cr button white  float  pulse">
-            <i class="material-icons">add</i>
-        </button>
-        <div class="cr modal content-scroll shadow  ">
+    <button onclick="triggerModal();" class="cr button white  float  pulse">
+        <i class="material-icons">add</i>
+    </button>
+    <div class="cr modal content-scroll shadow  ">
             <i class="material-icons text-black close">close</i>
             <div class="modal-head white center">Publish comment</div>
             <div class="modal-body white ">
@@ -127,6 +154,9 @@
                 </div>
             </div>
         </div>
+    <div id="bd" class="cr container ">
+
+       
         <div class="row">
             <div class="col-xs-12 col-md-12 col-lg-12 ">
                 <div class="center-div">
@@ -138,7 +168,7 @@
             <div class="col-xs-12 col-md-3 col-lg-3">
                 <div onclick="martin();" style="display: inline-block;" class="cr button white big pulse rounded adaptive hoverable">Martin Garrix</div>
             </div>
-            <div  class="col-xs-12 col-md-3 col-lg-3">
+            <div class="col-xs-12 col-md-3 col-lg-3">
                 <div onclick="guetta();" style="display: inline-block;" class="cr button white big pulse rounded adaptive hoverable">David Guetta</div>
             </div>
             <div class="col-xs-12 col-md-3 col-lg-3">
@@ -148,52 +178,77 @@
                 <div onclick="mello();" style="display: inline-block;" class="cr button white big pulse rounded adaptive hoverable">Marshmello</div>
             </div>
         </div>
-        <div class="cr container">
-              <div class="card-contain ">
-            <div class="row">
-                <div class="col-md col-md-offset-1 col-xs-12 ">
-                    <div class="cr card adaptive full-shadow">
-                        <div class="card-head ">Letters</div>
-                        <div class="card-body">
-                            <h3>[Verse 1: Jamie Scott]</h3>
-                            <p>Light 'em up, light 'em up Tell me where you are, tell me where you are The summer nights, the bright lights And the shooting stars, they break my heart</p>
-                            <h3>[Pre-Chorus 1: Jamie Scott]</h3>
-                            <p>I'm calling you now, but you're not picking up Your shadows so close if you are still in love Then light a match, light a match Baby, in the dark, show me where you are</p>
-                            <h3>[Chorus: Jamie Scott]</h3>
-                            <p>
-                                Oh, love How I miss you every single day when I see you on those streets Oh, love Tell me there's a river I can swim that will bring you back to me 'Cause I don't know how to love someone else I don't know how to forget your face Oh, love God, I miss you every single day and now you're so far away
-                            </p>
-                            <h3>[Post-Chorus: Jamie Scott]</h3>
-                            <strong>So far away</strong>
-                            <h3>[Verse 2: Romy Dya]</h3>
-                            <p>
-                                It's breaking me, I'm losing you We were far from perfect, but we were worth it Too many fights, and we cried, but never said we're sorry Stop saying you love me
-                            </p>
-                            <h3>[Pre-Chorus 2: Romy Dya]</h3>
-                            <p>You're calling me now, but I can't pick up Your shadow's too close, and I'm still in love The summer's over now, but somehow, it still breaks my heart We could have had the stars, oh</p>
-                            <h3>[Chorus: Jamie Scott & Romy Dya]</h3>
-                            <p>Oh, love How I miss you every single day when I see you on those streets Oh, love Tell me there's a river I can swim that will bring you back to me 'Cause I don't know how to love someone else I don't know how to forget your face Oh, love God, I miss you every single day and now you're so far away</p>
-                            <h3>[Post-Chorus: Romy Dya & Jamie Scott]</h3>
-                            <p>So far away So far away Oh, so far away So far away</p>
-                            <h3>[Outro: Romy Dya]</h3>
-                            <p>
-                                Oh, love How I miss you every single day when I see you on those streets Oh, love Tell me there's a river I can swim that will bring you back to me 'Cause I don't know how to love someone else I don't know how to forget your face Oh, love God, I miss you every single day when you're so far away
-                            </p>
-                        </div>
-                        <div class="card-footer">
-                            <div style="position: relative; left: 35%" class="cr button medium  big icon ">
-                                <div class="i-label">
-                                    <i class="material-icons">play_arrow</i>
+        <div>
+            <div class="card-contain ">
+                <div class="row">
+                    <div class="col-md-12 col-xs-12 ">
+                        <div class="cr card adaptive full-shadow">
+                            <div class="card-head ">Letters</div>
+                            <div class="card-body">
+                                <h3>[Verse 1: Jamie Scott]</h3>
+                                <p>Light 'em up, light 'em up Tell me where you are, tell me where you are The summer nights,
+                                    the bright lights And the shooting stars, they break my heart</p>
+                                <h3>[Pre-Chorus 1: Jamie Scott]</h3>
+                                <p>I'm calling you now, but you're not picking up Your shadows so close if you are still in
+                                    love Then light a match, light a match Baby, in the dark, show me where you are</p>
+                                <h3>[Chorus: Jamie Scott]</h3>
+                                <p>
+                                    Oh, love How I miss you every single day when I see you on those streets Oh, love Tell me there's a river I can swim that
+                                    will bring you back to me 'Cause I don't know how to love someone else I don't know how
+                                    to forget your face Oh, love God, I miss you every single day and now you're so far away
+                                </p>
+                                <h3>[Post-Chorus: Jamie Scott]</h3>
+                                <strong>So far away</strong>
+                                <h3>[Verse 2: Romy Dya]</h3>
+                                <p>
+                                    It's breaking me, I'm losing you We were far from perfect, but we were worth it Too many fights, and we cried, but never
+                                    said we're sorry Stop saying you love me
+                                </p>
+                                <h3>[Pre-Chorus 2: Romy Dya]</h3>
+                                <p>You're calling me now, but I can't pick up Your shadow's too close, and I'm still in love
+                                    The summer's over now, but somehow, it still breaks my heart We could have had the stars,
+                                    oh
+                                </p>
+                                <h3>[Chorus: Jamie Scott & Romy Dya]</h3>
+                                <p>Oh, love How I miss you every single day when I see you on those streets Oh, love Tell me
+                                    there's a river I can swim that will bring you back to me 'Cause I don't know how to
+                                    love someone else I don't know how to forget your face Oh, love God, I miss you every
+                                    single day and now you're so far away</p>
+                                <h3>[Post-Chorus: Romy Dya & Jamie Scott]</h3>
+                                <p>So far away So far away Oh, so far away So far away</p>
+                                <h3>[Outro: Romy Dya]</h3>
+                                <p>
+                                    Oh, love How I miss you every single day when I see you on those streets Oh, love Tell me there's a river I can swim that
+                                    will bring you back to me 'Cause I don't know how to love someone else I don't know how
+                                    to forget your face Oh, love God, I miss you every single day when you're so far away
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="cr button  adaptive  big icon ">
+                                    <div class="i-label">
+                                        <i class="material-icons">skip_next</i>
+                                    </div>
+                                    Next Song
                                 </div>
-                                Play
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="row center-md center-xs center-lg">
+            <div class="col-xs-12 col-md-12 col-lg-12">
+                <h1 id="txtHead2">Let me know more design</h1>
+            </div>
+            <div class="row center-xs center-md center-lg">
+                <div onclick="changePage();" class="cr button outline white big large">Play Football</div>
+            </div>
+
+
         </div>
-      
+
         <!-- <button class="cr button outline large rounded big red pulse icon ">
             <div class="i-label">
                 <i class="material-icons">favorite</i>
@@ -267,138 +322,168 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../JavaScript/Crow.js"></script>
     <script type="text/javascript">
-    function triggerModal() {
-        if (!$('.cr.modal').is('.opened')) {
-            $('.cr.modal').modal('show');
-        } else {
-            $('.cr.modal').modal('hide');
+        function triggerModal() {
+            if (!$('.cr.modal').is('.opened')) {
+                $('.cr.modal').modal('show');
+            } else {
+                $('.cr.modal').modal('hide');
+            }
+            //  $("#list1").color({
+            //     background: "#F44336",
+            //     font: "#FFFFFF",
+            //     header: "#F44336"
+            // })
+            // let checks = $("#list1").list('checked');
+            // console.log(checks.number);
+            // console.log(checks.checkboxs);
+            // $("#item1").color({
+            //     background: '#F44336',
+            //     font: '#FFFFFF'
+            // })
+
+            // $('#bd').loader('show', 'balls', {
+            //     time: 5000,
+            //     background: '#fff',
+            //     dfloadercolor: '#fff'
+            // });
+
+
+            // //Create function of progress up...   
+            // var random = Math.random() * (100 - 10) + 10;
+            // $("#loadbar").progress('interval', random, 5);  el intervalo se da en segundos
         }
-        //  $("#list1").color({
-        //     background: "#F44336",
-        //     font: "#FFFFFF",
-        //     header: "#F44336"
-        // })
-        // let checks = $("#list1").list('checked');
-        // console.log(checks.number);
-        // console.log(checks.checkboxs);
-        // $("#item1").color({
-        //     background: '#F44336',
-        //     font: '#FFFFFF'
-        // })
 
-        // $('#bd').loader('show', 'balls', {
-        //     time: 5000,
-        //     background: '#fff',
-        //     dfloadercolor: '#fff'
-        // });
+        function changePage() {
+            $('body').loader('show', 'dots', {
+                time: '5000',
+                background: '#201e55',
+                color: '#cbf17c'
+            })
+            setTimeout(() => {
+                $("#bd").css({ 'display': 'none' })
+                $('body').css({
+                    'background-image': "url('FIFA-18-FI.jpg')",
+                    'background-color': "#201e55",
+                    ' background-repeat': "no-repeat",
+                    'background-size': "cover",
+                    'background-position': "center",
+                    'transition': "background-image 0.4s ease-out"
+                })
 
+                //  $("#mybar > a").css({
+                //     "transition": "color 0.4s ease-out",
+                //     "color": "#00E676"
+                //  })
 
-        // //Create function of progress up...   
-        // var random = Math.random() * (100 - 10) + 10;
-        // $("#loadbar").progress('interval', random, 5);  el intervalo se da en segundos
-    }
+            }, 1000);
 
-    function martin() {
-        if ($('body').is('.guetta') || $('body').is('.avicii') || $('body').is('.mello')) {
-            $('body').removeAttr('class');
         }
-        $('body').css({
-            "transition": 'background 0.4s ease-out, background-image 1s ease-out'
-        })
-        $("#song-name").html("Martin Garrix & David Guetta ft Romy Dya & Jamie Scott - So Far Away")
-        $('body').addClass('garrix');
-        $("#mybar > a").css({
-            "transition": "color 0.4s ease-out",
-            "color": "#00E676"
-        })
-       
-        $("#mybar").removeClass('white');
-        $("#mybar").addClass('black');
 
-        $('.cr.button').css({
-            "transition": "background 0.4s ease-out"
-        })
-        $(".cr.button").removeClass('white').addClass('green');
-    }
+        function martin() {
+            if ($('body').is('.guetta') || $('body').is('.avicii') || $('body').is('.mello')) {
+                $('body').removeAttr('class');
+            }
+            $("#txtHead2").css({ 'color': 'white' })
+            $('body').css({
+                "transition": 'background 0.4s ease-out, background-image 1s ease-out'
+            })
+            $("#song-name").html("Martin Garrix & David Guetta ft Romy Dya & Jamie Scott - So Far Away")
+            $('body').addClass('garrix');
+            $("#mybar > a").css({
+                "transition": "color 0.4s ease-out",
+                "color": "#00E676"
+            })
 
-    function guetta() {
+            $("#mybar").removeClass('white');
+            $("#mybar").addClass('black');
 
-       if ($('body').is('.garrix') || $('body').is('.avicii') || $('body').is('.mello')) {
-            $('body').removeAttr('class');
+            $('.cr.button').css({
+                "transition": "background 0.4s ease-out"
+            })
+            $(".cr.button").removeClass('white').addClass('green');
         }
-       $('body').css({
-            "transition": 'background 0.4s ease-out, background-image 1s ease-out'
-        })
-       $("#song-name").html("David Guetta - Lovers on the Sun (feat. Sam Martin) ")
-        $('body').addClass('guetta');
-        $("#mybar > a").css({
-            "transition": "color 0.4s ease-out",
-            "color": "#00E676"
-        })
-        $("#mybar").css({
-            "transition": "background 0.4s ease-out"
-        })
-        $("#mybar").removeClass('white');
-        $("#mybar").addClass('black');
 
-        $('.cr.button').css({
-            "transition": "background 0.4s ease-out"
-        })
-        $(".cr.button").removeClass('white').addClass('green');
+        function guetta() {
 
-    }
+            if ($('body').is('.garrix') || $('body').is('.avicii') || $('body').is('.mello')) {
+                $('body').removeAttr('class');
+            }
+            $('body').css({
+                "transition": 'background 0.4s ease-out, background-image 1s ease-out'
+            })
+            $("#txtHead2").css({ 'color': 'white' })
+            $("#song-name").html("David Guetta - Lovers on the Sun (feat. Sam Martin) ")
+            $('body').addClass('guetta');
+            $("#mybar > a").css({
+                "transition": "color 0.4s ease-out",
+                "color": "#00E676"
+            })
+            $("#mybar").css({
+                "transition": "background 0.4s ease-out"
+            })
+            $("#mybar").removeClass('white');
+            $("#mybar").addClass('black');
 
-    function avicii() {
+            $('.cr.button').css({
+                "transition": "background 0.4s ease-out"
+            })
+            $(".cr.button").removeClass('white').addClass('green');
 
-       if ($('body').is('.garrix') || $('body').is('.guetta') || $('body').is('.mello')) {
-            $('body').removeAttr('class');
         }
-       $('body').css({
-            "transition": 'background 0.4s ease-out, background-image 1s ease-out'
-        })
-        $("#song-name").html("Avicii - Waiting For Love ")
-        $('body').addClass('avicii');
-        $("#mybar > a").css({
-            "transition": "color 0.4s ease-out",
-            "color": "#00E676"
-        })
-        $("#mybar").css({
-            "transition": "background 0.4s ease-out"
-        })
-        $("#mybar").removeClass('white');
-        $("#mybar").addClass('black');
 
-        $('.cr.button').css({
-            "transition": "background 0.4s ease-out"
-        })
-        $(".cr.button").removeClass('white').addClass('green');
-    }
-    function mello() {
+        function avicii() {
 
-       if ($('body').is('.garrix') || $('body').is('.guetta') || $('body').is('.avicii')) {
-            $('body').removeAttr('class');
+            if ($('body').is('.garrix') || $('body').is('.guetta') || $('body').is('.mello')) {
+                $('body').removeAttr('class');
+            }
+            $('body').css({
+                "transition": 'background 0.4s ease-out, background-image 1s ease-out'
+            })
+            $("#txtHead2").css({ 'color': 'white' })
+            $("#song-name").html("Avicii - Waiting For Love ")
+            $('body').addClass('avicii');
+            $("#mybar > a").css({
+                "transition": "color 0.4s ease-out",
+                "color": "#00E676"
+            })
+            $("#mybar").css({
+                "transition": "background 0.4s ease-out"
+            })
+            $("#mybar").removeClass('white');
+            $("#mybar").addClass('black');
+
+            $('.cr.button').css({
+                "transition": "background 0.4s ease-out"
+            })
+            $(".cr.button").removeClass('white').addClass('green');
         }
-       $('body').css({
-            "transition": 'background 0.4s ease-out, background-image 1s ease-out'
-        })
-       $("#song-name").html("Marshmello - Silence Ft. Khalid");
-        $('body').addClass('mello');
-        $("#mybar > a").css({
-            "transition": "color 0.4s ease-out",
-            "color": "#00E676"
-        })
-        $('.center-div').addClass('text-black')
-        $("#mybar").css({
-            "transition": "background 0.4s ease-out"
-        })
-        $("#mybar").removeClass('white');
-        $("#mybar").addClass('black');
+        function mello() {
 
-        $('.cr.button').css({
-            "transition": "background 0.4s ease-out"
-        })
-        $(".cr.button").removeClass('white').addClass('green');
-    }
+            if ($('body').is('.garrix') || $('body').is('.guetta') || $('body').is('.avicii')) {
+                $('body').removeAttr('class');
+            }
+            $('body').css({
+                "transition": 'background 0.4s ease-out, background-image 1s ease-out'
+            })
+            $("#song-name").html("Marshmello - Silence Ft. Khalid");
+            $('body').addClass('mello');
+            $("#mybar > a").css({
+                "transition": "color 0.4s ease-out",
+                "color": "#00E676"
+            })
+            $('.center-div').addClass('text-black')
+            $("#mybar").css({
+                "transition": "background 0.4s ease-out"
+            })
+            $("#txtHead2").css({ 'color': 'black' })
+            $("#mybar").removeClass('white');
+            $("#mybar").addClass('black');
+
+            $('.cr.button').css({
+                "transition": "background 0.4s ease-out"
+            })
+            $(".cr.button").removeClass('white').addClass('green');
+        }
     </script>
 </body>
 
