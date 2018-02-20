@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="flexboxgrid.min.css">
+    <title>LearnDesign</title>
+    <style>
+        body,html{
+            height: 100vh;
+        }
+
+        .content{
+            position: relative;
+            bottom: 0;
+            height: 100%; 
+        }
+    </style>
+</head>
+<body>
+    <div id="mybar" class="cr menubar  white   mobile-top">
+        <div class="brand">Crown</div>
+        <div class="menu-icon right">
+            <i class="material-icons">menu</i>
+        </div>
+        <a href="#" class="menu-item ">Home</a>
+        <a href="#" class="menu-item">News</a>
+        <a href="#" class="menu-item">Contact</a>
+        <div class="nav-input">
+            <input class="increase-to-large" placeholder="Search" type="text">
+            <i class="material-icons">search</i>
+        </div>
+        <a href="#" onclick="register();" class="menu-item pulse right">Register</a>
+        <a href="#" onclick="login();" class="menu-item pulse right">Log in</a>
+    </div>
+    <button onclick="triggerModal();" class="cr button white  float  pulse">
+        <i class="material-icons">add</i>
+    </button>
+    <div class="cr modal content-scroll shadow  ">
+        <i class="material-icons text-black close">close</i>
+        <div class="modal-head white center">Publish comment</div>
+        <div class="modal-body white ">
+            <div class="row">
+                <div class="col-xs-12 col-md-12">
+                    <div class="cr-material-field green">
+                        <label class="m-label">Username</label>
+                        <input class="m-input " type="text" name="in1">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-12">
+                    <div class="cr-material-field green text-white">
+                        <label class="m-label" for="in2">Password</label>
+                        <input class="m-input " type="password" name="in2">
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-12">
+                    <div class="cr-material-field green area">
+                        <span class="m-label">Comment</span>
+                        <textarea class="m-area"></textarea>
+                        <span max-value="120" class="m-counter"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer no-line white center">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <button class="cr simple button green pulse adaptive">CANCEL</button>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <button class="cr simple button green pulse adaptive">PUBLISH</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cr container">
+        <div class="row center-xs center-md center-lg">
+            <h1 class="text-white bold">Fifa 18</h1>
+        </div>
+       
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="Crow.js"></script>
+    <script> 
+        $('body').loader('show', 'dots', {
+                time: '5000',
+                background: '#201e55',
+                color: '#cbf17c'
+        })
+        setTimeout(() => {
+            $('body').css({
+            'background-image': "url('FIFA-18-FI.jpg')",
+            'background-color': "#201e55",
+            'background-repeat': "no-repeat",
+            'background-size' : "cover",
+            'background-position' : "center"
+            })
+        }, 1000);
+    </script>
+</body>
+
+</html>
