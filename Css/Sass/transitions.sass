@@ -7,10 +7,11 @@
     1% 
         display: block
         opacity: 0
-        transform: scale(0)
+        transform: scale(0) 
+
     100% 
         opacity: 1 !important
-        transform: scale(1)
+        transform: scale(1) 
 
 @-o-keyframes appear 
     0% 
@@ -36,17 +37,28 @@
         opacity: 1 !important
         transform: scale(1)
 
+// @keyframes appear 
+//     0% 
+//         display: none 
+//         opacity: 0 
+//     1% 
+//         display: block
+//         opacity: 0
+//         transform: scale(0) 
+//     100% 
+//         opacity: 1 !important
+//         transform: scale(1)
 @keyframes appear 
     0% 
         display: none 
-        opacity: 0
+        opacity: 0 
+        transform: scale(0) !important 
     1% 
-        display: block
-        opacity: 0
-        transform: scale(0)
+        display: block  
     100% 
-        opacity: 1 !important
-        transform: scale(1)
+        opacity: 1
+        transform: translate(-50%, -50%) scale(1) !important 
+        display: block 
 
 
 @-o-keyframes fadeIn 
@@ -261,7 +273,7 @@
     100% 
         transform: scale(1)
 
-@-webkit-keyframes
+@-webkit-keyframes charging1
     0% 
         left: -100% 
         width: 100%
@@ -271,7 +283,7 @@
         transform: scaleX(0.5)
         left: 100%
         width: 100% 
-@-moz-keyframes 
+@-moz-keyframes charging1
     0% 
         left: -100% 
         width: 100%

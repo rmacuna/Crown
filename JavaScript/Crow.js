@@ -1,6 +1,8 @@
 /*---------Inputs---------*/
 jQuery(function($) {
     let maxVal;
+    const lastPosOfNavInput = $(document).find('.nav-input').index() + 1;
+
     $('.m-input, .m-area').focus(function() {
         $(this).parent().addClass('is-focused has-label');
     })
@@ -308,7 +310,7 @@ jQuery(function($) {
         }
         $parent.removeClass('is-focused');
     })
-    $("div.cr.button.pulse, button.cr.button.pulse").click(function(e) {
+    $("div.cr.button.pulse, button.cr.button.pulse, a.menu-item.pulse").click(function(e) {
         $('.ripple').remove();
 
         let posX = $(this).offset().left,
@@ -324,7 +326,7 @@ jQuery(function($) {
         } else {
             btn_width = btn_height;
         }
-        
+
         let x = e.pageX - posX - btn_width / 2;
         let y = e.pageY - posY - btn_height / 2;
 
@@ -336,6 +338,65 @@ jQuery(function($) {
             left: x + 'px'
         }).addClass("ripple-active");
     })
+
+    $(".nav-input").find("input").on('focus', function() {
+        setTimeout(() => {
+            let icon = $(this).parent().find('i');
+            icon.remove();
+            $(this).parent().append('<i class="material-icons close">close</i>');
+            $(".nav-input").find("i.material-icons.close").click(function() {
+                $(this).parent().find("input").val("");
+            })
+        }, 310);
+    })
+    $(".nav-input").find("input").on('focusout', function() {
+        setTimeout(() => {
+            let icon = $(this).parent().find('i');
+            icon.html("search")
+        }, 310);
+    })
+    $(".cr.menubar.mobile-top").find('div.menu-icon > i').click(function(e) {
+        let menubar = $(this).parent().parent();
+        let navinput = menubar.find('.nav-input');
+        let copynav_input = navinput;
+        if (!menubar.is('.trigger')) {
+            menubar.addClass('trigger');
+            if (navinput != null) {
+                menubar.get(0).insertBefore(copynav_input.get(0), menubar.get(0).children[1]);
+            }
+            $(this).html("close");
+
+        } else {
+            menubar.removeClass('trigger');
+            if (copynav_input.index() != 1) {}
+            menubar.get(0).insertBefore(copynav_input.get(0), menubar.get(0).children[lastPosOfNavInput]);
+            $(this).html("menu");
+        }
+    })
+
+
+    $(window).on('resize', function() {
+        if ($('.cr.menubar').is('.trigger')) {
+            let navinput = $('.cr.menubar').find('.nav-input');
+            if ($(this).width() > 968) {
+                $('.cr.menubar').removeClass('trigger')
+                $('.cr.menubar').get(0).insertBefore(navinput.get(0), $('.cr.menubar').get(0).children[lastPosOfNavInput]);
+                $('div.menu-icon > i').html('menu')
+            }
+        }
+    })
+
+
+
+    $("input.increase-to-large").on('focus', function() {
+        $(this).animate({ width: ($(this).width() + 200) }, 310)
+    })
+    $("input.increase-to-large").on('focusout', function() {
+        console.log($(this).width())
+        $(this).animate({ width: ($(this).width() - 200) }, 310)
+    })
+
+
 })
 var statePressed = false;
 var overlay;
@@ -474,8 +535,8 @@ try {
                         '<div class="dot d3"></div>' +
                         '</div>' +
                         '<span id="crloadOverLay" class="load-overlay"></span>');
-                    let loader = $('body').find('div.cr.loader > div.dot');
-                    let overlay = $('body').find('span.load-overlay');
+                    let loader = $(this).find('div.cr.loader > div.dot');
+                    let overlay = $(this).find('span.load-overlay');
                     loader.css({
                         'background': settings.color
                     })
@@ -517,7 +578,7 @@ try {
                         $('#crloadOverLay').remove();
                     }, (settings.time * 1 + 350));
                 } else if (loadname == 'bouncy') {
-                    $(this).append('<div class="cr loader screen bouncy">'+'</div>')
+                    $(this).append('<div class="cr loader screen bouncy">' + '</div>')
                     $(this).append('<span class="load-overlay"></span>');
                     $(this).append('<div class="load-shadow"></div>');
                     let loader = $(this).find('.cr.loader.screen.bouncy');
@@ -534,7 +595,7 @@ try {
                         })
                         shadow.css({
                             'transition': "opacity 0.3s ease-out",
-                            'opacity': "0"             
+                            'opacity': "0"
                         })
                         overlay.addClass('hide');
                     }, settings.time);
@@ -732,7 +793,7 @@ try {
             }
         }
 
-        $.fn.progress = function (action, value, time) {
+        $.fn.progress = function(action, value, time) {
             if (action == 'increase') {
                 console.log($(this))
                 $(this).find('div').css({
@@ -741,7 +802,7 @@ try {
             }
             if (action == 'interval') {
                 $(this).find('div').css({
-                    'transition': "width " + time +"s" + " ease-out",
+                    'transition': "width " + time + "s" + " ease-out",
                     'width': value + "%"
                 })
             }

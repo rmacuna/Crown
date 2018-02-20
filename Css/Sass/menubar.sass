@@ -1,0 +1,416 @@
+div.cr.menubar
+    overflow: hidden 
+    position: relative 
+    background: lighten($gray, 32)
+    max-height: 100px
+    margin: 0 !important 
+    padding: 5px 5px
+    border-bottom-left-radius: 2px
+    white-space: nowrap
+    border-bottom-right-radius: 2px 
+    box-shadow: 0 2px 1px rgba($black, .4)
+    // transition: max-height 1s ease-out 
+
+    a.menu-item
+        position: relative
+        box-sizing: border-box
+        color: lighten($black, 30)
+        width: auto 
+        height: 100%
+        float: left
+        text-align: center 
+        text-decoration: none 
+        padding: 15px 25px
+        border-radius: 2px
+        -webkit-transition: background 0.3s ease-out 
+        -moz-transition: background 0.3s ease-out 
+        -o-transition: background 0.3s ease-out 
+        transition: background 0.3s ease-out 
+        &:active
+            background: lighten($gray, 10)
+            
+    a.hoverable 
+        &:after 
+            content: ' '
+            width: auto  
+            height: 2px 
+            border-radius: 4px 
+            background: $white
+            position: relative
+            display: block 
+            bottom: 0 
+            left: 0 
+            transition: transform 0.3s ease-out 
+            transform: scaleX(0)
+        &:hover 
+            &:after 
+                transform: scaleX(1) 
+
+
+    a.menu-item.right
+        float: right
+
+    div.menu-icon 
+        display: none 
+        position: absolute
+        top: 0
+        padding: 10px 10px 10px 10px
+        transition: transform 0.3s ease-out 
+        
+    div.menu-icon.right 
+        right: 0 
+
+    div.menu-icon.left 
+        left: 0 
+        
+    div.brand
+        position: relative
+        box-sizing: border-box
+        height: 100% 
+        padding: 15px 15px 
+        margin: 0
+        float: left
+        overflow: hidden
+        -webkit-touch-callout: none
+        -webkit-user-select: none
+        -moz-user-select: none
+        -ms-user-select: none
+        user-select: none
+        display: inline-block
+        font-weight: bold
+        cursor: default !important 
+        font-size: 16px 
+        i 
+            display: inline-block
+            position: relative
+            float: right
+            height: 100%
+    div.nav-input
+        position: relative
+        box-sizing: border-box
+        float: left 
+        margin-left: 4px
+        padding-top: 6px
+        input  
+            position: relative
+            border: none 
+            background: rgba($gray, .4)
+            color: $white
+            font-size: 16px
+            height: 32px
+            text-indent: 5px
+            padding-right: 28px
+            &::placeholder
+                color: rgba($white, .3)
+            &:focus 
+                + i 
+                    transform: rotate(720deg) 
+        input.large 
+            width: 300px !important
+                    
+        input.rounded 
+            border-radius: 50px
+    
+        i 
+            position: absolute 
+            right: 0 
+            transition: transform 0.3s ease-out
+            top: 0 
+            width: 1.271em
+            line-height: 2
+            height: auto  
+            cursor: pointer
+            margin: 0 
+            text-align: center 
+            &:hover 
+                animation: shake 0.82s 1s ease-out
+
+
+
+
+
+
+
+
+div.cr.menubar.mobile-top
+    @media screen and (max-width: 968px)
+        white-space: nowrap
+        a
+            &:nth-child(2)
+                width: 100% !important
+                display: block 
+        a.menu-item 
+            position: relative
+            float: none 
+            display: none 
+            width: 100% 
+            text-align: center
+        div.menu-icon 
+            display: block
+            i
+                cursor: pointer
+                right: 0 
+                text-align: center  
+                padding: 5px 5px 
+                font-size: 24px
+                transition: transform 0.5s ease-out 
+                
+
+        div.nav-input 
+            display: none 
+            position: relative 
+            float: none 
+            box-sizing: border-box
+            width: 97%
+            left: 5px
+            input 
+                width: 97% !important
+            
+        
+        div.brand 
+            position: relative !important 
+            height: auto !important 
+            left: 45%
+            float: none !important 
+            display: block  
+
+    @media screen and (max-width: 460px)
+        div.brand 
+            margin-left: -5%
+
+    @media screen and (max-width: 840px)
+        div.nav-input
+            width: 93%
+            input 
+                width: 93%
+    @media screen and (max-width: 443px)
+        div.nav-input
+            width: 90% 
+            input 
+                width: 90%
+
+
+
+div.cr.menubar.mobile-top.trigger
+    max-height: 1000px !important
+    a 
+        display: block 
+    div.nav-input 
+        display: block 
+    div.menu-icon
+        transform: rotate(-360deg)
+        
+div.cr.menubar.mobile-top.hide 
+    a.menu-item 
+        display: none 
+    div.nav-input 
+        display: none 
+    div.brand 
+        display: none 
+
+
+
+div.cr.menubar.plain 
+    box-shadow: none
+    
+div.cr.menubar.deep-shadow
+    box-shadow: 0 4px 16px rgba($black, .5)
+
+div.cr.menubar.huge 
+    height: 70px
+    a.menu-item 
+        padding: 20px 20px !important 
+    div.brand 
+        padding: 20px 20px !important 
+    div.nav-input 
+        padding-top: 12px !important 
+        i 
+            line-height: 2.5
+
+
+div.cr.menubar.blue 
+    background: $blue 
+    div.brand 
+        color: $white 
+    &:after 
+        color: $white 
+    a 
+        color: $white
+        &:active 
+            background: darken($blue, 10)
+    input 
+        background: rgba($white, .2) !important 
+        color: $white 
+     
+    i 
+        color: $white 
+
+div.cr.menubar.red 
+    background: $red 
+    div.brand 
+        color: $white 
+    &:after 
+        color: $white
+    a 
+        color: $white 
+        &:active 
+            background: darken($red, 10)
+    input 
+        background: rgba($white, .2) !important 
+        color: $white 
+     
+    i 
+        color: $white 
+
+div.cr.menubar.green 
+    background: $green 
+    div.brand 
+        color: $white
+    &:after 
+        color: $white 
+    a 
+        color: $white 
+        &:active 
+            background: darken($green, 10)
+    input 
+        background: rgba($white, .2) !important 
+        color: $white 
+     
+    i 
+        color: $white 
+
+div.cr.menubar.yellow
+    background: $yellow 
+    div.brand 
+        color: $black
+    &:after 
+        color: $black 
+    a 
+        color: $black 
+        &:active 
+            background: darken($yellow, 15)
+    input 
+        background: rgba($amber, .2) !important 
+        color: $black !important 
+    i 
+        color: $black 
+
+div.cr.menubar.amber 
+    background: $amber 
+    div.brand 
+        color: $white
+    &:after 
+        color: $white 
+    a 
+        color: $white 
+        &:active 
+            background: darken($amber, 10)
+    input 
+        background: rgba($white, .2) !important 
+        color: $white 
+     
+    i 
+        color: $white 
+
+div.cr.menubar.indigo 
+    background: $indigo
+    div.brand 
+        color: $white 
+    &:after 
+        color: $white 
+    a 
+        color: $white 
+        &:active 
+            background: darken($indigo, 10)
+    input 
+        background: rgba($white, .2) !important 
+        color: $white 
+     
+    i 
+        color: $white 
+
+div.cr.menubar.gold 
+    background: $gold
+    div.brand 
+        color: $white
+    &:after 
+        color: $white 
+    a 
+        color: $white 
+        &:active 
+            background: darken($gold, 10)
+    input 
+        background: rgba($white, .2) !important 
+        color: $white 
+     
+    i 
+        color: $white 
+
+div.cr.menubar.purple 
+    background: $purple 
+    div.brand 
+        color: $white
+    &:after 
+        color: $white 
+    a 
+        color: $white 
+        &:active 
+            background: darken($purple, 8)
+    input 
+        background: rgba($white, .2) !important 
+        color: $white 
+     
+    i 
+        color: $white 
+
+div.cr.menubar.black 
+    background: lighten($black, 10) 
+    div.brand 
+        color: $white
+    &:after 
+        color: $white 
+    a 
+        color: $white 
+        &:active 
+            background: darken($black, 10)
+    input 
+        color: $white 
+    i 
+        color: $white 
+
+div.cr.menubar.white 
+    background: darken($white, 3) 
+    div.brand 
+        color: $black
+    &:after 
+        color: $black 
+    a 
+        color: $black 
+        &:active 
+            background: darken($white, 8)
+    input 
+        background: rgba($gray, .1) !important 
+        color: $black !important 
+        &::placeholder 
+            color: $black !important 
+    i 
+        color: $black 
+
+div.cr.menubar.pink 
+    background: $pink
+    div.brand 
+        color: $white
+    &:after 
+        color: $white 
+    a 
+        color: $white 
+        &:active 
+            background: darken($pink, 10)
+    input 
+        background: rgba($white, .2) !important 
+        color: $white 
+    i 
+        color: $white 
+
+
+
