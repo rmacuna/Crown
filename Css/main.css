@@ -9,9 +9,10 @@ div.cr.card {
   height: auto;
   width: 25rem;
   border-radius: 4px;
-  margin: 5px 5px;
+  margin: 5px 0 5px 0;
   min-width: 12rem;
   font-size: 16px;
+  box-sizing: border-box;
   z-index: 1; }
   div.cr.card:hover {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.4); }
@@ -381,7 +382,7 @@ div.cake.shake-2:hover > i {
 div.cr.card.variant {
   border-radius: 4px;
   border: 1px solid rgba(158, 158, 158, 0.2);
-  box-shadow: 0 1px 1px 0 rgba(158, 158, 158, 0.6) !important; }
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.6) !important; }
   div.cr.card.variant .card-head {
     border-top-right-radius: 4px;
     border-top-left-radius: 4px; }
@@ -1560,7 +1561,6 @@ div.cr.modal {
   width: 500px;
   transform: translate(-50%, -50%);
   min-height: 200px;
-  max-height: calc(100% - 100px);
   top: 50%;
   left: 50%;
   display: none;
@@ -1575,7 +1575,7 @@ div.cr.modal {
   color: #4d4d4d; }
   @media screen and (max-width: 794px) {
     div.cr.modal {
-      width: 300px !important; } }
+      width: 90% !important; } }
   div.cr.modal .center {
     text-align: center; }
   div.cr.modal i.close {
@@ -1638,6 +1638,7 @@ div.cr.modal {
     box-sizing: border-box;
     padding: 10px 10px 10px 10px;
     min-height: 118px;
+    max-height: calc(100vh - 110px);
     overflow: hidden;
     width: 100%;
     color: #4d4d4d; }
@@ -1771,8 +1772,8 @@ div.cr.modal.big {
   margin-top: -80px; }
 
 div.cr.modal.content-scroll div.modal-body {
-  max-height: 500px !important;
-  overflow-y: auto; }
+  overflow-y: scroll !important;
+  -webkit-overflow-scrolling: touch !important; }
 
 div.cr.snackbar {
   visibility: hidden;

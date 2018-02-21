@@ -9,9 +9,10 @@ div.cr.card
 	height: auto
 	width: 25.0rem
 	border-radius: 4px
-	margin: 5px 5px
+	margin: 5px 0 5px 0 
 	min-width: 12.0rem
 	font-size: 16px
+	box-sizing: border-box
 	z-index: 1
 	&:hover 
 		box-shadow: 0  4px 10px 0 rgba($black, .4) 
@@ -225,8 +226,6 @@ div.cr.card.medium
 
 div.cr.card.adaptive 
 	width: 100% 
-	// @media screen and (min-width: 1200px)
-	// 	margin-left: 2%
 
 
 
@@ -441,7 +440,7 @@ div.cake.shake-2
 div.cr.card.variant 
 	border-radius: 4px
 	border: 1px solid rgba($gray, .2)
-	box-shadow: 0 1px 1px 0 rgba($gray, .6) !important
+	box-shadow: 0 1px 1px 0 rgba($black, .6) !important
 	.card-head 
 		border-top-right-radius: 4px 
 		border-top-left-radius: 4px

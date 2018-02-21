@@ -4,7 +4,6 @@ div.cr.modal
     width: 500px
     transform: translate(-50%, -50%)
     min-height: 200px
-    max-height: calc(100% - 100px)
     top: 50% 
     left: 50% 
     display: none 
@@ -19,7 +18,7 @@ div.cr.modal
     color: lighten($black, 30)
 
     @media screen and (max-width: 794px)
-        width: 300px !important
+        width: 90% !important
 
 
     .center 
@@ -87,6 +86,7 @@ div.cr.modal
         box-sizing: border-box 
         padding: 10px 10px 10px 10px 
         min-height: 118px
+        max-height: calc(100vh - 110px)
         overflow: hidden 
         width: 100% 
         color: lighten($black, 30)
@@ -227,5 +227,5 @@ div.cr.modal.big
 
 div.cr.modal.content-scroll
     div.modal-body 
-        max-height: 500px !important 
-        overflow-y: auto 
+        overflow-y: scroll !important 
+        -webkit-overflow-scrolling: touch !important 
