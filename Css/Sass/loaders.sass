@@ -49,7 +49,8 @@ div.cr.loader.circular.pink
 div.cr.loader.screen.circular 
 	position: fixed 
 	top: 40% 
-	left: 47% 
+	left: 50% 
+	transform: translateX(-50%)
 	border: 5px solid rgba($gray, .1)
 	z-index: 201
 
@@ -60,9 +61,9 @@ div.cr.loader.screen.circular
 	margin: 0 auto 
 	background: none 
 
-	-webkit-transition: transform 0.3s ease-out 
-	-ms-transition: transform 0.3s ease-out
-	transition: transform 0.3s ease-out 
+	// -webkit-transition: transform 0.3s ease-out 
+	// -ms-transition: transform 0.3s ease-out
+	// transition: transform 0.3s ease-out 
 
 	-webkit-animation: transform 0.3s ease-out
 	-ms-transition: transform 0.3s ease-out
@@ -109,7 +110,7 @@ div.cr.loader.circular.colored
 
 div.cr.loader.screen.pulse 
 	position: fixed 
-	left: 47% 
+	left: 50% 
 	top: 40% 
 	z-index: 201
 	margin: 0 auto 
@@ -183,8 +184,9 @@ div.cr.loader.screen.dots
 	-ms-transition: opacity 0.3s ease-out 
 	transition: opacity 0.3s ease-out 
 	z-index: 201
-	left: 46% 
-	top: 40%
+	left: 50%
+	transform: translateX(-50%) 
+	top: 45%
 	-webkit-animation: fadeIn 0.3s ease-out 
 	-moz-animation: fadeIn 0.3s ease-out 
 	-o-animation: fadeIn 0.3s ease-out 
@@ -225,15 +227,16 @@ span.load-overlay.hide
 
 div.cr.loader.screen.balls 
 	position: fixed 
+	width: 50px 
+	margin: 0 auto 
 	z-index: 201 
-	left: 47% 
+	text-align: center
 	-webkit-transition: opacity 0.3s ease-out 
 	-ms-transition: opacity 0.3s ease-out
 	transition: opacity 0.3s ease-out
 	top: 40% 
+	left: 50% 
 	height: 50px 
-	width: 50px 
-	margin: 0 auto 
 	-webkit-animation: spinRotate 1s  infinite 
 	-moz-animation: spinRotate 1s  infinite 
 	-ms-animation: spinRotate 1s  infinite 
@@ -260,9 +263,9 @@ div.cr.loader.screen.balls
 		background: #2196F3
 		box-shadow: 30px 0 0 #4CAF50
 
-div.cr.loader.screen 
-	@media screen and (max-width: 471px)
-		margin-left: -20px !important 
+// div.cr.loader.screen 
+// 	@media screen and (max-width: 471px)
+// 		margin-left: -20px !important 
 
 
 div.cr.linear.loader 
